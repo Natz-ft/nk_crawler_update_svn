@@ -1,0 +1,312 @@
+2019-10-23 09:48:15,848 - webcrawer service - ERROR - 运行失败: shanxishenzhaobiaogonggongfuwupingtai
+2019-10-23 09:48:16,066 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
+    model = Crawler_URL()
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
+    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+
+2019-10-23 09:48:21,473 - webcrawer service - ERROR - 运行失败: shanxishenzhaobiaogonggongfuwupingtai
+2019-10-23 09:48:21,489 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
+    model = Crawler_URL()
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
+    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+
+2019-10-23 09:48:49,569 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
+2019-10-23 09:48:49,569 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
+    model = Crawler_URL()
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
+    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+
+2019-10-23 09:48:52,959 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
+2019-10-23 09:48:52,959 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
+    model = Crawler_URL()
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
+    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+
+2019-10-23 10:19:11,289 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
+2019-10-23 10:19:11,649 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
+    model = Crawler_URL()
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
+    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+
+2019-10-23 10:20:25,102 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
+2019-10-23 10:20:26,133 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
+    model = Crawler_URL()
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
+    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+
+2019-10-23 10:21:40,467 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
+2019-10-23 10:21:40,467 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
+    model = Crawler_URL()
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
+    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+
+2019-10-23 10:23:49,764 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
+2019-10-23 10:23:49,764 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
+    model = Crawler_URL()
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
+    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+
+2019-10-23 10:24:16,962 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
+2019-10-23 10:24:16,962 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
+    model = Crawler_URL()
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
+    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+
+2019-10-23 10:25:26,548 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
+2019-10-23 10:25:26,548 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
+    model = Crawler_URL()
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
+    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+
+2019-10-23 10:26:34,979 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
+2019-10-23 10:26:34,979 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
+    restore_signals, start_new_session)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
+    startupinfo)
+  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
+    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
+    model = Crawler_URL()
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
+    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+
+
+2019-10-23 17:39:25,775 - webcrawer service - ERROR - 运行失败: neimengguzizhiquzhengfucaigou
+2019-10-23 17:39:25,790 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 134, in Pipeline
+    result = self.bank(result,text["type"])
+KeyError: 'type'
+
+2019-10-23 17:43:50,025 - webcrawer service - ERROR - 运行失败: neimengguzizhiquzhengfucaigou
+2019-10-23 17:43:50,025 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 134, in Pipeline
+    result = self.bank(result,text["type"])
+KeyError: 'type'
+
