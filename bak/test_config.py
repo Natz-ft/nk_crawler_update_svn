@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-from fake_useragent import UserAgent
 import datetime
-today = datetime.date.today()
-yesterday = str(today - datetime.timedelta(days=1))
-today = str(today)
 
 #配置xpath
+from fake_useragent import UserAgent
+
+today = datetime.date.today()
+yesterday = str(today - datetime.timedelta(days=1))
 parameter = {
     #中化
     "sinochemitc" : {"li" : '//*[@id="tab1"]/ul/li' , #标题的上一级
@@ -60,7 +60,7 @@ parameter = {
                                     
                              },
     #山西省招标投标公共服务平台
-    "shanxishenzhaobiaogonggongfuwupingtai" : {"li" : '//ul[@class="on"]//table[@class="download_table"]/tbody/tr' , #标题的上一级
+    "shanxishenzhaobiaogonggongfuwupingtai" : {"li" : '//ul[@class="on"]//table[@class="download_table"]//tr' , #标题的上一级
                                    "li_time" : "./td[4]/text()" , #时间
                                    "title" : "./td[2]/@title", #标题
                                     "href" : "./td[2]/a/@href", #标题地址
@@ -77,7 +77,7 @@ parameter = {
                           "href" : "./a/@href", #标题地址
                           "domainName_url" : "", #拼接域名
                           "li_area": "",  #区域
-                          "page_name" : {"type":1,"style":"http://www.zybtp.com/ggxx/index_count.jhtml","replaceKey":"count","startNum":1}, #页数  index_pageNo.jhtml
+                          "page_name" : {"type":1,"style":"http://www.zybtp.com/ggxx/index_count.jhtml","startNum":1}, #页数  index_pageNo.jhtml
                           "number_xpath" : '//div[@class="Top8 TxtCenter"]/div[2]/a[4]/@href', #页数区域
                           "search" : "",
                           
@@ -95,7 +95,16 @@ parameter = {
                                        "style":"post",
                                        "startNum":0,
                                        "headers":{
-                                           'User-Agent': UserAgent().chrome,                                        
+                                           'Accept': '*/*',
+                                           'Accept-Encoding': 'gzip, deflate',
+                                           'Accept-Language': 'zh-CN,zh;q=0.9',
+                                           'Connection': 'keep-alive',
+                                           'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                                           'Origin': 'http://www.hebeieb.com',
+                                           'Referer': 'http://www.hebeieb.com/tender/xxgk/list.do?selectype=zbgg',
+                                           'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36',
+                                           'X-Requested-With': 'XMLHttpRequest',
+                                           'Cookie':'JSESSIONID=73417900EA05C1C288F37A7A9EDEA197; __51cke__=; __tins__19687679=%7B%22sid%22%3A%201571627619812%2C%20%22vd%22%3A%202%2C%20%22expires%22%3A%201571629503848%7D; __51laig__=2'
                                            },
                                        "data":{
                                            "page": "0",
@@ -105,47 +114,14 @@ parameter = {
                                            "KeyType": "ggname"
                                            },                                       
                                        "post_url":"http://www.hebeieb.com/tender/xxgk/zbgg.do",
-                                       "pageNoKey":"page"
-                                       },  
+                                       }, #页数  index_pageNo.jhtml
                                    "number_xpath" : '//*[@id="zbggPagination"]/a[4]/text()', #页数区域
                                    "search" : "",                                               
                                                                                                         
                                    },
-    #黑龙江政府采购网
-    "heilongjiangcaigou" : {"li" : "//div[@class='xxei']", #标题的上一级
-                          "li_time" : "./span[@class='sjej']/text()" , #时间
-                          "title" : "./span[@class='lbej']/a/text()", #标题
-                          "href" : "./span[@class='lbej']/a/@onclick", #标题地址
-                          "domainName_url" : "http://www.hljcg.gov.cn", #拼接域名
-                          "li_area": "",  #区域
-                          "page_name" : {
-                                       "type":3,
-                                       "style":"onclick",
-                                       "startNum":1,
-                                       "onclick":[{"replaceKey":"count","button":"//*[@id='rightej']/div[3]/div[2]/a[text()=count]","params":[]}]
-                                       }, 
-                          "number_xpath" : '//*[@id="pageCount"]/@value', #页数区域
-                          "search" : "",
-
-                          },
-    #广东省政府采购网
-    "guangdongshenzhengfucaigou":{"li" : "//ul[@class='m_m_c_list']/li", #标题的上一级
-                          "li_time" : "./em/text()" , #时间
-                          "title" : "./a/@title", #标题
-                          "href" : "./a/@href", #标题地址
-                          "domainName_url" : "http://www.ccgp-guangdong.gov.cn", #拼接域名
-                          "li_area": "",  #区域
-                          "page_name" : {"type":3,
-                                        "style":"onclick",
-                                        "startNum":1,
-                                        "onclick":[{"replaceKey":"count","button":"//div[@class='m_m_c_page']/form/a[span/text()=count]","params":[]}]
-                                        }, 
-                          "number_xpath" : "//div[@class='m_m_c_page']/form/a[last()-3]/span/text()", #页数区域
-                          "search" : "",                          
-    },
-    #内蒙古自治区政府采购网
+#内蒙古自治区政府采购网
     "neimengguzizhiquzhengfucaigou":{"li" : "//*[@id='itemContainer']/tbody/tr", #标题的上一级
-                          "li_time" : "./td[@class='feed-time']/span//text()" , #时间
+                          "li_time" : "./td[@class='feed-time']/span/text()" , #时间
                           "title" : "./td[@class='title']/a/@title", #标题
                           "href" : "./td[@class='title']/a/@href", #标题地址
                           "domainName_url" : "", #拼接域名
@@ -158,14 +134,12 @@ parameter = {
                                                    "button":"//*[@id='c-main-2']/div/div[2]/div[4]/a[text()=count]",
                                                    "params":[]}
                                                    ]
-            , 
+            ,
                                         },
                           "number_xpath" : "//*[@id='c-main-2']/div/div[2]/div[4]/a/text()", #页数区域
-                          "search" : "",                          
+                          "search" : "",
     },
-
-
-    #3天津市政府采购平台 post
+    #天津市政府采购平台 post
     "tianjinshizhengfucaigoupingtai" : {"li" : '//*[@id="reflshPage"]/ul/li',
                                      "li_time" : "./span/text()" ,  #时间
                                      "title" : "./a/@title",  #标题
@@ -201,15 +175,13 @@ parameter = {
                                             'siteLists': ''
                                          },
                                          "post_url": "http://60.30.25.51/portal/topicView.do",
-                                         "pageNoKey":"page"
                                      },  # 页数  index_pageNo.jhtml
                                      "number_xpath": '//*[@id="pagesColumn"]/div/span[2]/b/text()',  # 总区域
                                      "search": "",
-                                     "type"  : "招标"
 
                                      },
 
-    # 4内蒙古自治区公共资源交易平台  todo
+    # 内蒙古自治区公共资源交易平台  todo
     "neimengguzizhiqugonggongziyuanjiaoyiwang": {"li": '/html/body/div[2]/div[2]/div/div[4]/table/tbody//tr',
                                        "li_time": "./td[4]/text()",  # 时间
                                        "title": "./td[3]/a/@title",  # 标题
@@ -257,7 +229,7 @@ parameter = {
                                                        "search": "",
                                                        },
 
-    #7 上海公共资源交易网
+    #6 上海公共资源交易网
     "shanghaigonggongziyuanjiaoyiwang" :{"li": '/html/body/div[5]/div[1]/div[4]/div[2]/table/tbody/tr',
                                          "li_time": "./td[5]/text()",  # 时间
                                           "title": "./td[1]/a/@title",  # 标题
@@ -268,28 +240,6 @@ parameter = {
                                           "number_xpath": '/html/body/div[5]/div[1]/div[5]/div[1]/a[last()]/@href', # 页数区域
                                           "search": "",
                                         },
-     #8 浙江省公共资源交易网
-    "zhejiangshenggonggongziyuanjiaoyiwang" :{"li" : '/html/body/div/table[1]/tbody/tr/td[2]/table/tbody/tr[2]/td/table[2]/tbody/tr/td[2]/div/table/tbody/tr'    ,
-                                         "li_time": "./td[3]/text()",  # 时间
-                                          "title": "./td[2]/a/@title",  # 标题
-                                          "href": "./td[2]/a/@href",  # 标题地址
-                                          "domainName_url": "http://new.zmctc.com/zjgcjy/",  # 拼接域名
-                                          "li_area": "",  # 区域
-                                           "page_name" : {"type":1,"style":"http://new.zmctc.com/zjgcjy/jyxx/004001/004001003/?Paging=count","replaceKey":"count","startNum":1},
-                                          "number_xpath": '/html/body/div/table[1]/tbody/tr/td[2]/table/tbody/tr[2]/td/table[2]/tbody/tr/td[2]/div/div/div/table/tbody/tr/td[23]/@title', # 页数区域
-                                          "search": "",
-            },
-    #9 江苏政府采购网
-    "jiangsuzhengfucaigouwang" :{"li" : '//*[@id="newsList"]/ul/li' ,
-                                         "li_time": "./text()[2]",  # 时间
-                                          "title": "./a/text()",  # 标题
-                                          "href": "./a/@href",  # 标题地址
-                                          "domainName_url": "http://new.zmctc.com/zjgcjy/",  # 拼接域名
-                                          "li_area": "",  # 区域
-                                           "page_name" : {"type":1,"style":"http://www.ccgp-jiangsu.gov.cn/ggxx/gkzbgg/index_count.html","replaceKey":"count","startNum":1},
-                                          "number_xpath": '//*[@id="newsPage"]/div/a[2]/@href', # 页数区域
-                                          "search": "",
-            },
 
 #11 广西招标投标公共服务平台
     "guangxizhaobiaotoubiaogonggongfuwupingtai" :{"li": '/html/body/table/tbody/tr[position()>1]',
@@ -301,7 +251,7 @@ parameter = {
                                           "page_name" : {"type":1,"style":"http://zbtb.gxi.gov.cn:9000/xxfbcms/category/bulletinList.html?searchDate=1994-10-23&dates=300&word=&categoryId=88&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=1&page=count","replaceKey":"count","startNum":1},
                                           "number_xpath": '/html/body/div[2]/a[2]/@onclick', # 页数区域
                                           "search": "",
-                                          "type" : "招标"
+
                                         },
 
 #12 海南省公共资源交易网
@@ -316,40 +266,12 @@ parameter = {
                                           "search": "",
                                         },
 
-    #14 安招才网
-    "anzhaocai": {"li": '//*[@id="gridcontainer1"]/div/div[1]/div[position()>1]',  # 标题的上一级
-                                  "li_time": "./span[3]/text()",  # 时间
-                                  "title": "./a/text()",  # 标题
-                                  "href": "./a/@href",  # 标题地址
-                                  "domainName_url": "http://www.anzhaocai.com",  # 拼接域名
-                                  "li_area": "./span[2]/text()",  # 区域
-                                  "page_name": {
-                                      "type": 2,
-                                      "style": "post",
-                                      "startNum": 1,
-                                      "headers": {
-                                          'User-Agent': UserAgent().chrome,
-                                      },
-                                      "data": {
-                                          "page": "0",
-                                      },
-                                      "post_url": "http://www.anzhaocai.com/FrontEndTran/AjaxPage1?page=3",
-                                      "pageNoKey": "page"
-                                  },
-                                  "number_xpath": '//*[@id="gridcontainer1"]/div/div[2]/div/a[10]/text()',  # 页数区域
-                                  "search": "",
 
-                                  },
-    #15江西国政招标有限公司
-        "jiangxiguozhengzhaobiaoyouxiangongsi" :{"li": '/html/body/div[3]/div/div/div[2]/ul/li',
-                                             "li_time": "./span/text()",  # 时间
-                                              "title": "./a/@title",  # 标题
-                                              "href": "./a/@href",  # 标题地址
-                                              "domainName_url": "http://www.jxgzzb.com.cn",  # 拼接域名
-                                              "li_area": "",  # 区域
-                                               "page_name" : {"type":1,"style":"http://www.jxgzzb.com.cn/Index/notice/inftype/1/page/count.html","replaceKey":"count","startNum":1},
-                                              "number_xpath": '/html/body/div[3]/div/div/div[2]/div[2]/ul/li[8]/a/text()', # 页数区域
-                                              "search": "",
-                                            },
-}
+
+    }
+
+
+
+    
+
 

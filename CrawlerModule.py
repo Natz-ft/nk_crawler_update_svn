@@ -81,6 +81,8 @@ class Crawler_URL:
     
 
     # 4.提取标题（将需要的标题先保存下来）
+
+
     def get_title_list(self, page_html_str, li, li_time, title, href, domainName_url = None, li_area = None,isloopBytime=True):
         try:
             # 把html字符串转换成element对象

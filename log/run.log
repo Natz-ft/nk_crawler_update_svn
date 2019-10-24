@@ -310,3 +310,94 @@ KeyError: 'type'
     result = self.bank(result,text["type"])
 KeyError: 'type'
 
+2019-10-24 09:21:39,671 - webcrawer service - ERROR - 运行失败: tianjinshizhengfucaigoupingtai
+2019-10-24 09:21:39,687 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 68, in RunMain
+    original_url = model.page_url(original_url, tmp_parame, i)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 198, in page_url
+    page_name["data"][page_name["pageNoKey"]]=cur_page_num
+KeyError: 'pageNoKey'
+
+2019-10-24 09:28:07,803 - webcrawer service - ERROR - 运行失败: tianjinshizhengfucaigoupingtai
+2019-10-24 09:28:07,803 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 68, in RunMain
+    original_url = model.page_url(original_url, tmp_parame, i)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 198, in page_url
+    page_name["data"][page_name["pageNoKey"]]=cur_page_num
+KeyError: 'pageNoKey'
+
+2019-10-24 09:31:53,424 - webcrawer service - ERROR - 运行失败: tianjinshizhengfucaigoupingtai
+2019-10-24 09:31:53,424 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 68, in RunMain
+    original_url = model.page_url(original_url, tmp_parame, i)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 198, in page_url
+    page_name["data"][page_name["pageNoKey"]]=cur_page_num
+KeyError: 'pageNoKey'
+
+2019-10-24 09:36:58,488 - webcrawer service - ERROR - 运行失败: tianjinshizhengfucaigoupingtai
+2019-10-24 09:36:58,488 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 68, in RunMain
+    original_url = model.page_url(original_url, tmp_parame, i)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 198, in page_url
+    page_name["data"][page_name["pageNoKey"]]=cur_page_num
+KeyError: 'pageNoKey'
+
+2019-10-24 09:43:44,269 - webcrawer service - ERROR - 运行失败: tianjinshizhengfucaigoupingtai
+2019-10-24 09:43:44,269 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 68, in RunMain
+    original_url = model.page_url(original_url, tmp_parame, i)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 198, in page_url
+    page_name["data"][page_name["pageNoKey"]]=cur_page_num
+KeyError: 'pageNoKey'
+
+2019-10-24 09:51:56,705 - webcrawer service - ERROR - 运行失败: tianjinshizhengfucaigoupingtai
+2019-10-24 09:51:56,705 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 134, in Pipeline
+    result = self.bank(result,text["type"])
+KeyError: 'type'
+
+2019-10-24 09:55:46,841 - webcrawer service - ERROR - 运行失败: guangxizhaobiaotoubiaogonggongfuwupingtai
+2019-10-24 09:55:46,841 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 134, in Pipeline
+    result = self.bank(result,text["type"])
+KeyError: 'type'
+
+2019-10-24 09:59:50,935 - webcrawer service - ERROR - 运行失败: guangxizhaobiaotoubiaogonggongfuwupingtai
+2019-10-24 09:59:50,935 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 134, in Pipeline
+    result = self.bank(result,text["type"])
+KeyError: 'type'
+
+2019-10-24 10:05:19,858 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai, 一共：1条
+2019-10-24 10:35:54,777 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang, 一共：0条
+2019-10-24 10:38:17,508 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang, 一共：1条
+2019-10-24 10:57:13,156 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang, 一共：0条
+2019-10-24 10:58:31,960 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang, 一共：4条
+2019-10-24 13:24:35,582 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang, 一共：6条
+2019-10-24 13:34:30,025 - webcrawer service - INFO - 运行成功: hainanshenggonggongziyuanjiaoyiwang, 一共：0条
+2019-10-24 13:52:12,828 - webcrawer service - INFO - 运行成功: hainanshenggonggongziyuanjiaoyiwang, 一共：0条
+2019-10-24 14:39:55,412 - webcrawer service - ERROR - 运行失败: anzhaocai
+2019-10-24 14:39:55,413 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 16, in RunMain
+    parame = parameter[html_name]
+KeyError: 'anzhaocai'
+
+2019-10-24 14:46:41,008 - webcrawer service - INFO - 运行成功: anzhaocai, 一共：0条
+2019-10-24 14:50:58,471 - webcrawer service - INFO - 运行成功: anzhaocai, 一共：0条
+2019-10-24 14:54:44,694 - webcrawer service - INFO - 运行成功: anzhaocai, 一共：5条
+2019-10-24 16:24:00,516 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi, 一共：0条
+2019-10-24 16:25:06,555 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi, 一共：0条
+2019-10-24 16:27:13,299 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi, 一共：0条
+2019-10-24 16:33:42,050 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi, 一共：1条
