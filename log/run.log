@@ -401,3 +401,188 @@ KeyError: 'anzhaocai'
 2019-10-24 16:25:06,555 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi, 一共：0条
 2019-10-24 16:27:13,299 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi, 一共：0条
 2019-10-24 16:33:42,050 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi, 一共：1条
+2019-10-25 10:07:45,686 - webcrawer service - ERROR - 运行失败: chengdushigonggongziyuanjiaoyizhongxin
+2019-10-25 10:07:45,781 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 29, in RunMain
+    html_str = model.parse_url(original_url)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 54, in parse_url
+    html_str = self.driver.page_source
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 679, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-10-25 10:14:13,368 - webcrawer service - ERROR - 运行失败: chengdushigonggongziyuanjiaoyizhongxin
+2019-10-25 10:14:13,372 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 29, in RunMain
+    html_str = model.parse_url(original_url)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 53, in parse_url
+    self.driver.get(href_title)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-10-25 10:20:34,135 - webcrawer service - ERROR - 运行失败: chengdushigonggongziyuanjiaoyizhongxin
+2019-10-25 10:20:34,145 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 29, in RunMain
+    html_str = model.parse_url(original_url)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 53, in parse_url
+    self.driver.get(href_title)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-10-25 10:26:41,628 - webcrawer service - ERROR - 运行失败: chengdushigonggongziyuanjiaoyizhongxin
+2019-10-25 10:26:41,630 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 29, in RunMain
+    html_str = model.parse_url(original_url)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 53, in parse_url
+    self.driver.get(href_title)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-10-25 10:44:31,038 - webcrawer service - ERROR - 运行失败: zhongguoyouzheng
+2019-10-25 10:44:31,044 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 29, in RunMain
+    html_str = model.parse_url(original_url)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 53, in parse_url
+    self.driver.get(href_title)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-10-25 10:48:51,472 - webcrawer service - INFO - 运行成功: zhongguoyouzheng, 一共：4条
+2019-10-25 10:51:22,017 - webcrawer service - INFO - 运行成功: zhongguoyouzheng, 一共：4条
+2019-10-25 10:52:44,907 - webcrawer service - ERROR - 运行失败: zhongguoyouzheng
+2019-10-25 10:52:44,916 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 29, in RunMain
+    html_str = model.parse_url(original_url)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 54, in parse_url
+    html_str = self.driver.page_source
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 679, in page_source
+    return self.execute(Command.GET_PAGE_SOURCE)['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-10-25 10:55:00,757 - webcrawer service - INFO - 运行成功: zhongguoyouzheng, 一共：4条
+2019-10-25 11:33:55,640 - webcrawer service - INFO - 运行成功: bingtuanzhengfucaigouwang, 一共：0条
+2019-10-25 11:37:35,001 - webcrawer service - INFO - 运行成功: bingtuanzhengfucaigouwang, 一共：2条
+2019-10-25 11:50:24,511 - webcrawer service - INFO - 运行成功: anzhaocai2, 一共：0条
+2019-10-25 13:15:00,127 - webcrawer service - INFO - 运行成功: anzhaocai2, 一共：2条
+2019-10-25 13:26:41,230 - webcrawer service - INFO - 运行成功: anzhaocai2, 一共：0条
+2019-10-25 13:33:14,124 - webcrawer service - INFO - 运行成功: anzhaocai2, 一共：0条
+2019-10-25 14:09:14,030 - webcrawer service - ERROR - 运行失败: anzhaocai2
+2019-10-25 15:23:33,789 - webcrawer service - INFO - 运行成功: anzhaocai2, 一共：2条
+2019-10-25 15:27:32,825 - webcrawer service - ERROR - 运行失败: anzhaocai2
+2019-10-25 15:27:32,827 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 76, in RunMain
+    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 66, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: The result of the xpath expression "//*[@id="gridcontainer1"]/div/div[2]/div/a/text()" is: [object Text]. It should be an element.
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-10-25 15:38:20,516 - webcrawer service - ERROR - 运行失败: anzhaocai2
+2019-10-25 15:38:20,759 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 135, in Pipeline
+    pd.DataFrame(self.time_change(result)).to_csv(csv, encoding='utf_8_sig')
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\core\generic.py", line 3228, in to_csv
+    formatter.save()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\formats\csvs.py", line 183, in save
+    compression=self.compression,
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\common.py", line 399, in _get_handle
+    f = open(path_or_buf, mode, encoding=encoding, newline="")
+PermissionError: [Errno 13] Permission denied: './data/anzhaocai2.csv'
+
+2019-10-25 15:40:35,743 - webcrawer service - ERROR - 运行失败: anzhaocai2
+2019-10-25 15:40:35,747 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 135, in Pipeline
+    pd.DataFrame(self.time_change(result)).to_csv(csv, encoding='utf_8_sig')
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\core\generic.py", line 3228, in to_csv
+    formatter.save()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\formats\csvs.py", line 183, in save
+    compression=self.compression,
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\common.py", line 399, in _get_handle
+    f = open(path_or_buf, mode, encoding=encoding, newline="")
+PermissionError: [Errno 13] Permission denied: './data/anzhaocai2.csv'
+
+2019-10-25 15:47:45,460 - webcrawer service - ERROR - 运行失败: chengdushigonggongziyuanjiaoyizhongxin
+2019-10-25 15:47:45,462 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 76, in RunMain
+    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 66, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="Pager"]/a[text()=11]"}
+  (Session info: chrome=76.0.3809.87)
+
+

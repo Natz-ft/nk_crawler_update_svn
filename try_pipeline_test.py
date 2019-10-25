@@ -8,6 +8,8 @@ from logger import Logger
 import argparse
 import traceback
 from test import Test
+from test_login import Test_login
+import utils
 
 
 def parse_args():
@@ -99,7 +101,12 @@ class Focus():
         pattern_t = re.compile(str_text)        
         if '招标文件名称' in df.keys():
             for k, i in enumerate(df['招标文件名称']):
-                d['类型'].append(type_str)
+                if type_str!="":
+                    d['类型'].append(type_str)
+                elif "中标" in i:
+                    d['类型'].append("中标")
+                else:
+                    d['类型'].append("招标")
                 content_bank = pattern_t.findall(i)
                 if content_bank != [] :
                     te = "".join(list(content_bank[0]))

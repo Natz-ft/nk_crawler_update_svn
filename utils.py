@@ -5,6 +5,7 @@ import re
 import requests
 import time
 import random
+import area
 
 headers = {"User-Agent": UserAgent().chrome}
 
@@ -59,7 +60,10 @@ def regex(html_str):
     #地点信息正则
     pattern_a = re.compile(r'地点.*?： *[\u4e00-\u9fa5]{1,10}')
     content_time, content_area = pattern_t.findall(html_str), "".join(pattern_a.findall(html_str))
-    return content_time, content_area
+    content_area_new = getAreaFromStr(content_area)
+    if content_area_new == "":
+        content_area_new = "中国"
+    return content_time, content_area_new
 
 def search_area(content):
     pattern = r"(?=(" + '|'.join(area_list) + r"))"
@@ -82,6 +86,7 @@ def area_tpye(area):
                 return k
     return "中国"                    #没找到，返回中国，方便调试观察
 
+#获取详细信息地址
 def rehref(href_title):
     """
     正则获取 href 地址信息
@@ -95,10 +100,91 @@ def rehref(href_title):
     else:
         href = href_title
     return href
+
+#获取总的页数
+def retotalPage(ori_number):
+    # 分页按钮不固定的 获取1，2，3，4，....列表  取最大值
+    if len(ori_number)>1:
+        number = max(list(filter(lambda x: x.isdigit(), ori_number)))
+    else:
+        # 
+        number = ''.join(re.findall(r'\d+页', ''.join(ori_number))).replace("页","")
+        if len(number)==0:            
+            number = max(re.findall(r'\d+', ''.join(ori_number)))
+    return number
+
+#获取；匹配地址
+def getAreaFromStr(title):
+    if "省" in title:
+        pattern_t = re.compile(r'([\u4e00-\u9fa5].*?)省')  
+    elif "市" in title:
+        pattern_t = re.compile(r'([\u4e00-\u9fa5].*?)市') 
+    elif "县" in title:
+        pattern_t = re.compile(r'([\u4e00-\u9fa5].*?)县')
+    else:
+        pattern_t = re.compile(r'([\u4e00-\u9fa5]{1,22})')    
+    title_str = "".join(pattern_t.findall(title))
+    if len(title_str)<4:
+        return title_str
+    for dif in range(4,2,-1):
+        title_str_new = "".join(["(" + title_str[i:i+dif] + ").*?|" for i in range(len(title_str)-1)])
+        pattern_n = re.compile(title_str_new)
+        tmp_str = pattern_n.findall(area.area_str)
+        result = ["".join(tmp) for tmp in tmp_str if len("".join(tmp))!=0]
+        if len(result)>0:
+            break
+    result = sorted(result,key=lambda k:len(k),reverse=True)[0]
+    return result
+
+
+#get请求 请求超时处理
+def loopRefresh(driver):
+    count = 0
+    for i in range(3):
+        try:
+            driver.refresh()
+            break
+        except:
+            count = count+1
+            pass
+    if count ==3:
+        return False
+    else:
+        return True
     
+    
+#千里马;中国采招网：吉林
+def  isLogin_byXpath(driver,xpathStr):
+    try:
+        pop_windows = driver.find_element_by_xpath(xpathStr)
+        return False
+    except:
+        return True
+    
+# 将标题时间转化为 xxxx-xx-xx 字符串格式
+def getTitleTimeStr(stime):   
+    p = re.compile('(\d{4})[年，-](\d{1,2})[月,-](\d{1,2})')
+    submit_time = p.findall(stime)
+    if len(submit_time)==0:
+        #月日
+        p = re.compile('(\d{1,2})[月,-](\d{1,2})')
+        submit_time = p.findall(stime)
+        if len(submit_time):
+            year = datetime.datetime.now().year
+            submit_time = year+"-"+"-".join(submit_time[0])
+        else:
+            submit_time=""
+    else:
+        #年月日
+        submit_time = "-".join(submit_time[0])
+    return submit_time
+
 
 
 if __name__ == '__main__':
-    str1 = '地点开标时间：2019-10-0909:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开标地点：北京经济技术开发区地'
-    a = search_area(str1)
-    print(a)
+    #str1 = '地点开标时间：2019-10-0909:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开标地点：北京经济技术开发区地'
+    #a = search_area(str1)
+    #print(a)
+    tmp = "中共黑龙江省直属机关工作委员会_办公设备_SC[2019]5212网上竞价公告"
+    result = getAreaFromStr(tmp)
+    print(result)

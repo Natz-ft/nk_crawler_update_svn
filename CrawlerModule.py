@@ -9,7 +9,7 @@ from collections import defaultdict
 import random
 import platform
 from config import config
-from utils import filter_title, regex, rehref
+import utils
 import urllib.request
 import urllib.parse
 import requests
@@ -37,20 +37,43 @@ class Crawler_URL:
 
 
     # 登陆浏览器
-    def log_in_web(self, userName, userpwd):
-        self.driver.get()
+    def log_in_web(self,url, login_info):
+        try:   
+            self.driver.get(url)
+        except:
+            flag = utils.loopRefresh(self.driver)
+            if not flag:
+                return ""
         time.sleep(3)
-        self.driver.find_element_by_id("username").send_keys(userName)
-        self.driver.find_element_by_id("userpwd").send_keys(userpwd)
-        self.driver.find_element_by_class_name("submit").click()
+        params = login_info["params"]
+        for param in params:
+            if param["type"]=="id":
+                self.driver.find_element_by_id(param["name"]).click()
+                self.driver.find_element_by_id(param["name"]).send_keys(param["value"])
+            elif param["type"]=="class":
+                self.driver.find_element_by_class_name(param["name"]).click()
+                self.driver.find_element_by_class_name(param["name"]).send_keys(param["value"])
+            elif param["type"]=="xpath":
+                self.driver.find_element_by_xpath(param["name"]).click()
+                self.driver.find_element_by_xpath(param["name"]).send_keys(param["value"])
+        if login_info["isHasVerify_code"]:
+            pass
+        self.driver.find_element_by_xpath(login_info["button"]).click()
         time.sleep(1)
+        return self.driver
         
         
     # 得到html字符串
     def parse_url(self, href_title,url_type="get",url_params={}):
         if url_type=="get":
             # 发送selenium请求
-            self.driver.get(href_title)
+            try:   
+                self.driver.get(href_title)
+            except:
+                flag = utils.loopRefresh(self.driver)
+                if not flag:
+                    return ""
+            time.sleep(3)
             html_str = self.driver.page_source
         elif url_type=="post":
             response = requests.post(url_params["post_url"], headers=url_params["headers"],  data=url_params["data"], verify=False)
@@ -58,10 +81,18 @@ class Crawler_URL:
         elif url_type=="onclick":
             click_params = url_params["onclick"]
             for url_param in click_params:
-                if "url" in url_param.keys():               
-                    self.driver.get(url_param["url"])
+                if "url" in url_param.keys():
+                    try:
+                        self.driver.get(url_param["url"])
+                    except:
+                        flag = utils.loopRefresh(self.driver)
+                        if not flag:
+                            return ""                                    
                     time.sleep(3)
                 params= url_param["params"]
+                if url_param["button"]=="":
+                    html_str = self.driver.page_source
+                    return html_str
                 if len(params)==0:
                     self.driver.find_element_by_xpath(url_param["button"]).click()
                 else:
@@ -72,9 +103,8 @@ class Crawler_URL:
                             self.driver.find_element_by_class_name(tmp_param["name"]).send_keys(tmp_param["value"])
                         elif tmp_param["type"]=="xpath":
                             self.driver.find_elements_by_xpath(tmp_param["name"]).send_keys(tmp_param["value"])
-                        time.sleep(1)
                     self.driver.find_element_by_xpath(url_param["button"]).click()
-                time.sleep(2)
+                time.sleep(3)
             html_str = self.driver.page_source
             #html_str = str(content, encoding="utf-8")
         return html_str
@@ -95,7 +125,10 @@ class Crawler_URL:
             if len(li_list) == 0:
                 print("li_list:", len(li_list))
                 return False
-
+            
+            
+            big_count = 0
+            equal_count = 0
             # 遍历所有li元素
             for li in li_list[0:]:
                 # 获取项目发布日期
@@ -105,9 +138,8 @@ class Crawler_URL:
                     continue
 
                 #时间处理
-                p = re.compile('(\d{4}[年，-]\d{1,2}[月,-]\d{1,2})')
-                submit_time = p.findall(stime)[0]
-                
+                submit_time = utils.getTitleTimeStr(stime)
+                    
                 if isloopBytime:
                     # 昨天日期
                     today = datetime.date.today()
@@ -116,15 +148,18 @@ class Crawler_URL:
                     #发布的时间不是昨天的时间，就结束本次循环
                     
                     if submit_time > yesterday:
+                        big_count = big_count+1
                         continue
-                    elif submit_time < yesterday:
-                        return False
+                    elif submit_time < yesterday :
+                        continue
+                    elif submit_time == yesterday:
+                        equal_count = equal_count+1
 
                 # 获取项目标题
                 item_title = "".join(li.xpath(title))
 
                 # 过滤处理
-                result = filter_title(item_title)
+                result = utils.filter_title(item_title)
                 if result == True:
                     continue
 
@@ -133,11 +168,12 @@ class Crawler_URL:
                     area = "".join(li.xpath(li_area))
                     area = ''.join(re.findall('([\u4e00-\u9fa5])', area))
                 else :
-                    area = ""
+                    #从标题获取地区
+                    area = utils.getAreaFromStr(item_title)
 
                 # 获取项目地址
                 href_title = "".join(li.xpath(href))
-                href_title = rehref(href_title)
+                href_title = utils.rehref(href_title)
 
                 #域名判断
                 if domainName_url != "":
@@ -158,6 +194,10 @@ class Crawler_URL:
                 # print('title:{}area:{}href{}time{}'.format(item_title, area, href_title, content_time))
                 print('title:{}area:{}href{}'.format(item_title, area, href_title))
                 time.sleep(1)
+            if big_count>0:
+                return True
+            elif equal_count==0:
+                return False           
             return True
         except Exception as e:
             print('error: ', e)
@@ -174,7 +214,7 @@ class Crawler_URL:
                     href_title = i
                     # 获取项目页面中的截止时间等时间信息
                     html_str = self.parse_url(href_title)
-                    content_time = regex(html_str)
+                    content_time, content_area = utils.regex(html_str)
                     #if self.content_item['省市区'][i]=="":
                         #self.content_item['省市区'][i]=content_area
                     self.content_item['时间信息'].append(content_time)
@@ -200,7 +240,8 @@ class Crawler_URL:
             page_name["data"][page_name["pageNoKey"]]=cur_page_num
             next_url = "post"
         elif page_name["type"]==3: #黑龙江政府采购网 
-            page_name["onclick"][0]["button"] = page_name["onclick"][0]["button"].replace(page_name["onclick"][0]["replaceKey"],str(cur_page_num))
+            if page_name["onclick"][0]["replaceKey"]!="":
+                page_name["onclick"][0]["button"] = page_name["onclick"][0]["button"].replace(page_name["onclick"][0]["replaceKey"],str(cur_page_num))
             next_url = "onclick"
         print("****************************************")
         print("当前运行第{}页".format(cur_page_num))

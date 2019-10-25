@@ -5,9 +5,10 @@ from test_config import parameter
 import time
 from collections import defaultdict
 import copy
-import utils
+import time
+from utils import isLogin_byXpath,retotalPage
 
-class Test:
+class Test_login:
     def __init__(self):
         self.result = defaultdict(list)
 
@@ -20,24 +21,32 @@ class Test:
             isloopBytime = parame["isloopBytime"]
         
         original_url = ""
-        #get请求
-        if isinstance(url_info,str):
-            original_url = url_info        
+        #登陆
+        driver = model.log_in_web(url_info, parame["login"])
         
-            if parame["search"] != "" :
-                original_url = model.Search(original_url, parame["search"])
-            #获取页面信息
-            html_str = model.parse_url(original_url)
+        isLogin = globals()[parame["login"]["login_status"]["class"]](driver,parame["login"]["login_status"]["params"])        
+       
         
-        else:
-            #获取页面信息
-            html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-
+        #判断失败： 验证码错误 循环（maxnum =5)
+        if not isLogin:
+            return self.result
+        #判断成功
+        #self.cookie_info = self.driver.get_cookies()                     # 列表中包含多个字典
+        #self.cookie_dict = {i["name"]: i["value"] for i in self.cookie_info}  # 字典推导式
+        #response = requests.get(href_title, headers=self.headers,cookies=self.cookie_dict)
+            
+        
+        
+        
+        #获取页面信息
+        html_str = model.parse_url("",url_type=parame["startPage"]["type"],url_params=parame["startPage"])                
+        
+                   
 
         if parame["number_xpath"] != "":
             #获取一共的页数
             ori_number = model.number_page(parame["number_xpath"], html_str)
-            number = utils.retotalPage(ori_number)
+            number = retotalPage(ori_number)
             number = int(number)+1
         else :
             return self.result
