@@ -1,4 +1,6 @@
 #-*- coding:utf-8 -*-
+import datetime
+
 from config import include_keys, exclude_keys, area_dict,area_list
 from fake_useragent import UserAgent
 import re
@@ -126,7 +128,7 @@ def getAreaFromStr(title):
     title_str = "".join(pattern_t.findall(title))
     if len(title_str)<4:
         return title_str
-    for dif in range(4,2,-1):
+    for dif in range(4,1,-1):
         title_str_new = "".join(["(" + title_str[i:i+dif] + ").*?|" for i in range(len(title_str)-1)])
         pattern_n = re.compile(title_str_new)
         tmp_str = pattern_n.findall(area.area_str)
@@ -171,7 +173,7 @@ def getTitleTimeStr(stime):
         submit_time = p.findall(stime)
         if len(submit_time):
             year = datetime.datetime.now().year
-            submit_time = year+"-"+"-".join(submit_time[0])
+            submit_time = str(year)+"-"+"-".join(submit_time[0])
         else:
             submit_time=""
     else:

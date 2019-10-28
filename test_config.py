@@ -77,7 +77,7 @@ parameter = {
                           "href" : "./a/@href", #标题地址
                           "domainName_url" : "", #拼接域名
                           "li_area": "",  #区域
-                          "page_name" : {"type":1,"style":"http://www.zybtp.com/fwzb/index_count.jhtml","replaceKey":"count","startNum":1}, #页数  index_pageNo.jhtml
+                          "page_name" : {"type":1,"style":"http://www.zybtp.com/ggxx/index_count.jhtml","replaceKey":"count","startNum":1}, #页数  index_pageNo.jhtml
                           "number_xpath" : '//div[@class="Top8 TxtCenter"]/div[2]/a[4]/@href', #页数区域
                           "search" : "",
                           
@@ -163,7 +163,6 @@ parameter = {
                           "number_xpath" : "//*[@id='c-main-2']/div/div[2]/div[4]/a/text()", #页数区域
                           "search" : "",                          
     },
-<<<<<<< .mine
 
 
     #3天津市政府采购平台 post
@@ -265,7 +264,7 @@ parameter = {
                                           "href": "./td[1]/a/@href",  # 标题地址
                                           "domainName_url": "http://www.zgazxxw.com",  # 拼接域名
                                           "li_area": "",  # 区域
-                                           "page_name" : {"type":1,"style":"http://www.zgazxxw.com/sh-000012-count.html","replaceKey":"count","startNum":1},
+                                           "page_name" : {"type":1,"style":"http://www.zgazxxw.com/sh-000012-count.html","replaceKey":"count","startNum":0},
                                           "number_xpath": '/html/body/div[5]/div[1]/div[5]/div[1]/a[last()]/@href', # 页数区域
                                           "search": "",
                                         },
@@ -306,14 +305,14 @@ parameter = {
                                         },
 
 #12 海南省公共资源交易网
-    "hainanshenggonggongziyuanjiaoyiwang" :{"li": '/html/body/div[5]/div[1]/div[4]/div[2]/table/tbody/tr',
-                                         "li_time": "./td[5]/text()",  # 时间
-                                          "title": "./td[1]/a/@title",  # 标题
-                                          "href": "./td[1]/a/@href",  # 标题地址
+    "hainanshenggonggongziyuanjiaoyiwang" :{"li": '/html/body/div[4]/div[2]/div[2]/div',
+                                         "li_time": "./p/span[2]/text()",  # 时间
+                                          "title": "./p/a/@title",  # 标题
+                                          "href": "./a/@href",  # 标题地址
                                           "domainName_url": "http://www.zgazxxw.com",  # 拼接域名
                                           "li_area": "",  # 区域
                                            "page_name" : {"type":1,"style":"http://www.zgazxxw.com/hi-001012l772-count.html","replaceKey":"count","startNum":0},
-                                          "number_xpath": '/html/body/div[5]/div[1]/div[5]/div[1]/a[last()]/@href', # 页数区域
+                                          "number_xpath": '/html/body/div[4]/div[2]/div[2]/div[30]/a[last()]/@href', # 页数区域
                                           "search": "",
                                         },
 
@@ -392,79 +391,5 @@ parameter = {
                          "number_xpath": '/html/body/div[3]/div[2]/div[2]/div/div[3]/table/tbody/tr/td/text()[15]',  # 页数区域
                          "search": "",
                          },
-||||||| .r432
-=======
-    #福建省公共资源交易中心
-    "fujianshengonggongziyuanjiaoyi":{
-        "li" : "//*[@id='itemContainer']/tbody/tr", #标题的上一级
-        "li_time" : "./td[@class='feed-time']/span//text()" , #时间
-        "title" : "./td[@class='title']/a/@title", #标题
-        "href" : "./td[@class='title']/a/@href", #标题地址
-        "domainName_url" : "", #拼接域名
-        "li_area": "./td[2]/span/text()",  #区域        
-        },
-    
-    #千里马
-    "qinglima":{
-        #登陆
-        "login":{"button":"//*[@id='deng']",
-                 "isHasVerify_code":False,
-                 "params":[{"type":"id","name":"abc","value":"18602298203"},
-                           {"type":"xpath","name":"//*[@id='kuang']/fieldset/input[2]","value":"123456789"}
-                           ],
-                 "login_status":{"class":"isLogin_byXpath","params":"//*[@id='light']"}
-                 },
-        #start页  进入到显示 标题列表的页
-        "startPage":{"type":"onclick",
-                     "onclick":[{"button":"",
-                                 "params":[],
-                                 "url":"http://www.qianlima.com/zb/area_26_0_1/"
-                                 },                                
-                                ],
-        },
-        
-        "li" : "/html/body/table[8]/tbody/tr/td[1]/table[4]/tbody/tr[2]/td/table/tbody/tr", #标题的上一级
-        "li_time" : "./td[3]/text()" , #时间
-        "title" : "./td[2]/a/@title", #标题
-        "href" : "./td[2]/a/@href", #标题地址
-        "domainName_url" : "", #拼接域名
-        "li_area": "",  #区域
-        "isloopBytime": True, #是否控制时间循环
-        "page_name" : {"type":1,"style":"http://www.qianlima.com/zb/area_26_0_count/","replaceKey":"count","startNum":1},
-        "number_xpath" : "/html/body/table[8]/tbody/tr/td[1]/table[5]/tbody/tr/td/font/text()", #页数区域
-        "search" : "",              
-    }, 
-    ##吉林招标网   非会员只能看免费信息type=0（只有招标）time=7  一周(30 月...)  (会员：招标信息（type=1），中标信息（type=4))
-    ##登陆异常验证： 滑动条形框
-    #"jilinzhaobiao":{
-        ##登陆
-        #"login":{"button":"//*[@id='login_login_btn']",
-                 #"isHasVerify_code":False,
-                 #"params":[{"type":"id","name":"txtusername","value":"13889891148"},
-                           #{"type":"id","name":"txtpassword","value":"jbf123"}
-                           #],
-                 #"login_status":{"class":"isLogin_byXpath","params":"//*[@id='f_meblg']/ul/li[1]"}
-                 #},
-        ##start页  进入到显示 标题列表的页
-        #"startPage":{"type":"onclick",
-                     #"onclick":[{"button":"",
-                                 #"params":[],
-                                 #"url":"https://search.bidcenter.com.cn/search?diqu=7&time=7&type=0&page=1"
-                                 #},                                
-                                #],
-        #},
-        
-        #"li" : "//table/tbody/tr", #标题的上一级
-        #"li_time" : "./td[4]/text()" , #时间
-        #"title" : "./td[1]/a/@title", #标题
-        #"href" : "./td[1]/a/@href", #标题地址
-        #"domainName_url" : "https://jl.bidcenter.com.cn", #拼接域名
-        #"li_area": "",  #区域
-        #"isloopBytime": True, #是否控制时间循环
-        #"page_name" : {"type":0,"style":r'page=\d+',"startNum":1},
-        #"number_xpath" : "", #页数区域
-        #"search" : "",              
-    #},
->>>>>>> .r433
 }
 

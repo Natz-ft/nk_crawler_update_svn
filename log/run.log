@@ -586,3 +586,53 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
   (Session info: chrome=76.0.3809.87)
 
 
+2019-10-28 09:41:22,420 - webcrawer service - ERROR - 运行失败: zhongguoyouzheng
+2019-10-28 09:41:22,467 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
+    number = utils.retotalPage(ori_number)
+  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 113, in retotalPage
+    number = max(re.findall(r'\d+', ''.join(ori_number)))
+ValueError: max() arg is an empty sequence
+
+2019-10-28 09:42:06,217 - webcrawer service - INFO - 运行成功: zhongguoyouzheng, 一共：0条
+2019-10-28 09:42:47,739 - webcrawer service - INFO - 运行成功: zhongguoyouzheng, 一共：0条
+2019-10-28 10:01:43,187 - webcrawer service - ERROR - 运行失败: shanghaigonggongziyuanjiaoyiwang
+2019-10-28 10:01:43,713 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 141, in Pipeline
+    result = self.bank(result,text["type"])
+KeyError: 'type'
+
+2019-10-28 10:29:02,007 - webcrawer service - ERROR - 运行失败: shanghaigonggongziyuanjiaoyiwang
+2019-10-28 10:29:02,007 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 141, in Pipeline
+    result = self.bank(result,text["type"])
+KeyError: 'type'
+
+2019-10-28 10:31:34,757 - webcrawer service - ERROR - 运行失败: shanghaigonggongziyuanjiaoyiwang
+2019-10-28 10:31:34,757 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 141, in Pipeline
+    result = self.bank(result,text["type"])
+KeyError: 'type'
+
+2019-10-28 11:15:07,209 - webcrawer service - ERROR - 运行失败: shanghaigonggongziyuanjiaoyiwang
+2019-10-28 11:15:07,211 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 141, in Pipeline
+    result = self.bank(result,text["type"])
+KeyError: 'type'
+
+2019-10-28 11:24:23,849 - webcrawer service - INFO - 运行成功: shanghaigonggongziyuanjiaoyiwang, 一共：1条
+2019-10-28 11:26:47,716 - webcrawer service - INFO - 运行成功: hainanshenggonggongziyuanjiaoyiwang, 一共：0条
+2019-10-28 11:35:13,482 - webcrawer service - ERROR - 运行失败: hainanshenggonggongziyuanjiaoyiwang
+2019-10-28 11:35:13,483 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
+    number = utils.retotalPage(ori_number)
+  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 115, in retotalPage
+    number = max(re.findall(r'\d+', ''.join(ori_number)))
+ValueError: max() arg is an empty sequence
+
+2019-10-28 11:45:33,778 - webcrawer service - INFO - 运行成功: hainanshenggonggongziyuanjiaoyiwang, 一共：1条
+2019-10-28 16:04:13,381 - webcrawer service - INFO - 运行成功: chengdushigonggongziyuanjiaoyizhongxin, 一共：0条

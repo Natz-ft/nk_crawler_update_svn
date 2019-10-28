@@ -37,3 +37,15 @@ start 不输入则默认为 0，end 不输入默认为长度。
 
 get_title_list 
 先进行时间判断，时间属于昨天，就对标题进行过滤，标题符合，采集标题/链接/地区存进 存进字典，输出采集信息，返回true
+
+````
+getAreaFromStr(item_title)
+range(start,stop,step)
+返回[start，start+step，... stop-1]
+````
+
+````
+re.compile
+tmp_str = pattern_n.findall(area.area_str)
+返回的是一个匹配对象，它单独使用就没有任何意义，需要和findall(), search(), match(）搭配使用。
+````
