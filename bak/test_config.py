@@ -164,6 +164,29 @@ parameter = {
                           "search" : "",                          
     },
 
+    #10中钢国际招标公司
+    "zhonggangzhaobiaoyouxianzerengongsi" : {"li" : '//*[@id="list"]/tr', #标题的上一级
+                          "li_time" : "./td[4]/text()" , #时间
+                          "title" : "./td[2]/a/@title", #标题
+                          "href" : "./td[2]/a/@href", #标题地址
+                          "domainName_url" : "http://tendering.sinosteel.com", #拼接域名
+                          "li_area": "",  #区域
+                          "page_name" : {
+                                       "type":3,
+                                       "style":"onclick",
+                                       "startNum":1,
+                                       "onclick":[{"replaceKey":"count","button":'/html/body/div[2]/div[2]/div[2]/div/div[5]/div[2]/div/ul/li[1]/a/@data-page-index=count',"params":[]}]
+                                       },
+                          "number_xpath" : '/html/body/div[2]/div[2]/div[2]/div/div[5]/div[2]/div/div[2]/text()', #页数区域
+                          "search" : "",
+
+                          },
+
+
+
+
+
+
 
     #3天津市政府采购平台 post
     "tianjinshizhengfucaigoupingtai" : {"li" : '//*[@id="reflshPage"]/ul/li',
@@ -264,7 +287,7 @@ parameter = {
                                           "href": "./td[1]/a/@href",  # 标题地址
                                           "domainName_url": "http://www.zgazxxw.com",  # 拼接域名
                                           "li_area": "",  # 区域
-                                           "page_name" : {"type":1,"style":"http://www.zgazxxw.com/sh-000012-count.html","replaceKey":"count","startNum":1},
+                                           "page_name" : {"type":1,"style":"http://www.zgazxxw.com/sh-000012-count.html","replaceKey":"count","startNum":0},
                                           "number_xpath": '/html/body/div[5]/div[1]/div[5]/div[1]/a[last()]/@href', # 页数区域
                                           "search": "",
                                         },
@@ -280,7 +303,7 @@ parameter = {
                                           "search": "",
             },
     #9 江苏政府采购网
-    "jiangsuzhengfucaigouwang" :{"li" : '//*[@id="newsList"]/ul/li' ,
+    "jiangsuzhengfucaigouwang" :{"li" : '//*[@id="newsList"]/ul/li',
                                          "li_time": "./text()[2]",  # 时间
                                           "title": "./a/text()",  # 标题
                                           "href": "./a/@href",  # 标题地址
@@ -289,7 +312,25 @@ parameter = {
                                            "page_name" : {"type":1,"style":"http://www.ccgp-jiangsu.gov.cn/ggxx/gkzbgg/index_count.html","replaceKey":"count","startNum":1},
                                           "number_xpath": '//*[@id="newsPage"]/div/a[2]/@href', # 页数区域
                                           "search": "",
-            },
+                                 },
+
+    #10厦门市政府采购网
+    "xiamenshigongongziyuanjiaoyiwang" : {"li" : '//*[@id="pubdays"]/li[position()>1]', #标题的上一级
+                          "li_time" : "./span[2]/text()" , #时间
+                          "title" : "./a/@title", #标题
+                          "href" : "./a/@title", #标题地址
+                          "domainName_url" : "http://www.xmzyjy.cn", #拼接域名
+                          "li_area": "",  #区域
+                          "page_name" : {
+                                       "type":3,
+                                       "style":"onclick",
+                                       "startNum":1,
+                                       "onclick":[{"replaceKey":"count","button":'//*[@id="pageList"]/li/a[text()=count]',"params":[]}]
+                                       },
+                          "number_xpath" : '//*[@id="pageList"]/li[14]/@jp-data', #页数区域
+                          "search" : "",
+
+                          },
 
 #11 广西招标投标公共服务平台
     "guangxizhaobiaotoubiaogonggongfuwupingtai" :{"li": '/html/body/table/tbody/tr[position()>1]',
@@ -305,14 +346,14 @@ parameter = {
                                         },
 
 #12 海南省公共资源交易网
-    "hainanshenggonggongziyuanjiaoyiwang" :{"li": '/html/body/div[5]/div[1]/div[4]/div[2]/table/tbody/tr',
-                                         "li_time": "./td[5]/text()",  # 时间
-                                          "title": "./td[1]/a/@title",  # 标题
-                                          "href": "./td[1]/a/@href",  # 标题地址
+    "hainanshenggonggongziyuanjiaoyiwang" :{"li": '/html/body/div[4]/div[2]/div[2]/div',
+                                         "li_time": "./p/span[2]/text()",  # 时间
+                                          "title": "./p/a/@title",  # 标题
+                                          "href": "./a/@href",  # 标题地址
                                           "domainName_url": "http://www.zgazxxw.com",  # 拼接域名
                                           "li_area": "",  # 区域
                                            "page_name" : {"type":1,"style":"http://www.zgazxxw.com/hi-001012l772-count.html","replaceKey":"count","startNum":0},
-                                          "number_xpath": '/html/body/div[5]/div[1]/div[5]/div[1]/a[last()]/@href', # 页数区域
+                                          "number_xpath": '/html/body/div[4]/div[2]/div[2]/div[30]/a[last()]/@href', # 页数区域
                                           "search": "",
                                         },
 

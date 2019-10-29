@@ -8,6 +8,7 @@ import requests
 import time
 import random
 import area
+import datetime
 
 headers = {"User-Agent": UserAgent().chrome}
 
@@ -117,14 +118,21 @@ def retotalPage(ori_number):
 
 #获取；匹配地址
 def getAreaFromStr(title):
+    #提取汉字
+    pat=re.compile(r'[\u4e00-\u9fa5]+')
+    title="".join(pat.findall(title)) 
+       
+    #title = re.sub(r"\(.*?\)|\（.*?\）", "", title)
+    #title = re.sub('[\(\).*?\（\）]',"",title)
     if "省" in title:
-        pattern_t = re.compile(r'([\u4e00-\u9fa5].*?)省')  
+        pattern_t = re.compile(r'([\u4e00-\u9fa5].*?省)')  
     elif "市" in title:
-        pattern_t = re.compile(r'([\u4e00-\u9fa5].*?)市') 
+        pattern_t = re.compile(r'([\u4e00-\u9fa5].*?市)') 
     elif "县" in title:
-        pattern_t = re.compile(r'([\u4e00-\u9fa5].*?)县')
+        pattern_t = re.compile(r'([\u4e00-\u9fa5].*?县)')
     else:
-        pattern_t = re.compile(r'([\u4e00-\u9fa5]{1,22})')    
+        pattern_t = re.compile(r'([\u4e00-\u9fa5]{1,22})')
+    
     title_str = "".join(pattern_t.findall(title))
     if len(title_str)<4:
         return title_str
@@ -135,7 +143,10 @@ def getAreaFromStr(title):
         result = ["".join(tmp) for tmp in tmp_str if len("".join(tmp))!=0]
         if len(result)>0:
             break
-    result = sorted(result,key=lambda k:len(k),reverse=True)[0]
+    if len(result)!=0:
+        result = sorted(result,key=lambda k:len(k),reverse=True)[0]
+    else:
+        result = ""
     return result
 
 
@@ -188,5 +199,6 @@ if __name__ == '__main__':
     #a = search_area(str1)
     #print(a)
     tmp = "中共黑龙江省直属机关工作委员会_办公设备_SC[2019]5212网上竞价公告"
+    tmp = '地点、方式及招标文件售价：(1)凡有意参加投标者，请于2019年10月24日起至2019年10月31日，每日上午09:00时到12:00时，下午14：30时到17:00时(北京时间，节假日除外)在招标代理机构&nbsp;华新项目管理集团有限公司(地址：长沙市天心区保利国际地点：6.1投标截止：2019年11月20日9:00时止，超过截止时间的投标将被拒绝（☆）。6.2开标时间：2019年11月20日9:00时。6.3开标地点（递交投标文件地点）：华新项目管理集团有限'
     result = getAreaFromStr(tmp)
     print(result)

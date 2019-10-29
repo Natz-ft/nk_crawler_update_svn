@@ -49,3 +49,7 @@ re.compile
 tmp_str = pattern_n.findall(area.area_str)
 返回的是一个匹配对象，它单独使用就没有任何意义，需要和findall(), search(), match(）搭配使用。
 ````
+````
+t4 = copy.deepcopy(d4['k1'])
+深拷贝：不需要改变引用字典的内部结构的情况，可以使用深拷贝
+````

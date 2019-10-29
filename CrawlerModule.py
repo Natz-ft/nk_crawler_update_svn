@@ -221,7 +221,7 @@ class Crawler_URL:
                     time.sleep(random.randint(1, 3))
                 return True
             except Exception as e :
-                print('error: ', e)
+                print('ContentAnalysis error: ', e)
                 return False
         else:
             return False

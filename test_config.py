@@ -164,6 +164,47 @@ parameter = {
                           "search" : "",                          
     },
 
+    #1中钢国际招标公司
+    "zhonggangzhaobiaoyouxianzerengongsi" : {"li" : '//*[@id="list"]/tr', #标题的上一级
+                          "li_time" : "./td[4]/text()" , #时间
+                          "title" : "./td[2]/a/@title", #标题
+                          "href" : "./td[2]/a/@href", #标题地址
+                          "domainName_url" : "http://tendering.sinosteel.com", #拼接域名
+                          "li_area": "",  #区域
+                          "page_name" : {
+                                       "type":3,
+                                       "style":"onclick",
+                                       "startNum":1,
+                                       "onclick":[{"replaceKey":"count","button":'/html/body/div[2]/div[2]/div[2]/div/div[5]/div[2]/div/ul/li/a[text()=count]',"params":[]}]
+                                       },
+                          "number_xpath" : '/html/body/div[2]/div[2]/div[2]/div/div[5]/div[2]/div/div[2]/text()', #页数区域
+                          "search" : "",
+
+                          },
+
+    #2太平洋保险
+    "taipingyangbaoxian" : {"li" : '/html/body/div[2]/div[1]/div[2]/div[2]/ul/li', #标题的上一级
+                          "li_time" : "./a/em/text()" , #时间
+                          "title" : "./a/@title", #标题
+                          "href" : "./a/@href", #标题地址
+                          "domainName_url" : "http://purchase.cpic.com.cn", #拼接域名
+                          "li_area": "",  #区域
+                          "page_name" : {
+                                       "type":3,
+                                       "style":"onclick",
+                                       "startNum":1,
+                                       "onclick":[{"replaceKey":"count","button":'/html/body/div[2]/div[1]/div[2]/ul/div/div/div[2]/a[text()=count]',"params":[]}]
+                                       },
+                          "number_xpath" : '/html/body/div[2]/div[1]/div[2]/ul/div/div/div[1]/em[2]/text()', #页数区域
+                          "search" : "",
+
+                          },
+
+
+
+
+
+
 
     #3天津市政府采购平台 post
     "tianjinshizhengfucaigoupingtai" : {"li" : '//*[@id="reflshPage"]/ul/li',
@@ -209,14 +250,14 @@ parameter = {
 
                                      },
 
-    # 4内蒙古自治区公共资源交易平台  todo
+    # 4内蒙古自治区公共资源交易平台
     "neimengguzizhiqugonggongziyuanjiaoyiwang": {"li": '/html/body/div[2]/div[2]/div/div[4]/table/tbody//tr',
                                        "li_time": "./td[4]/text()",  # 时间
                                        "title": "./td[3]/a/@title",  # 标题
                                        "href": "./td[3]/a/@href",  # 标题地址
                                        "domainName_url": "http://ggzyjy.nmg.gov.cn",  # 拼接域名
                                        "li_area": "",  # 区域
-                                       "page_name" : {"type":1,"style":"http://ggzyjy.nmg.gov.cn/jyxx/jsgcZbgg?currentPage=count","startNum":1}, #页数
+                                       "page_name" : {"type":1,"style":"http://ggzyjy.nmg.gov.cn/jyxx/jsgcZbgg?currentPage=count","replaceKey":"count","startNum":1}, #页数
                                        "number_xpath": '/html/body/div[2]/div[2]/div/div[5]/div/a[7]/text()', # 页数区域
                                        "search": "",
                                      },
@@ -280,7 +321,7 @@ parameter = {
                                           "search": "",
             },
     #9 江苏政府采购网
-    "jiangsuzhengfucaigouwang" :{"li" : '//*[@id="newsList"]/ul/li' ,
+    "jiangsuzhengfucaigouwang" :{"li" : '//*[@id="newsList"]/ul/li',
                                          "li_time": "./text()[2]",  # 时间
                                           "title": "./a/text()",  # 标题
                                           "href": "./a/@href",  # 标题地址
@@ -289,7 +330,25 @@ parameter = {
                                            "page_name" : {"type":1,"style":"http://www.ccgp-jiangsu.gov.cn/ggxx/gkzbgg/index_count.html","replaceKey":"count","startNum":1},
                                           "number_xpath": '//*[@id="newsPage"]/div/a[2]/@href', # 页数区域
                                           "search": "",
-            },
+                                 },
+
+    #10厦门市政府采购网
+    "xiamenshigongongziyuanjiaoyiwang" : {"li" : '//*[@id="pubdays"]/li[position()>1]', #标题的上一级
+                          "li_time" : "./span[2]/text()" , #时间
+                          "title" : "./a/@title", #标题
+                          "href" : "./a/@href", #标题地址
+                          "domainName_url" : "http://www.xmzyjy.cn", #拼接域名
+                          "li_area": "",  #区域
+                          "page_name" : {
+                                       "type":3,
+                                       "style":"onclick",
+                                       "startNum":1,
+                                       "onclick":[{"replaceKey":"count","button":'//*[@id="pageList"]/li/a[text()=count]',"params":[]}]
+                                       },
+                          "number_xpath" : '//*[@id="pageList"]/li[14]/@jp-data', #页数区域
+                          "search" : "",
+
+                          },
 
 #11 广西招标投标公共服务平台
     "guangxizhaobiaotoubiaogonggongfuwupingtai" :{"li": '/html/body/table/tbody/tr[position()>1]',
@@ -346,6 +405,25 @@ parameter = {
                                               "number_xpath": '/html/body/div[3]/div/div/div[2]/div[2]/ul/li[8]/a/text()', # 页数区域
                                               "search": "",
                                             },
+
+
+#16 云南省政府采购网
+    "yunnanshengzhengfucaigouwang": {"li": '//*[@id="bulletinlistid"]/tbody/tr',  # 标题的上一级
+                                  "li_time": "./span[3]/text()",  # 时间
+                                  "title": "./td[1]/@title",  # 标题
+                                  "href": "",  # 标题地址 //todo 16-云南招标-找不到链接
+                                  "domainName_url": "http://www.yngp.com",  # 拼接域名
+                                  "li_area": "./td[3]/@title",  # 区域
+                                   "page_name" : {
+                                       "type":3,
+                                       "style":"onclick",
+                                       "startNum":1,
+                                       "onclick":[{"replaceKey":"count","button":'//*[@id="bulletinlistid-footer"]/div/div[1]/ul/li/a[text()=count]',"params":[]}]
+                                       },
+                                  "number_xpath": '//*[@id="bulletinlistid-footer"]/div/div[1]/ul/li/text()',  # 页数区域
+                                  "search": "",
+
+                                  },
 
 
 
