@@ -94,7 +94,12 @@ class Crawler_URL:
                     html_str = self.driver.page_source
                     return html_str
                 if len(params)==0:
-                    self.driver.find_element_by_xpath(url_param["button"]).click()
+                    buttons = url_param["button"]
+                    if len(buttons)>1:
+                        for button in buttons:
+                            self.driver.find_element_by_xpath(button).click()
+                    else:
+                        self.driver.find_element_by_xpath(button).click()
                 else:
                     for tmp_param in params:
                         if tmp_param["type"]=="id":

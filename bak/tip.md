@@ -53,3 +53,13 @@ tmp_str = pattern_n.findall(area.area_str)
 t4 = copy.deepcopy(d4['k1'])
 深拷贝：不需要改变引用字典的内部结构的情况，可以使用深拷贝
 ````
+````
+ 在try_pipline文件的Focus类，pipline方法
+1 testClass = globals()[text["classname"]]()
+    globals()方法返回字典
+2 globals()[text["classname"]
+    从字典中取出Test
+3 globals()[text["classname"]]()==Test()
+    相当于实例化，Test类的构造函数不需要参数
+ 
+````
