@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35d1f649-2699-4e3c-a6bb-2ba8922104f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bak/CrawlerModule.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CrawlerModule.py" beforeDir="false" afterPath="$PROJECT_DIR$/CrawlerModule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bak/tip.md" beforeDir="false" afterPath="$PROJECT_DIR$/bak/tip.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bak/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/bak/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bak/test_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/bak/test_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/chengdushigonggongziyuanjiaoyizhongxin.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/chengdushigonggongziyuanjiaoyizhongxin.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/guangxizhaobiaotoubiaogonggongfuwupingtai.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/guangxizhaobiaotoubiaogonggongfuwupingtai.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/jiangxiguozhengzhaobiaoyouxiangongsi.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/jiangxiguozhengzhaobiaoyouxiangongsi.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/xiamenshigongongziyuanjiaoyiwang.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/xiamenshigongongziyuanjiaoyiwang.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/zhongguoyouzheng.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/zhongguoyouzheng.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/jiangsuzhengfucaigouwang.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/jiangsuzhengfucaigouwang.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/shandongshengzhengfucaigouxinxigongkaipingtai.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/shandongshengzhengfucaigouxinxigongkaipingtai.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/zhejiangshenggonggongziyuanjiaoyiwang.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/zhejiangshenggonggongziyuanjiaoyiwang.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/run.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/run.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_config.py" afterDir="false" />
     </list>
@@ -21,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/new_Crawler$try_pipeline_test.coverage" NAME="try_pipeline_test Coverage Results" MODIFIED="1572427688902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/new_Crawler$try_pipeline_test.coverage" NAME="try_pipeline_test Coverage Results" MODIFIED="1572508009373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -39,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="33" column="86" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="88" />
+            <state relative-caret-position="124">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -51,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1463">
-              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+            <state relative-caret-position="171">
+              <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -60,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="347" column="76" lean-forward="true" selection-start-line="347" selection-start-column="44" selection-end-line="347" selection-end-column="79" />
+            <state relative-caret-position="-6049">
+              <caret line="186" column="45" selection-start-line="186" selection-start-column="45" selection-end-line="186" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -69,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/try_pipeline_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
+            <state relative-caret-position="295">
               <caret line="139" selection-start-line="139" selection-end-line="139" />
               <folding>
                 <element signature="e#28#37#0" expanded="true" />
@@ -83,29 +84,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log/run.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-379">
+            <state relative-caret-position="-579">
               <caret line="1063" lean-forward="true" selection-start-line="1063" selection-end-line="1063" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CrawlerModule.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bak/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="97" column="38" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
-              <folding>
-                <element signature="e#24#33#0" expanded="true" />
-                <element signature="e#396#1241#0" />
-                <element signature="e#1319#2360#0" />
-                <element signature="e#5240#7628#0" />
-                <element signature="e#7991#8747#0" />
-                <element signature="e#8837#9925#0" />
-                <element signature="e#10001#10144#0" />
-                <element signature="e#10210#10351#0" />
-                <element signature="e#10399#10443#0" />
-                <element signature="e#10483#10501#0" />
-              </folding>
+            <state relative-caret-position="291">
+              <caret line="102" lean-forward="true" selection-start-line="94" selection-end-line="108" selection-end-column="192" />
             </state>
           </provider>
         </entry>
@@ -135,16 +124,16 @@
         <option value="$PROJECT_DIR$/try_pipeline_test.py" />
         <option value="$PROJECT_DIR$/bak/tip.md" />
         <option value="$PROJECT_DIR$/test_config.py" />
-        <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/CrawlerModule.py" />
+        <option value="$PROJECT_DIR$/config.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="169" />
-    <option name="y" value="39" />
-    <option name="width" value="1057" />
-    <option name="height" value="548" />
+    <option name="x" value="-44" />
+    <option name="y" value="28" />
+    <option name="width" value="697" />
+    <option name="height" value="708" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -162,6 +151,11 @@
             <path>
               <item name="new_Crawler" type="b2602c69:ProjectViewProjectNode" />
               <item name="new_Crawler" type="462c0819:PsiDirectoryNode" />
+              <item name="bak" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new_Crawler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new_Crawler" type="462c0819:PsiDirectoryNode" />
               <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -173,7 +167,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Web_crawler_w/new_Crawler" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Integrate_xxf" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -260,12 +254,12 @@
       <workItem from="1572225748000" duration="20738000" />
       <workItem from="1572325351012" duration="15339000" />
       <workItem from="1572398109969" duration="6024000" />
-      <workItem from="1572405017583" duration="13753000" />
+      <workItem from="1572405017583" duration="33251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97607000" />
+    <option name="totallyTimeSpent" value="117105000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -279,13 +273,36 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2753404" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28744328" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.22950819" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" visible="true" weight="0.30491802" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.30491802" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.3295082" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.47868854" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2753404" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22950819" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.30491802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
@@ -300,7 +317,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
       <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -324,11 +341,6 @@
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/CrawlerModule.py</url>
-          <line>105</line>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test.py</url>
           <line>33</line>
           <option name="timeStamp" value="94" />
@@ -345,13 +357,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/CrawlerModule.py</url>
-          <line>201</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/CrawlerModule.py</url>
-          <line>203</line>
-          <option name="timeStamp" value="100" />
+          <line>92</line>
+          <option name="timeStamp" value="102" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -386,42 +393,32 @@ submit_time = str(year)+&quot;-&quot;+&quot;-&quot;.join(submit_time[0])</expres
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>html_str = model.parse_url(&quot;&quot;,url_type=url_info[&quot;type&quot;],url_params=url_info)</expression-string>
+        <expression-string>self.driver.find_element_by_xpath(button).click()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>url_type=url_info[&quot;type&quot;]</expression-string>
+        <expression-string>type(buttons) is not str</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>url_params=url_info</expression-string>
+        <expression-string>//*[@id=&quot;list&quot;]/tr</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>model.parse_url(&quot;&quot;,url_type=url_info[&quot;type&quot;],url_params=url_info)</expression-string>
+        <expression-string>model.get_title_list(html_str, parame[&quot;li&quot;],parame[&quot;li_time&quot;], parame[&quot;title&quot;], parame[&quot;href&quot;], parame[&quot;domainName_url&quot;], parame[&quot;li_area&quot;],isloopBytime=isloopBytime)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>html_str</expression-string>
+        <expression-string>bool = model.get_title_list(html_str, parame[&quot;li&quot;],parame[&quot;li_time&quot;], parame[&quot;title&quot;], parame[&quot;href&quot;], parame[&quot;domainName_url&quot;], parame[&quot;li_area&quot;],isloopBytime=isloopBytime)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>model.number_page(parame[&quot;number_xpath&quot;], html_str)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>parame[&quot;number_xpath&quot;]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ori_number = model.number_page(parame[&quot;number_xpath&quot;], html_str)</expression-string>
+        <expression-string>len(buttons)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -431,7 +428,12 @@ submit_time = str(year)+&quot;-&quot;+&quot;-&quot;.join(submit_time[0])</expres
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>model.page_url(original_url, tmp_parame, i)</expression-string>
+        <expression-string>utils.getAreaFromStr(item_title)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>model.parse_url(&quot;&quot;,url_type=url_info[&quot;type&quot;],url_params=url_info)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -439,13 +441,6 @@ submit_time = str(year)+&quot;-&quot;+&quot;-&quot;.join(submit_time[0])</expres
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Anaconda3/Lib/codecs.py" />
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="319" selection-start-line="319" selection-end-line="319" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/jiangsuzhengfucaigouwang.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -510,13 +505,6 @@ submit_time = str(year)+&quot;-&quot;+&quot;-&quot;.join(submit_time[0])</expres
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bak/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="102" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="108" selection-end-column="192" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/easydict/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -555,15 +543,74 @@ submit_time = str(year)+&quot;-&quot;+&quot;-&quot;.join(submit_time[0])</expres
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/chrome/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2140">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="975" column="42" selection-start-line="975" selection-start-column="42" selection-end-line="975" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/remote/command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/try_pipeline_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+          <folding>
+            <element signature="e#28#37#0" expanded="true" />
+            <element signature="e#3495#4929#0" />
+            <element signature="e#6289#6604#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6049">
+          <caret line="186" column="45" selection-start-line="186" selection-start-column="45" selection-end-line="186" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/remote/webelement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CrawlerModule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="97" column="38" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
+        <state relative-caret-position="105">
+          <caret line="96" column="82" selection-start-line="96" selection-start-column="82" selection-end-line="96" selection-end-column="82" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
-            <element signature="e#396#1241#0" />
             <element signature="e#1319#2360#0" />
-            <element signature="e#5240#7628#0" />
             <element signature="e#7991#8747#0" />
             <element signature="e#8837#9925#0" />
             <element signature="e#10001#10144#0" />
@@ -574,43 +621,17 @@ submit_time = str(year)+&quot;-&quot;+&quot;-&quot;.join(submit_time[0])</expres
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1463">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="347" column="76" lean-forward="true" selection-start-line="347" selection-start-column="44" selection-end-line="347" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/try_pipeline_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-          <folding>
-            <element signature="e#28#37#0" expanded="true" />
-            <element signature="e#3495#4929#0" />
-            <element signature="e#6289#6604#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log/run.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-379">
+        <state relative-caret-position="-579">
           <caret line="1063" lean-forward="true" selection-start-line="1063" selection-end-line="1063" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/bak/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="33" column="86" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="88" />
+        <state relative-caret-position="291">
+          <caret line="102" lean-forward="true" selection-start-line="94" selection-end-line="108" selection-end-column="192" />
         </state>
       </provider>
     </entry>
