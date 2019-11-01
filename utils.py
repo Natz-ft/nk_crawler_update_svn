@@ -108,7 +108,11 @@ def rehref(href_title):
 def retotalPage(ori_number):
     # 分页按钮不固定的 获取1，2，3，4，....列表  取最大值
     if len(ori_number)>1:
-        number = max(list(filter(lambda x: x.isdigit(), ori_number)))
+        num_list = list(filter(lambda x: x.isdigit(), ori_number))
+        if len(num_list)>0:
+            number = max(num_list)
+        else:
+            number = ""
     else:
         # 
         number = ''.join(re.findall(r'\d+页', ''.join(ori_number))).replace("页","")
@@ -175,24 +179,28 @@ def  isLogin_byXpath(driver,xpathStr):
         return True
     
 # 将标题时间转化为 xxxx-xx-xx 字符串格式
-def getTitleTimeStr(stime):   
+def getTitleTimeStr(stime):
+    # xxxx年xx月xx日
     p = re.compile('(\d{4})[年，-](\d{1,2})[月,-](\d{1,2})')
     submit_time = p.findall(stime)
-    if len(submit_time)==0:
-        #月日
-        p = re.compile('(\d{1,2})[月,-](\d{1,2})')
-        submit_time = p.findall(stime)
-        if len(submit_time):
-            year = datetime.datetime.now().year
-            submit_time = str(year)+"-"+"-".join(submit_time[0])
-        else:
-            submit_time=""
-    else:
-        #年月日
+    if len(submit_time):
         submit_time = "-".join(submit_time[0])
-    return submit_time
-
-
+        return submit_time
+    # xx月xx日
+    p = re.compile('(\d{1,2})[月,-](\d{1,2})')    
+    submit_time = p.findall(stime)
+    if len(submit_time):
+        year = datetime.datetime.now().year
+        submit_time = str(year)+"-"+"-".join(submit_time[0])
+        return submit_time
+    # xxxx/xx/xx
+    p = re.compile('(\d{4})[/](\d{1,2})[/](\d{1,2})')
+    submit_time = p.findall(stime)
+    if len(submit_time):
+        submit_time = "-".join(submit_time[0])
+        return submit_time        
+        
+    return ""
 
 if __name__ == '__main__':
     #str1 = '地点开标时间：2019-10-0909:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开标地点：北京经济技术开发区地'

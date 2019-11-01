@@ -163,7 +163,7 @@ parameter = {
                           "number_xpath" : "//*[@id='c-main-2']/div/div[2]/div[4]/a/text()", #页数区域
                           "search" : "",                          
     },
-
+#zl excel colomn3
     #1中钢国际招标公司
     "zhonggangzhaobiaoyouxianzerengongsi" : {"li" : '//*[@id="list"]/tr', #标题的上一级
                           "li_time" : "./td[4]/text()" , #时间

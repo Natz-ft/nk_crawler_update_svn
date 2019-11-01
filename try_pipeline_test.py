@@ -9,7 +9,9 @@ import argparse
 import traceback
 from test import Test
 from test_login import Test_login
+from test_loop3 import Test_loop3
 import utils
+
 
 
 def parse_args():
