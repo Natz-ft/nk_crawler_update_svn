@@ -320,7 +320,7 @@ parameter = {
                                                        "search": "",
                                                        },
 
-    # 5-2山东省政府采购信息公开平台
+ # 5-2山东省政府采购信息公开平台
     "shandongshengzhengfucaigouxinxigongkaipingtai2": {"li": '//*[@class="Font9"]',
                                                       "li_time": "./text()[2]",  # 时间
                                                       "title": "./a/@title",  # 标题
@@ -348,7 +348,7 @@ parameter = {
                                                       "search": "",
                                                       },
 
-    #7 上海公共资源交易网
+ #7 上海公共资源交易网
     "shanghaigonggongziyuanjiaoyiwang" :{"li": '/html/body/div[5]/div[1]/div[4]/div[2]/table/tbody/tr',
                                          "li_time": "./td[5]/text()",  # 时间
                                           "title": "./td[1]/a/@title",  # 标题
@@ -359,7 +359,7 @@ parameter = {
                                           "number_xpath": '/html/body/div[5]/div[1]/div[5]/div[1]/a[last()]/@href', # 页数区域
                                           "search": "",
                                         },
-     #8 浙江省公共资源交易网
+#8 浙江省公共资源交易网
     "zhejiangshenggonggongziyuanjiaoyiwang" :{"li" : '/html/body/div/table[1]/tbody/tr/td[2]/table/tbody/tr[2]/td/table[2]/tbody/tr/td[2]/div/table/tbody/tr'    ,
                                          "li_time": "./td[3]/text()",  # 时间
                                           "title": "./td[2]/a/@title",  # 标题
@@ -372,7 +372,7 @@ parameter = {
             },
 
 
-    #8-2 浙江省公共资源交易网
+#8-2 浙江省公共资源交易网
     "zhejiangshenggonggongziyuanjiaoyiwang2" :{"li" : '/html/body/div/table[1]/tbody/tr/td[2]/table/tbody/tr[2]/td/table[2]/tbody/tr/td[2]/div/table/tbody/tr'    ,
                                          "li_time": "./td[3]/text()",  # 时间
                                           "title": "./td[2]/a/@title",  # 标题
@@ -384,7 +384,7 @@ parameter = {
                                           "search": "",
             },
 
-    #9 江苏政府采购网
+#9 江苏政府采购网
     "jiangsuzhengfucaigouwang" :{"li" : '//*[@id="newsList"]/ul/li',
                                          "li_time": "./text()[2]",  # 时间
                                           "title": "./a/text()",  # 标题
@@ -395,7 +395,7 @@ parameter = {
                                           "number_xpath": '//*[@id="newsPage"]/div/a[2]/@href', # 页数区域
                                           "search": "",
                                  },
-    #9-2 江苏政府采购网
+#9-2 江苏政府采购网
     "jiangsuzhengfucaigouwang2" :{"li" : '//*[@id="newsList"]/ul/li',
                                          "li_time": "./text()[2]",  # 时间
                                           "title": "./a/text()",  # 标题
@@ -407,7 +407,7 @@ parameter = {
                                           "search": "",
                                  },
 
-    #10厦门市政府采购网
+#10厦门市政府采购网
     "xiamenshigongongziyuanjiaoyiwang" : {"li" : '//*[@id="pubdays"]/li[position()>1]', #标题的上一级
                           "li_time" : "./span[2]/text()" , #时间
                           "title" : "./a/@title", #标题
@@ -522,30 +522,30 @@ parameter = {
                                   "search": "",
 
                                   },
-    #15江西国政招标有限公司
-        "jiangxiguozhengzhaobiaoyouxiangongsi" :{"li": '/html/body/div[3]/div/div/div[2]/ul/li',
-                                             "li_time": "./span/text()",  # 时间
-                                              "title": "./a/@title",  # 标题
-                                              "href": "./a/@href",  # 标题地址
-                                              "domainName_url": "http://www.jxgzzb.com.cn",  # 拼接域名
-                                              "li_area": "",  # 区域
-                                               "page_name" : {"type":1,"style":"http://www.jxgzzb.com.cn/Index/notice/inftype/1/page/count.html","replaceKey":"count","startNum":1},
-                                              "number_xpath": '/html/body/div[3]/div/div/div[2]/div[2]/ul/li[8]/a/text()', # 页数区域
-                                              "search": "",
-                                            },
+#15江西国政招标有限公司
+    "jiangxiguozhengzhaobiaoyouxiangongsi" :{"li": '/html/body/div[3]/div/div/div[2]/ul/li',
+                                         "li_time": "./span/text()",  # 时间
+                                          "title": "./a/@title",  # 标题
+                                          "href": "./a/@href",  # 标题地址
+                                          "domainName_url": "http://www.jxgzzb.com.cn",  # 拼接域名
+                                          "li_area": "",  # 区域
+                                           "page_name" : {"type":1,"style":"http://www.jxgzzb.com.cn/Index/notice/inftype/1/page/count.html","replaceKey":"count","startNum":1},
+                                          "number_xpath": '/html/body/div[3]/div/div/div[2]/div[2]/ul/li[8]/a/text()', # 页数区域
+                                          "search": "",
+                                        },
 
 
 #15-2江西国政招标有限公司
-        "jiangxiguozhengzhaobiaoyouxiangongsi2" :{"li": '/html/body/div[3]/div/div/div[2]/ul/li',
-                                             "li_time": "./span/text()",  # 时间
-                                              "title": "./a/@title",  # 标题
-                                              "href": "./a/@href",  # 标题地址
-                                              "domainName_url": "http://www.jxgzzb.com.cn",  # 拼接域名
-                                              "li_area": "",  # 区域
-                                               "page_name" : {"type":1,"style":"http://www.jxgzzb.com.cn/Index/notice/inftype/2/page/count.html","replaceKey":"count","startNum":1},
-                                              "number_xpath": '/html/body/div[3]/div/div/div[2]/div[2]/ul/li[8]/a/text()', # 页数区域
-                                              "search": "",
-                                            },
+    "jiangxiguozhengzhaobiaoyouxiangongsi2" :{"li": '/html/body/div[3]/div/div/div[2]/ul/li',
+                                         "li_time": "./span/text()",  # 时间
+                                          "title": "./a/@title",  # 标题
+                                          "href": "./a/@href",  # 标题地址
+                                          "domainName_url": "http://www.jxgzzb.com.cn",  # 拼接域名
+                                          "li_area": "",  # 区域
+                                           "page_name" : {"type":1,"style":"http://www.jxgzzb.com.cn/Index/notice/inftype/2/page/count.html","replaceKey":"count","startNum":1},
+                                          "number_xpath": '/html/body/div[3]/div/div/div[2]/div[2]/ul/li[8]/a/text()', # 页数区域
+                                          "search": "",
+                                        },
 
 
 #16 云南省政府采购网
@@ -555,13 +555,23 @@ parameter = {
                                   "href": "",  # 标题地址 //todo 16-云南招标-找不到链接
                                   "domainName_url": "http://www.yngp.com",  # 拼接域名
                                   "li_area": "./td[3]/@title",  # 区域
-                                   "page_name" : {
-                                       "type":3,
-                                       "style":"onclick",
-                                       "startNum":1,
-                                       "onclick":[{"replaceKey":"count","button":'//*[@id="bulletinlistid-footer"]/div/div[1]/ul/li/a[text()=count]',"params":[]}]
-                                       },
-                                  "number_xpath": '//*[@id="bulletinlistid-footer"]/div/div[1]/ul/li/text()',  # 页数区域
+                                     "page_name": {
+                                         "type": 2,
+                                         "style": "post",
+                                         "startNum": 1,
+                                         "headers": {
+                                             'User-Agent': UserAgent().chrome,
+                                         },
+                                         "data": {
+                                             "current": "count",
+                                             "rowCount": "10",
+                                             "searchPhrase": "",
+                                             "query_sign": "1"
+                                         },
+                                         "post_url": "http://www.yngp.com/bulletin.do?method=moreListQuery",
+                                         "pageNoKey": "current"
+                                     },
+                                  "number_xpath": '//*[@id="bulletinlistid-footer"]/div/div[2]/span/text()',  # 页数区域
                                   "search": "",
 
                                   },
@@ -624,27 +634,27 @@ parameter = {
                           },
 
     #19 中国邮政
-        "zhongguoyouzheng" :{"li": '//*[@id="Content3"]/div[2]/ul/li[position()<21]',
-                                             "li_time": "./span[2]/text()",  # 时间
-                                              "title": "./span[1]/a/@title",  # 标题
-                                              "href": "./span[1]/a/@href",  # 标题地址
-                                              "domainName_url": "http://www.chinapost.com.cn",  # 拼接域名
-                                              "li_area": "",  # 区域
-                                               "page_name" : {"type":1,"style":"http://www.chinapost.com.cn/html1/category/181313/7338-count.htm","replaceKey":"count","startNum":1},
-                                              "number_xpath": '//*[@id="CBLast"]/@href', # 页数区域
-                                              "search": "",
-                                            },
+    "zhongguoyouzheng" :{"li": '//*[@id="Content3"]/div[2]/ul/li[position()<21]',
+                                         "li_time": "./span[2]/text()",  # 时间
+                                          "title": "./span[1]/a/@title",  # 标题
+                                          "href": "./span[1]/a/@href",  # 标题地址
+                                          "domainName_url": "http://www.chinapost.com.cn",  # 拼接域名
+                                          "li_area": "",  # 区域
+                                           "page_name" : {"type":1,"style":"http://www.chinapost.com.cn/html1/category/181313/7338-count.htm","replaceKey":"count","startNum":1},
+                                          "number_xpath": '//*[@id="CBLast"]/@href', # 页数区域
+                                          "search": "",
+                                        },
     #19-2 中国邮政
-        "zhongguoyouzheng2" :{"li": '//*[@id="Content3"]/div[2]/ul/li[position()<21]',
-                                             "li_time": "./span[2]/text()",  # 时间
-                                              "title": "./span[1]/a/@title",  # 标题
-                                              "href": "./span[1]/a/@href",  # 标题地址
-                                              "domainName_url": "http://www.chinapost.com.cn",  # 拼接域名
-                                              "li_area": "",  # 区域
-                                               "page_name" : {"type":1,"style":"http://www.chinapost.com.cn/html1/category/181313/7334-count.htm","replaceKey":"count","startNum":1},
-                                              "number_xpath": '//*[@id="CBLast"]/@href', # 页数区域
-                                              "search": "",
-                                            },
+    "zhongguoyouzheng2" :{"li": '//*[@id="Content3"]/div[2]/ul/li[position()<21]',
+                                         "li_time": "./span[2]/text()",  # 时间
+                                          "title": "./span[1]/a/@title",  # 标题
+                                          "href": "./span[1]/a/@href",  # 标题地址
+                                          "domainName_url": "http://www.chinapost.com.cn",  # 拼接域名
+                                          "li_area": "",  # 区域
+                                           "page_name" : {"type":1,"style":"http://www.chinapost.com.cn/html1/category/181313/7334-count.htm","replaceKey":"count","startNum":1},
+                                          "number_xpath": '//*[@id="CBLast"]/@href', # 页数区域
+                                          "search": "",
+                                        },
 
 
 

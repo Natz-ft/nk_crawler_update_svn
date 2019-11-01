@@ -1,0 +1,270 @@
+<html lang="zh-CN"><head>
+    <meta charset="GBK">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>云南省政府采购系统</title>
+
+
+
+
+
+
+
+<script type="text/javascript">
+	var webAppPath = "";
+</script>
+    <link href="/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/plugins/bootstrap/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/plugins/bootstrap/css/base.css" rel="stylesheet">
+    <link href="/plugins/bootstrap/css/jquery-ui.css" rel="stylesheet">
+    <link href="/plugins/bootstrap/css/bootstrap-dialog.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/plugins/bootstrap/js/html5shiv.min.js"></script>
+    <script src="/plugins/bootstrap/js/ie8-responsive-file-warning.js"></script>
+    <script src="/plugins/bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+    <!--
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>-->
+
+		<!-- 表单验证 -->
+		<link href="/plugins/bootstrap/css/scojs.css" rel="stylesheet">
+		<!-- 下拉选择控件 -->
+		<link href="/plugins/bootstrap/css/bootstrap-select.css" rel="stylesheet">
+		<!-- 样式引入区 -->
+		<link href="/plugins/bootstrap/css/bootstrap-grid.css" rel="stylesheet">
+		<link href="/plugins/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+		<style>
+/* 自定义样式,写在这 */
+</style>
+
+</head>
+<body>
+
+<div class="top"></div>
+<input type="hidden" name="menuSelect" id="menuSelect" value="null">
+<!--导航开始-->
+<div class="nav_menu">
+  <ul class="ul_nav">
+    <a href="#" id="nav1" onclick="goMain(this);"><li><i class="ico_1 fl"></i>首&nbsp;&nbsp;页</li></a>
+    <li class="line"></li>
+    <a href="#" id="nav2" onclick="goBulletins(this);"><li><i class="ico_2 fl"></i>采购信息</li></a>
+    <li class="line"></li>
+    <a href="#" id="nav3" onclick="goNotices(this);"><li><i class="ico_3 fl"></i>监督管理</li></a>
+    <li class="line"></li>
+    <a href="#" id="nav4" onclick="gopolicy(this);"><li><i class="ico_4 fl"></i>政策法规</li></a>
+         <li class="line"></li>
+    <a href="#" id="nav9" onclick="goGovBuy(this);"><li><i class="ico_9 fl"></i>购买服务</li></a>
+    <li class="line"></li>
+    <a href="#" id="nav5" onclick="goAgencies(this);"><li><i class="ico_5 fl"></i>相关机构</li></a>
+    <li class="line"></li>
+    <a href="#" id="nav6" onclick="goloading(this);"><li><i class="ico_6 fl"></i>办事指南</li></a>
+    <li class="line"></li>
+    <a href="#" id="nav7" onclick="goemall(this);"><li><i class="ico_7 fl"></i>电子卖场</li></a>
+    <!-- <li class="line"></li>
+    <a href="#" id="nav8" onclick="goemallold();"><li><i class="ico_7 fl"></i>电子商城旧</li></a> -->
+  </ul>
+</div>
+<!--导航结束-->
+<link rel="stylesheet" type="text/css" href="/index/css/top.css">
+<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/index/pages/top.js"></script>
+<div class="container" role="main" style="width:1110px;">
+
+	<div class="row">
+		<div class="col-xs-12" style="min-height: 400px">
+
+		<input type="hidden" name="sign" id="sign" value="1">
+		<input type="hidden" id="flag" name="flag" value="null">
+		<input type="hidden" id="district" name="district" value="null">
+		<div class="panel panel-default panel-search">
+			<div id="tab-content" class="tab-content">
+				<form id="tab1content" class="tab-pane active">
+					<input type="hidden" id="type" name="type" value="">
+					<div class="panel-heading-search">
+						<div class="panel-heading-search-group search-group-tab1">
+							<a href="javascript:void(0);" id="query1" onclick="userful('1')" class="active"><font size="2"><b>招标/预审/谈判/磋商/询价公告</b></font></a>
+							<a href="javascript:void(0);" id="query4" onclick="userful('4')" class=""><font size="2"><b>PPP合作伙伴采购信息</b></font></a>
+							<a href="javascript:void(0);" id="query3" onclick="userful('3')" class=""><font size="2"><b>单一来源审核前公示</b></font></a>
+							<a href="javascript:void(0);" id="query5" onclick="userful('5')" class=""><font size="2"><b>进口产品核准前公示</b></font></a>
+							<a href="javascript:void(0);" id="query2" onclick="userful('2')" class=""><font size="2"><b>中标、成交公告</b></font></a>
+							<a href="javascript:void(0);" id="query7" onclick="userful('7')" class=""><font size="2"><b>澄清、更正、终止公告</b></font></a>
+							<a href="javascript:void(0);" id="query6" onclick="userful('6')" class=""><font size="2"><b>政府采购合同公告</b></font></a>
+
+						</div>
+						<!--
+                    <span class="panel-heading-pull-right">
+                        <a href="#" id="extend-link-tab1"><span class="glyphicon glyphicon-search"></span>
+                        <span class="caret"></span></a>
+                   	</span>
+                -->
+					</div>
+					<div class="panel-body form-horizontal search-body" id="searchPanel1">
+						<div class="col-xs-6">
+							<div class="form-group form-group-sm">
+								<label class="search-label-left control-label ">
+									标题：
+								</label>
+								<div class="search-input-left">
+									<input type="text" maxlength="64" value="" name="bulletintitle" id="bulletintitle" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="form-group form-group-sm">
+								<label class="search-label-right control-label">
+									发布时间：
+								</label>
+								<div class="search-input-left form-inline">
+									<div class="input-group input-group-sm date form_datetime" data-date-format="dd MM yyyy">
+										<input class="form-control" id="startTime" name="startTime" type="text">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span> </span>
+									</div>
+									至
+									<div class="input-group input-group-sm date form_datetime" data-date-format="dd MM yyyy">
+										<input class="form-control" id="endTime" name="endTime" type="text">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-6">
+							<div class="form-group form-group-sm">
+								<label class="search-label-left control-label ">
+									采购单位名称：
+								</label>
+								<div class="search-input-left">
+									<input type="text" maxlength="64" value="" name="purchaser" id="purchaser" class="form-control">
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-6">
+							<div class="form-group form-group-sm">
+								<label class="search-label-right control-label">
+									项目编号：
+								</label>
+								<div class="search-input-left">
+									<input type="text" maxlength="128" value="" name="projectid" id="projectid" class="form-control">
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xs-6">
+                            <div class="form-group form-group-sm">
+                                <label class="search-label-left control-label ">区划：</label>
+                                <div class="search-input-left">
+								    <select class="selectpicker bs-select-hidden" id="querycodeName" name="querycodeName" title="请选择"><option class="bs-title-option" value="">请选择</option>
+<option prompt="test" value="">请选择</option><option value="530000">省级</option><option value="530100">昆明市</option><option value="530300">曲靖市</option><option value="530400">玉溪市</option><option value="530500">保山市</option><option value="530600">昭通市</option><option value="530700">丽江市</option><option value="530800">普洱市</option><option value="530900">临沧市</option><option value="532300">楚雄州</option><option value="532500">红河州</option><option value="532600">文山州</option><option value="532800">版纳州</option><option value="532900">大理州</option><option value="533100">德宏州</option><option value="533300">怒江州</option><option value="533400">迪庆州</option><option value="533500">滇中区</option></select><div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-id="querycodeName" title="请选择"><span class="filter-option pull-left">请选择</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner" role="menu"><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">请选择</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">省级</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">昆明市</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">曲靖市</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">玉溪市</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">保山市</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">昭通市</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="8"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">丽江市</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="9"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">普洱市</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="10"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">临沧市</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="11"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">楚雄州</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="12"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">红河州</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="13"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">文山州</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="14"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">版纳州</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="15"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">大理州</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="16"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">德宏州</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="17"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">怒江州</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="18"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">迪庆州</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="19"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">滇中区</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-6" id="querygglxdm_div">
+							<div class="form-group form-group-sm">
+								<label class="search-label-right control-label">类别：</label>
+								<div class="search-input-left">
+								   <select class="selectpicker bs-select-hidden" id="querygglxdm">
+								   		<option value="">请选择</option>
+								   		<option value="bxlx005">资格预审公告</option>
+								   		<option value="bxlx001">公开招标公告</option>
+								   		<option value="bxlx006">邀请招标公告</option>
+								   		<option value="bxlx003">竞争性谈判公告</option>
+								   		<option value="bxlx015">竞争性磋商公告</option>
+								   		<option value="bxlx002">询价采购公告</option>
+								   		<option value="bxlx016">单一来源公告</option>
+								   		<option value="bxlx009">其他公告</option>
+								   		<option value="bxlx010">补遗公告</option>
+								   </select><div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" data-id="querygglxdm" title="请选择"><span class="filter-option pull-left">请选择</span>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">请选择</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">资格预审公告</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">公开招标公告</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">邀请招标公告</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">竞争性谈判公告</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="5"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">竞争性磋商公告</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="6"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">询价采购公告</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="7"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">单一来源公告</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="8"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">其他公告</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="9"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">补遗公告</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+                                </div>
+							</div>
+						</div>
+						<div class="col-xs-6 col-xs-offset-6">
+							<div class="form-group">
+								<label class="search-label-right control-label"></label>
+								<div class="search-input-right text-right">
+									<button type="button" class="btn btn-default btn-sm search-button" id="resetbtn">
+										重置
+									</button>
+									<button type="button" class="btn btn-primary btn-sm search-button" id="querybtn">
+										查询
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+
+			<div class=" panel-body">
+				<table class="table  table-hover  bootgrid-table" id="bulletinlistid" aria-busy="true">
+					<thead class="bg-default" id="thead">
+						<tr><th data-column-id="bulletintitle" class="text-center" style="width:70%;"><a href="javascript:void(0);" class="column-header-anchor "><span class="text">
+								标题
+							</span><span class="icon glyphicon "></span></a></th><th data-column-id="bulletinclasschina" class="text-center" style="width:10%;"><a href="javascript:void(0);" class="column-header-anchor "><span class="text">
+								类别
+							</span><span class="icon glyphicon "></span></a></th><th data-column-id="codeName" class="text-center" style="width:10%;"><a href="javascript:void(0);" class="column-header-anchor sortable"><span class="text">
+								区划
+							</span><span class="icon glyphicon "></span></a></th><th data-column-id="finishday" class="text-center" style="width:10%;"><a href="javascript:void(0);" class="column-header-anchor "><span class="text">
+								发布时间
+							</span><span class="icon glyphicon "></span></a></th></tr>
+					</thead>
+				<tbody><tr><td colspan="4" class="loading">正在查询中...</td></tr></tbody></table><div id="bulletinlistid-footer" class="bootgrid-footer"><div class="row"><div class="col-xs-6"><p class="pagination"></p></div><div class="col-xs-6 infoBar"><p class="text-default"></p><div class="actions btn-group"><button class="btn btn-default" type="button" title="刷新数据"><span class="icon glyphicon glyphicon-refresh"></span></button><div class="dropdown btn-group"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="dropdown-text">10</span> <span class="caret"></span></button><ul class="dropdown-menu pull-right" role="menu"><li class="active" aria-selected="true"><a data-action="10" class="dropdown-item dropdown-item-button">10</a></li><li aria-selected="false"><a data-action="20" class="dropdown-item dropdown-item-button">20</a></li><li aria-selected="false"><a data-action="50" class="dropdown-item dropdown-item-button">50</a></li><li aria-selected="false"><a data-action="100" class="dropdown-item dropdown-item-button">100</a></li></ul></div><div class="dropdown btn-group"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="dropdown-text"><span class="icon glyphicon glyphicon-th-list"></span></span> <span class="caret"></span></button><ul class="dropdown-menu pull-right" role="menu"><li><label class="dropdown-item"><input name="bulletintitle" type="checkbox" value="1" class="dropdown-item-checkbox" checked="checked">
+								标题
+							</label></li><li><label class="dropdown-item"><input name="bulletinclasschina" type="checkbox" value="1" class="dropdown-item-checkbox" checked="checked">
+								类别
+							</label></li><li><label class="dropdown-item"><input name="codeName" type="checkbox" value="1" class="dropdown-item-checkbox" checked="checked">
+								区划
+							</label></li><li><label class="dropdown-item"><input name="finishday" type="checkbox" value="1" class="dropdown-item-checkbox" checked="checked">
+								发布时间
+							</label></li></ul></div></div></div></div></div>
+			</div>
+
+		</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+  <!--底部开始-->
+  <div class="bottom">
+   <!--  <div class="bottom_sign"><img src="/index/images/bottom_sign.png"></div> -->
+    <p>主办单位：云南省财政厅，备案：滇ICP备05004092号 </p>
+	<p>系统操作及业务咨询电话：0871-63956095、18887127413（座机）、18887128494（座机），网站技术支持：东软集团股份有限公司</p>
+	<p>采购人法律及政策咨询电话：0871-63956099（云南省财政厅政府采购管理处），地址：昆明市五华区华山南路130号4006-4009室，邮编：650021</p>
+	<p>本网站建议使用360浏览器（极速模式）、火狐浏览器、谷歌浏览器</p>
+  </div>
+
+<!--底部结束-->
+<!--导航结束-->
+<link rel="stylesheet" type="text/css" href="/index/css/bottom.css">
+
+<script src="/plugins/bootstrap/js/jquery-1.11.3.min.js"></script>
+<script src="/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap-dialog.js"></script>
+<script src="/plugins/bootstrap/js/jQuery.formatMoney.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap-common.js"></script>
+
+
+		<!-- js引入区-->
+		<script src="/plugins/bootstrap/js/bootstrap-grid.js"></script>
+		<script src="/plugins/bootstrap/js/bootstrap-datetimepicker.js"></script>
+		<script src="/plugins/bootstrap/js/bootstrap-select.min.js"></script>
+		<script src="/plugins/bootstrap/js/jquery.form.min.js"></script>
+		<script src="/plugins/bootstrap/js/sco.valid.js"></script>
+		<script src="/resource/pages/assitools/bulletin/morelist.js"></script>
+
+
+
+<div class="datetimepicker datetimepicker-dropdown-bottom-left dropdown-menu" style="left: 737.5px; z-index: 1010;"><div class="datetimepicker-minutes" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">1 十一月 2019</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="minute">10:00</span><span class="minute">10:05</span><span class="minute">10:10</span><span class="minute">10:15</span><span class="minute active">10:20</span><span class="minute">10:25</span><span class="minute">10:30</span><span class="minute">10:35</span><span class="minute">10:40</span><span class="minute">10:45</span><span class="minute">10:50</span><span class="minute">10:55</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr></tfoot></table></div><div class="datetimepicker-hours" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">1 十一月 2019</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="hour">0:00</span><span class="hour">1:00</span><span class="hour">2:00</span><span class="hour">3:00</span><span class="hour">4:00</span><span class="hour">5:00</span><span class="hour">6:00</span><span class="hour">7:00</span><span class="hour">8:00</span><span class="hour">9:00</span><span class="hour active">10:00</span><span class="hour">11:00</span><span class="hour">12:00</span><span class="hour">13:00</span><span class="hour">14:00</span><span class="hour">15:00</span><span class="hour">16:00</span><span class="hour">17:00</span><span class="hour">18:00</span><span class="hour">19:00</span><span class="hour">20:00</span><span class="hour">21:00</span><span class="hour">22:00</span><span class="hour">23:00</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr></tfoot></table></div><div class="datetimepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">十一月 2019</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr><tr><th class="dow">日</th><th class="dow">一</th><th class="dow">二</th><th class="dow">三</th><th class="dow">四</th><th class="dow">五</th><th class="dow">六</th></tr></thead><tbody><tr><td class="day old">27</td><td class="day old">28</td><td class="day old">29</td><td class="day old">30</td><td class="day old">31</td><td class="day today active">1</td><td class="day">2</td></tr><tr><td class="day">3</td><td class="day">4</td><td class="day">5</td><td class="day">6</td><td class="day">7</td><td class="day">8</td><td class="day">9</td></tr><tr><td class="day">10</td><td class="day">11</td><td class="day">12</td><td class="day">13</td><td class="day">14</td><td class="day">15</td><td class="day">16</td></tr><tr><td class="day">17</td><td class="day">18</td><td class="day">19</td><td class="day">20</td><td class="day">21</td><td class="day">22</td><td class="day">23</td></tr><tr><td class="day">24</td><td class="day">25</td><td class="day">26</td><td class="day">27</td><td class="day">28</td><td class="day">29</td><td class="day">30</td></tr><tr><td class="day new">1</td><td class="day new">2</td><td class="day new">3</td><td class="day new">4</td><td class="day new">5</td><td class="day new">6</td><td class="day new">7</td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr></tfoot></table></div><div class="datetimepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2019</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="month">一月</span><span class="month">二月</span><span class="month">三月</span><span class="month">四月</span><span class="month">五月</span><span class="month">六月</span><span class="month">七月</span><span class="month">八月</span><span class="month">九月</span><span class="month">十月</span><span class="month active">十一月</span><span class="month">十二月</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr></tfoot></table></div><div class="datetimepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2010-2019</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year active">2019</span><span class="year old">2020</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr></tfoot></table></div></div><div class="datetimepicker datetimepicker-dropdown-bottom-left dropdown-menu" style="left: 879.172px; z-index: 1020;"><div class="datetimepicker-minutes" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">1 十一月 2019</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="minute">10:00</span><span class="minute">10:05</span><span class="minute">10:10</span><span class="minute">10:15</span><span class="minute active">10:20</span><span class="minute">10:25</span><span class="minute">10:30</span><span class="minute">10:35</span><span class="minute">10:40</span><span class="minute">10:45</span><span class="minute">10:50</span><span class="minute">10:55</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr></tfoot></table></div><div class="datetimepicker-hours" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">1 十一月 2019</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="hour">0:00</span><span class="hour">1:00</span><span class="hour">2:00</span><span class="hour">3:00</span><span class="hour">4:00</span><span class="hour">5:00</span><span class="hour">6:00</span><span class="hour">7:00</span><span class="hour">8:00</span><span class="hour">9:00</span><span class="hour active">10:00</span><span class="hour">11:00</span><span class="hour">12:00</span><span class="hour">13:00</span><span class="hour">14:00</span><span class="hour">15:00</span><span class="hour">16:00</span><span class="hour">17:00</span><span class="hour">18:00</span><span class="hour">19:00</span><span class="hour">20:00</span><span class="hour">21:00</span><span class="hour">22:00</span><span class="hour">23:00</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr></tfoot></table></div><div class="datetimepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">十一月 2019</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr><tr><th class="dow">日</th><th class="dow">一</th><th class="dow">二</th><th class="dow">三</th><th class="dow">四</th><th class="dow">五</th><th class="dow">六</th></tr></thead><tbody><tr><td class="day old">27</td><td class="day old">28</td><td class="day old">29</td><td class="day old">30</td><td class="day old">31</td><td class="day today active">1</td><td class="day">2</td></tr><tr><td class="day">3</td><td class="day">4</td><td class="day">5</td><td class="day">6</td><td class="day">7</td><td class="day">8</td><td class="day">9</td></tr><tr><td class="day">10</td><td class="day">11</td><td class="day">12</td><td class="day">13</td><td class="day">14</td><td class="day">15</td><td class="day">16</td></tr><tr><td class="day">17</td><td class="day">18</td><td class="day">19</td><td class="day">20</td><td class="day">21</td><td class="day">22</td><td class="day">23</td></tr><tr><td class="day">24</td><td class="day">25</td><td class="day">26</td><td class="day">27</td><td class="day">28</td><td class="day">29</td><td class="day">30</td></tr><tr><td class="day new">1</td><td class="day new">2</td><td class="day new">3</td><td class="day new">4</td><td class="day new">5</td><td class="day new">6</td><td class="day new">7</td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr></tfoot></table></div><div class="datetimepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2019</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="month">一月</span><span class="month">二月</span><span class="month">三月</span><span class="month">四月</span><span class="month">五月</span><span class="month">六月</span><span class="month">七月</span><span class="month">八月</span><span class="month">九月</span><span class="month">十月</span><span class="month active">十一月</span><span class="month">十二月</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr></tfoot></table></div><div class="datetimepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2010-2019</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year active">2019</span><span class="year old">2020</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">今天</th></tr></tfoot></table></div></div></body></html>

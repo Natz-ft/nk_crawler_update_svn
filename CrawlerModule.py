@@ -8,6 +8,9 @@ from fake_useragent import UserAgent
 from collections import defaultdict
 import random
 import platform
+
+from selenium.webdriver.common.keys import Keys
+
 from config import config
 import utils
 import urllib.request
@@ -98,7 +101,7 @@ class Crawler_URL:
                     # buttons = url_param["button"]
                     # if type(buttons) is not str:
                     #     for button in buttons:
-                    #         self.driver.find_element_by_xpath(button).click()
+                    #         self.driver.find_element_by_xpath(button).send_keys(Keys.ENTER)
                     # else:
                     #     self.driver.find_element_by_xpath(buttons).click()
                 else:

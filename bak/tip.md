@@ -24,9 +24,10 @@ number = int(number) + 1
     a=[1, 2]
     >>> type(a)
     <class 'list'>
+etree.html() 效果 ：构造xpath对象 
+number 是list对象
 ``````
- etree.html() 效果 ：构造xpath对象 
- number 是list对象
+ 
  ````
  X[start:end:span]
  
@@ -62,4 +63,11 @@ t4 = copy.deepcopy(d4['k1'])
 3 globals()[text["classname"]]()==Test()
     相当于实例化，Test类的构造函数不需要参数
  
+````
+
+````
+title_str_new = "".join(["(" + title_str[i:i+dif] + ").*?|" for i in range(len(title_str)-1)])
+
+列表表达式 [expression1 for expression2  if expression3 ] 
+生成一个列表，列表中的元素由expression1组成 
 ````
