@@ -71,3 +71,8 @@ title_str_new = "".join(["(" + title_str[i:i+dif] + ").*?|" for i in range(len(t
 列表表达式 [expression1 for expression2  if expression3 ] 
 生成一个列表，列表中的元素由expression1组成 
 ````
+
+````
+driver = model.log_in_web(*login_infos)
+在list或者tuple传入的时候，前面加入*，会自动的将list或者tuple转化为可变参数传入
+````

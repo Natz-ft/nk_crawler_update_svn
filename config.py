@@ -239,8 +239,11 @@ information = {#"jincai_1" : {"original_url" : "http://www.cfcpn.com/plist/caigo
 
     #zl need_login
     # 河北招标网
-    "hebeizhaobiaocaigouwang_3_9_0": {"original_url": "https://sso.bidcenter.com.cn/login", "csv": "hebeizhaobiaocaigouwang_3_9_0.csv","classname": "Test_login", "type": "招标"},
-
+    #"hebeizhaobiaocaigouwang_3_9": {"original_url": "https://sso.bidcenter.com.cn/login", "csv": "hebeizhaobiaocaigouwang_3_9.csv","classname": "Test_login", "type": ""},
+    # 吉林省采购招标网
+    "jilinshengcaigouzhaobiaowang_3_11_0": {"original_url": "http://www.gc-zb.com/login/index.html", "csv": "jilinshengcaigouzhaobiaowang_3_11_0.csv","classname": "Test_login", "type": "招标"},
+    # 大连市招标网
+    #"dalianshizhaobiaowang_3_13": {"original_url": "https://sso.bidcenter.com.cn/login", "csv": "dalianshizhaobiaowang_3_13.csv","classname": "Test_login", "type": ""},
 
 
 

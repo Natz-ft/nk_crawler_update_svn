@@ -944,7 +944,7 @@ parameter = {
 
     ########################
     #zl need_login
-    #
+    #河北省招标网
     "hebeizhaobiaocaigouwang_3_9_0": {
         # 登陆
         "login": {"button": "//*[@id='login_login_btn']",
@@ -974,5 +974,71 @@ parameter = {
         "number_xpath": "",  # 页数区域
         "search": "",
     },
+
+    #吉林省采购招标网
+    "jilinshengcaigouzhaobiaowang_3_11_0": {
+        # 登陆
+        "login": {"button": '//*[@id="login_frm1"]/span[3]/input',
+                  "isHasVerify_code": False,
+                  "params": [{"type": "id", "name": "username", "value": "jbf"},
+                             {"type": "id", "name": "userpwd", "value": "jbf123"}
+                             ],
+                  "login_status": {"class": "isLogin_byXpath", "params": ""}
+                  },
+        # start页  进入到显示 标题列表的页
+        "startPage": {"type": "onclick",
+                      "onclick": [{"button": "",
+                                   "params": [],
+                                   "url": "https://search.bidcenter.com.cn/search?diqu=6&darea=%E5%A4%A7%E8%BF%9E"
+                                   },
+                                  ],
+                      },
+        "li": '//*[@id="jq_project_list"]/tbody/tr',  # 标题的上一级
+        "li_time": "./td[7]/text()",  # 时间
+        "title": "./td[2]/a/text()",  # 标题
+        "href": "./td[2]/a/@href",  # 标题地址
+        "domainName_url": "http:",  # 拼接域名
+        "li_area": "./td[5]/text()",  # 区域
+        "isloopBytime": True,  # 是否控制时间循环
+        "page_name": {"type": 1, "style": "https://search.bidcenter.com.cn/search?diqu=6&darea=%E5%A4%A7%E8%BF%9E&page=count", "replaceKey": "count",
+                      "startNum": 1},  # {"type":0,"style":r'page=\d+',"startNum":1},
+        "number_xpath": "",  # 页数区域
+        "search": "",
+    },
+
+
+    #大连市招标网
+    "dalianshizhaobiaowang_3_13": {
+        # 登陆
+        "login": {"button": "//*[@id='login_login_btn']",
+                  "isHasVerify_code": False,
+                  "params": [{"type": "id", "name": "txtusername", "value": "13889891148"},
+                             {"type": "id", "name": "txtpassword", "value": "jbf123"}
+                             ],
+                  "login_status": {"class": "isLogin_byXpath", "params": "//*[@id='f_meblg']/ul/li[1]"}
+                  },
+        # start页  进入到显示 标题列表的页
+        "startPage": {"type": "onclick",
+                      "onclick": [{"button": "",
+                                   "params": [],
+                                   "url": "https://search.bidcenter.com.cn/search?diqu=6&darea=%E5%A4%A7%E8%BF%9E"
+                                   },
+                                  ],
+                      },
+        "li": '//*[@id="jq_project_list"]/tbody/tr',  # 标题的上一级
+        "li_time": "./td[7]/text()",  # 时间
+        "title": "./td[2]/a/text()",  # 标题
+        "href": "./td[2]/a/@href",  # 标题地址
+        "domainName_url": "http:",  # 拼接域名
+        "li_area": "./td[5]/text()",  # 区域
+        "isloopBytime": True,  # 是否控制时间循环
+        "page_name": {"type": 1, "style": "https://search.bidcenter.com.cn/search?diqu=6&darea=%E5%A4%A7%E8%BF%9E&page=count", "replaceKey": "count",
+                      "startNum": 1},  # {"type":0,"style":r'page=\d+',"startNum":1},
+        "number_xpath": "",  # 页数区域
+        "search": "",
+    },
+
+
+
 }
 

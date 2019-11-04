@@ -1382,3 +1382,30 @@ ValueError: max() arg is an empty sequence
 2019-11-01 16:04:55,230 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_0, 一共：0条
 2019-11-01 16:17:35,647 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_0, 一共：0条
 2019-11-04 14:05:58,700 - webcrawer service - INFO - 运行成功: hebeizhaobiaocaigouwang_3_9_0, 一共：0条
+2019-11-04 14:48:35,651 - webcrawer service - INFO - 运行成功: hebeizhaobiaocaigouwang_3_9_0, 一共：237条
+2019-11-04 14:53:56,635 - webcrawer service - INFO - 运行成功: dalianshizhaobiaowang_3_13_0, 一共：0条
+2019-11-04 14:56:52,131 - webcrawer service - INFO - 运行成功: dalianshizhaobiaowang_3_13, 一共：5条
+2019-11-04 17:14:38,950 - webcrawer service - ERROR - 运行失败: jilinshengcaigouzhaobiaowang_3_11_0
+2019-11-04 17:14:39,056 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 142, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 28, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 103, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 84, in model_log_in_web
+    driver.find_element_by_xpath(login_info["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[@class="login_left"]/form/input] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@class="login_left"]/form/input]' is not a valid XPath expression.
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-04 17:36:39,454 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
