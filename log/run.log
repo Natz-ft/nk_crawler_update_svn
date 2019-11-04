@@ -1381,3 +1381,4 @@ ValueError: max() arg is an empty sequence
 2019-11-01 16:03:14,925 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_0, 一共：0条
 2019-11-01 16:04:55,230 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_0, 一共：0条
 2019-11-01 16:17:35,647 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_0, 一共：0条
+2019-11-04 14:05:58,700 - webcrawer service - INFO - 运行成功: hebeizhaobiaocaigouwang_3_9_0, 一共：0条

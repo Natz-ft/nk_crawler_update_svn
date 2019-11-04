@@ -442,8 +442,8 @@ parameter = {
 
 
 #zl excel colomn3
-    #1中钢国际招标公司
-    "zhonggangzhaobiaoyouxianzerengongsi" : {"li" : '//*[@id="list"]/tr', #标题的上一级
+    #中钢国际招标公司
+    "zhonggangzhaobiaoyouxianzerengongsi_3_2_0" : {"li" : '//*[@id="list"]/tr', #标题的上一级
                           "li_time" : "./td[4]/text()" , #时间
                           "title" : "./td[2]/a/@title", #标题
                           "href" : "./td[2]/a/@href", #标题地址
@@ -460,8 +460,8 @@ parameter = {
 
                           },
 
-#1-2中钢国际招标公司
-    "zhonggangzhaobiaoyouxianzerengongsi2" : {"li" : '//*[@id="list"]/tr', #标题的上一级
+    #中钢国际招标公司
+    "zhonggangzhaobiaoyouxianzerengongsi_3_2_1" : {"li" : '//*[@id="list"]/tr', #标题的上一级
                           "li_time" : "./td[3]/text()" , #时间
                           "title" : "./td[2]/a/@title", #标题
                           "href" : "./td[2]/a/@href", #标题地址
@@ -478,8 +478,8 @@ parameter = {
 
                           },
 
-    #2太平洋保险
-    "taipingyangbaoxian" : {"li" : '/html/body/div[2]/div[1]/div[2]/div[2]/ul/li', #标题的上一级
+    #太平洋保险
+    "taipingyangbaoxian_3_3_0" : {"li" : '/html/body/div[2]/div[1]/div[2]/div[2]/ul/li', #标题的上一级
                           "li_time" : "./a/em/text()" , #时间
                           "title" : "./a/@title", #标题
                           "href" : "./a/@href", #标题地址
@@ -502,8 +502,8 @@ parameter = {
 
 
 
-    #3天津市政府采购平台 post
-    "tianjinshizhengfucaigoupingtai" : {"li" : '//*[@id="reflshPage"]/ul/li',
+    #天津市政府采购平台
+    "tianjinshizhengfucaigoupingtai_3_4" : {"li" : '//*[@id="reflshPage"]/ul/li',
                                      "li_time" : "./span/text()" ,  #时间
                                      "title" : "./a/@title",  #标题
                                      "href" : "./a/@href",  #标题地址
@@ -546,8 +546,8 @@ parameter = {
 
                                      },
 
-    # 4内蒙古自治区公共资源交易平台
-    "neimengguzizhiqugonggongziyuanjiaoyiwang": {"li": '/html/body/div[2]/div[2]/div/div[4]/table/tbody//tr',
+    # 内蒙古自治区公共资源交易平台
+    "neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_0": {"li": '/html/body/div[2]/div[2]/div/div[4]/table/tbody//tr',
                                        "li_time": "./td[4]/text()",  # 时间
                                        "title": "./td[3]/a/@title",  # 标题
                                        "href": "./td[3]/a/@href",  # 标题地址
@@ -558,8 +558,8 @@ parameter = {
                                        "search": "",
                                      },
 
-# 4-2内蒙古自治区公共资源交易平台
-    "neimengguzizhiqugonggongziyuanjiaoyiwang2": {"li": '/html/body/div[2]/div[2]/div/div[4]/table/tbody//tr',
+    # 内蒙古自治区公共资源交易平台
+    "neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_1": {"li": '/html/body/div[2]/div[2]/div/div[4]/table/tbody//tr',
                                        "li_time": "./td[3]/text()",  # 时间
                                        "title": "./td[2]/a/@title",  # 标题
                                        "href": "./td[2]/a/@href",  # 标题地址
@@ -570,8 +570,8 @@ parameter = {
                                        "search": "",
                                      },
 
-    # 5山东省政府采购信息公开平台
-    "shandongshengzhengfucaigouxinxigongkaipingtai": {"li": '//*[@class="Font9"]',
+    #山东省政府采购信息公开平台
+    "shandongshengzhengfucaigouxinxigongkaipingtai_3_6_0": {"li": '//*[@class="Font9"]',
                                                       "li_time": "./text()[2]",  # 时间
                                                       "title": "./a/@title",  # 标题
                                                       "href": "./a/@href",  # 标题地址
@@ -598,8 +598,8 @@ parameter = {
                                                        "search": "",
                                                        },
 
-    # 5-2山东省政府采购信息公开平台
-    "shandongshengzhengfucaigouxinxigongkaipingtai2": {"li": '//*[@class="Font9"]',
+    # 山东省政府采购信息公开平台
+    "shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1": {"li": '//*[@class="Font9"]',
                                                       "li_time": "./text()[2]",  # 时间
                                                       "title": "./a/@title",  # 标题
                                                       "href": "./a/@href",  # 标题地址
@@ -626,8 +626,8 @@ parameter = {
                                                       "search": "",
                                                       },
 
-    #7 上海公共资源交易网
-    "shanghaigonggongziyuanjiaoyiwang" :{"li": '/html/body/div[5]/div[1]/div[4]/div[2]/table/tbody/tr',
+    #上海公共资源交易网
+    "shanghaigonggongziyuanjiaoyiwang_3_14" :{"li": '/html/body/div[5]/div[1]/div[4]/div[2]/table/tbody/tr',
                                          "li_time": "./td[5]/text()",  # 时间
                                           "title": "./td[1]/a/@title",  # 标题
                                           "href": "./td[1]/a/@href",  # 标题地址
@@ -637,8 +637,8 @@ parameter = {
                                           "number_xpath": '/html/body/div[5]/div[1]/div[5]/div[1]/a[last()]/@href', # 页数区域
                                           "search": "",
                                         },
-     #8 浙江省公共资源交易网
-    "zhejiangshenggonggongziyuanjiaoyiwang" :{"li" : '/html/body/div/table[1]/tbody/tr/td[2]/table/tbody/tr[2]/td/table[2]/tbody/tr/td[2]/div/table/tbody/tr'    ,
+     #浙江省公共资源交易网
+    "zhejiangshenggonggongziyuanjiaoyiwang_3_15_0" :{"li" : '/html/body/div/table[1]/tbody/tr/td[2]/table/tbody/tr[2]/td/table[2]/tbody/tr/td[2]/div/table/tbody/tr'    ,
                                          "li_time": "./td[3]/text()",  # 时间
                                           "title": "./td[2]/a/@title",  # 标题
                                           "href": "./td[2]/a/@href",  # 标题地址
@@ -650,8 +650,8 @@ parameter = {
             },
 
 
-    #8-2 浙江省公共资源交易网
-    "zhejiangshenggonggongziyuanjiaoyiwang2" :{"li" : '/html/body/div/table[1]/tbody/tr/td[2]/table/tbody/tr[2]/td/table[2]/tbody/tr/td[2]/div/table/tbody/tr'    ,
+    # 浙江省公共资源交易网
+    "zhejiangshenggonggongziyuanjiaoyiwang_3_15_1" :{"li" : '/html/body/div/table[1]/tbody/tr/td[2]/table/tbody/tr[2]/td/table[2]/tbody/tr/td[2]/div/table/tbody/tr'    ,
                                          "li_time": "./td[3]/text()",  # 时间
                                           "title": "./td[2]/a/@title",  # 标题
                                           "href": "./td[2]/a/@href",  # 标题地址
@@ -662,8 +662,8 @@ parameter = {
                                           "search": "",
             },
 
-    #9 江苏政府采购网
-    "jiangsuzhengfucaigouwang" :{"li" : '//*[@id="newsList"]/ul/li',
+    #江苏政府采购网
+    "jiangsuzhengfucaigouwang_3_16_0" :{"li" : '//*[@id="newsList"]/ul/li',
                                          "li_time": "./text()[2]",  # 时间
                                           "title": "./a/text()",  # 标题
                                           "href": "./a/@href",  # 标题地址
@@ -673,8 +673,8 @@ parameter = {
                                           "number_xpath": '//*[@id="newsPage"]/div/a[2]/@href', # 页数区域
                                           "search": "",
                                  },
-    #9-2 江苏政府采购网
-    "jiangsuzhengfucaigouwang2" :{"li" : '//*[@id="newsList"]/ul/li',
+    #江苏政府采购网
+    "jiangsuzhengfucaigouwang_3_16_1" :{"li" : '//*[@id="newsList"]/ul/li',
                                          "li_time": "./text()[2]",  # 时间
                                           "title": "./a/text()",  # 标题
                                           "href": "./a/@href",  # 标题地址
@@ -685,8 +685,8 @@ parameter = {
                                           "search": "",
                                  },
 
-    #10厦门市政府采购网
-    "xiamenshigongongziyuanjiaoyiwang" : {"li" : '//*[@id="pubdays"]/li[position()>1]', #标题的上一级
+    #厦门市政府采购网
+    "xiamenshigongongziyuanjiaoyiwang_3_18_0" : {"li" : '//*[@id="pubdays"]/li[position()>1]', #标题的上一级
                           "li_time" : "./span[2]/text()" , #时间
                           "title" : "./a/@title", #标题
                           "href" : "./a/@href", #标题地址
@@ -703,8 +703,8 @@ parameter = {
 
                           },
 
-#10-2厦门市政府采购网
-    "xiamenshigongongziyuanjiaoyiwang2" : {"li" : '//*[@id="pubdays"]/li[position()>1]', #标题的上一级
+    #厦门市政府采购网
+    "xiamenshigongongziyuanjiaoyiwang_3_18_1" : {"li" : '//*[@id="pubdays"]/li[position()>1]', #标题的上一级
                           "li_time" : "./span[2]/text()" , #时间
                           "title" : "./a/@title", #标题
                           "href" : "./a/@href", #标题地址
@@ -724,8 +724,8 @@ parameter = {
 
 
 
-#11 广西招标投标公共服务平台
-    "guangxizhaobiaotoubiaogonggongfuwupingtai" :{"li": '/html/body/table/tbody/tr[position()>1]',
+    #广西招标投标公共服务平台
+    "guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_0" :{"li": '/html/body/table/tbody/tr[position()>1]',
                                          "li_time": "./td[5]/text()",  # 时间
                                           "title": "./td[1]/a/@title",  # 标题
                                           "href": "./td[1]/a/@href",  # 标题地址
@@ -737,8 +737,8 @@ parameter = {
                                           "type" : "招标"
                                         },
 
-#11-2 广西招标投标公共服务平台
-    "guangxizhaobiaotoubiaogonggongfuwupingtai2" :{"li": '/html/body/table/tbody/tr[position()>1]',
+    # 广西招标投标公共服务平台
+    "guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_1" :{"li": '/html/body/table/tbody/tr[position()>1]',
                                          "li_time": "./td[5]/text()",  # 时间
                                           "title": "./td[1]/a/@title",  # 标题
                                           "href": "./td[1]/a/@href",  # 标题地址
@@ -751,8 +751,8 @@ parameter = {
                                         },
 
 
-#12 海南省公共资源交易网
-    "hainanshenggonggongziyuanjiaoyiwang" :{"li": '/html/body/div[4]/div[2]/div[2]/div',
+    #海南省公共资源交易网
+    "hainanshenggonggongziyuanjiaoyiwang_3_20" :{"li": '/html/body/div[4]/div[2]/div[2]/div',
                                          "li_time": "./p/span[2]/text()",  # 时间
                                           "title": "./p/a/@title",  # 标题
                                           "href": "./a/@href",  # 标题地址
@@ -763,8 +763,8 @@ parameter = {
                                           "search": "",
                                         },
 
-    #13 湖南国联招标有限公司
-    "hunanguolianzhaobiaoyouxiangongsi": {"li": '//*[@id="gridcontainer1"]/div/div[1]/div[position()>1]',  # 标题的上一级
+    #湖南国联招标有限公司
+    "hunanguolianzhaobiaoyouxiangongsi_3_22_0": {"li": '//*[@id="gridcontainer1"]/div/div[1]/div[position()>1]',  # 标题的上一级
                                   "li_time": "./span[3]/text()",  # 时间
                                   "title": "./a/text()",  # 标题
                                   "href": "./a/@href",  # 标题地址
@@ -783,8 +783,8 @@ parameter = {
 
 
 
-#14 安招采网
-    "anzhaocai": {"li": '//*[@id="gridcontainer1"]/div/div[1]/div[position()>1]',  # 标题的上一级
+    #安招采网
+    "anzhaocai_3_23": {"li": '//*[@id="gridcontainer1"]/div/div[1]/div[position()>1]',  # 标题的上一级
                                   "li_time": "./span[3]/text()",  # 时间
                                   "title": "./a/text()",  # 标题
                                   "href": "./a/@href",  # 标题地址
@@ -800,8 +800,8 @@ parameter = {
                                   "search": "",
 
                                   },
-    #15江西国政招标有限公司
-        "jiangxiguozhengzhaobiaoyouxiangongsi" :{"li": '/html/body/div[3]/div/div/div[2]/ul/li',
+    #江西国政招标有限公司
+        "jiangxiguozhengzhaobiaoyouxiangongsi_3_24_0" :{"li": '/html/body/div[3]/div/div/div[2]/ul/li',
                                              "li_time": "./span/text()",  # 时间
                                               "title": "./a/@title",  # 标题
                                               "href": "./a/@href",  # 标题地址
@@ -813,8 +813,8 @@ parameter = {
                                             },
 
 
-    #15-2江西国政招标有限公司
-        "jiangxiguozhengzhaobiaoyouxiangongsi2" :{"li": '/html/body/div[3]/div/div/div[2]/ul/li',
+    #江西国政招标有限公司
+        "jiangxiguozhengzhaobiaoyouxiangongsi_3_24_1" :{"li": '/html/body/div[3]/div/div/div[2]/ul/li',
                                              "li_time": "./span/text()",  # 时间
                                               "title": "./a/@title",  # 标题
                                               "href": "./a/@href",  # 标题地址
@@ -826,8 +826,8 @@ parameter = {
                                             },
 
 
-    #16 云南省政府采购网
-    "yunnanshengzhengfucaigouwang": {"li": '//*[@id="bulletinlistid"]/tbody/tr',  # 标题的上一级
+    #云南省政府采购网
+    "yunnanshengzhengfucaigouwang_3_26_0": {"li": '//*[@id="bulletinlistid"]/tbody/tr',  # 标题的上一级
                                   "li_time": "./span[3]/text()",  # 时间
                                   "title": "./td[1]/@title",  # 标题
                                   "href": "",  # 标题地址 //todo 16-云南招标-找不到链接
@@ -844,8 +844,8 @@ parameter = {
 
                                   },
 
-    #17 拉萨公共资源交易网
-    "lasagonggongziyuanjiaoyiwang": {"li": '//*[@id="listCon"]/ul/li',  # 标题的上一级
+    # 拉萨公共资源交易网
+    "lasagonggongziyuanjiaoyiwang_3_28_0": {"li": '//*[@id="listCon"]/ul/li',  # 标题的上一级
                                   "li_time": "./span/text()",  # 时间
                                   "title": "./a/@title",  # 标题
                                   "href": "./a/@href",  # 标题地址
@@ -863,8 +863,8 @@ parameter = {
                                   },
 
 
-    #17-2 拉萨公共资源交易网
-    "lasagonggongziyuanjiaoyiwang2": {"li": '//*[@id="listCon"]/ul/li',  # 标题的上一级
+    # 拉萨公共资源交易网
+    "lasagonggongziyuanjiaoyiwang_3_28_1": {"li": '//*[@id="listCon"]/ul/li',  # 标题的上一级
                                   "li_time": "./span/text()",  # 时间
                                   "title": "./a/@title",  # 标题
                                   "href": "./a/@href",  # 标题地址
@@ -883,8 +883,8 @@ parameter = {
 
 
 
-    #18成都公共资源交易中心
-    "chengdushigonggongziyuanjiaoyizhongxin" : {"li" : '//*[@id="contentlist"]/div', #标题的上一级
+    #成都公共资源交易中心
+    "chengdushigonggongziyuanjiaoyizhongxin_3_29" : {"li" : '//*[@id="contentlist"]/div', #标题的上一级
                           "li_time" : "./div[3]/div[1]/text()" , #时间
                           "title" : "./div[2]/a/text()", #标题
                           "href" : "./div[2]/a/@href", #标题地址
@@ -901,8 +901,8 @@ parameter = {
 
                           },
 
-    #19 中国邮政
-        "zhongguoyouzheng" :{"li": '//*[@id="Content3"]/div[2]/ul/li[position()<21]',
+    #中国邮政
+        "zhongguoyouzheng_3_31_0" :{"li": '//*[@id="Content3"]/div[2]/ul/li[position()<21]',
                                              "li_time": "./span[2]/text()",  # 时间
                                               "title": "./span[1]/a/@title",  # 标题
                                               "href": "./span[1]/a/@href",  # 标题地址
@@ -913,7 +913,7 @@ parameter = {
                                               "search": "",
                                             },
     #19-2 中国邮政
-        "zhongguoyouzheng2" :{"li": '//*[@id="Content3"]/div[2]/ul/li[position()<21]',
+        "zhongguoyouzheng_3_31_1" :{"li": '//*[@id="Content3"]/div[2]/ul/li[position()<21]',
                                              "li_time": "./span[2]/text()",  # 时间
                                               "title": "./span[1]/a/@title",  # 标题
                                               "href": "./span[1]/a/@href",  # 标题地址
@@ -927,7 +927,7 @@ parameter = {
 
 
     # 20 兵团政府采购网
-    "bingtuanzhengfucaigouwang": {"li": '/html/body/div[3]/div[2]/div[2]/div/div[2]/ul/li',
+    "bingtuanzhengfucaigouwang_3_32": {"li": '/html/body/div[3]/div[2]/div[2]/div/div[2]/ul/li',
                          "li_time": "./span/text()",  # 时间
                          "title": "./div/a/text()",  # 标题
                          "href": "./div/a/@href",  # 标题地址
@@ -945,7 +945,7 @@ parameter = {
     ########################
     #zl need_login
     #
-    "hebeizhaobiaocaigouwang": {
+    "hebeizhaobiaocaigouwang_3_9_0": {
         # 登陆
         "login": {"button": "//*[@id='login_login_btn']",
                   "isHasVerify_code": False,
@@ -958,19 +958,18 @@ parameter = {
         "startPage": {"type": "onclick",
                       "onclick": [{"button": "",
                                    "params": [],
-                                   "url": "https://jl.bidcenter.com.cn/diqumore-1-1-1.html"
+                                   "url": "https://search.bidcenter.com.cn/search?keywords=&diqu=3"
                                    },
                                   ],
                       },
-
-        "li": "//table/tbody/tr",  # 标题的上一级
-        "li_time": "./td[4]/text()",  # 时间
-        "title": "./td[1]/a/@title",  # 标题
-        "href": "./td[1]/a/@href",  # 标题地址
-        "domainName_url": "https://jl.bidcenter.com.cn",  # 拼接域名
-        "li_area": "",  # 区域
+        "li": '//*[@id="jq_project_list"]/tbody/tr',  # 标题的上一级
+        "li_time": "./td[7]/text()",  # 时间
+        "title": "./td[2]/a/text()",  # 标题
+        "href": "./td[2]/a/@href",  # 标题地址
+        "domainName_url": "http:",  # 拼接域名
+        "li_area": "./td[5]/text()",  # 区域
         "isloopBytime": True,  # 是否控制时间循环
-        "page_name": {"type": 1, "style": "https://jl.bidcenter.com.cn/diqumore-1-1-count.html", "replaceKey": "count",
+        "page_name": {"type": 1, "style": "https://search.bidcenter.com.cn/search?keywords=&diqu=3&page=count", "replaceKey": "count",
                       "startNum": 1},  # {"type":0,"style":r'page=\d+',"startNum":1},
         "number_xpath": "",  # 页数区域
         "search": "",
