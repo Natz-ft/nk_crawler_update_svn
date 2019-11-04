@@ -989,18 +989,18 @@ parameter = {
         "startPage": {"type": "onclick",
                       "onclick": [{"button": "",
                                    "params": [],
-                                   "url": "https://search.bidcenter.com.cn/search?diqu=6&darea=%E5%A4%A7%E8%BF%9E"
+                                   "url": "http://jilin.gc-zb.com/lists/pid/9.html"
                                    },
                                   ],
                       },
-        "li": '//*[@id="jq_project_list"]/tbody/tr',  # 标题的上一级
-        "li_time": "./td[7]/text()",  # 时间
-        "title": "./td[2]/a/text()",  # 标题
-        "href": "./td[2]/a/@href",  # 标题地址
-        "domainName_url": "http:",  # 拼接域名
-        "li_area": "./td[5]/text()",  # 区域
+        "li": '//*[@id="center_box"]/div/div[2]/div[2]/div[1]/p',  # 标题的上一级
+        "li_time": "./b/text()",  # 时间
+        "title": "./a/@title",  # 标题
+        "href": "./a/@href",  # 标题地址
+        "domainName_url": "",  # 拼接域名
+        "li_area": "",  # 区域
         "isloopBytime": True,  # 是否控制时间循环
-        "page_name": {"type": 1, "style": "https://search.bidcenter.com.cn/search?diqu=6&darea=%E5%A4%A7%E8%BF%9E&page=count", "replaceKey": "count",
+        "page_name": {"type": 1, "style": "http://jilin.gc-zb.com/lists.html?page=count1&zz=city_173&keyword=&pid=9&city=0&time=7", "replaceKey": "count",
                       "startNum": 1},  # {"type":0,"style":r'page=\d+',"startNum":1},
         "number_xpath": "",  # 页数区域
         "search": "",
