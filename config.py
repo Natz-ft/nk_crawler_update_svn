@@ -22,9 +22,9 @@ config.driver_linux = r'./chromedriver'
 
 # search keywords
 
-include_keys = ['黑龙江','佳木斯','哈尔滨','河北','河南','太原','内蒙古','郑州','上海',
+include_keys = ['黑龙江','佳木斯','哈尔滨','河北','河南','太原','内蒙古','郑州','上海','长春'
                 '珠海','佛山','广西','长沙','江西','贵州','西安','安徽','庐江县','云南',
-                '重庆','西藏','新疆','天津','福建','湖南','吉林'
+                '重庆','西藏','新疆','天津','福建','湖南','吉林','郑州','银行','外包'
                 ]
 #exclude_keys = ['废标']
 #exclude_add_list = ['维修']
@@ -168,7 +168,7 @@ information = {#"jincai_1" : {"original_url" : "http://www.cfcpn.com/plist/caigo
                #福建省公共资源交易中心
                #"fujianshengonggongziyuanjiaoyi_1_18_0":{"original_url" : "http://www.fjggzyjy.cn/news/category/9/", "csv" : "fujianshengonggongziyuanjiaoyi_1_18_0.csv", "classname" : "Test","type":"招标"},               
 
-    # zl execl的第三列
+    # zl execl的第三列 no_login
     #中钢招标有限责任公司
     # "zhonggangzhaobiaoyouxianzerengongsi_3_2_0" :{"original_url" : "http://tendering.sinosteel.com/zgzb/zbzq/005001/secondPage.html" , "csv" : "zhonggangzhaobiaoyouxianzerengongsi_3_2_0.csv" , "classname" : "Test","type":"招标" },
     #中钢招标有限责任公司
@@ -238,13 +238,27 @@ information = {#"jincai_1" : {"original_url" : "http://www.cfcpn.com/plist/caigo
 
 
     #zl need_login
+    # 华中招标网
+    "huazhongzhaobiaowang_3_8_0": {"original_url": "http://hnzhaobiao.com/index.asp", "csv": "huazhongzhaobiaowang_3_8_0.csv","classname": "Test_login", "type": "招标"},
+    # 华中招标网
+    #"huazhongzhaobiaowang_3_8_1": {"original_url": "http://hnzhaobiao.com/index.asp","csv": "huazhongzhaobiaowang_3_8_1.csv", "classname": "Test_login", "type": "中标"},
+
     # 河北招标网
     #"hebeizhaobiaocaigouwang_3_9": {"original_url": "https://sso.bidcenter.com.cn/login", "csv": "hebeizhaobiaocaigouwang_3_9.csv","classname": "Test_login", "type": ""},
     # 吉林省采购招标网
-    "jilinshengcaigouzhaobiaowang_3_11_0": {"original_url": "http://www.gc-zb.com/login/index.html", "csv": "jilinshengcaigouzhaobiaowang_3_11_0.csv","classname": "Test_login", "type": "招标"},
+    #"jilinshengcaigouzhaobiaowang_3_11_0": {"original_url": "http://www.gc-zb.com/login/index.html", "csv": "jilinshengcaigouzhaobiaowang_3_11_0.csv","classname": "Test_login", "type": "招标"},
+    # 吉林省采购招标网
+    #"jilinshengcaigouzhaobiaowang_3_11_1": {"original_url": "http://www.gc-zb.com/login/index.html","csv": "jilinshengcaigouzhaobiaowang_3_11_1.csv", "classname": "Test_login","type": "中标"},
+    # 辽宁省采购招标网
+    #"liaoningshengcaigouzhaobiaowang_3_12_0": {"original_url": "http://www.gc-zb.com/login/index.html","csv": "jilinshengcaigouzhaobiaowang_3_12_0.csv", "classname": "Test_login","type": "招标"},
+    # 辽宁省采购招标网
+    #"liaoningshengcaigouzhaobiaowang_3_12_1": {"original_url": "http://www.gc-zb.com/login/index.html","csv": "jilinshengcaigouzhaobiaowang_3_12_1.csv","classname": "Test_login", "type": "中标"},
     # 大连市招标网
     #"dalianshizhaobiaowang_3_13": {"original_url": "https://sso.bidcenter.com.cn/login", "csv": "dalianshizhaobiaowang_3_13.csv","classname": "Test_login", "type": ""},
-
+    #深圳_千里马
+    #"shenzhenqinglima_3_21_0":{"original_url" : "http://center.qianlima.com/login.jsp", "csv" : "shenzhenqinglima_3_21_0.csv", "classname" : "Test_login","type":"招标"},
+    #深圳_千里马
+    #"shenzhenqinglima_3_21_1":{"original_url" : "http://center.qianlima.com/login.jsp", "csv" : "shenzhenqinglima_3_21_1.csv", "classname" : "Test_login","type":"中标"},
 
 
 }

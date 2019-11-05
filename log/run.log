@@ -1409,3 +1409,40 @@ SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@class=
 
 
 2019-11-04 17:36:39,454 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
+2019-11-05 09:14:25,206 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
+2019-11-05 09:16:32,719 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
+2019-11-05 09:19:54,133 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
+2019-11-05 09:26:18,416 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
+2019-11-05 09:32:34,943 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
+2019-11-05 09:46:06,552 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
+2019-11-05 09:48:29,183 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：6条
+2019-11-05 10:05:57,796 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：22条
+2019-11-05 10:11:52,012 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_1, 一共：12条
+2019-11-05 10:32:53,067 - webcrawer service - INFO - 运行成功: liaoningshengcaigouzhaobiaowang_3_12_0, 一共：43条
+2019-11-05 10:42:26,398 - webcrawer service - INFO - 运行成功: liaoningshengcaigouzhaobiaowang_3_12_1, 一共：19条
+2019-11-05 11:39:19,398 - webcrawer service - INFO - 运行成功: shenzhenqinglima_3_21_0, 一共：12条
+2019-11-05 14:39:06,129 - webcrawer service - INFO - 运行成功: shenzhenqinglima_3_21_0, 一共：12条
+2019-11-05 14:47:21,025 - webcrawer service - INFO - 运行成功: shenzhenqinglima_3_21_1, 一共：14条
+2019-11-05 15:22:00,867 - webcrawer service - ERROR - 运行失败: huazhongzhaobiaowang_3_8_0
+2019-11-05 15:22:00,969 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 142, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 28, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 104, in log_in_web
+    self.cookie_info = self.driver.get_cookies()                 # 列表中包含多个字典
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 841, in get_cookies
+    return self.execute(Command.GET_ALL_COOKIES)['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 241, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: 用户名不能为空!
+Message: unexpected alert open: {Alert text : 用户名不能为空!}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-05 15:33:13,886 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：0条
+2019-11-05 15:53:41,280 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：0条
+2019-11-05 16:22:11,264 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：0条
+2019-11-05 16:23:11,351 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_1, 一共：0条
