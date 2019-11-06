@@ -1,0 +1,667 @@
+<html><head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>厦门市公共资源交易网</title>
+<script src="https://hm.baidu.com/hm.js?b9b3de9840555ca877bfb52b9430f10b"></script><script type="text/javascript">
+	var HttpWeb ="";
+    var ctx = "/XmUiForWeb2.0";//提前在jsp页面定义js的全局变量;然后我们在引入的js代码中就可以直接使用ctx，轻松获取到所需的值。
+</script>
+<link rel="stylesheet" type="text/css" href="/XmUiForWeb2.0/website/xmebid/css/jedate.css">
+<link rel="stylesheet" type="text/css" href="/XmUiForWeb2.0/website/xmebid/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/XmUiForWeb2.0/website/xmebid/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/XmUiForWeb2.0/website/xmebid/css/xmNewStyle.css">
+<link rel="stylesheet" type="text/css" href="/XmUiForWeb2.0/website/xmebid/css/common.css">
+<script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/jedate.js"></script>
+<script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/jqPaginator.js"></script>
+<!-- 新闻图片轮播器 -->
+<script type="text/javascript" src="/XmUiForWeb2.0/js/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/jquery.ex.datetimepicker.js"></script><script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/datepicker/jquery.datetimepicker.js"></script><script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/datepicker/jquery.daterangemoment.min.js"></script><script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/datepicker/jquery.daterangepicker.js"></script><link rel="stylesheet" href="/XmUiForWeb2.0/website/xmebid/js/datepicker/jquery.datetimepicker.css"><link rel="stylesheet" href="/XmUiForWeb2.0/website/xmebid/js/datepicker/jquery.daterangepicker.css">
+<script type="text/javascript">
+	var nowLogName = 'null';
+	var login_type = 'null';//记录登录类型（account：1 或 key：0）
+	var user_type = 'null';//用户类型（用户角色（企业锁登录时为2））
+ 	var dropOk = false;//滑块验证是否通过
+ 	var centerId_nav = null;//二级导航动态查询办事指南时使用
+ 	var zhxxTag = 'null';
+ 	var jsxydaglTag = 'null';
+ 	var userToken = 'null';
+ 	var serial_No = 'null';
+ 	var pop_all = 'null';
+ 	var zhxxHttpWeb = 'null';
+ 	var comId  ='null';
+ 	var jytjTag = 'null'
+ 	var userID = 'null'
+</script>
+</head>
+<body>
+
+
+
+
+<script type="text/javascript">
+var scheduleArray = new Array();//全局的变量，记录定时器
+
+  function onkeydownsearch(){//回车搜索
+      if(event.keyCode==13){
+    	  $(".menu li.active").removeClass("active");
+    	  toWebSiteSearch();
+	  }
+  }
+
+  //站内搜索
+  function toWebSiteSearch() {
+	  //清除所有的定时器
+	  clearAllIntervals();
+
+	  $.ajax({
+			url:ctx+"/xmebid/webSearch.do?keyword="+encodeURIComponent(encodeURIComponent($("#headq").val()))+'&centerId=',
+			async:true,
+			success:function(data){
+				$(".index_content").html(data);
+			}
+		})
+  }
+</script>
+
+<div class="header">
+	<div class="nav_1">
+        <div class="logo_big"></div>
+	</div>
+	<div class="nav_1">
+        <div class="slogan_big"></div>
+	</div>
+	<div class="nav_3">
+        <div class="ss_box_opacity">
+		</div>
+		<div class="ss_box">
+	        <input name="searchword" id="headq" type="text" class="input_text" placeholder="搜索当前网站信息" onkeydown="onkeydownsearch();">
+	        <input type="button" class="input_btn" onclick="toWebSiteSearch();"><!-- value="高级搜索" -->
+		</div>
+	</div>
+	<div class="nav_2">
+		<div class="menu twhite1 "> <a href="#" class="nav-toggle"></a>
+	        <ul>
+	            <li class="active"><a href="#" value="/xmebid/xmIndex.do"><span class="m1"></span>网站首页</a></li>
+	            <li><a href="#" value="/xmebid/industryDynamic.do?bigClassId=2&amp;tab=2"><span class="m7"></span>重要通知</a></li>
+	            <li><a href="#" value="/xmebid/xmBidList.do"><span class="m2"></span>交易信息</a></li>
+	            <li><a href="#" value="/xmebid/xmtradeList.do"><span class="m11"></span>交易目录</a></li>
+	            <li><a href="#" value="/xmebid/onlineWork.do?bigClassId=4"><span class="m4"></span>政务公开</a></li>
+	            <li><a href="#" value="/xmebid/articleNewsList.do?bigClassId=3"><span class="m6"></span>政策法规</a></li>
+	            <li><a href="#" value="/xmebid/transBody.do"><span class="m10"></span>曝光专栏</a></li>
+				<li><a href="#" value="/xmebid/generalProfile.do?bigClassId=5"><span class="m5"></span>中心概况</a></li>
+	            <!-- <li><a href="#" value="/xmebid/industryDynamic.do?bigClassId=1"><span class="m3"></span>行业动态</a></li> -->
+	            <li class="last"><a href="#" value="/xmebid/downList.do"><span class="m8"></span>下载中心</a></li>
+	            <!-- <li><a href="#" value="/xmebid/xmNewsList.do"><span class="m3"></span>新闻动态</a></li>-->
+				<!-- <li><a href="#" value="/xmebid/workOpen.do?bigClassId=9"><span class="m9"></span>党务公开</a></li> -->
+	        </ul>
+	        <div class="clear"></div>
+	    </div>
+	</div>
+</div>
+<div class="index_content">
+
+
+<script>
+    var ctx = "/XmUiForWeb2.0";
+    var pop_all = 'null';
+</script>
+
+	<div class="news">
+	    <div id="news_pic_slider">
+             <div class="hd">
+                 <ul><li class="on"></li><li class=""></li></ul>
+             </div>
+             <div class="bd">
+                 <div class="tempWrap" style="overflow:hidden; position:relative; width:420px"><ul style="width: 840px; left: -118.87px; position: relative; overflow: hidden; padding: 0px; margin: 0px;"><li style="float: left; width: 420px;"><img src="http://www.xmzyjy.cn/ztbFiles/bidFiles/webUpload/image/picmini_20180613103536976.jpg"><div class="pic_info">厦门市建设工程电子招投标交易平台投标人专场培训会</div></li><li style="float: left; width: 420px;"><img src="http://www.xmzyjy.cn/ztbFiles/bidFiles/webUpload/image/picmini_20180613103920879.jpg"><div class="pic_info">厦门市房屋建筑和市政基础设施工程电子招投标网上公开培训</div></li></ul></div>
+             </div>
+        </div>
+		<!-- <button id="jsonp">市政府对接</button> -->
+		<div class="new_info">
+	      <div class="new_tabs">
+	        <ul>
+	          <li class="current" value="2">重要通知</li>
+	          <li value="1">行业动态</li>
+	          <li value="13">工作动态</li>
+	          <!-- <li value="14">信用信息</li>  -->
+	        </ul>
+	      </div>
+	      <div style="clear: both;"></div>
+	      <div class="new_details content">
+	        <div class="tab1_1">
+	          <ul id="newsContent">
+	          </ul>
+				<ul id="newsContent2" class="show">
+
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=2493b72aabad4cb591883829d1e2fd75&amp;bigClassId=2&amp;previousPage=0" title="关于网站及业务系统停机维护的重要通知" target="_blank">关于网站及业务系统停机维护的重要通知</a></span><span class="right">2019-09-23</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=d5a7e78e23f24c58a7f9a356d62ed607&amp;bigClassId=2&amp;previousPage=0" title="关于提供随机抽取450家入围投标人数学模型（离线版）下载的通知" target="_blank">关于提供随机抽取450家入围投标人数学模型（离线版）下载的通知</a></span><span class="right">2019-07-31</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=cc645d9b223e4a16bb6e7337e795eb24&amp;bigClassId=2&amp;previousPage=0" title="关于服务器维护的重要通知" target="_blank">关于服务器维护的重要通知</a></span><span class="right">2019-07-24</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=2af6225b63894784869210fcd74f1027&amp;bigClassId=2&amp;previousPage=0" title="关于建设工程投标保证金有关事项的通知" target="_blank">关于建设工程投标保证金有关事项的通知</a></span><span class="right">2019-07-23</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=9382a16752d94589846346f44e6279aa&amp;bigClassId=2&amp;previousPage=0" title="关于核验评标区进出人员身份的通知" target="_blank">关于核验评标区进出人员身份的通知</a></span><span class="right">2019-07-19</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=9f6c8c999b524d798dabb74712326073&amp;bigClassId=2&amp;previousPage=0" title="公 告" target="_blank">公 告</a></span><span class="right">2019-07-15</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=aa1136de498f45018b744d5655a1f020&amp;bigClassId=2&amp;previousPage=0" title="厦门市建设局 厦门市行政审批管理局关于在全市房屋建筑和市政基础设施工程使用电子投标保函的通知" target="_blank">厦门市建设局 厦门市行政审批管理局关于在全市房屋建筑和市政基础设施工程使用电子投标保函的通知</a></span><span class="right">2019-07-04</span></li>
+
+
+				</ul>
+				<ul id="newsContent1" class="hide">
+
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=1d8bdde702bf45d5b1df4cd227d5b8ef&amp;bigClassId=1&amp;previousPage=0" title="厦门市建设工程项目招投标领域营商环境专项整治线索征集邮寄地址和电子邮箱" target="_blank">厦门市建设工程项目招投标领域营商环境专项整治线索征集邮寄地址和电子邮箱</a></span><span class="right">2019-10-14</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=8d73e6e224d04849be39252017864708&amp;bigClassId=1&amp;previousPage=0" title="公开招标、竞争性谈判、竞争性磋商的概念以及差异性" target="_blank">公开招标、竞争性谈判、竞争性磋商的概念以及差异性</a></span><span class="right">2019-08-06</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=2acb2975544a41fea265badcc29b576b&amp;bigClassId=1&amp;previousPage=0" title="上海：拒签《不参与围标串标承诺书》可拒收标书！" target="_blank">上海：拒签《不参与围标串标承诺书》可拒收标书！</a></span><span class="right">2019-06-18</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=470425b10ba7414b883097a27b8ed834&amp;bigClassId=1&amp;previousPage=0" title="多家企业因使用盗版软件加密锁涉嫌围标串标行为（广东省珠海市）" target="_blank">多家企业因使用盗版软件加密锁涉嫌围标串标行为（广东省珠海市）</a></span><span class="right">2019-05-31</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=28c12841bbab481e865662c343ce21a0&amp;bigClassId=1&amp;previousPage=0" title="投标文件制作机器码一致，是否废标？官方答案来了(河南省)" target="_blank">投标文件制作机器码一致，是否废标？官方答案来了(河南省)</a></span><span class="right">2019-05-13</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=424bc2028a814889aeaaa0ec79e136fe&amp;bigClassId=1&amp;previousPage=0" title="【行业信用】厦门市建设局公布2018年度市级财政投融资建设项目代建企业信用综合评价结果" target="_blank">【行业信用】厦门市建设局公布2018年度市级财政投融资建设项目代建企业信用综合评价结果</a></span><span class="right">2019-04-25</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=fc88aa324ca54f788f3a52c34653f4ed&amp;bigClassId=1&amp;previousPage=0" title="【回顾】2019年3月大事记，你值得了解！" target="_blank">【回顾】2019年3月大事记，你值得了解！</a></span><span class="right">2019-04-06</span></li>
+
+
+				</ul>
+				<ul id="newsContent13" class="hide">
+
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=3d3d326640634fecb00a5eeb13b6591a&amp;bigClassId=13&amp;previousPage=0" title="关于公共资源交易——政府采购入场交易常见问题的在线访谈" target="_blank"><label class="new"></label>关于公共资源交易——政府采购入场交易常见问题的在线访谈</a></span><span class="right">2019-10-30</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=2d3a66d9c7d14a78b88d9440e6cd07a9&amp;bigClassId=13&amp;previousPage=0" title="市公共资源交易中心召开全体干部职工大会" target="_blank">市公共资源交易中心召开全体干部职工大会</a></span><span class="right">2019-10-25</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=06aebeaf771c4cf189ae04173326dfb5&amp;bigClassId=13&amp;previousPage=0" title="服务工程项目交易，努力优化营商环境" target="_blank">服务工程项目交易，努力优化营商环境</a></span><span class="right">2019-10-22</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=f8d57c633f3b432d99922fe1ae0180ba&amp;bigClassId=13&amp;previousPage=0" title="厦门市公共资源交易中心获庆祝新中国成立70周年歌咏比赛三等奖" target="_blank">厦门市公共资源交易中心获庆祝新中国成立70周年歌咏比赛三等奖</a></span><span class="right">2019-10-15</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=1a3a1f8908ae4151b37a3ed08ace460b&amp;bigClassId=13&amp;previousPage=0" title="贴心细心服务助力工程提速市公共资源交易中心提供优质高效服务，确保民生工程顺利开标" target="_blank">贴心细心服务助力工程提速市公共资源交易中心提供优质高效服务，确保民生工程顺利开标</a></span><span class="right">2019-09-30</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=abd4b29f751a41adb812f89d1daeb5ed&amp;bigClassId=13&amp;previousPage=0" title="公共资源交易中心党支部获“先进基层党支部”荣誉称号" target="_blank">公共资源交易中心党支部获“先进基层党支部”荣誉称号</a></span><span class="right">2019-09-20</span></li>
+<li><span class="left">
+<a href="http://www.xmzyjy.cn/XmUiForWeb2.0/articleNews/newsDetails.do?newsId=35f8d4feb06e4538b74a9c95e00fa8c9&amp;bigClassId=13&amp;previousPage=0" title="“互联网+”激发公共资源交易活力厦门市公共资源交易中心整合改革见成效，去年交易金额超1000亿元" target="_blank">“互联网+”激发公共资源交易活力厦门市公共资源交易中心整合改革见成效，去年交易金额超1000亿元</a></span><span class="right">2019-09-06</span></li>
+
+
+				</ul>
+			</div>
+	        <div id="moreContent" class="more" style="right:20px;position:absolute;bottom:10px; "><a onclick="clickMore('2','重要通知')" '="">查看全部</a></div>
+	      </div>
+	    </div>
+	</div>
+
+
+
+	<div class="icon_list">
+		<ul>
+          <li><a href="http://117.25.161.106:90/XmBizUiForWeb/login/xmRegisterFirst.do" target="_blank" rel="noopener noreferrer"><span class="bg1"></span>
+            <label>注册共享平台</label></a></li>
+          <!-- <li><a onclick="toDestinationJsp(2)"><span class="bg2"></span>
+            <label>收费标准</label></a></li> -->
+          <li><a href="http://117.25.161.106:90/XmBizUiForWeb/login/xmLogin.do" target="_blank" rel="noopener noreferrer"><span class="bg5"></span>
+            <label>场地预约</label></a></li>
+            <li><a onclick="toDestinationJsp(1)"><span class="bg4"></span>
+            <label>办事指南</label></a></li>
+          <li><a onclick="toDestinationJsp(3)"><span class="bg3"></span>
+            <label>系统操作手册</label></a></li>
+        </ul>
+	</div>
+
+	<div class="date">
+			<div class="left_menu">
+                <ul class="f16px" id="tradeCenterList">
+                	<li class="zbxx zbxxon" id="tradeCenterId1" value="G"><span class="zbxxG"></span></li>
+                	<li class="zbxx" id="tradeCenterId2" value="D"><span class="zbxxD"></span></li>
+                	<li class="zbxx" id="tradeCenterId3" value="C"><span class="zbxxC"></span></li>
+                	<li class="zbxx" id="tradeCenterId4" value="B"><span class="zbxxB"></span></li>
+                	<li class="zbxx" id="tradeCenterId5" value="CC"><span class="zbxxCC"></span></li>
+                </ul>
+			</div>
+			<!-- 数据展示内容结束   -->
+			<div class="date_top" id="top_1" style="display: block;">
+				  <div class="type_tabs">
+				  	<div class="noticeTypeList">
+				  		<ul id="noticeTypeList"><li onclick="doSearch(this,'1')" class="first" value="1">进场报建信息</li><li onclick="doSearch(this,'2')" class="active" value="2">招标公告</li><li onclick="doSearch(this,'3')" value="3">变更公告</li><li onclick="doSearch(this,'9')" value="9">开标记录表</li><li onclick="doSearch(this,'4')" value="4">中标候选人公示</li><li onclick="doSearch(this,'5')" value="5">中标结果公示</li><li onclick="doSearch(this,'6')" value="6">通知公告</li><li onclick="doSearch(this,'7')" class="last" <li="" value="8">异议回复</li></ul>
+						<span id="nowTime" style="display:none;"></span>
+				  	</div>
+
+					<div class="purchaseTradeWay">
+						<ul id="purchaseTradeWayList"></ul>
+					</div>
+				 </div>
+				 <div class="type_data">
+					<ul id="pubdays" class="hide">
+					</ul>
+					<ul id="pubday1" class="hide">
+
+<li class="weakColor"><p style="width:250px;max-width:250px;">报建编号</p><a style="padding-left: 15px;">项目名称</a><span>发布时间</span></li>
+<li><p style="width:250px;max-width:250px;" title="3502012017090201">3502012017090201</p><a style="padding-left: 15px;" href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/registerInfo.do?projId=40288a1666d3f8970166d527db4a018d&amp;dataFrom=1" target="_blank" title="埭头溪生态补水一期泥山溪工程">埭头溪生态补水一期泥山溪工程</a><span>2019-11-06</span></li>
+<li><p style="width:250px;max-width:250px;" title="3502011911040101">3502011911040101</p><a style="padding-left: 15px;" href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/registerInfo.do?projId=40288a356e212b3b016e39b82d290013&amp;dataFrom=1" target="_blank" title="富贵门花园三期">富贵门花园三期</a><span>2019-11-06</span></li>
+<li><p style="width:250px;max-width:250px;" title="3502051911060201">3502051911060201</p><a style="padding-left: 15px;" href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/registerInfo.do?projId=40288a356e212b3b016e3ede87370019&amp;dataFrom=1" target="_blank" title="马銮湾新城海沧片区龙窖路工程">马銮湾新城海沧片区龙窖路工程</a><span>2019-11-06</span></li>
+<li><p style="width:250px;max-width:250px;" title="3502061911069901">3502061911069901</p><a style="padding-left: 15px;" href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/registerInfo.do?projId=40288a356e212b3b016e3ede893c001a&amp;dataFrom=1" target="_blank" title="中国建设银行股份有限公司厦门江头支行装修改造工程">中国建设银行股份有限公司厦门江头支行装修改造工程</a><span>2019-11-06</span></li>
+<li><p style="width:250px;max-width:250px;" title="3502061911059901">3502061911059901</p><a style="padding-left: 15px;" href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/registerInfo.do?projId=40288a356e212b3b016e39b82d6e0014&amp;dataFrom=1" target="_blank" title="厦门两边贸易有限公司装修工程">厦门两边贸易有限公司装修工程</a><span>2019-11-05</span></li>
+<li><p style="width:250px;max-width:250px;" title="3502131911050102">3502131911050102</p><a style="padding-left: 15px;" href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/registerInfo.do?projId=40288a356e212b3b016e3c4b61170015&amp;dataFrom=1" target="_blank" title="新圩镇古宅村幸福院工程">新圩镇古宅村幸福院工程</a><span>2019-11-05</span></li>
+<li><p style="width:250px;max-width:250px;" title="3502131911050103">3502131911050103</p><a style="padding-left: 15px;" href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/registerInfo.do?projId=40288a356e212b3b016e3c4b628a0016&amp;dataFrom=1" target="_blank" title="眷乡（厦门）文化旅游有限公司装修工程">眷乡（厦门）文化旅游有限公司装修工程</a><span>2019-11-05</span></li>
+
+
+					</ul>
+					<ul id="pubday2" class="show">
+
+<li class="build weakColor"><p>招标项目编号</p><a>招标项目名称</a><span>发布时间</span><span>招标类型</span></li>
+<li class="build"><p title="E3502119211102008001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072739193CC984032350892F436DD173C62" target="_blank" title="E3502119211102008001">E3502119211102008001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072739193CC984032350892F436DD173C62" target="_blank" title="天马山水库除险加固工程（施工）">天马山水库除险加固工程（施工）</a><label class="tender"></label><span>2019-11-06</span><span>施工</span></li>
+<li class="build"><p title="E3502120201144800001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072b2455109397e41bfb304f3bebfc75e3d" target="_blank" title="E3502120201144800001">E3502120201144800001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072b2455109397e41bfb304f3bebfc75e3d" target="_blank" title="厦门市中小学生综合实践基地二期项目（代建）">厦门市中小学生综合实践基地二期项目（代建）</a><label class="tender">[非电子标]</label><span>2019-11-06</span><span>代建</span></li>
+<li class="build"><p title="E3502030201144440001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072e970418535b243bdb8acbb00830b00c5" target="_blank" title="E3502030201144440001">E3502030201144440001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072e970418535b243bdb8acbb00830b00c5" target="_blank" title="鼓浪屿工艺美院文化提升与艺术重塑项目一期工程（EPC）">鼓浪屿工艺美院文化提升与艺术重塑项目一期工程（EPC）</a><label class="tender"></label><span>2019-11-06</span><span>EPC</span></li>
+<li class="build"><p title="E3502030201144701001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072e5d94e27e71945beabcaf48b7b9b4f1b" target="_blank" title="E3502030201144701001">E3502030201144701001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072e5d94e27e71945beabcaf48b7b9b4f1b" target="_blank" title="前埔污水处理厂北线污水系统三期工程（施工）">前埔污水处理厂北线污水系统三期工程（施工）</a><label class="tender"></label><span>2019-11-05</span><span>施工</span></li>
+<li class="build"><p title="E3502110201144820001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E35020000729539a40337d84b058a6141cdf58b1c6c" target="_blank" title="E3502110201144820001">E3502110201144820001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E35020000729539a40337d84b058a6141cdf58b1c6c" target="_blank" title="四川大学华西厦门医院（监理）">四川大学华西厦门医院（监理）</a><label class="tender"></label><span>2019-11-05</span><span>监理</span></li>
+<li class="build"><p title="E3502120201144620001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072af889ae2c5c646a2b4e5a3403ff6c892" target="_blank" title="E3502120201144620001">E3502120201144620001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072af889ae2c5c646a2b4e5a3403ff6c892" target="_blank" title="同安区新埔路道路工程（一期）（施工）">同安区新埔路道路工程（一期）（施工）</a><label class="tender"></label><span>2019-11-05</span><span>施工</span></li>
+<li class="build"><p title="E3502110201144203001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072c9b83040e0af45f38ced7b7540e4f87a" target="_blank" title="E3502110201144203001">E3502110201144203001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072c9b83040e0af45f38ced7b7540e4f87a" target="_blank" title="集美新城董任路道路（九天湖路-杏锦路段）及电力缆化（锦园变-杏锦路段）工程（土建工程）（勘察设计）">集美新城董任路道路（九天湖路-杏锦路段）及电力缆化（锦园变-杏锦路段）工程（土建工程）（勘察设计）</a><label class="tender"></label><span>2019-11-05</span><span>勘察设计</span></li>
+
+
+					</ul>
+					<ul id="pubday3" class="hide">
+
+<li class="build weakColor"><p>招标项目编号</p><a>招标项目名称</a><span>发布时间</span><span>招标类型</span></li>
+<li class="build"><p title="E3502129212102008001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F002&amp;uniqueId=E350200007289F389F6BE0812BD7D72C4C21C3CA809&amp;objId=null" target="_blank" title="E3502129212102008001">E3502129212102008001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F002&amp;uniqueId=E350200007289F389F6BE0812BD7D72C4C21C3CA809&amp;objId=null" target="_blank" title="西源溪坤泽洋湿地工程(施工）">西源溪坤泽洋湿地工程(施工）</a><label class="tender">[答疑]</label><span>2019-11-06</span><span>施工</span></li>
+<li class="build"><p title="E3502110201144681001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F002&amp;uniqueId=E3502000072853c4a21d76142e28d28dc7341439e1a&amp;objId=null" target="_blank" title="E3502110201144681001">E3502110201144681001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F002&amp;uniqueId=E3502000072853c4a21d76142e28d28dc7341439e1a&amp;objId=null" target="_blank" title="四川大学华西厦门医院（基坑支护工程）">四川大学华西厦门医院（基坑支护工程）</a><label class="tender">[答疑]</label><span>2019-11-06</span><span>施工</span></li>
+<li class="build"><p title="E3502130201143880001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F003&amp;uniqueId=E3502000072473fe31feb684cada299d799b92a22af&amp;objId=null" target="_blank" title="E3502130201143880001">E3502130201143880001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F003&amp;uniqueId=E3502000072473fe31feb684cada299d799b92a22af&amp;objId=null" target="_blank" title="新圩镇山岬路沿线综合整治工程（施工）">新圩镇山岬路沿线综合整治工程（施工）</a><label class="tender">[控制价]</label><span>2019-11-06</span><span>施工</span></li>
+<li class="build"><p title="E3502110201142180001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F003&amp;uniqueId=E35020000726f0ba83bd2ef437b94181324eb6ae19e&amp;objId=null" target="_blank" title="E3502110201142180001">E3502110201142180001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F003&amp;uniqueId=E35020000726f0ba83bd2ef437b94181324eb6ae19e&amp;objId=null" target="_blank" title="2018JP02地块电梯采购及安装">2018JP02地块电梯采购及安装</a><label class="tender">[控制价]</label><span>2019-11-06</span><span>材料设备</span></li>
+<li class="build"><p title="E3502130201143940001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F002&amp;uniqueId=E3502000072507a592d7f8f4d9eac7f5884530d80f0&amp;objId=null" target="_blank" title="E3502130201143940001">E3502130201143940001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F002&amp;uniqueId=E3502000072507a592d7f8f4d9eac7f5884530d80f0&amp;objId=null" target="_blank" title="厦门新机场莲河片区疏港中路（翔安南路-滨海东大道段）工程(施工）">厦门新机场莲河片区疏港中路（翔安南路-滨海东大道段）工程(施工）</a><label class="tender">[答疑]</label><span>2019-11-06</span><span>施工</span></li>
+<li class="build"><p title="E3502009200102045001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F002&amp;uniqueId=E3502000072F9E63B8F7A178E0010F0B818755EB064&amp;objId=null" target="_blank" title="E3502009200102045001">E3502009200102045001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F002&amp;uniqueId=E3502000072F9E63B8F7A178E0010F0B818755EB064&amp;objId=null" target="_blank" title="筼筜湖第二排涝泵站及西堤闸施工监理">筼筜湖第二排涝泵站及西堤闸施工监理</a><label class="tender">[答疑]</label><span>2019-11-06</span><span>监理</span></li>
+<li class="build"><p title="E3502060201143780001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F003&amp;uniqueId=E3502000072b9c284081f2049e78f0d16d180ba10ae&amp;objId=null" target="_blank" title="E3502060201143780001">E3502060201143780001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F003&amp;uniqueId=E3502000072b9c284081f2049e78f0d16d180ba10ae&amp;objId=null" target="_blank" title="马垅阳光公寓改造项目（施工）">马垅阳光公寓改造项目（施工）</a><label class="tender">[控制价]</label><span>2019-11-06</span><span>施工</span></li>
+
+
+					</ul>
+					<ul id="pubday8" class="hide">
+
+<li class="build weakColor"><p>招标项目编号</p><a>招标项目名称</a><span>发布时间</span><span>招标类型</span></li>
+<li class="build"><p title="E3502120201140883001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E3502000072d4a91e4a24c24a599787eb5809bee424&amp;objId=0e8728c9efea4f2081e23fb5a5ddd150" target="_blank" title="E3502120201140883001">E3502120201140883001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E3502000072d4a91e4a24c24a599787eb5809bee424&amp;objId=0e8728c9efea4f2081e23fb5a5ddd150" target="_blank" title="同安工业集中区道路绿化提升工程（施工）（重新招标）">同安工业集中区道路绿化提升工程（施工）（重新招标）</a><label class="tender"></label><span>2019-11-05</span><span>施工</span></li>
+<li class="build"><p title="E3502120201143740002"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E3502000072026debfeeb9b417ea78b28dd29050845&amp;objId=bb4cd443a338441cbcf8a0883bc1de17" target="_blank" title="E3502120201143740002">E3502120201143740002</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E3502000072026debfeeb9b417ea78b28dd29050845&amp;objId=bb4cd443a338441cbcf8a0883bc1de17" target="_blank" title="西山水厂一期绿化工程(施工)">西山水厂一期绿化工程(施工)</a><label class="tender"></label><span>2019-11-05</span><span>施工</span></li>
+<li class="build"><p title="E3502030201142800001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E35020000725fdf4741e44641d3909173d28ead1a65&amp;objId=39a5204f01aa4ecfa5faf8a2c8908456" target="_blank" title="E3502030201142800001">E3502030201142800001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E35020000725fdf4741e44641d3909173d28ead1a65&amp;objId=39a5204f01aa4ecfa5faf8a2c8908456" target="_blank" title="黄厝片区村庄排水管网建设改造工程（施工）">黄厝片区村庄排水管网建设改造工程（施工）</a><label class="tender"></label><span>2019-11-05</span><span>施工</span></li>
+<li class="build"><p title="E3502110201142240001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E3502000072687143de71cf47e3bcd80a2936fdc249&amp;objId=5c7b667638f74446994f734e35fdfe2e" target="_blank" title="E3502110201142240001">E3502110201142240001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E3502000072687143de71cf47e3bcd80a2936fdc249&amp;objId=5c7b667638f74446994f734e35fdfe2e" target="_blank" title="厦门市妇幼保健院集美院区（勘察）">厦门市妇幼保健院集美院区（勘察）</a><label class="tender"></label><span>2019-11-05</span><span>勘察</span></li>
+<li class="build"><p title="E3502120201143040001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E3502000072f95f895d507f44c4a08d1cec50c72a11&amp;objId=9a07c02e1dd04df7855bdfdbedd6d9ab" target="_blank" title="E3502120201143040001">E3502120201143040001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E3502000072f95f895d507f44c4a08d1cec50c72a11&amp;objId=9a07c02e1dd04df7855bdfdbedd6d9ab" target="_blank" title="梅山路（同新路-环城路）提升改造工程（施工)（重新招标）">梅山路（同新路-环城路）提升改造工程（施工)（重新招标）</a><label class="tender"></label><span>2019-11-04</span><span>施工</span></li>
+<li class="build"><p title="E3502130201141681001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E35020000722e2ff843bbde488dbfd96c3eb3e7cd2a&amp;objId=7fa8b32196bf4aedabc158744ff555d3" target="_blank" title="E3502130201141681001">E3502130201141681001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E35020000722e2ff843bbde488dbfd96c3eb3e7cd2a&amp;objId=7fa8b32196bf4aedabc158744ff555d3" target="_blank" title="东部固体废弃物处理中心填埋场二期项目（施工）">东部固体废弃物处理中心填埋场二期项目（施工）</a><label class="tender"></label><span>2019-11-04</span><span>施工</span></li>
+<li class="build"><p title="E3502130201142022001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E3502000072e10424f14830496ea344a63fddae34bb&amp;objId=4db9d9e6243242eeb37f3531f3be31f0" target="_blank" title="E3502130201142022001">E3502130201142022001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F007&amp;uniqueId=E3502000072e10424f14830496ea344a63fddae34bb&amp;objId=4db9d9e6243242eeb37f3531f3be31f0" target="_blank" title="厦门新机场工程-航站区工程（桩基工程Ⅰ标、Ⅱ标）（施工）">厦门新机场工程-航站区工程（桩基工程Ⅰ标、Ⅱ标）（施工）</a><label class="tender"></label><span>2019-11-04</span><span>施工</span></li>
+
+
+					</ul>
+					<ul id="pubday4" class="hide">
+
+<li class="build weakColor"><p>招标项目编号</p><a>招标项目名称</a><span>发布时间</span><span>招标类型</span></li>
+<li class="build"><p title="E3502130201141681001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E35020000722e2ff843bbde488dbfd96c3eb3e7cd2a&amp;objId=null" target="_blank" title="E3502130201141681001">E3502130201141681001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E35020000722e2ff843bbde488dbfd96c3eb3e7cd2a&amp;objId=null" target="_blank" title="东部固体废弃物处理中心填埋场二期项目（施工）">东部固体废弃物处理中心填埋场二期项目（施工）</a><label class="tender"></label><span>2019-11-06</span><span>施工</span></li>
+<li class="build"><p title="E3502030201142800001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E35020000725fdf4741e44641d3909173d28ead1a65&amp;objId=null" target="_blank" title="E3502030201142800001">E3502030201142800001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E35020000725fdf4741e44641d3909173d28ead1a65&amp;objId=null" target="_blank" title="黄厝片区村庄排水管网建设改造工程（施工）">黄厝片区村庄排水管网建设改造工程（施工）</a><label class="tender"></label><span>2019-11-06</span><span>施工</span></li>
+<li class="build"><p title="E3502130201142022001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E3502000072e10424f14830496ea344a63fddae34bb&amp;objId=null" target="_blank" title="E3502130201142022001">E3502130201142022001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E3502000072e10424f14830496ea344a63fddae34bb&amp;objId=null" target="_blank" title="厦门新机场工程-航站区工程（桩基工程Ⅰ标、Ⅱ标）（施工）">厦门新机场工程-航站区工程（桩基工程Ⅰ标、Ⅱ标）（施工）</a><label class="tender"></label><span>2019-11-06</span><span>施工</span></li>
+<li class="build"><p title="E3502130201142022001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E3502000072e10424f14830496ea344a63fddae34bb&amp;objId=null" target="_blank" title="E3502130201142022001">E3502130201142022001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E3502000072e10424f14830496ea344a63fddae34bb&amp;objId=null" target="_blank" title="厦门新机场工程-航站区工程（桩基工程Ⅰ标、Ⅱ标）（施工）">厦门新机场工程-航站区工程（桩基工程Ⅰ标、Ⅱ标）（施工）</a><label class="tender"></label><span>2019-11-06</span><span>施工</span></li>
+<li class="build"><p title="E3502120201143040001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E3502000072f95f895d507f44c4a08d1cec50c72a11&amp;objId=null" target="_blank" title="E3502120201143040001">E3502120201143040001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E3502000072f95f895d507f44c4a08d1cec50c72a11&amp;objId=null" target="_blank" title="梅山路（同新路-环城路）提升改造工程（施工)（重新招标）">梅山路（同新路-环城路）提升改造工程（施工)（重新招标）</a><label class="tender"></label><span>2019-11-05</span><span>施工</span></li>
+<li class="build"><p title="E3502130201141363002"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E3502000072be1bac0a4eb142008f8bf5c4160a60a7&amp;objId=null" target="_blank" title="E3502130201141363002">E3502130201141363002</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E3502000072be1bac0a4eb142008f8bf5c4160a60a7&amp;objId=null" target="_blank" title="环东海域新城后亭路（万家春路-翔安西路段）工程（勘察设计）">环东海域新城后亭路（万家春路-翔安西路段）工程（勘察设计）</a><label class="tender"></label><span>2019-11-05</span><span>勘察设计</span></li>
+<li class="build"><p title="E3502110201141760001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E3502000072ec544f84274944f19acf96bb0dfa05cb&amp;objId=null" target="_blank" title="E3502110201141760001">E3502110201141760001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F004&amp;uniqueId=E3502000072ec544f84274944f19acf96bb0dfa05cb&amp;objId=null" target="_blank" title="杏林水厂扩建工程绿化工程（施工）">杏林水厂扩建工程绿化工程（施工）</a><label class="tender"></label><span>2019-11-04</span><span>施工</span></li>
+
+
+					</ul>
+					<ul id="pubday5" class="hide">
+
+<li class="build weakColor"><p>招标项目编号</p><a>招标项目名称</a><span>发布时间</span><span>招标类型</span></li>
+<li class="build"><p title="E3502130201142161001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E3502000072bc28d622f2f645c3b9b7cd98d39dcd50&amp;objId=null" target="_blank" title="E3502130201142161001">E3502130201142161001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E3502000072bc28d622f2f645c3b9b7cd98d39dcd50&amp;objId=null" target="_blank" title="东部固体废弃物处理中心填埋场二期项目（监理）">东部固体废弃物处理中心填埋场二期项目（监理）</a><label class="tender"></label><span>2019-11-06</span><span>监理</span></li>
+<li class="build"><p title="E3500000717000058007"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E350200007238885d571984446aa3ee8ddec24a6c71&amp;objId=null" target="_blank" title="E3500000717000058007">E3500000717000058007</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E350200007238885d571984446aa3ee8ddec24a6c71&amp;objId=null" target="_blank" title="厦门海沧隧道本岛端接线绿化景观工程（施工）（重新招标）">厦门海沧隧道本岛端接线绿化景观工程（施工）（重新招标）</a><label class="tender"></label><span>2019-11-05</span><span>施工</span></li>
+<li class="build"><p title="E3502110201139569001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E35020000728cf8d7e44d4e43b295ca3b5f78372be5&amp;objId=null" target="_blank" title="E3502110201139569001">E3502110201139569001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E35020000728cf8d7e44d4e43b295ca3b5f78372be5&amp;objId=null" target="_blank" title="东林排洪渠（东林泵站-入海口）清淤、截流工程(施工)">东林排洪渠（东林泵站-入海口）清淤、截流工程(施工)</a><label class="tender"></label><span>2019-11-05</span><span>施工</span></li>
+<li class="build"><p title="E3500000717002688002"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E35020000722d2f95a7f3cb48abb5a4fce0815c2ca2&amp;objId=null" target="_blank" title="E3500000717002688002">E3500000717002688002</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E35020000722d2f95a7f3cb48abb5a4fce0815c2ca2&amp;objId=null" target="_blank" title="厦门第二东通道工程施工监理">厦门第二东通道工程施工监理</a><label class="tender"></label><span>2019-11-05</span><span>监理</span></li>
+<li class="build"><p title="E3500000717002688002"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E35020000722d2f95a7f3cb48abb5a4fce0815c2ca2&amp;objId=null" target="_blank" title="E3500000717002688002">E3500000717002688002</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E35020000722d2f95a7f3cb48abb5a4fce0815c2ca2&amp;objId=null" target="_blank" title="厦门第二东通道工程施工监理">厦门第二东通道工程施工监理</a><label class="tender"></label><span>2019-11-05</span><span>监理</span></li>
+<li class="build"><p title="E3502010201142242001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E3502000072666ba1ca5aaf422e9b5029c5042aec96&amp;objId=null" target="_blank" title="E3502010201142242001">E3502010201142242001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E3502000072666ba1ca5aaf422e9b5029c5042aec96&amp;objId=null" target="_blank" title="兴东花园安置房室外景观工程（施工）（重新公告）">兴东花园安置房室外景观工程（施工）（重新公告）</a><label class="tender"></label><span>2019-11-05</span><span>施工</span></li>
+<li class="build"><p title="E3502120201142140001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E35020000727c01770dfe734ce8849a53486ab3efdf&amp;objId=null" target="_blank" title="E3502120201142140001">E3502120201142140001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F005&amp;uniqueId=E35020000727c01770dfe734ce8849a53486ab3efdf&amp;objId=null" target="_blank" title="同安区芸溪路坑仔口路段道路工程（硬化）">同安区芸溪路坑仔口路段道路工程（硬化）</a><label class="tender"></label><span>2019-11-05</span><span>施工</span></li>
+
+
+					</ul>
+					<ul id="pubday6" class="hide">
+
+<li class="build weakColor"><p>招标项目编号</p><a>招标项目名称</a><span>发布时间</span><span>招标类型</span></li>
+<li class="build"><p title="E3502030201142860001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E3502000072259c0066ed8148baa1f8bdafd6aa6df3&amp;objId=null" target="_blank" title="E3502030201142860001">E3502030201142860001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E3502000072259c0066ed8148baa1f8bdafd6aa6df3&amp;objId=null" target="_blank" title="东山、东坪山社污水改造提升工程（施工）项目重新开标的通知">东山、东坪山社污水改造提升工程（施工）项目重新开标的通知</a><label class="tender"></label><span>2019-11-05</span><span>施工</span></li>
+<li class="build"><p title="E3502050201136524001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E3502000072d142f22f47174179b8654e9c34253fbe&amp;objId=null" target="_blank" title="E3502050201136524001">E3502050201136524001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E3502000072d142f22f47174179b8654e9c34253fbe&amp;objId=null" target="_blank" title="关于马銮湾新城西园小学（监理）延期开标的通知">关于马銮湾新城西园小学（监理）延期开标的通知</a><label class="tender"></label><span>2019-11-05</span><span>监理</span></li>
+<li class="build"><p title="E3500000717002724001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E3502000072637706e7801c4cbfa88cc44e01c20004&amp;objId=null" target="_blank" title="E3500000717002724001">E3500000717002724001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E3502000072637706e7801c4cbfa88cc44e01c20004&amp;objId=null" target="_blank" title="关于撤消“环岛路（海悦山庄-塔头段）排水改造工程（施工）”招标公告的通知">关于撤消“环岛路（海悦山庄-塔头段）排水改造工程（施工）”招标公告的通知</a><label class="tender"></label><span>2019-11-04</span><span>施工</span></li>
+<li class="build"><p title="E3502130201140780001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E35020000720103336fb0214b139617e6ce1c9933aa&amp;objId=null" target="_blank" title="E3502130201140780001">E3502130201140780001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E35020000720103336fb0214b139617e6ce1c9933aa&amp;objId=null" target="_blank" title="关于撤销“环东海域滨海旅游浪漫线二期景观工程（翔安段）（施工）”招标公告的通知">关于撤销“环东海域滨海旅游浪漫线二期景观工程（翔安段）（施工）”招标公告的通知</a><label class="tender"></label><span>2019-10-24</span><span>施工</span></li>
+<li class="build"><p title="E3502130201140780001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E35020000720103336fb0214b139617e6ce1c9933aa&amp;objId=null" target="_blank" title="E3502130201140780001">E3502130201140780001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E35020000720103336fb0214b139617e6ce1c9933aa&amp;objId=null" target="_blank" title="关于撤销“环东海域滨海旅游浪漫线二期景观工程（翔安段）（施工）”招标公告的通知">关于撤销“环东海域滨海旅游浪漫线二期景观工程（翔安段）（施工）”招标公告的通知</a><label class="tender"></label><span>2019-10-24</span><span>施工</span></li>
+<li class="build"><p title="E3502130201140780001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E35020000720103336fb0214b139617e6ce1c9933aa&amp;objId=null" target="_blank" title="E3502130201140780001">E3502130201140780001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E35020000720103336fb0214b139617e6ce1c9933aa&amp;objId=null" target="_blank" title="关于撤销“环东海域滨海旅游浪漫线二期景观工程（翔安段）（施工）”招标公告的通知">关于撤销“环东海域滨海旅游浪漫线二期景观工程（翔安段）（施工）”招标公告的通知</a><label class="tender"></label><span>2019-10-24</span><span>施工</span></li>
+<li class="build"><p title="E3502130201141120001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E350200007218c7872e76434b06999256efe003e068&amp;objId=null" target="_blank" title="E3502130201141120001">E3502130201141120001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F006&amp;uniqueId=E350200007218c7872e76434b06999256efe003e068&amp;objId=null" target="_blank" title="关于“翔安区2019年美丽乡村建设项目-新店镇溪尾社区浦尾自然村、新店镇溪尾社区溪尾自然村”项目重新启动开标流程的通知">关于“翔安区2019年美丽乡村建设项目-新店镇溪尾社区浦尾自然村、新店镇溪尾社区溪尾自然村”项目重新启动开标流程的通知</a><label class="tender"></label><span>2019-10-23</span><span>施工</span></li>
+
+
+					</ul>
+					<ul id="pubday7" class="hide">
+
+<li class="build weakColor"><p>招标项目编号</p><a>招标项目名称</a><span>发布时间</span><span>招标类型</span></li>
+<li class="build"><p title="E3502130201143081001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E3502000072b3b10baa3d8b468c973c891912fe4d1c&amp;objId=180ceed4f48545d0a08950d578026421" target="_blank" title="E3502130201143081001">E3502130201143081001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E3502000072b3b10baa3d8b468c973c891912fe4d1c&amp;objId=180ceed4f48545d0a08950d578026421" target="_blank" title="环东海域滨海旅游道路（下后滨至刘五店段）用地整治工程（监理）">环东海域滨海旅游道路（下后滨至刘五店段）用地整治工程（监理）</a><label class="tender"></label><span>2019-11-06</span><span>监理</span></li>
+<li class="build"><p title="E3502010201142380001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E350200007210c08355e1774eee9d0ddbeaf5548279&amp;objId=c1742544884e41b5a63bd47ad83e0e60" target="_blank" title="E3502010201142380001">E3502010201142380001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E350200007210c08355e1774eee9d0ddbeaf5548279&amp;objId=c1742544884e41b5a63bd47ad83e0e60" target="_blank" title="厦门新机场工程—航站区工程（桩基工程Ⅱ标）（监理）">厦门新机场工程—航站区工程（桩基工程Ⅱ标）（监理）</a><label class="tender"></label><span>2019-11-05</span><span>监理</span></li>
+<li class="build"><p title="E3502130201141120001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E350200007218c7872e76434b06999256efe003e068&amp;objId=394ce3b9637e43e5aeaa9954bd35238d" target="_blank" title="E3502130201141120001">E3502130201141120001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E350200007218c7872e76434b06999256efe003e068&amp;objId=394ce3b9637e43e5aeaa9954bd35238d" target="_blank" title="翔安区2019年美丽乡村建设项目-新店镇溪尾社区浦尾自然村、新店镇溪尾社区溪尾自然村">翔安区2019年美丽乡村建设项目-新店镇溪尾社区浦尾自然村、新店镇溪尾社区溪尾自然村</a><label class="tender"></label><span>2019-11-04</span><span>施工</span></li>
+<li class="build"><p title="E3502060201141500001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E3502000072f1b2f8355dcd4acf8a7b963808cf0207&amp;objId=5cba91d9a6844f179d4779f6ad05df8a" target="_blank" title="E3502060201141500001">E3502060201141500001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E3502000072f1b2f8355dcd4acf8a7b963808cf0207&amp;objId=5cba91d9a6844f179d4779f6ad05df8a" target="_blank" title="火炬新科广场（2015G09）电梯采购及安装">火炬新科广场（2015G09）电梯采购及安装</a><label class="tender"></label><span>2019-11-04</span><span>材料设备</span></li>
+<li class="build"><p title="E3502010201143680001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E350200007264ac6a39ae564d439aea558d92b0fe1b&amp;objId=e2184f68ea6e4d059cf1061339f27f49" target="_blank" title="E3502010201143680001">E3502010201143680001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E350200007264ac6a39ae564d439aea558d92b0fe1b&amp;objId=e2184f68ea6e4d059cf1061339f27f49" target="_blank" title="厦门市环东海域医院电梯设备采购及安装（重新招标）">厦门市环东海域医院电梯设备采购及安装（重新招标）</a><label class="tender"></label><span>2019-10-31</span><span>材料设备</span></li>
+<li class="build"><p title="E3502010201143680001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E350200007264ac6a39ae564d439aea558d92b0fe1b&amp;objId=e997416f50754cf88538c65fd91c0dcb" target="_blank" title="E3502010201143680001">E3502010201143680001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E350200007264ac6a39ae564d439aea558d92b0fe1b&amp;objId=e997416f50754cf88538c65fd91c0dcb" target="_blank" title="厦门市环东海域医院电梯设备采购及安装（重新招标）">厦门市环东海域医院电梯设备采购及安装（重新招标）</a><label class="tender"></label><span>2019-10-31</span><span>材料设备</span></li>
+<li class="build"><p title="E3502060201140707001"><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E3502000072ffec41bbef804d21afd541060debe019&amp;objId=6dd6381787a94aee8ed3ea0908d73f7b" target="_blank" title="E3502060201140707001">E3502060201140707001</a></p><a href="http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F008&amp;uniqueId=E3502000072ffec41bbef804d21afd541060debe019&amp;objId=6dd6381787a94aee8ed3ea0908d73f7b" target="_blank" title="邮轮母港片区市政配套道路一期工程及邮轮母港片区地下综合管廊工程（施工）">邮轮母港片区市政配套道路一期工程及邮轮母港片区地下综合管廊工程（施工）</a><label class="tender"></label><span>2019-10-30</span><span>施工</span></li>
+
+
+					</ul>
+				 </div>
+				 <div id="searchMoreContent" class="searchMoreArea"><a onclick="clickMore(3)">查看全部</a></div>
+			</div>
+
+			<div class="date_top" id="top_2" style="display:none;">
+			</div>
+			<!-- 数据展示内容结束  -->
+
+			<!-- 工程建设内容开始  -->
+			<div class="date_bottom cqjy_list1" id="bottom_1" style="display: block;">
+				<ul style="position: relative;top: 15px;">
+		          <li>
+		          	<a href="http://117.25.161.106:7070/EngTrade/" target="_blank" rel="noopener noreferrer"><span class="bg1"></span><br>
+		            <label>电子招投标统一登录入口</label></a>
+		          </li>
+		          <li>
+		          	<a href="http://117.25.161.110:8002/EarnestOffical/" target="_blank" rel="noopener noreferrer"><span class="bg2"></span><br>
+		            <label>投标保证金管理系统</label></a>
+		          </li>
+		          <li>
+		          	<a href="http://117.25.161.110:7070/xmjy/login;jsessionid=DCDD86F2B6F52014A721868B467B44B9.tomcatC" target="_blank" rel="noopener noreferrer"><span class="bg3"></span><br>
+		            <label>交易平台（非电子标）</label></a>
+		          </li>
+
+		          <li class="line2">
+
+		          	<a onclick="target_railTransit();"><span class="bg5"></span><br>
+		            <label>厦门轨道交通项目专栏</label></a>
+		          </li>
+		          <li>
+		          	<a href="http://117.25.161.110:9502/shoufei/login" target="_blank" rel="noopener noreferrer"><span class="bg6"></span><br>
+		            <label>交易服务费管理系统</label></a>
+		          </li>
+		        </ul>
+			</div>
+			<!-- 工程建设内容结束  -->
+			<!-- 政府采购内容开始  -->
+			<div class="date_bottom cqjy_list2" id="bottom_2" style="display: none;">
+				<ul style="position: relative;top: 80px;">
+		          <li><a href="http://202.109.244.105/350200/items/afb7a3b686a6496c934d657db6e15b2a/" target="_blank" rel="noopener noreferrer"><span class="bg1"></span><br>
+		            <label>政府采购品目分类</label></a></li>
+		          <li><a href="http://www.ccgp.gov.cn/jnhb/jnhbqd/" target="_blank" rel="noopener noreferrer"><span class="bg2"></span><br>
+		            <label>节能环保标志产品清单</label></a></li>
+		          <li><a href="http://202.109.244.105/350200/items/533332eb18834f29a62b37f3a1d00c92/" target="_blank" rel="noopener noreferrer"><span class="bg3"></span><br>
+		            <label>进口产品清单</label></a></li>
+		          <li><a href="http://202.109.244.105/350200/record/a49ffceab5d74241b067e79b24944184/" target="_blank" rel="noopener noreferrer"><span class="bg4"></span><br>
+		            <label>违法失信行为名单</label></a></li>
+		        </ul>
+			</div>
+			<!-- 政府采购内容结束  -->
+
+			<!-- 公共资源配置内容开始  -->
+			<div class="date_bottom cqjy_list3" id="bottom_3" style="display: none;">
+				<ul style="position: relative;top: 80px;">
+		          <li>
+			          <a href="http://117.25.161.110:8082/ggzyscpz/" target="_blank" rel="noopener noreferrer">
+				          <span class="bg1"></span><br>
+				          <label>电子竞价系统竞买人入口</label>
+			          </a>
+		          </li>
+		          <li>
+			          <a href="http://117.25.161.110:8082/ggzypz/" target="_blank" rel="noopener noreferrer">
+			          	<span class="bg3"></span><br>
+			            <label>电子竞价系统管理人员入口</label>
+			          </a>
+		          </li>
+		        </ul>
+			</div>
+			<!-- 公共资源配置内容开始  -->
+
+			<!-- 土地矿产权内容开始  -->
+			<div class="date_bottom cqjy_list4" id="bottom_4" style="display: none;">
+				<ul style="position: relative;top: 80px;">
+		          <li><a href="http://www.landchina.com/" target="_blank" rel="noopener noreferrer"><span class="bg1"></span><br>
+		            <label>中国土地市场网</label></a></li>
+		          <li><a href="http://zygh.xm.gov.cn/tz/" target="_blank" rel="noopener noreferrer"><span class="bg2"></span><br>
+		            <label>厦门市土地矿产资源交易市场</label></a></li>
+		        </ul>
+			</div>
+			<!-- 土地矿产权内容结束  -->
+			<!-- 产权交易内容开始  -->
+			<div class="date_bottom cqjy_list5" id="bottom_5" style="display: none;">
+				<ul style="position: relative;top: 80px;">
+
+		        </ul>
+			</div>
+			<!-- 产权交易内容结束  -->
+
+			<!-- 开标日历  开始-->
+			<div class="right_calendar">
+				<div class="rl">
+			      <div class="rl_bt">
+			        <div class="rl_btr">
+				        <span style="width:80px;">
+				        	<select onchange="init_calendar();" style="width:55px;border:0;background:#f0f3fa" id="year"><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option></select>年
+				        </span>
+				        <span>
+				        	<select onchange="init_calendar();" style="width:41px;border:0;background:#f0f3fa" id="month"><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option><option value="5">6</option><option value="6">7</option><option value="7">8</option><option value="8">9</option><option value="9">10</option><option value="10">11</option><option value="11">12</option></select>月
+				        </span>
+				        <span>
+				        	<select style="border-radius: 3px;" id="calendararea1" onchange="init_calendar();">
+					       		<option value="1" selected="selected">工程建设</option>
+					       		<option value="2">政府采购</option>
+					       		<!-- <option value="4">资源配置</option>
+					       		<option value="3">土地矿业</option>
+					       		<option value="5">产权交易</option> -->
+					       	</select>
+				        </span>
+			        </div>
+			      </div>
+			      <!--end rl_bt-->
+			      <div class="rl_nr">
+			        <table cellspacing="0" cellpadding="0" id="bid_calendar_body">
+			          <thead id="tb_header">
+			            <tr style="text-align:center">
+			              <th style="text-align:center">日</th>
+			              <th style="text-align:center">一</th>
+			              <th style="text-align:center">二</th>
+			              <th style="text-align:center">三</th>
+			              <th style="text-align:center">四</th>
+			              <th style="text-align:center">五</th>
+			              <th class="red" style="text-align:center">六</th>
+			            </tr>
+			          </thead>
+			          <tbody id="tb_body"><tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td d="1" class="has"><div style="">1</div><div class="bid_tip_num"><span class="rl_pointer">7</span></div></td><td class="red" d="2"><div style="">2</div><div class="bid_tip_num"></div></td></tr><tr><td class="red" d="3"><div style="">3</div><div class="bid_tip_num"></div></td><td d="4" class="has"><div style="">4</div><div class="bid_tip_num"><span class="rl_pointer">4</span></div></td><td d="5" class="has"><div style="">5</div><div class="bid_tip_num"><span class="rl_pointer">5</span></div></td><td class="current has" d="6"><div style="">6</div><div class="bid_tip_num"><span class="rl_pointer">4</span></div></td><td d="7" class="has"><div style="">7</div><div class="bid_tip_num"><span class="rl_pointer">7</span></div></td><td d="8" class="has"><div style="">8</div><div class="bid_tip_num"><span class="rl_pointer">5</span></div></td><td class="red" d="9"><div style="">9</div><div class="bid_tip_num"></div></td></tr><tr><td class="red" d="10"><div style="">10</div><div class="bid_tip_num"></div></td><td d="11" class="has"><div style="">11</div><div class="bid_tip_num"><span class="rl_pointer">6</span></div></td><td d="12" class="has"><div style="">12</div><div class="bid_tip_num"><span class="rl_pointer">6</span></div></td><td d="13" class="has"><div style="">13</div><div class="bid_tip_num"><span class="rl_pointer">7</span></div></td><td d="14" class="has"><div style="">14</div><div class="bid_tip_num"><span class="rl_pointer">7</span></div></td><td d="15" class="has"><div style="">15</div><div class="bid_tip_num"><span class="rl_pointer">7</span></div></td><td class="red" d="16"><div style="">16</div><div class="bid_tip_num"></div></td></tr><tr><td class="red" d="17"><div style="">17</div><div class="bid_tip_num"></div></td><td d="18" class="has"><div style="">18</div><div class="bid_tip_num"><span class="rl_pointer">8</span></div></td><td d="19" class="has"><div style="">19</div><div class="bid_tip_num"><span class="rl_pointer">9</span></div></td><td d="20" class="has"><div style="">20</div><div class="bid_tip_num"><span class="rl_pointer">9</span></div></td><td d="21" class="has"><div style="">21</div><div class="bid_tip_num"><span class="rl_pointer">7</span></div></td><td d="22" class="has"><div style="">22</div><div class="bid_tip_num"><span class="rl_pointer">8</span></div></td><td class="red" d="23"><div style="">23</div><div class="bid_tip_num"></div></td></tr><tr><td class="red" d="24"><div style="">24</div><div class="bid_tip_num"></div></td><td d="25" class="has"><div style="">25</div><div class="bid_tip_num"><span class="rl_pointer">7</span></div></td><td d="26" class="has"><div style="">26</div><div class="bid_tip_num"><span class="rl_pointer">6</span></div></td><td d="27" class="has"><div style="">27</div><div class="bid_tip_num"><span class="rl_pointer">8</span></div></td><td d="28" class="has"><div style="">28</div><div class="bid_tip_num"><span class="rl_pointer">8</span></div></td><td d="29" class="has"><div style="">29</div><div class="bid_tip_num"><span class="rl_pointer">5</span></div></td><td class="red" d="30"><div style="">30</div><div class="bid_tip_num"></div></td></tr></tbody>
+			        </table>
+			      </div>
+			    </div>
+			</div>
+			<!-- 开标日历  结束-->
+
+		</div>
+		<div class="link">
+
+		 <div class="link_title">
+		 	<span>友情链接：</span>
+		 	<ul>
+		 		<li class="active">国家级网站</li>
+		 		<li>省级网站</li>
+		 		<li>市级网站</li>
+		 	</ul>
+		 </div>
+		 <div class="pic_list pic_list1" style="display:block"> <a class="next"></a> <a class="prev"></a>
+	       	<div class="bd">
+                   <div class="tempWrap" style="overflow:hidden; position:relative; width:1110px"><ul style="width: 2664px; left: -1332px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                     <li style="float: left; width: 204px;"><a href="http://www.gov.cn/" class="span_1" target="_blank" rel="noopener noreferrer" title="中央人民政府网"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.ndrc.gov.cn/" class="span_2" target="_blank" rel="noopener noreferrer" title="发展改革委"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.miit.gov.cn/" class="span_3" target="_blank" rel="noopener noreferrer" title="工业和信息化部"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.ccdi.gov.cn/" class="span_4" target="_blank" rel="noopener noreferrer" title="中央纪委国家监委网站"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.mnr.gov.cn/" class="span_5" target="_blank" rel="noopener noreferrer" title="自然资源部"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.mohurd.gov.cn/" class="span_6" target="_blank" rel="noopener noreferrer" title="住房城乡建设部"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.mwr.gov.cn/" class="span_7" target="_blank" rel="noopener noreferrer" title="水利部"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.mofcom.gov.cn/" class="span_8" target="_blank" rel="noopener noreferrer" title="商务部"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.samr.gov.cn/" class="span_9" target="_blank" rel="noopener noreferrer" title="国家市场监督管理总局"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.mem.gov.cn/" class="span_10" target="_blank" rel="noopener noreferrer" title="应急管理部"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.ccgp.gov.cn/" class="span_11" target="_blank" rel="noopener noreferrer" title="中国政府采购网、中国政府购买服务信息平台"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.creditchina.gov.cn/" class="span_12" target="_blank" rel="noopener noreferrer" title="信用中国"></a></li>
+                   </ul></div>
+               </div>
+	        <div class="clear"></div>
+	      </div>
+
+	      <div class="pic_list pic_list2" style="display:none"> <a class="next"></a> <a class="prev"></a>
+	       	<div class="bd">
+                   <div class="tempWrap" style="overflow:hidden; position:relative; width:1110px"><ul style="width: 1776px; left: -444px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                     <li style="float: left; width: 204px;"><a href="http://www.fujian.gov.cn/" class="span_1" target="_blank" rel="noopener noreferrer" title="福建省人民政府"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://zjt.fujian.gov.cn/" class="span_2" target="_blank" rel="noopener noreferrer" title="福建省住建厅"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://slt.fujian.gov.cn/" class="span_3" target="_blank" rel="noopener noreferrer" title="福建水利信息网"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://jtyst.fujian.gov.cn/" class="span_4" target="_blank" rel="noopener noreferrer" title="福建省交通运输厅"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.fjgczj.com" class="span_5" target="_blank" rel="noopener noreferrer" title="福建省建设工程造价信息网"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://zfcg.czt.fujian.gov.cn/" class="span_6" target="_blank" rel="noopener noreferrer" title="福建省政府采购网"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.fjcredit.gov.cn/" class="span_7" target="_blank" rel="noopener noreferrer" title="信用中国（福建）"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://220.160.52.164:98/" class="span_8" target="_blank" rel="noopener noreferrer" title="福建省住房和城乡建设系统   市场监管与诚信一体化工作平台"></a></li>
+                   </ul></div>
+               </div>
+	        <div class="clear"></div>
+	      </div>
+	      <div class="pic_list pic_list3" style="display:none"> <a class="next"></a> <a class="prev"></a>
+	       	<div class="bd">
+                   <div class="tempWrap" style="overflow:hidden; position:relative; width:1110px"><ul style="width: 2442px; left: -1332px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                     <li style="float: left; width: 204px;"><a href="http://www.xm.gov.cn/" class="span_1" target="_blank" rel="noopener noreferrer" title="厦门市人民政府网"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://dpc.xm.gov.cn/" class="span_2" target="_blank" rel="noopener noreferrer" title="市发展和改革委员会"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://as.xm.gov.cn/" class="span_3" target="_blank" rel="noopener noreferrer" title="市行政服务中心"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://zygh.xm.gov.cn/" class="span_4" target="_blank" rel="noopener noreferrer" title="厦门市自然资源和规划局"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://js.xm.gov.cn/" class="span_5" target="_blank" rel="noopener noreferrer" title="市建设局"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://jt.xm.gov.cn/" class="span_6" target="_blank" rel="noopener noreferrer" title="市交通运输局"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://sl.xm.gov.cn/" class="span_7" target="_blank" rel="noopener noreferrer" title="厦门水利信息网"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://port.xm.gov.cn/" class="span_8" target="_blank" rel="noopener noreferrer" title="厦门港口管理局"></a></li>
+                     <!-- 已下线删除 modify by chengy 20190806 -->
+                     <!-- <li><a href="http://www.xmcz.gov.cn/ggzyscpz/" class="span_9"  target='_blank' title="厦门市公共资源市场配置网"></a></li> -->
+                     <li style="float: left; width: 204px;"><a href="http://zygh.xm.gov.cn/tz/" class="span_10" target="_blank" rel="noopener noreferrer" title="厦门市土地矿产资源交易市场、厦门市土地开发总公司"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://www.xemas.com.cn/index.html" class="span_11" target="_blank" rel="noopener noreferrer" title="厦门产权交易中心  厦门市股权托管交易中心  厦门市碳和排污交易中心"></a></li>
+                     <li style="float: left; width: 204px;"><a href="http://credit.xm.gov.cn/" class="span_12" target="_blank" rel="noopener noreferrer" title="信用中国（福建厦门）"></a></li>
+                   </ul></div>
+               </div>
+	        <div class="clear"></div>
+	      </div>
+
+		</div>
+<script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/calendar.js"></script>
+<script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/default.js"></script>
+
+</div>
+
+
+
+<script>
+//百度站长统计
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b9b3de9840555ca877bfb52b9430f10b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+$(function(){
+	//头部菜单切换
+	$(".menu li").on('click',function(){
+
+		clearAllIntervals();
+
+		$(this).addClass('active').siblings().removeClass('active');
+		var href = $(this).find("a").attr("value");
+		if(href){
+			$.ajax({
+				url:ctx+href,
+				async:true,
+				success:function(data){
+					$(".index_content").html(data);
+				}
+			})
+		}
+	})
+	//默认初始化第一个菜单
+	$(".menu li:eq(0)").click();
+
+})
+
+//清除所有的定时器
+function clearAllIntervals() {
+	for(var i=0; i<scheduleArray.length; i++) {
+		if(scheduleArray[i]) {
+			window.clearInterval(scheduleArray[i]);
+		}
+	}
+}
+</script>
+
+<div class="footer">
+
+	<div class="footer_content">
+
+		<div class="footer_logo">
+			<span id="_ideConac">
+				<a href="//bszs.conac.cn/sitename?method=show&amp;id=10FAF37AB7F52B79E053022819AC434A" target="_blank">
+					<img id="imgConac" vspace="0" hspace="0" border="0" src="../website/xmebid/images/blue.png" data-bd-imgshare-binded="1">
+				</a>
+			</span>
+		</div>
+		<div class="footer_info">
+
+		    <div class="line_div">
+				<span>意见反馈：<label>jyzxzhk@xmas.gov.cn</label></span>
+				<span style="left: 100px;position: relative;">业务咨询导引电话：<label>0592-2677200</label></span>
+				<!-- <span style="left: 150px;position: relative;">综合科电话：<label>0592-2677193</label></span> -->
+			</div>
+			<div class="line_div">
+				<span>主办单位：<label>厦门市行政审批管理局</label></span>
+				<span style="left: 112px;position: relative;">地址：<label>厦门市云顶北路842号（市行政服务中心4层）</label></span>
+
+			</div>
+			<div class="line_div">
+				<span>协办/维护单位：<label>厦门市公共资源交易中心</label></span>
+				<!-- <span style="left: 63px;position: relative;">备案号：<label>闽ICP备08005143号</label></span> -->
+			    <span style="left: 63px;position: relative;">
+			    <a target="_blank" rel="noopener noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35020602001376" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                <img src="../website/xmebid/images/police_img.png" style="float:left;">
+                <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#423e3e;font-weight: 700;">闽公网安备 35020602001376号</p><label class="icp" style="left: 20px;position: relative;">闽ICP备08005143号</label></a>
+			    </span>
+
+			</div>
+
+			<div class="line_div" style="left: 100px;position: relative;">
+			    <span>建议分辨率在1280*800以上,IE9以上浏览器体验更佳</span>
+
+			</div>
+        </div>
+	</div>
+</div>
+
+
+
+<div style="position: fixed; right: 30px; bottom: 200px; text-align: center;">
+	<!-- <a id="" style="font-size: 14px;"  shape="" onclick="$(this).parent().remove();">x</a><br/> -->
+	<a href="/XmUiForWeb2.0/appdown.html" target="_blank"><img height="100" src="/XmUiForWeb2.0/img/qrcode.png"></a>
+	<p>扫码下载</p>
+	<p>"e鹭交易"APP</p>
+</div>
+
+<script type="text/javascript">
+
+  $(function() {
+	$.ajax({//获取在线人数、浏览人次
+		type : "post",
+		//async:false,
+		url : ctx+"/xmebid/getOnline.do",
+		dataType : "json",
+		contentType:"application/json;charset=UTF-8",
+		data:'{index:1}',
+		success : function(data, textStatus) {
+			if(data && data.result) {
+				var obj = data.data;
+				$("#count_footer").html(obj.onlineCount+"人");//在线人数
+				$("#totalCount_footer").html(obj.totalCount+"次");//总浏览人次
+			}
+		},
+		error : function(jqXHR, textStatus, errorThrown) {
+
+	    }
+	});
+})
+
+</script>
+
+</body></html>

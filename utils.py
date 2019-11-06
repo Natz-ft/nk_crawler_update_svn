@@ -202,6 +202,15 @@ def getTitleTimeStr(stime):
         
     return ""
 
+
+#  云南政府采购网3_26
+def get_special_href(li,href_url,href_xpath_position,replacekey):
+    href_substitution = "".join(li.xpath(href_xpath_position))
+    href_url = href_url.replace(replacekey,str(href_substitution))
+    return href_url
+
+
+
 if __name__ == '__main__':
     #str1 = '地点开标时间：2019-10-0909:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开标地点：北京经济技术开发区地'
     #a = search_area(str1)

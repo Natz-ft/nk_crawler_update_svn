@@ -116,7 +116,7 @@ class Crawler_URL:
                 flag = utils.loopRefresh(self.driver)
                 if not flag:
                     return ""
-            time.sleep(3)
+            time.sleep(5)
             html_str = self.driver.page_source
         elif url_type=="post":
             response = requests.post(url_params["post_url"], headers=url_params["headers"],  data=url_params["data"], verify=False)
@@ -131,19 +131,14 @@ class Crawler_URL:
                         flag = utils.loopRefresh(self.driver)
                         if not flag:
                             return ""                                    
-                    time.sleep(5)
+                    time.sleep(4)
                 params= url_param["params"]
                 if url_param["button"]=="":
                     html_str = self.driver.page_source
                     return html_str
                 if len(params)==0:
                     self.driver.find_element_by_xpath(url_param["button"]).click()
-                    # buttons = url_param["button"]
-                    # if type(buttons) is not str:
-                    #     for button in buttons:
-                    #         self.driver.find_element_by_xpath(button).send_keys(Keys.ENTER)
-                    # else:
-                    #     self.driver.find_element_by_xpath(buttons).click()
+
                 else:
                     for tmp_param in params:
                         if tmp_param["type"]=="id":
@@ -153,7 +148,7 @@ class Crawler_URL:
                         elif tmp_param["type"]=="xpath":
                             self.driver.find_elements_by_xpath(tmp_param["name"]).send_keys(tmp_param["value"])
                     self.driver.find_element_by_xpath(url_param["button"]).click()
-                time.sleep(3)
+                time.sleep(4)
             html_str = self.driver.page_source
             #html_str = str(content, encoding="utf-8")
         return html_str
@@ -187,7 +182,13 @@ class Crawler_URL:
                         stime = times[i]
                         #时间处理
                         submit_time = utils.getTitleTimeStr(stime)
-                        
+
+                        ##add
+                        # str_to_date = datetime.datetime.strptime(submit_time, "%Y-%m-%d")
+                        # submit_time = datetime.datetime.strftime(str_to_date, "%Y-%m-%d")
+                        # print(submit_time)
+                        ##
+
                         # 昨天日期
                         today = datetime.date.today()
                         #yesterday = str(today - datetime.timedelta(days=1))
@@ -269,6 +270,15 @@ class Crawler_URL:
 
                 #时间处理
                 submit_time = utils.getTitleTimeStr(stime)
+
+                ##
+                if submit_time== "":
+                    continue
+                str_to_date = datetime.datetime.strptime(submit_time, "%Y-%m-%d")
+                submit_time = datetime.datetime.strftime(str_to_date, "%Y-%m-%d")
+
+                ##
+
                     
                 if isloopBytime:
                     # 昨天日期
@@ -304,6 +314,12 @@ class Crawler_URL:
                 # 获取项目地址
                 href_title = "".join(li.xpath(href))
                 href_title = utils.rehref(href_title)
+
+                # if isinstance(href,str):
+                #     href_title = "".join(li.xpath(href))
+                #     href_title = utils.rehref(href_title)
+                # else:
+                #     href_title = utils.get_special_href(li,href["href_url"],href["href_xpath_position"],href["replacekey"])
 
                 #域名判断
                 if domainName_url != "":

@@ -1,0 +1,338 @@
+<html><head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>厦门市公共资源交易网</title>
+<script src="https://hm.baidu.com/hm.js?b9b3de9840555ca877bfb52b9430f10b"></script><script type="text/javascript">
+	var HttpWeb ="";
+    var ctx = "/XmUiForWeb2.0";//提前在jsp页面定义js的全局变量;然后我们在引入的js代码中就可以直接使用ctx，轻松获取到所需的值。
+</script>
+<link rel="stylesheet" type="text/css" href="/XmUiForWeb2.0/website/xmebid/css/jedate.css">
+<link rel="stylesheet" type="text/css" href="/XmUiForWeb2.0/website/xmebid/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/XmUiForWeb2.0/website/xmebid/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/XmUiForWeb2.0/website/xmebid/css/xmNewStyle.css">
+<link rel="stylesheet" type="text/css" href="/XmUiForWeb2.0/website/xmebid/css/common.css">
+<script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/jedate.js"></script>
+<script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/jqPaginator.js"></script>
+<!-- 新闻图片轮播器 -->
+<script type="text/javascript" src="/XmUiForWeb2.0/js/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/jquery.ex.datetimepicker.js"></script><script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/datepicker/jquery.datetimepicker.js"></script><script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/datepicker/jquery.daterangemoment.min.js"></script><script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/datepicker/jquery.daterangepicker.js"></script><link rel="stylesheet" href="/XmUiForWeb2.0/website/xmebid/js/datepicker/jquery.datetimepicker.css"><link rel="stylesheet" href="/XmUiForWeb2.0/website/xmebid/js/datepicker/jquery.daterangepicker.css">
+<script type="text/javascript">
+	var nowLogName = 'null';
+	var login_type = 'null';//记录登录类型（account：1 或 key：0）
+	var user_type = 'null';//用户类型（用户角色（企业锁登录时为2））
+ 	var dropOk = false;//滑块验证是否通过
+ 	var centerId_nav = null;//二级导航动态查询办事指南时使用
+ 	var zhxxTag = 'null';
+ 	var jsxydaglTag = 'null';
+ 	var userToken = 'null';
+ 	var serial_No = 'null';
+ 	var pop_all = 'null';
+ 	var zhxxHttpWeb = 'null';
+ 	var comId  ='null';
+ 	var jytjTag = 'null'
+ 	var userID = 'null'
+</script>
+</head>
+<body>
+
+
+
+
+<script type="text/javascript">
+var scheduleArray = new Array();//全局的变量，记录定时器
+
+  function onkeydownsearch(){//回车搜索
+      if(event.keyCode==13){
+    	  $(".menu li.active").removeClass("active");
+    	  toWebSiteSearch();
+	  }
+  }
+
+  //站内搜索
+  function toWebSiteSearch() {
+	  //清除所有的定时器
+	  clearAllIntervals();
+
+	  $.ajax({
+			url:ctx+"/xmebid/webSearch.do?keyword="+encodeURIComponent(encodeURIComponent($("#headq").val()))+'&centerId=',
+			async:true,
+			success:function(data){
+				$(".index_content").html(data);
+			}
+		})
+  }
+</script>
+
+<div class="header">
+	<div class="nav_1">
+        <div class="logo_big"></div>
+	</div>
+	<div class="nav_1">
+        <div class="slogan_big"></div>
+	</div>
+	<div class="nav_3">
+        <div class="ss_box_opacity">
+		</div>
+		<div class="ss_box">
+	        <input name="searchword" id="headq" type="text" class="input_text" placeholder="搜索当前网站信息" onkeydown="onkeydownsearch();">
+	        <input type="button" class="input_btn" onclick="toWebSiteSearch();"><!-- value="高级搜索" -->
+		</div>
+	</div>
+	<div class="nav_2">
+		<div class="menu twhite1 "> <a href="#" class="nav-toggle"></a>
+	        <ul>
+	            <li class=""><a href="#" value="/xmebid/xmIndex.do"><span class="m1"></span>网站首页</a></li>
+	            <li><a href="#" value="/xmebid/industryDynamic.do?bigClassId=2&amp;tab=2"><span class="m7"></span>重要通知</a></li>
+	            <li class="active"><a href="#" value="/xmebid/xmBidList.do"><span class="m2"></span>交易信息</a></li>
+	            <li><a href="#" value="/xmebid/xmtradeList.do"><span class="m11"></span>交易目录</a></li>
+	            <li><a href="#" value="/xmebid/onlineWork.do?bigClassId=4"><span class="m4"></span>政务公开</a></li>
+	            <li><a href="#" value="/xmebid/articleNewsList.do?bigClassId=3"><span class="m6"></span>政策法规</a></li>
+	            <li><a href="#" value="/xmebid/transBody.do"><span class="m10"></span>曝光专栏</a></li>
+				<li><a href="#" value="/xmebid/generalProfile.do?bigClassId=5"><span class="m5"></span>中心概况</a></li>
+	            <!-- <li><a href="#" value="/xmebid/industryDynamic.do?bigClassId=1"><span class="m3"></span>行业动态</a></li> -->
+	            <li class="last"><a href="#" value="/xmebid/downList.do"><span class="m8"></span>下载中心</a></li>
+	            <!-- <li><a href="#" value="/xmebid/xmNewsList.do"><span class="m3"></span>新闻动态</a></li>-->
+				<!-- <li><a href="#" value="/xmebid/workOpen.do?bigClassId=9"><span class="m9"></span>党务公开</a></li> -->
+	        </ul>
+	        <div class="clear"></div>
+	    </div>
+	</div>
+</div>
+<div class="index_content">
+
+
+
+<input type="hidden" id="firstMenu" value="G">
+<input type="hidden" id="secondMenu" value="2">
+<input type="hidden" id="thirdMenu" value="undefined">
+<div class="content_bid">
+	<div class="info">
+		<div class="location">当前位置：<a class="comHomePageTag">首页</a> &gt; 交易信息</div>
+		<div class="search">
+			<input id="noticeTitle" type="text" placeholder="请输入招标信息标题 /招标关键字">
+			<button id="searchBtn">搜索</button>
+		</div>
+		<div class="type_tabs">
+			<ul id="tenderTypeId">
+
+					<li code-value="G" class="first active">
+						<span class="G"></span>工程建设
+					</li>
+
+					<li code-value="D">
+						<span class="D"></span>政府采购
+					</li>
+
+					<li code-value="C">
+						<span class="C"></span>公共资源配置
+					</li>
+
+					<li code-value="B">
+						<span class="B"></span>土地矿业权
+					</li>
+
+					<li code-value="CC" class="last">
+						<span class="CC"></span>国有产权交易
+					</li>
+
+			</ul>
+		</div>
+		<div class="type_1" id="pubTimeDiv">
+			<div id="pubTimeTitle">发布时间:</div>
+			<ul id="pubTimeId">
+				<li code-value="" class="active">全部</li>
+
+					<li code-value="day0">当天</li>
+
+					<li code-value="day10">近十天</li>
+
+					<li code-value="day30">近一个月</li>
+
+					<li code-value="day90">近三个月</li>
+
+				<li code-value="dayCustom">自定义</li>
+				<span class="form-group hide" style="margin-bottom: 10px;margin-right: 10px;" code-value="input" id="input">
+				   <input type="text" id="searchBeginTime" placeholder="请输选择时间" class="form-control" value="">
+			    </span>
+			</ul>
+
+		</div>
+		<div class="type_1">
+			<div id="transTitle"></div>
+			<ul id="transTypeId"><li code-value="" class="active" onclick="doSearch(this,'', 1)">全部</li><li code-value="G01" onclick="doSearch(this,'G01', 1)">房建</li><li code-value="G02" onclick="doSearch(this,'G02', 1)">市政</li><li code-value="G03" onclick="doSearch(this,'G03', 1)">公路</li><li code-value="G04" onclick="doSearch(this,'G04', 1)">铁路</li><li code-value="G05" onclick="doSearch(this,'G05', 1)">民航</li><li code-value="G06" onclick="doSearch(this,'G06', 1)">水运</li><li code-value="G07" onclick="doSearch(this,'G07', 1)">水利水电</li><li code-value="G08" onclick="doSearch(this,'G08', 1)">能源电力</li><li code-value="G09" onclick="doSearch(this,'G09', 1)">广电通信</li><li code-value="G99" onclick="doSearch(this,'G99', 1)">其他</li></ul>
+			<ul id="transTypeHiddenId" class="hide">
+				<li class="active" code-value="">全部</li>
+			</ul>
+
+			<div class="hide" id="bidStageTitle">竞价阶段:</div>
+			<ul class="hide" id="bidStageId">
+			</ul>
+
+			<span id="nowTimeTag" style="display:none;"></span>
+		</div>
+		<div class="type_1 hide" id="areaDiv">
+		    <div id="areaTitle">区域:</div>
+			<ul id="areaTypeList">
+			    <li class="active" code-value="">全部</li>
+			    <li code-value="SZ">市本级</li>
+			    <li code-value="SM">思明</li>
+			    <li code-value="HL">湖里</li>
+			    <li code-value="HC">海沧</li>
+			    <li code-value="JM">集美</li>
+			    <li code-value="TA">同安</li>
+			    <li code-value="XA">翔安</li>
+			</ul>
+		</div>
+
+		<div class="type_1 hide" id="amendDiv">
+		    <div class="hide" id="amendTypeTitle">变更类型:</div>
+			<ul id="amendTypeId" class="hide">
+				<li class="active" code-value="1">答疑纪要</li>
+				<li code-value="2">工程控制价</li>
+			</ul>
+		</div>
+
+		<div class="type_notice">
+			<ul id="noticeTypeId"><li onclick="doSearch(this,'1', 2)" class="first" code-value="1">进场报建信息</li><li onclick="doSearch(this,'2', 2)" class="active" code-value="2">招标公告</li><li onclick="doSearch(this,'3', 2)" code-value="3">变更公告</li><li onclick="doSearch(this,'9', 2)" code-value="9">开标记录表</li><li onclick="doSearch(this,'4', 2)" code-value="4">中标候选人公示</li><li onclick="doSearch(this,'5', 2)" code-value="5">中标结果公示</li><li onclick="doSearch(this,'6', 2)" code-value="6">通知公告</li><li onclick="doSearch(this,'7', 2)" code-value="7">保证金退还</li><li onclick="doSearch(this,'8', 2)" class="last" code-value="8">异议回复</li></ul>
+		</div>
+
+		<div class="type_data" style="height:470px;">
+			<ul id="pubdays"><li class="project weakColor"><p>招标项目编号</p><a>招标项目名称</a><span>招标文件</span><span>发布时间</span><span>招标类型</span><span class="long">相关标段包名称</span></li><li class="project"><p title="E3502120201144800001">E3502120201144800001</p><a href="/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072b2455109397e41bfb304f3bebfc75e3d&amp;objId=b305ac56738f48b28f4ffb136c11e09a" target="_blank" title="厦门市中小学生综合实践基地二期项目（代建）">厦门市中小学生综合实践基地二期项目（代建）</a><label class="tender">[非电子标]</label><span class="short"><a href="http://117.25.161.106:7070/EngTrade/" target="_blank">下载</a></span><span>2019-11-06</span><span>房建</span><span class="long" title="厦门市中小学生综合实践基地二期项目（代建）">厦门市中小学生综合实践基地二期项目（代建）</span></li><li class="project"><p title="E3502119211102008001">E3502119211102008001</p><a href="/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072739193CC984032350892F436DD173C62&amp;objId=1e670f7965e94a4aa1a6736152552fd3" target="_blank" title="天马山水库除险加固工程（施工）">天马山水库除险加固工程（施工）</a><label class="tender"></label><span class="short"><a href="http://117.25.161.106:7070/EngTrade/" target="_blank">下载</a></span><span>2019-11-06</span><span>水利水电</span><span class="long" title="天马山水库除险加固工程（施工）">天马山水库除险加固工程（施工）</span></li><li class="project"><p title="E3502030201144440001">E3502030201144440001</p><a href="/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072e970418535b243bdb8acbb00830b00c5&amp;objId=4c958109dbab423886770da9b055d9c0" target="_blank" title="鼓浪屿工艺美院文化提升与艺术重塑项目一期工程（EPC）">鼓浪屿工艺美院文化提升与艺术重塑项目一期工程（EPC）</a><label class="tender"></label><span class="short"><a href="http://117.25.161.106:7070/EngTrade/" target="_blank">下载</a></span><span>2019-11-06</span><span>房建</span><span class="long" title="鼓浪屿工艺美院文化提升与艺术重塑项目一期工程（EPC）">鼓浪屿工艺美院文化提升与艺术重塑项目一期工程（EPC）</span></li><li class="project"><p title="E3502030201144701001">E3502030201144701001</p><a href="/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072e5d94e27e71945beabcaf48b7b9b4f1b&amp;objId=632a3cee1a9f40d3b5107c05d82fb906" target="_blank" title="前埔污水处理厂北线污水系统三期工程（施工）">前埔污水处理厂北线污水系统三期工程（施工）</a><label class="tender"></label><span class="short"><a href="http://117.25.161.106:7070/EngTrade/" target="_blank">下载</a></span><span>2019-11-05</span><span>市政</span><span class="long" title="前埔污水处理厂北线污水系统三期工程（施工）">前埔污水处理厂北线污水系统三期工程（施工）</span></li><li class="project"><p title="E3502110201144203001">E3502110201144203001</p><a href="/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072c9b83040e0af45f38ced7b7540e4f87a&amp;objId=86c8fd5edea14700935984327fba7950" target="_blank" title="集美新城董任路道路（九天湖路-杏锦路段）及电力缆化（锦园变-杏锦路段）工程（土建工程）（勘察设计）">集美新城董任路道路（九天湖路-杏锦路段）及电力缆化（锦园变-杏锦路段）工程（土建工程）（勘察设计）</a><label class="tender"></label><span class="short"><a href="http://117.25.161.106:7070/EngTrade/" target="_blank">下载</a></span><span>2019-11-05</span><span>市政</span><span class="long" title="集美新城董任路道路（九天湖路-杏锦路段）及电力缆化（锦园变-杏锦路段）工程（土建工程）（勘察设计）">集美新城董任路道路（九天湖路-杏锦路段）及电力缆化（锦园变-杏锦路段）工程（土建工程）（勘察设计）</span></li><li class="project"><p title="E3500000717002733003">E3500000717002733003</p><a href="/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E35020000724c15c89b1bcc49be84cdd1f82829b11d&amp;objId=4da69da8982a4a27a608bea03911001b" target="_blank" title="厦门新机场片区翔安东路（翔安南路—大嶝大桥段）提升工程（监理）">厦门新机场片区翔安东路（翔安南路—大嶝大桥段）提升工程（监理）</a><label class="tender"></label><span class="short"><a href="http://117.25.161.106:7070/EngTrade/" target="_blank">下载</a></span><span>2019-11-05</span><span>公路</span><span class="long" title="厦门新机场片区翔安东路（翔安南路—大嶝大桥段）提升工程（监理）">厦门新机场片区翔安东路（翔安南路—大嶝大桥段）提升工程（监理）</span></li><li class="project"><p title="E3502050201144660002">E3502050201144660002</p><a href="/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E3502000072cb86bfa619d8464894f380e551a327de&amp;objId=4f988db1d661427d922c31d34f134743" target="_blank" title="海沧新阳居住区保障性安居工程二期项目—供配电工程（施工）">海沧新阳居住区保障性安居工程二期项目—供配电工程（施工）</a><label class="tender"></label><span class="short"><a href="http://117.25.161.106:7070/EngTrade/" target="_blank">下载</a></span><span>2019-11-05</span><span>房建</span><span class="long" title="海沧新阳居住区保障性安居工程二期项目-供配电工程（施工）">海沧新阳居住区保障性安居工程二期项目-供配电工程（施工）</span></li><li class="project"><p title="E3502110201144820001">E3502110201144820001</p><a href="/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E35020000729539a40337d84b058a6141cdf58b1c6c&amp;objId=73a92a6f7eb14d8e9a386ff23354592e" target="_blank" title="四川大学华西厦门医院（监理）">四川大学华西厦门医院（监理）</a><label class="tender"></label><span class="short"><a href="http://117.25.161.106:7070/EngTrade/" target="_blank">下载</a></span><span>2019-11-05</span><span>房建</span><span class="long" title="四川大学华西厦门医院（监理）">四川大学华西厦门医院（监理）</span></li><li class="project"><p title="E3502130201144341001">E3502130201144341001</p><a href="/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E350200007252af49e1515b40b6975efd1bc0e9c999&amp;objId=1ade46e3b0a748ea933482d9bd71ed26" target="_blank" title="厦门新机场莲河片区莲河中路（溪东路-疏港中路段）工程（监理）">厦门新机场莲河片区莲河中路（溪东路-疏港中路段）工程（监理）</a><label class="tender"></label><span class="short"><a href="http://117.25.161.106:7070/EngTrade/" target="_blank">下载</a></span><span>2019-11-05</span><span>市政</span><span class="long" title="厦门新机场莲河片区莲河中路（溪东路-疏港中路段）工程（监理）">厦门新机场莲河片区莲河中路（溪东路-疏港中路段）工程（监理）</span></li><li class="project"><p title="E3502130201144340001">E3502130201144340001</p><a href="/XmUiForWeb2.0/xmebid/agentBid.do?leftIndex=F001&amp;uniqueId=E350200007268bd7a74323745fe9905df2c3db08493&amp;objId=6a08b85613714f10a454909a8cbb9eca" target="_blank" title="厦门新机场莲河片区莲河中路（溪东路-疏港中路段）工程（施工）">厦门新机场莲河片区莲河中路（溪东路-疏港中路段）工程（施工）</a><label class="tender"></label><span class="short"><a href="http://117.25.161.106:7070/EngTrade/" target="_blank">下载</a></span><span>2019-11-05</span><span>市政</span><span class="long" title="厦门新机场莲河片区莲河中路（溪东路-疏港中路段）工程（施工）">厦门新机场莲河片区莲河中路（溪东路-疏港中路段）工程（施工）</span></li></ul>
+		</div>
+		<!-- 网上自由竞价提示语 -->
+		<div id="bidTip" style="text-align:center;font-weight:bold;color:#333;" class="hide">以上数据可能因网络延迟存在误差，不作为出价依据，报价人应参考竞买人界面实时数据出价。</div>
+
+		<ul id="pageList" class="pagination" style="margin:15px 0px;"><li class="first disabled" jp-role="first" jp-data="1"><a href="javascript:;">首页</a></li><li class="prev disabled" jp-role="prev" jp-data="0"><a href="javascript:;">上一页</a></li><li class="page active" jp-role="page" jp-data="1"><a href="javascript:;">1</a></li><li class="page" jp-role="page" jp-data="2"><a href="javascript:;">2</a></li><li class="page" jp-role="page" jp-data="3"><a href="javascript:;">3</a></li><li class="page" jp-role="page" jp-data="4"><a href="javascript:;">4</a></li><li class="page" jp-role="page" jp-data="5"><a href="javascript:;">5</a></li><li class="page" jp-role="page" jp-data="6"><a href="javascript:;">6</a></li><li class="page" jp-role="page" jp-data="7"><a href="javascript:;">7</a></li><li class="page" jp-role="page" jp-data="8"><a href="javascript:;">8</a></li><li class="page" jp-role="page" jp-data="9"><a href="javascript:;">9</a></li><li class="page" jp-role="page" jp-data="10"><a href="javascript:;">10</a></li><li class="next" jp-role="next" jp-data="2"><a href="javascript:;">下一页</a></li><li class="last" jp-role="last" jp-data="1871"><a href="javascript:;">末页</a></li></ul>
+		<p id="totalPages" class="pagination" style="float:right;margin:20px 0 0 10px">第1/1871页</p>
+		<p id="pageCount" class="pagination" style="float:right;margin:20px 0 0 0">共18709条记录</p>
+
+	</div>
+</div>
+
+ <script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/bidList.js"></script>
+ <script type="text/javascript" src="/XmUiForWeb2.0/website/xmebid/js/returnHomePage.js"></script>
+
+</div>
+
+
+
+<script>
+//百度站长统计
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b9b3de9840555ca877bfb52b9430f10b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+
+$(function(){
+	//头部菜单切换
+	$(".menu li").on('click',function(){
+
+		clearAllIntervals();
+
+		$(this).addClass('active').siblings().removeClass('active');
+		var href = $(this).find("a").attr("value");
+		if(href){
+			$.ajax({
+				url:ctx+href,
+				async:true,
+				success:function(data){
+					$(".index_content").html(data);
+				}
+			})
+		}
+	})
+	//默认初始化第一个菜单
+	$(".menu li:eq(0)").click();
+
+})
+
+//清除所有的定时器
+function clearAllIntervals() {
+	for(var i=0; i<scheduleArray.length; i++) {
+		if(scheduleArray[i]) {
+			window.clearInterval(scheduleArray[i]);
+		}
+	}
+}
+</script>
+
+<div class="footer">
+
+	<div class="footer_content">
+
+		<div class="footer_logo">
+			<span id="_ideConac">
+				<a href="//bszs.conac.cn/sitename?method=show&amp;id=10FAF37AB7F52B79E053022819AC434A" target="_blank">
+					<img id="imgConac" vspace="0" hspace="0" border="0" src="../website/xmebid/images/blue.png" data-bd-imgshare-binded="1">
+				</a>
+			</span>
+		</div>
+		<div class="footer_info">
+
+		    <div class="line_div">
+				<span>意见反馈：<label>jyzxzhk@xmas.gov.cn</label></span>
+				<span style="left: 100px;position: relative;">业务咨询导引电话：<label>0592-2677200</label></span>
+				<!-- <span style="left: 150px;position: relative;">综合科电话：<label>0592-2677193</label></span> -->
+			</div>
+			<div class="line_div">
+				<span>主办单位：<label>厦门市行政审批管理局</label></span>
+				<span style="left: 112px;position: relative;">地址：<label>厦门市云顶北路842号（市行政服务中心4层）</label></span>
+
+			</div>
+			<div class="line_div">
+				<span>协办/维护单位：<label>厦门市公共资源交易中心</label></span>
+				<!-- <span style="left: 63px;position: relative;">备案号：<label>闽ICP备08005143号</label></span> -->
+			    <span style="left: 63px;position: relative;">
+			    <a target="_blank" rel="noopener noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=35020602001376" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                <img src="../website/xmebid/images/police_img.png" style="float:left;">
+                <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#423e3e;font-weight: 700;">闽公网安备 35020602001376号</p><label class="icp" style="left: 20px;position: relative;">闽ICP备08005143号</label></a>
+			    </span>
+
+			</div>
+
+			<div class="line_div" style="left: 100px;position: relative;">
+			    <span>建议分辨率在1280*800以上,IE9以上浏览器体验更佳</span>
+
+			</div>
+        </div>
+	</div>
+</div>
+
+
+
+<div style="position: fixed; right: 30px; bottom: 200px; text-align: center;">
+	<!-- <a id="" style="font-size: 14px;"  shape="" onclick="$(this).parent().remove();">x</a><br/> -->
+	<a href="/XmUiForWeb2.0/appdown.html" target="_blank"><img height="100" src="/XmUiForWeb2.0/img/qrcode.png"></a>
+	<p>扫码下载</p>
+	<p>"e鹭交易"APP</p>
+</div>
+
+<script type="text/javascript">
+
+  $(function() {
+	$.ajax({//获取在线人数、浏览人次
+		type : "post",
+		//async:false,
+		url : ctx+"/xmebid/getOnline.do",
+		dataType : "json",
+		contentType:"application/json;charset=UTF-8",
+		data:'{index:1}',
+		success : function(data, textStatus) {
+			if(data && data.result) {
+				var obj = data.data;
+				$("#count_footer").html(obj.onlineCount+"人");//在线人数
+				$("#totalCount_footer").html(obj.totalCount+"次");//总浏览人次
+			}
+		},
+		error : function(jqXHR, textStatus, errorThrown) {
+
+	    }
+	});
+})
+
+</script>
+
+<div class="date-picker-wrapper" unselectable="on" style="display: none; top: 734px; left: 0px; user-select: none;"><div class="drp_top-bar">					<div class="normal-top">						<span style="color:#333">已选择: </span> <b class="start-day">...</b> <span class="separator-day"> ~ </span> <b class="end-day">...</b> <i class="selected-days">(<span class="selected-days-num">3</span> 天)</i></div>					<div class="error-top">error</div>					<div class="default-top">请选择一个日期范围</div>					<input type="button" class="apply-btn disabled" value="确定">				</div><div class="month-wrapper"><table class="month1" cellspacing="0" border="0" cellpadding="0"><thead><tr class="caption"><th style="width:27px;"><span class="prev">&lt;</span></th><th colspan="5" class="month-name">十月 2019</th><th style="width:27px;"><span class="next">&gt;</span></th></tr><tr class="week-name"><th>日</th>					<th>一</th>					<th>二</th>					<th>三</th>					<th>四</th>					<th>五</th>					<th>六</th></tr></thead><tbody><tr><td><div time="1569741800502" title="" class="day lastMonth  valid ">29</div></td><td><div time="1569828200502" title="" class="day lastMonth  valid ">30</div></td><td><div time="1569914600502" title="" class="day toMonth  valid ">1</div></td><td><div time="1570001000502" title="" class="day toMonth  valid ">2</div></td><td><div time="1570087400502" title="" class="day toMonth  valid ">3</div></td><td><div time="1570173800502" title="" class="day toMonth  valid ">4</div></td><td><div time="1570260200502" title="" class="day toMonth  valid ">5</div></td></tr><tr><td><div time="1570346600502" title="" class="day toMonth  valid ">6</div></td><td><div time="1570433000502" title="" class="day toMonth  valid ">7</div></td><td><div time="1570519400502" title="" class="day toMonth  valid ">8</div></td><td><div time="1570605800502" title="" class="day toMonth  valid ">9</div></td><td><div time="1570692200502" title="" class="day toMonth  valid ">10</div></td><td><div time="1570778600502" title="" class="day toMonth  valid ">11</div></td><td><div time="1570865000502" title="" class="day toMonth  valid ">12</div></td></tr><tr><td><div time="1570951400502" title="" class="day toMonth  valid ">13</div></td><td><div time="1571037800502" title="" class="day toMonth  valid ">14</div></td><td><div time="1571124200502" title="" class="day toMonth  valid ">15</div></td><td><div time="1571210600502" title="" class="day toMonth  valid ">16</div></td><td><div time="1571297000502" title="" class="day toMonth  valid ">17</div></td><td><div time="1571383400502" title="" class="day toMonth  valid ">18</div></td><td><div time="1571469800502" title="" class="day toMonth  valid ">19</div></td></tr><tr><td><div time="1571556200502" title="" class="day toMonth  valid ">20</div></td><td><div time="1571642600502" title="" class="day toMonth  valid ">21</div></td><td><div time="1571729000502" title="" class="day toMonth  valid ">22</div></td><td><div time="1571815400502" title="" class="day toMonth  valid ">23</div></td><td><div time="1571901800502" title="" class="day toMonth  valid ">24</div></td><td><div time="1571988200502" title="" class="day toMonth  valid ">25</div></td><td><div time="1572074600502" title="" class="day toMonth  valid ">26</div></td></tr><tr><td><div time="1572161000502" title="" class="day toMonth  valid ">27</div></td><td><div time="1572247400502" title="" class="day toMonth  valid ">28</div></td><td><div time="1572333800502" title="" class="day toMonth  valid ">29</div></td><td><div time="1572420200502" title="" class="day toMonth  valid ">30</div></td><td><div time="1572506600502" title="" class="day toMonth  valid ">31</div></td><td><div time="1572593000502" title="" class="day nextMonth  valid ">1</div></td><td><div time="1572679400502" title="" class="day nextMonth  valid ">2</div></td></tr></tbody></table><div class="gap"><div class="gap-top-mask"></div><div class="gap-bottom-mask"></div><div class="gap-lines"><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div><div class="gap-line">					<div class="gap-1"></div>					<div class="gap-2"></div>					<div class="gap-3"></div>				</div></div></div><table class="month2" cellspacing="0" border="0" cellpadding="0"><thead><tr class="caption"><th style="width:27px;"><span class="prev">&lt;</span></th><th colspan="5" class="month-name">十一月 2019</th><th style="width:27px;"><span class="next">&gt;</span></th></tr><tr class="week-name"><th>日</th>					<th>一</th>					<th>二</th>					<th>三</th>					<th>四</th>					<th>五</th>					<th>六</th></tr></thead><tbody><tr><td><div time="1572161000502" title="" class="day lastMonth  valid ">27</div></td><td><div time="1572247400502" title="" class="day lastMonth  valid ">28</div></td><td><div time="1572333800502" title="" class="day lastMonth  valid ">29</div></td><td><div time="1572420200502" title="" class="day lastMonth  valid ">30</div></td><td><div time="1572506600502" title="" class="day lastMonth  valid ">31</div></td><td><div time="1572593000502" title="" class="day toMonth  valid ">1</div></td><td><div time="1572679400502" title="" class="day toMonth  valid ">2</div></td></tr><tr><td><div time="1572765800502" title="" class="day toMonth  valid ">3</div></td><td><div time="1572852200502" title="" class="day toMonth  valid ">4</div></td><td><div time="1572938600502" title="" class="day toMonth  valid ">5</div></td><td><div time="1573025000502" title="" class="day toMonth  valid real-today">6</div></td><td><div time="1573111400502" title="" class="day toMonth  invalid ">7</div></td><td><div time="1573197800502" title="" class="day toMonth  invalid ">8</div></td><td><div time="1573284200502" title="" class="day toMonth  invalid ">9</div></td></tr><tr><td><div time="1573370600502" title="" class="day toMonth  invalid ">10</div></td><td><div time="1573457000502" title="" class="day toMonth  invalid ">11</div></td><td><div time="1573543400502" title="" class="day toMonth  invalid ">12</div></td><td><div time="1573629800502" title="" class="day toMonth  invalid ">13</div></td><td><div time="1573716200502" title="" class="day toMonth  invalid ">14</div></td><td><div time="1573802600502" title="" class="day toMonth  invalid ">15</div></td><td><div time="1573889000502" title="" class="day toMonth  invalid ">16</div></td></tr><tr><td><div time="1573975400502" title="" class="day toMonth  invalid ">17</div></td><td><div time="1574061800502" title="" class="day toMonth  invalid ">18</div></td><td><div time="1574148200502" title="" class="day toMonth  invalid ">19</div></td><td><div time="1574234600502" title="" class="day toMonth  invalid ">20</div></td><td><div time="1574321000502" title="" class="day toMonth  invalid ">21</div></td><td><div time="1574407400502" title="" class="day toMonth  invalid ">22</div></td><td><div time="1574493800502" title="" class="day toMonth  invalid ">23</div></td></tr><tr><td><div time="1574580200502" title="" class="day toMonth  invalid ">24</div></td><td><div time="1574666600502" title="" class="day toMonth  invalid ">25</div></td><td><div time="1574753000502" title="" class="day toMonth  invalid ">26</div></td><td><div time="1574839400502" title="" class="day toMonth  invalid ">27</div></td><td><div time="1574925800502" title="" class="day toMonth  invalid ">28</div></td><td><div time="1575012200502" title="" class="day toMonth  invalid ">29</div></td><td><div time="1575098600502" title="" class="day toMonth  invalid ">30</div></td></tr></tbody></table><div style="clear:both;height:0;font-size:0;"></div><div class="time"><div class="time1"></div><div class="time2"></div></div><div style="clear:both;height:0;font-size:0;"></div></div><div class="footer"><b>快捷选择</b>&nbsp;<span class="prev-days">过去 <a href="javascript:;" shortcut="day,-3">3天</a> <a href="javascript:;" shortcut="day,-5">5天</a> <a href="javascript:;" shortcut="day,-7">7天</a></span>&nbsp;<span class="prev-buttons">&nbsp;&nbsp;&nbsp; <a href="javascript:;" shortcut="prev,week">上周</a> <a href="javascript:;" shortcut="prev,month">上个月</a></span></div></div></body></html>

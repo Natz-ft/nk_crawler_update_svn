@@ -1446,3 +1446,99 @@ Message: unexpected alert open: {Alert text : 用户名不能为空!}
 2019-11-05 15:53:41,280 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：0条
 2019-11-05 16:22:11,264 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：0条
 2019-11-05 16:23:11,351 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_1, 一共：0条
+2019-11-06 10:40:14,687 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：0条
+2019-11-06 10:49:40,465 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：30条
+2019-11-06 10:51:42,497 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_1, 一共：0条
+2019-11-06 11:21:20,371 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_1, 一共：113条
+2019-11-06 11:28:23,394 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang_3_26_0_test
+2019-11-06 11:28:23,413 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 19, in RunMain
+    parame = parameter[html_name]
+KeyError: 'yunnanshengzhengfucaigouwang_3_26_0_test'
+
+2019-11-06 11:30:20,815 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang_3_26_0_test
+2019-11-06 11:30:20,917 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 42, in RunMain
+    number = utils.retotalPage(ori_number)
+  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 120, in retotalPage
+    number = max(re.findall(r'\d+', ''.join(ori_number)))
+ValueError: max() arg is an empty sequence
+
+2019-11-06 11:32:29,880 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_0_test, 一共：0条
+2019-11-06 11:40:35,813 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_0_test, 一共：0条
+2019-11-06 14:13:53,291 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_0_test, 一共：0条
+2019-11-06 14:41:35,498 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_0_test, 一共：22条
+2019-11-06 15:00:27,374 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_1, 一共：17条
+2019-11-06 15:18:27,260 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang_3_18_1
+2019-11-06 15:18:27,376 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 36, in RunMain
+    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 140, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="noticeTypeList"]/li[6]"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-06 15:38:46,152 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：0条
+2019-11-06 15:52:36,987 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：0条
+2019-11-06 15:54:25,548 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：0条
+2019-11-06 15:56:14,634 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：0条
+2019-11-06 16:13:29,018 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：2条
+2019-11-06 16:17:47,209 - webcrawer service - ERROR - 运行失败: hunanguolianzhaobiaoyouxiangongsi_3_22_0
+2019-11-06 16:17:47,212 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 42, in RunMain
+    number = utils.retotalPage(ori_number)
+  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 120, in retotalPage
+    number = max(re.findall(r'\d+', ''.join(ori_number)))
+ValueError: max() arg is an empty sequence
+
+2019-11-06 16:23:18,513 - webcrawer service - INFO - 运行成功: hunanguolianzhaobiaoyouxiangongsi_3_22_0, 一共：0条
+2019-11-06 17:08:58,854 - webcrawer service - ERROR - 运行失败: chongqingguojitouzizixun_3_22_0
+2019-11-06 17:08:58,856 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 42, in RunMain
+    number = utils.retotalPage(ori_number)
+  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 118, in retotalPage
+    number = ''.join(re.findall(r'\d+页', ''.join(ori_number))).replace("页","")
+TypeError: sequence item 0: expected str instance, lxml.etree._Element found
+
+2019-11-06 17:10:38,325 - webcrawer service - ERROR - 运行失败: chongqingguojitouzizixun_3_22_0
+2019-11-06 17:10:38,327 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 99, in RunMain
+    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 140, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="Paging"]/div/div/table/tbody/tr/td[text()=6]"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-06 17:18:00,774 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi_3_2_0, 一共：0条
+2019-11-06 17:18:15,135 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi_3_2_1, 一共：0条
+2019-11-06 17:18:31,306 - webcrawer service - INFO - 运行成功: taipingyangbaoxian_3_3_0, 一共：0条

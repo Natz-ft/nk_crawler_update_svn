@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # 整合
+import datetime
 import re
 import pandas as pd
 from config import config, default, include_keys, information,bank
@@ -179,3 +180,5 @@ class Focus():
 if __name__ == "__main__":
     focus = Focus()
     focus.find_all()
+
+
