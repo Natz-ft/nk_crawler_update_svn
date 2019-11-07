@@ -585,11 +585,15 @@ parameter = {
                                                                 'User-Agent': UserAgent().chrome,
                                                             },
                                                             "data":{
-                                                                "page": "curgage",
-                                                                "TimeStr": yesterday+","+yesterday,
-                                                                "AllPtName": "",
-                                                                "KeyStr": "",
-                                                                "KeyType": ""
+                                                                "subject":"",
+                                                                "pdate":"" ,
+                                                                "areacode":"" ,
+                                                                "unitname":"",
+                                                                "kindof": "",
+                                                                "projectname":"" ,
+                                                                "projectcode": "",
+                                                                "colcode": "0301",
+                                                                "curpage": "",
                                                             },
                                                             "post_url":"http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp",
                                                             "pageNoKey":"curpage"
@@ -605,6 +609,7 @@ parameter = {
                                                       "href": "./a/@href",  # 标题地址
                                                       "domainName_url": "http://www.ccgp-shandong.gov.cn",  # 拼接域名
                                                       "li_area": "",  # 区域
+
                                                       "page_name": {
                                                           "type": 2,
                                                           "style": "post",
@@ -613,11 +618,15 @@ parameter = {
                                                               'User-Agent': UserAgent().chrome,
                                                           },
                                                           "data": {
-                                                              "page": "curgage",
-                                                              "TimeStr": yesterday + "," + yesterday,
-                                                              "AllPtName": "",
-                                                              "KeyStr": "",
-                                                              "KeyType": ""
+                                                              "subject":"",
+                                                                "pdate":"" ,
+                                                                "areacode":"" ,
+                                                                "unitname":"",
+                                                                "kindof": "",
+                                                                "projectname":"" ,
+                                                                "projectcode": "",
+                                                                "colcode": "0301",
+                                                                "curpage": "",
                                                           },
                                                           "post_url": "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp",
                                                           "pageNoKey": "curpage"
@@ -625,6 +634,42 @@ parameter = {
                                                       "number_xpath": '//*[@class = "Font9"]/strong/text()',  # 页数区域
                                                       "search": "",
                                                       },
+
+
+    #山东省政府采购信息公开平台_市县
+    "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0": {"li": '//*[@class="Font9"]',
+                                                      "li_time": "./text()",  # 时间
+                                                      "title": "./a/@title",  # 标题
+                                                      "href": "./a/@href",  # 标题地址
+                                                      "domainName_url": "http://www.ccgp-shandong.gov.cn",  # 拼接域名
+                                                      "li_area": "",  # 区域
+                                                      "page_name": {"type": 1,
+                                                                  "style": "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?subject=&pdate=&areacode=&unitname=&kindof=&projectname=&projectcode=&colcode=0303&curpage=count",
+                                                                  "replaceKey": "count", "startNum": 1},
+                                                       # "page_name" : {
+                                                       #      "type":2,
+                                                       #      "style":"post",
+                                                       #      "startNum":1,
+                                                       #      "headers":{
+                                                       #          'User-Agent': UserAgent().chrome,
+                                                       #      },
+                                                       #      "data":{
+                                                       #          "subject":"",
+                                                       #          "pdate":"" ,
+                                                       #          "areacode":"" ,
+                                                       #          "unitname":"",
+                                                       #          "kindof": "",
+                                                       #          "projectname":"" ,
+                                                       #          "projectcode": "",
+                                                       #          "colcode": "0302",
+                                                       #          "curpage": "",
+                                                       #      },
+                                                       #      "post_url":"http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp",
+                                                       #      "pageNoKey":"curpage"
+                                                       #  },
+                                                       "number_xpath": '//*[@class = "Font9"]/strong/text()', # 页数区域
+                                                       "search": "",
+                                                       },
 
     #上海公共资源交易网
     "shanghaigonggongziyuanjiaoyiwang_3_14" :{"li": '/html/body/div[5]/div[1]/div[4]/div[2]/table/tbody/tr',
