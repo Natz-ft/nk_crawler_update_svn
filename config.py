@@ -23,25 +23,25 @@ config.driver_linux = r'./chromedriver'
 # search keywords
 
 include_keys = ['黑龙江','佳木斯','哈尔滨','河北','河南','太原','内蒙古','郑州','上海','长春'
-                '珠海','佛山','广西','长沙','江西','贵州','西安','安徽','庐江县','云南',
-                '重庆','西藏','新疆','天津','福建','湖南','吉林','郑州','银行','外包','厦门','山东','济南'
+                '珠海','佛山','广西','长沙','江西','贵州','西安','安徽','庐江县','云南','天津',
+                '重庆','西藏','新疆','天津','福建','湖南','吉林','郑州','银行','外包','厦门','山东','济南','北京','重庆'
                 ]
-#exclude_keys = ['废标']
+exclude_keys = ['废标']
 # exclude_add_list = ['维修']
 
 # include_keys = ['银行', '外包', '人力', '开发', '测试', '保险', '扫描', '录入', '入围']
 
-exclude_keys = ['废标', '餐厅','餐饮','食品','保证金专户','保证金银行','银行账号','股份转让','开户银行','账户资金',
-           '装修',  '修缮', '食堂', '装饰', '律师', '律所', '转让', '厨房设施', '保洁', '保安', '体检','公务车辆','宣传品',
-           '资格考试', '培训', '招聘', '办公楼', '软装', '租赁', '服装', '排水', '拍摄', '宣传', '施工','电梯','布线',
-           '地板', '耗材', '空调', '家具', '煤']
-
-exclude_add_list = ['维修', '空气', '工装', '采暖', '急救', '发电机','工作服',
-                    '绿化', '公厕', '天然气', '消防', '农田', '拍卖', '土地',
-                    '分红','股权','水土','失败','房产处置','门面处置','花卉',
-                    '电池','双肩包','礼品','机具','道路','住房贷款','作废','债权',
-                    '安置房','栽培','抵债','厕所','棚改项目','债权处置']
-exclude_keys.extend(exclude_add_list)
+# exclude_keys = ['废标', '餐厅','餐饮','食品','保证金专户','保证金银行','银行账号','股份转让','开户银行','账户资金',
+#            '装修',  '修缮', '食堂', '装饰', '律师', '律所', '转让', '厨房设施', '保洁', '保安', '体检','公务车辆','宣传品',
+#            '资格考试', '培训', '招聘', '办公楼', '软装', '租赁', '服装', '排水', '拍摄', '宣传', '施工','电梯','布线',
+#            '地板', '耗材', '空调', '家具', '煤']
+#
+# exclude_add_list = ['维修', '空气', '工装', '采暖', '急救', '发电机','工作服',
+#                     '绿化', '公厕', '天然气', '消防', '农田', '拍卖', '土地',
+#                     '分红','股权','水土','失败','房产处置','门面处置','花卉',
+#                     '电池','双肩包','礼品','机具','道路','住房贷款','作废','债权',
+#                     '安置房','栽培','抵债','厕所','棚改项目','债权处置']
+# exclude_keys.extend(exclude_add_list)
 
 
 
@@ -169,6 +169,10 @@ information = {#"jincai_1" : {"original_url" : "http://www.cfcpn.com/plist/caigo
                #"fujianshengonggongziyuanjiaoyi_1_18_0":{"original_url" : "http://www.fjggzyjy.cn/news/category/9/", "csv" : "fujianshengonggongziyuanjiaoyi_1_18_0.csv", "classname" : "Test","type":"招标"},               
 
     #execl的第三列 no_login
+    # ##中招国际招标有限公司
+    # "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0" :{"original_url" : "http://www.cntcitc.com.cn/column.html?currentPage=1&chanId=12" , "csv" : "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0" , "classname" : "Test","type":"招标" },
+    # ##中招国际招标有限公司
+    # "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1": {"original_url": "http://www.cntcitc.com.cn/column.html?currentPage=1&chanId=13","csv": "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1", "classname": "Test", "type": "中标"},
     # ##中钢招标有限责任公司
     # "zhonggangzhaobiaoyouxianzerengongsi_3_2_0" :{"original_url" : "http://tendering.sinosteel.com/zgzb/zbzq/005001/secondPage.html" , "csv" : "zhonggangzhaobiaoyouxianzerengongsi_3_2_0.csv" , "classname" : "Test","type":"招标" },
     # ##中钢招标有限责任公司
@@ -186,8 +190,9 @@ information = {#"jincai_1" : {"original_url" : "http://www.cfcpn.com/plist/caigo
     # ##山东省政府采购信息公开平台
     # "shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1": {"original_url" : "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?colcode=0302" , "csv" : "shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1.csv" , "classname" : "Test","type":"中标" },
     # ##山东省政府采购信息公开平台_市县
-     "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0": {"original_url" : "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?colcode=0303" , "csv" : "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0.csv" , "classname" : "Test","type":"招标" },
-    #
+    #  "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0": {"original_url" : "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?colcode=0303" , "csv" : "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0.csv" , "classname" : "Test","type":"招标" },
+    # ##山东省政府采购信息公开平台_市县
+    #  "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1": {"original_url" : "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?colcode=0304" , "csv" : "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1.csv" , "classname" : "Test","type":"中标" },
     # ##上海公共资源交易网
     # "shanghaigonggongziyuanjiaoyiwang_3_14" : {"original_url" : "http://www.zgazxxw.com/sh-000012.html" , "csv" : "shanghaigonggongziyuanjiaoyiwang_3_14.csv" , "classname" : "Test" ,"type":""},
     # ##浙江省公共资源交易网
@@ -230,6 +235,8 @@ information = {#"jincai_1" : {"original_url" : "http://www.cfcpn.com/plist/caigo
     # "yunnanshengzhengfucaigouwang_3_26_1" : {"original_url" :{"type":"onclick",
     #                                                       "onclick":[{"button":'//*[@id="query2"]/font/b',"params":[],"url":"http://www.yngp.com/bulletin.do?method=moreList&menuSelect=nav2"}], },
     #                                                       "csv" : "yunnanshengzhengfucaigouwang_3_26_1.csv","classname" : "Test","type":"中标"},
+    # ##重庆国际投资咨询集团有限公司
+    # "chongqingguojitouzizixunjituanyouxiangongsi_3_27": {"original_url": "http://cqiic.com/CZJTweb/zbgg","csv": "chongqingguojitouzizixunjituanyouxiangongsi_3_27.csv", "classname": "Test","type":""},
     # ##拉萨公共资源交易网
     # "lasagonggongziyuanjiaoyiwang_3_28_0": {"original_url": "http://ggzy.lasa.gov.cn/Category/More?id=643&typeId=0","csv": "lasagonggongziyuanjiaoyiwang_3_28_0.csv", "classname": "Test","type":"招标"},
     # ##拉萨公共资源交易网
@@ -245,8 +252,7 @@ information = {#"jincai_1" : {"original_url" : "http://www.cfcpn.com/plist/caigo
 
 
     #zl need_login
-    # 中招国际招标有限公司
-    # "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0": {"original_url": "https://jy.365trade.com.cn/cas/login?service=http%3A%2F%2Fzzgj.365trade.com.cn%3A8000%2F", "csv": "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0.csv","classname": "Test_login", "type": "招标"},
+
 
     # 华中招标网
     #"huazhongzhaobiaowang_3_8_0": {"original_url": "http://hnzhaobiao.com/index.asp", "csv": "huazhongzhaobiaowang_3_8_0.csv","classname": "Test_login", "type": "招标"},

@@ -211,11 +211,22 @@ def get_special_href(li,href_url,href_xpath_position,replacekey):
 
 
 
+def demo_regex2():
+    str = "showArticle('9a91d73855034c8dade57720fc77ca7a');return false;"
+    p = re.compile('\'(.*)\'')
+    need_str = p.findall(str)
+    need_str = "".join(need_str)
+    print(need_str)
+
+
+
+
 if __name__ == '__main__':
     #str1 = '地点开标时间：2019-10-0909:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开标地点：北京经济技术开发区地'
     #a = search_area(str1)
     #print(a)
-    tmp = "中共黑龙江省直属机关工作委员会_办公设备_SC[2019]5212网上竞价公告"
-    tmp = '地点、方式及招标文件售价：(1)凡有意参加投标者，请于2019年10月24日起至2019年10月31日，每日上午09:00时到12:00时，下午14：30时到17:00时(北京时间，节假日除外)在招标代理机构&nbsp;华新项目管理集团有限公司(地址：长沙市天心区保利国际地点：6.1投标截止：2019年11月20日9:00时止，超过截止时间的投标将被拒绝（☆）。6.2开标时间：2019年11月20日9:00时。6.3开标地点（递交投标文件地点）：华新项目管理集团有限'
-    result = getAreaFromStr(tmp)
-    print(result)
+    # tmp = "中共黑龙江省直属机关工作委员会_办公设备_SC[2019]5212网上竞价公告"
+    # tmp = '地点、方式及招标文件售价：(1)凡有意参加投标者，请于2019年10月24日起至2019年10月31日，每日上午09:00时到12:00时，下午14：30时到17:00时(北京时间，节假日除外)在招标代理机构&nbsp;华新项目管理集团有限公司(地址：长沙市天心区保利国际地点：6.1投标截止：2019年11月20日9:00时止，超过截止时间的投标将被拒绝（☆）。6.2开标时间：2019年11月20日9:00时。6.3开标地点（递交投标文件地点）：华新项目管理集团有限'
+    # result = getAreaFromStr(tmp)
+    # print(result)
+    demo_regex2()

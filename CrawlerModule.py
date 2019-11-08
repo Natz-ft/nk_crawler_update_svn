@@ -284,7 +284,7 @@ class Crawler_URL:
                     # 昨天日期
                     today = datetime.date.today()
                     yesterday = str(today - datetime.timedelta(days=1))
-                    #yesterday = str(today)
+                    # yesterday = str(today)
                     #发布的时间不是昨天的时间，就结束本次循环
                     
                     if submit_time > yesterday:

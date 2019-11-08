@@ -442,6 +442,33 @@ parameter = {
 
 
 #zl excel colomn3
+
+
+    # 中招国际招标有限公司
+    "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0": {"li": '/html/body/div[3]/div[1]/ul/li',
+                                       "li_time": ".//li[2]/text()",  # 时间
+                                       "title": ".//a/@title",  # 标题
+                                       "href": ".//a/@onclick",  # 标题地址
+                                       "domainName_url": "http://www.cntcitc.com.cn/more/article.html?gContentId=",  # 拼接域名
+                                       "li_area": "",  # 区域
+                                       "page_name" : {"type":1,"style":"http://www.cntcitc.com.cn/column.html?currentPage=count&chanId=12","replaceKey":"count","startNum":1}, #页数
+                                       "number_xpath": '', # 页数区域
+                                       "search": "",
+                                     },
+
+# 中招国际招标有限公司
+    "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1": {"li": '/html/body/div[3]/div[1]/ul/li',
+                                       "li_time": ".//li[2]/text()",  # 时间
+                                       "title": ".//a/@title",  # 标题
+                                       "href": ".//a/@onclick",  # 标题地址
+                                       "domainName_url": "http://www.cntcitc.com.cn/more/article.html?gContentId=",  # 拼接域名
+                                       "li_area": "",  # 区域
+                                       "page_name" : {"type":1,"style":"http://www.cntcitc.com.cn/column.html?currentPage=count&chanId=13","replaceKey":"count","startNum":1}, #页数
+                                       "number_xpath": '', # 页数区域
+                                       "search": "",
+                                     },
+
+
     #中钢国际招标公司
     "zhonggangzhaobiaoyouxianzerengongsi_3_2_0" : {"li" : '//*[@id="list"]/tr', #标题的上一级
                           "li_time" : "./td[4]/text()" , #时间
@@ -645,6 +672,42 @@ parameter = {
                                                       "li_area": "",  # 区域
                                                       "page_name": {"type": 1,
                                                                   "style": "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?subject=&pdate=&areacode=&unitname=&kindof=&projectname=&projectcode=&colcode=0303&curpage=count",
+                                                                  "replaceKey": "count", "startNum": 1},
+                                                       # "page_name" : {
+                                                       #      "type":2,
+                                                       #      "style":"post",
+                                                       #      "startNum":1,
+                                                       #      "headers":{
+                                                       #          'User-Agent': UserAgent().chrome,
+                                                       #      },
+                                                       #      "data":{
+                                                       #          "subject":"",
+                                                       #          "pdate":"" ,
+                                                       #          "areacode":"" ,
+                                                       #          "unitname":"",
+                                                       #          "kindof": "",
+                                                       #          "projectname":"" ,
+                                                       #          "projectcode": "",
+                                                       #          "colcode": "0302",
+                                                       #          "curpage": "",
+                                                       #      },
+                                                       #      "post_url":"http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp",
+                                                       #      "pageNoKey":"curpage"
+                                                       #  },
+                                                       "number_xpath": '//*[@class = "Font9"]/strong/text()', # 页数区域
+                                                       "search": "",
+                                                       },
+
+
+#山东省政府采购信息公开平台_市县
+    "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1": {"li": '//*[@class="Font9"]',
+                                                      "li_time": "./text()",  # 时间
+                                                      "title": "./a/@title",  # 标题
+                                                      "href": "./a/@href",  # 标题地址
+                                                      "domainName_url": "http://www.ccgp-shandong.gov.cn",  # 拼接域名
+                                                      "li_area": "",  # 区域
+                                                      "page_name": {"type": 1,
+                                                                  "style": "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?subject=&pdate=&areacode=&unitname=&kindof=&projectname=&projectcode=&colcode=0304&curpage=count",
                                                                   "replaceKey": "count", "startNum": 1},
                                                        # "page_name" : {
                                                        #      "type":2,
@@ -911,6 +974,21 @@ parameter = {
 
                                   },
 
+    #  重庆国际投资咨询集团有限公司
+    "chongqingguojitouzizixunjituanyouxiangongsi_3_27": {"li": '//*[@id="right"]/div[2]/ul/li',
+                         "li_time": "./span/text()",  # 时间
+                         "title": "./div/a/@title",  # 标题
+                         "href": "./div/a/@href",  # 标题地址
+                         "domainName_url": "http://cqiic.com",  # 拼接域名
+                         "li_area": "",  # 区域
+                         "page_name": {"type": 1,
+                                       "style": "http://cqiic.com/CZJTweb/zbgg/?Paging=count",
+                                       "replaceKey": "count", "startNum": 1},
+                         "number_xpath": '',  # 页数区域//*[@id="Paging"]/div/div/table/tbody/tr/td[19]
+                         "search": "",
+                         },
+
+
 
 
 
@@ -1014,41 +1092,7 @@ parameter = {
 
     ########################
     #zl need_login
-    "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0": {
-        # 登陆
-        "login": {"button": "/html/body/table[4]/tbody/tr/td[2]/table[2]/tbody/tr/td/table/tbody/tr[5]/td/p/input",
-                  "isHasVerify_code": False,
-                  "params": [{"type": "xpath",
-                              "name": "/html/body/table[4]/tbody/tr/td[2]/table[2]/tbody/tr/td/table/tbody/tr[3]/td[2]/input",
-                              "value": "jbfhn"},
-                             {"type": "xpath",
-                              "name": "/html/body/table[4]/tbody/tr/td[2]/table[2]/tbody/tr/td/table/tbody/tr[4]/td[2]/input",
-                              "value": "jbfhn82652688"}
-                             ],
-                  "login_status": {"class": "isLogin_byXpath", "params": "//*[@id='f_meblg']/ul/li[1]"}
-                  },  # /html/body/table[4]/tbody/tr/td[2]/table[2]/tbody/tr/td/table/tbody/tr[3]/td
-        # start页  进入到显示 标题列表的页
-        "startPage": {"type": "onclick",
-                      "onclick": [{"button": "",
-                                   "params": [],
-                                   "url": "http://hnzhaobiao.com/zhaobiao.asp?smallclassname=%B7%FE%CE%F1%D5%D0%B1%EA"
-                                   },
-                                  ],
-                      },
-        "li": '/html/body/table[4]/tbody/tr/td[2]/table[3]/tbody/tr/td[2]/table[4]/tbody/tr',  # 标题的上一级
-        "li_time": "./td[3]/text()",  # 时间
-        "title": "./td[1]/a/text()",  # 标题
-        "href": "./td[1]/a/@href",  # 标题地址
-        "domainName_url": "http://hnzhaobiao.com/",  # 拼接域名
-        "li_area": "./td[2]/p/text()",  # 区域
-        "isloopBytime": True,  # 是否控制时间循环
-        "page_name": {"type": 1,
-                      "style": "http://hnzhaobiao.com/zhaobiao.asp?page=count&bigclassname=%D5%D0%B1%EA%D0%C5%CF%A2&smallclassname=%B7%FE%CE%F1%D5%D0%B1%EA&keywords=&dq=",
-                      "replaceKey": "count",
-                      "startNum": 1},  # {"type":0,"style":r'page=\d+',"startNum":1},
-        "number_xpath": "",  # 页数区域
-        "search": "",
-    },
+
 
 
 
