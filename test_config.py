@@ -1795,6 +1795,37 @@ parameter = {
         "search" : "",
     },
 
+
+#深圳千里马
+    "heilongjiangzhaobiao_3_10":{
+        #登陆
+        "login":{"button":"//*[@id='deng']",
+                 "isHasVerify_code":False,
+                 "params":[{"type":"id","name":"abc","value":"18602298203"},
+                           {"type":"xpath","name":"//*[@id='kuang']/fieldset/input[2]","value":"123456789"}
+                           ],
+                 "login_status":{"class":"isLogin_byXpath","params":"//*[@id='light']"}
+                 },
+        #start页  进入到显示 标题列表的页
+        "startPage":{"type":"onclick",
+                     "onclick":[{"button":"",
+                                 "params":[],
+                                 "url":"http://www.qianlima.com/zb/area_316_3_1/"
+                                 },
+                                ],
+        },
+        "li" : "/html/body/table[8]/tbody/tr/td[1]/table[4]/tbody/tr[2]/td/table/tbody/tr", #标题的上一级
+        "li_time" : "./td[3]/text()" , #时间
+        "title" : "./td[2]/a/@title", #标题
+        "href" : "./td[2]/a/@href", #标题地址
+        "domainName_url" : "", #拼接域名
+        "li_area": "",  #区域
+        "isloopBytime": True, #是否控制时间循环
+        "page_name" : {"type":1,"style":"http://www.qianlima.com/zb/area_316_3_count","replaceKey":"count","startNum":1},
+        "number_xpath" : "/html/body/table[8]/tbody/tr/td[1]/table[5]/tbody/tr/td/font/text()", #页数区域
+        "search" : "",
+    },
+
     #重庆国际投资咨询集团有限公司
     "chongqingguojitouzizixun_3_26": {"li": '//*[@id="right"]/div[2]/ul/li',
                          "li_time": "./span/text()",  # 时间
