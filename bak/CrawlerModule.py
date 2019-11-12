@@ -8,11 +8,85 @@ from fake_useragent import UserAgent
 from collections import defaultdict
 import random
 import platform
+
+from selenium.webdriver.common.keys import Keys
+
 from config import config
 import utils
 import urllib.request
 import urllib.parse
 import requests
+import traceback
+
+
+def parse_url_request(page_url,headers,cookie_dict):
+    response = requests.get(page_url, headers=headers,cookies=cookie_dict)
+    time.sleep(3)
+    html_str = response.content.decode("utf-8")
+    return html_str    
+    
+def Init_driver():
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument("--start-maximized")
+    chrome_options.add_argument("--allow-file-access-from-files")
+    #chrome_options.add_argument('--headless')  #服务器上不注释
+    chrome_options.add_argument('--disable-gpu')
+    chrome_options.add_argument("--no-sandbox")
+    platform_info = platform.platform()
+    platform_info = ''.join(re.findall(r'Windows', platform_info))
+
+    if platform_info == "Windows":
+        driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+    else:
+        driver = webdriver.Chrome(config.driver_linux, chrome_options=chrome_options)
+    return driver
+    
+
+
+
+
+# 得到html字符串 子进程专用
+def parse_url_get(driver,href_title): #url_type == 'get'
+    # 发送selenium请求
+    try:   
+        driver.get(href_title)
+    except:
+        flag = utils.loopRefresh(driver)
+        if not flag:
+            return ""
+    time.sleep(3)
+    html_str = driver.page_source
+    return html_str
+
+
+# 登陆浏览器 子进程专用
+def model_log_in_web(driver,url, login_info):
+    try:   
+        driver.get(url)
+    except:
+        flag = utils.loopRefresh(driver)
+        if not flag:
+            return ""
+    time.sleep(3)
+    params = login_info["params"]
+    for param in params:
+        if param["type"]=="id":
+            driver.find_element_by_id(param["name"]).click()
+            driver.find_element_by_id(param["name"]).send_keys(param["value"])
+        elif param["type"]=="class":
+            driver.find_element_by_class_name(param["name"]).click()
+            driver.find_element_by_class_name(param["name"]).send_keys(param["value"])
+        elif param["type"]=="xpath":
+            driver.find_element_by_xpath(param["name"]).click()
+            driver.find_element_by_xpath(param["name"]).send_keys(param["value"])
+    if login_info["isHasVerify_code"]:
+        pass
+    driver.find_element_by_xpath(login_info["button"]).click()
+    time.sleep(3)
+    return driver
+
+
+    
 
 class Crawler_URL:
     def __init__(self):  # 初始化url_array;启动web_drive
@@ -20,46 +94,15 @@ class Crawler_URL:
         # 创建存储信息的列表
         self.content_item = defaultdict(list)
         # 加载chromedriver
-        chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument("--start-maximized")
-        chrome_options.add_argument("--allow-file-access-from-files")
-        #chrome_options.add_argument('--headless')  #服务器上不注释
-        chrome_options.add_argument('--disable-gpu')
-        chrome_options.add_argument("--no-sandbox")
-        platform_info = platform.platform()
-        platform_info = ''.join(re.findall(r'Windows', platform_info))
-
-        if platform_info == "Windows":
-            self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
-        else:
-            self.driver = webdriver.Chrome(config.driver_linux, chrome_options=chrome_options)
+        self.driver = Init_driver()
             
 
 
     # 登陆浏览器
     def log_in_web(self,url, login_info):
-        try:   
-            self.driver.get(url)
-        except:
-            flag = utils.loopRefresh(self.driver)
-            if not flag:
-                return ""
-        time.sleep(3)
-        params = login_info["params"]
-        for param in params:
-            if param["type"]=="id":
-                self.driver.find_element_by_id(param["name"]).click()
-                self.driver.find_element_by_id(param["name"]).send_keys(param["value"])
-            elif param["type"]=="class":
-                self.driver.find_element_by_class_name(param["name"]).click()
-                self.driver.find_element_by_class_name(param["name"]).send_keys(param["value"])
-            elif param["type"]=="xpath":
-                self.driver.find_element_by_xpath(param["name"]).click()
-                self.driver.find_element_by_xpath(param["name"]).send_keys(param["value"])
-        if login_info["isHasVerify_code"]:
-            pass
-        self.driver.find_element_by_xpath(login_info["button"]).click()
-        time.sleep(1)
+        self.driver = model_log_in_web(self.driver, url, login_info)
+        self.cookie_info = self.driver.get_cookies()                 # 列表中包含多个字典
+        self.cookie_dict = {i["name"]: i["value"] for i in self.cookie_info}        
         return self.driver
         
         
@@ -73,7 +116,7 @@ class Crawler_URL:
                 flag = utils.loopRefresh(self.driver)
                 if not flag:
                     return ""
-            time.sleep(3)
+            time.sleep(5)
             html_str = self.driver.page_source
         elif url_type=="post":
             response = requests.post(url_params["post_url"], headers=url_params["headers"],  data=url_params["data"], verify=False)
@@ -88,19 +131,14 @@ class Crawler_URL:
                         flag = utils.loopRefresh(self.driver)
                         if not flag:
                             return ""                                    
-                    time.sleep(3)
+                    time.sleep(4)
                 params= url_param["params"]
                 if url_param["button"]=="":
                     html_str = self.driver.page_source
                     return html_str
                 if len(params)==0:
                     self.driver.find_element_by_xpath(url_param["button"]).click()
-                    # buttons = url_param["button"]
-                    # if type(buttons) is not str:
-                    #     for button in buttons:
-                    #         self.driver.find_element_by_xpath(button).click()
-                    # else:
-                    #     self.driver.find_element_by_xpath(buttons).click()
+
                 else:
                     for tmp_param in params:
                         if tmp_param["type"]=="id":
@@ -110,7 +148,7 @@ class Crawler_URL:
                         elif tmp_param["type"]=="xpath":
                             self.driver.find_elements_by_xpath(tmp_param["name"]).send_keys(tmp_param["value"])
                     self.driver.find_element_by_xpath(url_param["button"]).click()
-                time.sleep(3)
+                time.sleep(4)
             html_str = self.driver.page_source
             #html_str = str(content, encoding="utf-8")
         return html_str
@@ -123,7 +161,95 @@ class Crawler_URL:
         try:
             # 把html字符串转换成element对象
             html_element = etree.HTML(page_html_str)
+
+            big_count = 0
+            equal_count = 0            
             
+            # 不可以取到 包含所有信息的行
+            if li =="":
+                titles,hrefs,times,areas = [],[],[],[]
+                if li_area != "" :
+                    areas = html_element.xpath(li_area)
+                titles = html_element.xpath(title)
+                hrefs = html_element.xpath(href)
+                if li_time !="":
+                    times = html_element.xpath(li_time)
+                else:
+                    isloopBytime = False
+                    
+                for i in range(len(titles)):                     
+                    if isloopBytime:
+                        stime = times[i]
+                        #时间处理
+                        submit_time = utils.getTitleTimeStr(stime)
+
+                        ##add
+                        # str_to_date = datetime.datetime.strptime(submit_time, "%Y-%m-%d")
+                        # submit_time = datetime.datetime.strftime(str_to_date, "%Y-%m-%d")
+                        # print(submit_time)
+                        ##
+
+                        # 昨天日期
+                        today = datetime.date.today()
+                        #yesterday = str(today - datetime.timedelta(days=1))
+                        yesterday = str(today)
+                        #发布的时间不是昨天的时间，就结束本次循环
+                        
+                        if submit_time > yesterday:
+                            big_count = big_count+1
+                            continue
+                        elif submit_time < yesterday :
+                            continue
+                        elif submit_time == yesterday:
+                            equal_count = equal_count+1
+                    # 过滤处理
+                    result = utils.filter_title(titles[i])
+                    if result == True:
+                        continue
+                    #获取地区
+                    if li_area != "" :
+                        if "省" in title:
+                            pattern_t = re.compile(r'([\u4e00-\u9fa5].*?省)')  
+                        elif "市" in title:
+                            pattern_t = re.compile(r'([\u4e00-\u9fa5].*?市)') 
+                        elif "县" in title:
+                            pattern_t = re.compile(r'([\u4e00-\u9fa5].*?县)')
+                        elif "区" in title:
+                            pattern_t = re.compile(r'([\u4e00-\u9fa5].*?区)')
+                        elif "自治州" in title:
+                            pattern_t = re.compile(r'([\u4e00-\u9fa5].*?自治州)')
+                        else:
+                            pattern_t = re.compile(r'([\u4e00-\u9fa5]+)')
+                        
+                        area = "".join(pattern_t.findall(areas[i]))
+                    else :
+                        #从标题获取地区
+                        area = utils.getAreaFromStr(titles[i])
+                    # 获取项目地址
+                    href_title = utils.rehref(hrefs[i])
+    
+                    #域名判断
+                    if domainName_url != "":
+                        href_title = domainName_url + href_title
+                    
+                    # 字典的健为项目标题，值为[项目标题地址,时间]
+                    if titles[i] not in self.content_item['招标文件名称']:
+                        self.content_item['招标文件名称'].append(titles[i])
+                        self.content_item['省市区'].append(area)
+                        self.content_item['网址'].append(href_title)
+                    else:
+                        continue                        
+                    print('title:{}area:{}href{}'.format(titles[i], area, href_title))
+                    time.sleep(1)
+                if isloopBytime:
+                    if big_count>0:
+                        return True
+                    elif equal_count==0:
+                        return False 
+                return True
+             
+             
+            #可以取到 包含所有信息的行       
             #行信息
             li_list = html_element.xpath(li)
 
@@ -133,8 +259,7 @@ class Crawler_URL:
                 return False
             
             
-            big_count = 0
-            equal_count = 0
+
             # 遍历所有li元素
             for li in li_list[0:]:
                 # 获取项目发布日期
@@ -145,12 +270,21 @@ class Crawler_URL:
 
                 #时间处理
                 submit_time = utils.getTitleTimeStr(stime)
+
+                ##
+                if submit_time== "":
+                    continue
+                str_to_date = datetime.datetime.strptime(submit_time, "%Y-%m-%d")
+                submit_time = datetime.datetime.strftime(str_to_date, "%Y-%m-%d")
+
+                ##
+
                     
                 if isloopBytime:
                     # 昨天日期
                     today = datetime.date.today()
                     yesterday = str(today - datetime.timedelta(days=1))
-                    #yesterday = str(today)
+                    # yesterday = str(today)
                     #发布的时间不是昨天的时间，就结束本次循环
                     
                     if submit_time > yesterday:
@@ -181,6 +315,12 @@ class Crawler_URL:
                 href_title = "".join(li.xpath(href))
                 href_title = utils.rehref(href_title)
 
+                # if isinstance(href,str):
+                #     href_title = "".join(li.xpath(href))
+                #     href_title = utils.rehref(href_title)
+                # else:
+                #     href_title = utils.get_special_href(li,href["href_url"],href["href_xpath_position"],href["replacekey"])
+
                 #域名判断
                 if domainName_url != "":
                     href_title = domainName_url + href_title
@@ -200,15 +340,18 @@ class Crawler_URL:
                 # print('title:{}area:{}href{}time{}'.format(item_title, area, href_title, content_time))
                 print('title:{}area:{}href{}'.format(item_title, area, href_title))
                 time.sleep(1)
-            if big_count>0:
-                return True
-            elif equal_count==0:
-                return False           
+            if isloopBytime:
+                if big_count>0:
+                    return True
+                elif equal_count==0:
+                    return False           
             return True
         except Exception as e:
-            print('error: ', e)
+            print('get_title_list error: ', e)
+            traceback.print_exc()
             #self.driver.get_screenshot_as_file(r'./error.png')
             return False
+
 
 
     #对全部的标题进行获取
@@ -228,9 +371,11 @@ class Crawler_URL:
                 return True
             except Exception as e :
                 print('ContentAnalysis error: ', e)
+                traceback.print_exc()
                 return False
         else:
-            return False
+            return False   
+        
     #取下一页的地址 
     def page_url(self, page_url, page_name, cur_page_num):        
         if page_name["type"]==0:

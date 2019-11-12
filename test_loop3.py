@@ -2,13 +2,30 @@
 import re
 from CrawlerModule import Crawler_URL
 #from ContentAnalysis_multi_process import ContentAnalysis
-from ContentAnalysis_multi_process_request import ContentAnalysis
+#from ContentAnalysis_multi_process_request import ContentAnalysis
+from ContentAnalysis_multi_process_refresh import ContentAnalysis
 from test_config import parameter
 import time
 from collections import defaultdict
 import copy
 import time
 from utils import isLogin_byXpath,retotalPage
+#from test_config import content_wait_func_dic
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+def wait(driver):
+    return not ('您访问频率太高' in driver.page_source)
+def isWaite_loop3(driver):
+
+    try:
+        WebDriverWait(driver, 10).until(wait, 'decode_captcha fail to find yzm')
+    except:
+        # 如果不显示正常页面，刷新页面
+        while not wait:
+            print('您访问频率太高：refresh page...')
+            driver.refresh()
+            time.sleep(5)
 
 class Test_loop3:
     def __init__(self):
@@ -35,16 +52,21 @@ class Test_loop3:
             
             #获取页面信息
             html_str = model.parse_url(original_url)
+            if html_str == "":
+                print("{} parse_url is empty ".format(original_url))
+                continue
             if parame["number_xpath"] != "":
                 #获取一共的页数
                 num_str = model.number_page(parame["number_xpath"], html_str)
                 
                 num_str = ''.join(re.findall(r'\d+', "".join(num_str)))
+                if num_str =='':
+                    continue
                 num_page = int(int(num_str) / 20) + 1                
                 for i in range(parame["page_name"]["startNum"], num_page):
                     if parame["li"] != "":
                         #获取页面信息
-                        bool = model.get_title_list(html_str, parame["li"],parame["li_time"], parame["title"], parame["href"], parame["domainName_url"], parame["li_area"],isloopBytime=isloopBytime)
+                        bool = model.get_title_list(html_str, parame,isloopBytime=isloopBytime)
                     else :
                         return self.result
                     #当页面发生错误时退出循环
@@ -64,10 +86,25 @@ class Test_loop3:
                         return self.result
                     #获取页面信息
                     html_str = model.parse_url(original_url)
-                    
-                   
-        #if ContentAnalysis(model,login_infos) :
-        if model.ContentAnalysis() :
+                    if '您访问频率太高' in html_str:
+                        model.driver.refresh()
+                        time.sleep(5)
+                        html_str = model.parse_url(original_url)
+                        for loop_i in range(3):
+                            if '您访问频率太高' in html_str:
+                                model.driver.refresh()
+                                time.sleep(5)
+                                html_str = model.parse_url(original_url)
+                            else:
+                                break
+        
+        wait_fuc_name = ''  
+        
+        #if "content_wait_class" in parame.keys():
+            #wait_fuc_name = parame["content_wait_class"] #return 'isWaite_loop3'
+
+        if ContentAnalysis(model,login_infos,wait_foc_func=isWaite_loop3) :
+        #if model.ContentAnalysis(content_wait_func_dic[wait_fuc_name]) :
             self.result = model.result()
         else:
             return self.result

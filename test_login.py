@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import re
 from CrawlerModule import Crawler_URL
-from ContentAnalysis_multi_process import ContentAnalysis
+from ContentAnalysis_multi_process_refresh import ContentAnalysis
+#from ContentAnalysis_multi_process import ContentAnalysis
 #from ContentAnalysis_multi_process_request import ContentAnalysis
 from test_config import parameter
 import time
@@ -13,39 +14,9 @@ from utils import isLogin_byXpath,retotalPage
 class Test_login:
     def __init__(self):
         self.result = defaultdict(list)
-
-    def RunMain(self, url_info, key, html_name):
-        #初始化
-        model = Crawler_URL()
-        parame = parameter[html_name]
-        isloopBytime = True
-        if "isloopBytime" in parame.keys():
-            isloopBytime = parame["isloopBytime"]
-        
-        original_url = ""
-        login_infos = [url_info, parame["login"]]
-        #登陆
-        driver = model.log_in_web(*login_infos)
-        
-        isLogin = globals()[parame["login"]["login_status"]["class"]](driver,parame["login"]["login_status"]["params"])        
-       
-        
-        #判断失败： 验证码错误 循环（maxnum =5)
-        if not isLogin:
-            return self.result
-        #判断成功
-        #self.cookie_info = self.driver.get_cookies()                     # 列表中包含多个字典
-        #self.cookie_dict = {i["name"]: i["value"] for i in self.cookie_info}  # 字典推导式
-        #response = requests.get(href_title, headers=self.headers,cookies=self.cookie_dict)
-            
         
         
-        
-        #获取页面信息
-        html_str = model.parse_url("",url_type=parame["startPage"]["type"],url_params=parame["startPage"])                
-        
-                   
-
+    def getUrlList(self,model,parame,html_str,original_url,isloopBytime):
         if parame["number_xpath"] != "":
             #获取一共的页数
             ori_number = model.number_page(parame["number_xpath"], html_str)
@@ -57,7 +28,7 @@ class Test_login:
             for i in range(parame["page_name"]["startNum"], number):
                 if parame["li"] != "":
                     #获取页面信息
-                    bool = model.get_title_list(html_str, parame["li"],parame["li_time"], parame["title"], parame["href"], parame["domainName_url"], parame["li_area"],isloopBytime=isloopBytime)
+                    bool = model.get_title_list(html_str, parame,isloopBytime=isloopBytime)
                 else :
                     return self.result
                 #当页面发生错误时退出循环
@@ -87,7 +58,7 @@ class Test_login:
             while(isLoop):
                 #if parame["li"] != "":
                 #获取页面信息
-                bool = model.get_title_list(html_str, parame["li"],parame["li_time"], parame["title"], parame["href"], parame["domainName_url"], parame["li_area"],isloopBytime=isloopBytime)
+                bool = model.get_title_list(html_str, parame,isloopBytime=isloopBytime)
                 #else :
                     #return self.result
                 #当页面发生错误时退出循环
@@ -106,15 +77,60 @@ class Test_login:
     
                 if next_type in [0,1]:
                     #获取页面信息
-                    html_str = model.parse_url(original_url)                               
+                    html_str = model.parse_url(original_url)                                       
                 else:
                     html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
+
+    def RunMain(self, url_info, key, html_name):
+        #初始化
+        model = Crawler_URL()
+        parame = parameter[html_name]
+        isloopBytime = True
+        if "isloopBytime" in parame.keys():
+            isloopBytime = parame["isloopBytime"]
+        
+        original_url = ""
+        login_infos = [url_info, parame["login"]]
+        #登陆
+        driver = model.log_in_web(*login_infos)
+        
+        isLogin = globals()[parame["login"]["login_status"]["class"]](driver,parame["login"]["login_status"]["params"])        
+       
+        
+        #判断失败： 验证码错误 循环（maxnum =5)
+        if not isLogin:
+            return self.result
+        #判断成功
+        #self.cookie_info = self.driver.get_cookies()                     # 列表中包含多个字典
+        #self.cookie_dict = {i["name"]: i["value"] for i in self.cookie_info}  # 字典推导式
+        #response = requests.get(href_title, headers=self.headers,cookies=self.cookie_dict)
+        if "startPage_pre"  in  parame.keys():
+            pageType = parame["startPage_pre"]["type"]
+            if pageType=="get":
+                html_str = model.parse_url(parame["startPage_pre"]["url"])
+        if isinstance(parame["startPage"],list):
+            for item in parame["startPage"]:
+                if item["type"]=="get":
+                    original_url = item["url"]
+                    html_str = model.parse_url(original_url)
+                    self.getUrlList(model, parame, html_str, original_url,isloopBytime)
+                elif item["type"]=="onclick":
+                    #获取页面信息
+                    html_str = model.parse_url("",url_type=item["type"],url_params=item)
+                    self.getUrlList(model, parame, html_str, original_url,isloopBytime)
+        else:
+            if parame["startPage"]["type"]=="get":
+                original_url = parame["startPage"]["url"]
+                #获取页面信息
+                html_str = model.parse_url(original_url)
+            else:    
                 
-                
+                html_str = model.parse_url("",url_type=parame["startPage"]["type"],url_params=parame["startPage"])
+            self.getUrlList(model, parame, html_str, original_url,isloopBytime)        
             
 
-        #if ContentAnalysis(model,login_infos) :
-        if model.ContentAnalysis() :
+        if ContentAnalysis(model,login_infos) :
+        #if model.ContentAnalysis() :
             self.result = model.result()
         else:
             return self.result

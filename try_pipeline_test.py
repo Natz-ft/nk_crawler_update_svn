@@ -1,6 +1,5 @@
 # -*- coding:utf-8 -*-
 # 整合
-import datetime
 import re
 import pandas as pd
 from config import config, default, include_keys, information,bank
@@ -11,7 +10,10 @@ import traceback
 from test import Test
 from test_login import Test_login
 from test_loop3 import Test_loop3
+from test_json import TestJson
 import utils
+import time
+
 
 
 
@@ -20,7 +22,7 @@ def parse_args():
     parser.add_argument('--start-time', type=str, default=default.start_time, help='default config')
     parser.add_argument('--file-path', type=str, default=default.file_path, help='default config')
     parser.add_argument('--save-path', type=str, default=default.save_path, help='default config')
-    # parser.add_argument('--save-filename', type=str, default=default.save_filename, help='default config')
+    parser.add_argument('--save-filename', type=str, default=default.save_filename, help='default config')
     parser.add_argument('--interactive_file', type=str, default=default.interactive_file, help='default config')
     parser.add_argument('--choice-run', type=str, default=default.choice_run, help='default config')
 
@@ -178,7 +180,8 @@ class Focus():
 
 
 if __name__ == "__main__":
+    startTime = time.time()
     focus = Focus()
     focus.find_all()
-
-
+    rangeTime = time.time()-startTime
+    print("cost total time is {}".format(rangeTime))

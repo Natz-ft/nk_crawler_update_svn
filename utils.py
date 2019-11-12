@@ -1,6 +1,4 @@
 #-*- coding:utf-8 -*-
-import datetime
-
 from config import include_keys, exclude_keys, area_dict,area_list
 from fake_useragent import UserAgent
 import re
@@ -9,6 +7,10 @@ import time
 import random
 import area
 import datetime
+from selenium.webdriver.common.action_chains import ActionChains
+#from selenium.webdriver.support.wait import WebDriverWait
+#from selenium.webdriver.common.by import By
+#from selenium.webdriver.support import expected_conditions as EC
 
 headers = {"User-Agent": UserAgent().chrome}
 
@@ -39,6 +41,7 @@ def filter_title(title):
     :param title:
     :return:
     '''
+    print(title)
     include_pattern = r"(?=(" + '|'.join(include_keys) + r"))"
     exclude_pattern = r"(?=(" + '|'.join(exclude_keys) + r"))"
     r1 = re.findall(include_pattern, title)
@@ -89,6 +92,8 @@ def area_tpye(area):
                 return k
     return "中国"                    #没找到，返回中国，方便调试观察
 
+
+
 #获取详细信息地址
 def rehref(href_title):
     """
@@ -97,27 +102,40 @@ def rehref(href_title):
     """
     #javascript:urlOpen('url')
     #javascript:location.href='url';return false;
-    href_tmp = "".join(re.findall(r'[\'](.*?)[\']',href_title))
-    if len(href_tmp)>0:
-        href = href_tmp
+    href_arr = re.findall(r'[\'](.*?)[\']',href_title)
+    if len(href_arr)==1:
+        href = href_arr[0]
+    elif len(href_arr)>1:
+        #showProjectDetail('014002007','9990000000010328373');
+        href = "/".join(href_arr)
     else:
-        href = href_title
+        #goNewPage(64283,7);   http://www.cpeinet.com.cn/cpcec/bul/bul_show.jsp?id=64283
+        href_tmp = "".join(re.findall(r'[\(](.*?)[\)]',href_title))
+        if len(href_tmp) and ',' in href_tmp:
+            href = href_tmp.split(',')[0]
+        else:
+            href = href_title
+        
+    # 去除 第一个.
+    href = re.sub(r'^[\.]',"",href)    
     return href
 
 #获取总的页数
 def retotalPage(ori_number):
+    if len(ori_number)==0:
+        return 0
+
     # 分页按钮不固定的 获取1，2，3，4，....列表  取最大值
     if len(ori_number)>1:
         num_list = list(filter(lambda x: x.isdigit(), ori_number))
         if len(num_list)>0:
             number = max(num_list)
-        else:
-            number = ""
-    else:
-        # 
-        number = ''.join(re.findall(r'\d+页', ''.join(ori_number))).replace("页","")
-        if len(number)==0:            
-            number = max(re.findall(r'\d+', ''.join(ori_number)))
+            return number
+    
+    number = ''.join(re.findall(r'\d+页', ''.join(ori_number))).replace("页","")
+    if len(number)==0:
+        number = max(re.findall(r'\d+', ''.join(ori_number)))
+
     return number
 
 #获取；匹配地址
@@ -198,35 +216,91 @@ def getTitleTimeStr(stime):
     submit_time = p.findall(stime)
     if len(submit_time):
         submit_time = "-".join(submit_time[0])
-        return submit_time        
+        return submit_time  
+    # xxxx.xx.xx
+    p = re.compile('(\d{4})[.](\d{1,2})[.](\d{1,2})')
+    submit_time = p.findall(stime)
+    if len(submit_time):
+        submit_time = "-".join(submit_time[0])
+        return submit_time     
         
     return ""
 
+def get_track(distance):
+    """
+    根据偏移量获取移动轨迹
+    :param distance: 偏移量
+    :return: 移动轨迹
+    """
+    # 移动轨迹
+    track = []
+    # 当前位移
+    current = 0
+    # 减速阈值
+    mid = distance * 4 / 5
+    # 计算间隔
+    t = 0.2
+    # 初速度
+    v = 0
 
-#  云南政府采购网3_26
-def get_special_href(li,href_url,href_xpath_position,replacekey):
-    href_substitution = "".join(li.xpath(href_xpath_position))
-    href_url = href_url.replace(replacekey,str(href_substitution))
-    return href_url
+    while current < distance:
+        if current < mid:
+            # 加速度为正 2
+            a = 4
+        else:
+            # 加速度为负 3
+            a = -3
+        # 初速度 v0
+        v0 = v
+        # 当前速度 v = v0 + at
+        v = v0 + a * t
+        # 移动距离 x = v0t + 1/2 * a * t^2
+        move = v0 * t + 1 / 2 * a * t * t
+        # 当前位移
+        current += move
+        # 加入轨迹
+        track.append(round(move))
+    return track
+def move_to_gap(browser,slider, tracks):
+    """
+    拖动滑块到缺口处
+    :param slider: 滑块
+    :param tracks: 轨迹
+    :return:
+    """
+    ActionChains(browser).click_and_hold(slider).perform()
+    for x in tracks:
+        ActionChains(browser).move_by_offset(xoffset=x, yoffset=0).perform()
+    time.sleep(0.5)
+    ActionChains(browser).release().perform()
+def scrollVerify(driver,moveElementXPath,distance):
+    track_list = get_track(distance)
+    #import random
+    #track_list = []
+    #num = distance//50
+    #track_list = [50]*num
+    #if distance%50>0:
+        #track_list.append(distance%50)
+    moveElement = driver.find_element_by_xpath(moveElementXPath)
+    #鼠标点击元素并按住不放
+    ActionChains(driver).click_and_hold(on_element=moveElement).perform()
+    track_sum = 0
+    for i, track in enumerate(track_list):
+        #track_sum = track_sum+track
+        #print(track_sum)
+        #拖动元素
+        ActionChains(driver).move_to_element_with_offset(to_element=moveElement, xoffset=track, yoffset=0).perform()
+        #if i <num:
+            #time.sleep(random.randint(10,50)/100)
+    #ActionChains(driver).release(on_element=moveElement).perform()
+    ##释放元素
+    #ActionChains(driver).release(on_element=moveElement).perform()
+    pass
 
-
-
-def demo_regex2():
-    str = "showArticle('9a91d73855034c8dade57720fc77ca7a');return false;"
-    p = re.compile('\'(.*)\'')
-    need_str = p.findall(str)
-    need_str = "".join(need_str)
-    print(need_str)
-
-
-
-
-if __name__ == '__main__':
-    #str1 = '地点开标时间：2019-10-0909:30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开标地点：北京经济技术开发区地'
-    #a = search_area(str1)
-    #print(a)
-    # tmp = "中共黑龙江省直属机关工作委员会_办公设备_SC[2019]5212网上竞价公告"
-    # tmp = '地点、方式及招标文件售价：(1)凡有意参加投标者，请于2019年10月24日起至2019年10月31日，每日上午09:00时到12:00时，下午14：30时到17:00时(北京时间，节假日除外)在招标代理机构&nbsp;华新项目管理集团有限公司(地址：长沙市天心区保利国际地点：6.1投标截止：2019年11月20日9:00时止，超过截止时间的投标将被拒绝（☆）。6.2开标时间：2019年11月20日9:00时。6.3开标地点（递交投标文件地点）：华新项目管理集团有限'
-    # result = getAreaFromStr(tmp)
-    # print(result)
-    demo_regex2()
+#if __name__ == '__main__':
+    ###from CrawlerModule import Init_driver
+    ###driver = Init_driver()
+    ###driver.get("https://jl.bidcenter.com.cn/diqumore-1-6.html")
+    ###moveElementXPath = "//span[@id='nc_1_n1z']"
+    ###distance = 258
+    ####scrollVerify(driver, moveElementXPath, distance)  

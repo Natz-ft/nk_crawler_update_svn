@@ -1,1531 +1,205 @@
-2019-10-23 09:48:15,848 - webcrawer service - ERROR - 运行失败: shanxishenzhaobiaogonggongfuwupingtai
-2019-10-23 09:48:16,066 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
-    restore_signals, start_new_session)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
-    startupinfo)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
+2019-11-11 14:02:53,023 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0, 一共：0条
+2019-11-11 14:03:11,361 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1, 一共：0条
+2019-11-11 14:03:22,006 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi_3_2_0, 一共：0条
+2019-11-11 14:03:32,533 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi_3_2_1, 一共：0条
+2019-11-11 14:03:49,376 - webcrawer service - INFO - 运行成功: taipingyangbaoxian_3_3_0, 一共：0条
+2019-11-11 14:04:03,662 - webcrawer service - INFO - 运行成功: tianjinshizhengfucaigoupingtai_3_4, 一共：0条
+2019-11-11 14:04:13,469 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_0, 一共：0条
+2019-11-11 14:04:24,057 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_1, 一共：0条
+2019-11-11 14:04:39,148 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_0, 一共：0条
+2019-11-11 14:05:06,235 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1, 一共：0条
+2019-11-11 14:07:47,768 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：6条
+2019-11-11 14:08:56,360 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1, 一共：2条
+2019-11-11 14:09:26,705 - webcrawer service - INFO - 运行成功: shanghaigonggongziyuanjiaoyiwang_3_14, 一共：0条
+2019-11-11 14:09:48,250 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang_3_15_0, 一共：0条
+2019-11-11 14:10:11,299 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang_3_15_1, 一共：0条
+2019-11-11 14:10:30,971 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang_3_16_0, 一共：0条
+2019-11-11 14:10:50,626 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang_3_16_1, 一共：0条
+2019-11-11 14:11:13,126 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_0, 一共：0条
+2019-11-11 14:11:46,382 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：0条
+2019-11-11 14:12:06,695 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_0, 一共：0条
+2019-11-11 14:12:22,365 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_1, 一共：0条
+2019-11-11 14:12:55,580 - webcrawer service - INFO - 运行成功: hainanshenggonggongziyuanjiaoyiwang_3_20, 一共：0条
+2019-11-11 14:13:34,719 - webcrawer service - INFO - 运行成功: anzhaocai_3_23, 一共：0条
+2019-11-11 14:13:45,705 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi_3_24_0, 一共：0条
+2019-11-11 14:14:04,688 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi_3_24_1, 一共：0条
+2019-11-11 14:14:23,865 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_0, 一共：0条
+2019-11-11 14:14:43,173 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_1, 一共：0条
+2019-11-11 14:14:52,893 - webcrawer service - INFO - 运行成功: chongqingguojitouzizixunjituanyouxiangongsi_3_27, 一共：0条
+2019-11-11 14:15:10,719 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang_3_28_0, 一共：0条
+2019-11-11 14:15:21,281 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang_3_28_1, 一共：0条
+2019-11-11 14:15:45,938 - webcrawer service - INFO - 运行成功: chengdushigonggongziyuanjiaoyizhongxin_3_29, 一共：0条
+2019-11-11 14:16:01,313 - webcrawer service - INFO - 运行成功: zhongguoyouzheng_3_31_0, 一共：0条
+2019-11-11 14:16:22,109 - webcrawer service - INFO - 运行成功: zhongguoyouzheng_3_31_1, 一共：0条
+2019-11-11 14:16:38,252 - webcrawer service - INFO - 运行成功: bingtuanzhengfucaigouwang_3_32, 一共：0条
+2019-11-11 14:22:59,429 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：1条
+2019-11-11 14:23:26,726 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_1, 一共：0条
+2019-11-11 14:29:45,643 - webcrawer service - INFO - 运行成功: hebeizhaobiaocaigouwang_3_9, 一共：3条
+2019-11-11 14:33:26,455 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：2条
+2019-11-11 14:36:05,063 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_1, 一共：0条
+2019-11-11 14:40:32,018 - webcrawer service - INFO - 运行成功: liaoningshengcaigouzhaobiaowang_3_12_0, 一共：6条
+2019-11-11 14:44:19,939 - webcrawer service - INFO - 运行成功: liaoningshengcaigouzhaobiaowang_3_12_1, 一共：0条
+2019-11-11 14:45:41,582 - webcrawer service - INFO - 运行成功: dalianshizhaobiaowang_3_13, 一共：0条
+2019-11-11 14:48:01,892 - webcrawer service - INFO - 运行成功: shenzhenqinglima_3_21_0, 一共：1条
+2019-11-11 14:48:53,526 - webcrawer service - INFO - 运行成功: shenzhenqinglima_3_21_1, 一共：0条
+2019-11-11 14:49:02,923 - webcrawer service - INFO - 运行成功: chongqingguojitouzizixun_3_26, 一共：0条
+2019-11-11 15:42:18,187 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0, 一共：0条
+2019-11-11 15:42:35,205 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1, 一共：0条
+2019-11-11 15:42:44,796 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi_3_2_0, 一共：0条
+2019-11-11 15:42:53,891 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi_3_2_1, 一共：0条
+2019-11-11 15:43:10,047 - webcrawer service - INFO - 运行成功: taipingyangbaoxian_3_3_0, 一共：0条
+2019-11-11 15:44:11,125 - webcrawer service - INFO - 运行成功: tianjinshizhengfucaigoupingtai_3_4, 一共：0条
+2019-11-11 15:44:20,797 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_0, 一共：0条
+2019-11-11 15:44:32,095 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_1, 一共：0条
+2019-11-11 15:44:45,995 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_0, 一共：0条
+2019-11-11 15:45:07,610 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1, 一共：0条
+2019-11-11 15:47:43,109 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：6条
+2019-11-11 15:49:00,969 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1, 一共：2条
+2019-11-11 15:49:28,871 - webcrawer service - INFO - 运行成功: shanghaigonggongziyuanjiaoyiwang_3_14, 一共：0条
+2019-11-11 15:49:55,359 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang_3_15_0, 一共：0条
+2019-11-11 15:50:16,031 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang_3_15_1, 一共：0条
+2019-11-11 15:50:45,735 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang_3_16_0, 一共：0条
+2019-11-11 15:51:13,375 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang_3_16_1, 一共：0条
+2019-11-11 15:51:41,543 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_0, 一共：0条
+2019-11-11 15:52:03,050 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：0条
+2019-11-11 15:52:22,283 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_0, 一共：0条
+2019-11-11 15:52:41,767 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_1, 一共：0条
+2019-11-11 15:53:08,891 - webcrawer service - INFO - 运行成功: hainanshenggonggongziyuanjiaoyiwang_3_20, 一共：0条
+2019-11-11 15:53:45,344 - webcrawer service - INFO - 运行成功: anzhaocai_3_23, 一共：0条
+2019-11-11 15:53:57,130 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi_3_24_0, 一共：0条
+2019-11-11 15:54:18,486 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi_3_24_1, 一共：0条
+2019-11-11 15:54:31,262 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang_3_26_0
+2019-11-11 15:54:31,372 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
     result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
-    model = Crawler_URL()
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
-    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-
-
-2019-10-23 09:48:21,473 - webcrawer service - ERROR - 运行失败: shanxishenzhaobiaogonggongfuwupingtai
-2019-10-23 09:48:21,489 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
-    restore_signals, start_new_session)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
-    startupinfo)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
-    model = Crawler_URL()
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
-    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-
-
-2019-10-23 09:48:49,569 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
-2019-10-23 09:48:49,569 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
-    restore_signals, start_new_session)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
-    startupinfo)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
-    model = Crawler_URL()
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
-    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-
-
-2019-10-23 09:48:52,959 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
-2019-10-23 09:48:52,959 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
-    restore_signals, start_new_session)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
-    startupinfo)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
-    model = Crawler_URL()
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
-    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-
-
-2019-10-23 10:19:11,289 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
-2019-10-23 10:19:11,649 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
-    restore_signals, start_new_session)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
-    startupinfo)
-  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
-    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
-    model = Crawler_URL()
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
-    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-
-
-2019-10-23 10:20:25,102 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
-2019-10-23 10:20:26,133 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
-    restore_signals, start_new_session)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
-    startupinfo)
-  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
-    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
-    model = Crawler_URL()
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
-    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-
-
-2019-10-23 10:21:40,467 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
-2019-10-23 10:21:40,467 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
-    restore_signals, start_new_session)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
-    startupinfo)
-  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
-    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
-    model = Crawler_URL()
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
-    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-
-
-2019-10-23 10:23:49,764 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
-2019-10-23 10:23:49,764 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
-    restore_signals, start_new_session)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
-    startupinfo)
-  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
-    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
-    model = Crawler_URL()
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
-    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-
-
-2019-10-23 10:24:16,962 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
-2019-10-23 10:24:16,962 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
-    restore_signals, start_new_session)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
-    startupinfo)
-  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
-    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
-    model = Crawler_URL()
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
-    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-
-
-2019-10-23 10:25:26,548 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
-2019-10-23 10:25:26,548 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
-    restore_signals, start_new_session)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
-    startupinfo)
-  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
-    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
-    model = Crawler_URL()
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
-    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-
-
-2019-10-23 10:26:34,979 - webcrawer service - ERROR - 运行失败: shangdongcaigouyuzhaobiao
-2019-10-23 10:26:34,979 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 800, in __init__
-    restore_signals, start_new_session)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1207, in _execute_child
-    startupinfo)
-  File "C:\Program Files\JetBrains\PyCharm 2018.3.5\helpers\pydev\_pydev_bundle\pydev_monkey.py", line 452, in new_CreateProcess
-    return getattr(_subprocess, original_name)(app_name, patch_arg_str_win(cmd_line), *args)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 98, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 14, in RunMain
-    model = Crawler_URL()
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 33, in __init__
-    self.driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
-
-
-2019-10-23 17:39:25,775 - webcrawer service - ERROR - 运行失败: neimengguzizhiquzhengfucaigou
-2019-10-23 17:39:25,790 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 134, in Pipeline
-    result = self.bank(result,text["type"])
-KeyError: 'type'
-
-2019-10-23 17:43:50,025 - webcrawer service - ERROR - 运行失败: neimengguzizhiquzhengfucaigou
-2019-10-23 17:43:50,025 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 134, in Pipeline
-    result = self.bank(result,text["type"])
-KeyError: 'type'
-
-2019-10-24 09:21:39,671 - webcrawer service - ERROR - 运行失败: tianjinshizhengfucaigoupingtai
-2019-10-24 09:21:39,687 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 68, in RunMain
-    original_url = model.page_url(original_url, tmp_parame, i)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 198, in page_url
-    page_name["data"][page_name["pageNoKey"]]=cur_page_num
-KeyError: 'pageNoKey'
-
-2019-10-24 09:28:07,803 - webcrawer service - ERROR - 运行失败: tianjinshizhengfucaigoupingtai
-2019-10-24 09:28:07,803 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 68, in RunMain
-    original_url = model.page_url(original_url, tmp_parame, i)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 198, in page_url
-    page_name["data"][page_name["pageNoKey"]]=cur_page_num
-KeyError: 'pageNoKey'
-
-2019-10-24 09:31:53,424 - webcrawer service - ERROR - 运行失败: tianjinshizhengfucaigoupingtai
-2019-10-24 09:31:53,424 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 68, in RunMain
-    original_url = model.page_url(original_url, tmp_parame, i)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 198, in page_url
-    page_name["data"][page_name["pageNoKey"]]=cur_page_num
-KeyError: 'pageNoKey'
-
-2019-10-24 09:36:58,488 - webcrawer service - ERROR - 运行失败: tianjinshizhengfucaigoupingtai
-2019-10-24 09:36:58,488 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 68, in RunMain
-    original_url = model.page_url(original_url, tmp_parame, i)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 198, in page_url
-    page_name["data"][page_name["pageNoKey"]]=cur_page_num
-KeyError: 'pageNoKey'
-
-2019-10-24 09:43:44,269 - webcrawer service - ERROR - 运行失败: tianjinshizhengfucaigoupingtai
-2019-10-24 09:43:44,269 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 68, in RunMain
-    original_url = model.page_url(original_url, tmp_parame, i)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 198, in page_url
-    page_name["data"][page_name["pageNoKey"]]=cur_page_num
-KeyError: 'pageNoKey'
-
-2019-10-24 09:51:56,705 - webcrawer service - ERROR - 运行失败: tianjinshizhengfucaigoupingtai
-2019-10-24 09:51:56,705 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 134, in Pipeline
-    result = self.bank(result,text["type"])
-KeyError: 'type'
-
-2019-10-24 09:55:46,841 - webcrawer service - ERROR - 运行失败: guangxizhaobiaotoubiaogonggongfuwupingtai
-2019-10-24 09:55:46,841 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 134, in Pipeline
-    result = self.bank(result,text["type"])
-KeyError: 'type'
-
-2019-10-24 09:59:50,935 - webcrawer service - ERROR - 运行失败: guangxizhaobiaotoubiaogonggongfuwupingtai
-2019-10-24 09:59:50,935 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 134, in Pipeline
-    result = self.bank(result,text["type"])
-KeyError: 'type'
-
-2019-10-24 10:05:19,858 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai, 一共：1条
-2019-10-24 10:35:54,777 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang, 一共：0条
-2019-10-24 10:38:17,508 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang, 一共：1条
-2019-10-24 10:57:13,156 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang, 一共：0条
-2019-10-24 10:58:31,960 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang, 一共：4条
-2019-10-24 13:24:35,582 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang, 一共：6条
-2019-10-24 13:34:30,025 - webcrawer service - INFO - 运行成功: hainanshenggonggongziyuanjiaoyiwang, 一共：0条
-2019-10-24 13:52:12,828 - webcrawer service - INFO - 运行成功: hainanshenggonggongziyuanjiaoyiwang, 一共：0条
-2019-10-24 14:39:55,412 - webcrawer service - ERROR - 运行失败: anzhaocai
-2019-10-24 14:39:55,413 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 16, in RunMain
-    parame = parameter[html_name]
-KeyError: 'anzhaocai'
-
-2019-10-24 14:46:41,008 - webcrawer service - INFO - 运行成功: anzhaocai, 一共：0条
-2019-10-24 14:50:58,471 - webcrawer service - INFO - 运行成功: anzhaocai, 一共：0条
-2019-10-24 14:54:44,694 - webcrawer service - INFO - 运行成功: anzhaocai, 一共：5条
-2019-10-24 16:24:00,516 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi, 一共：0条
-2019-10-24 16:25:06,555 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi, 一共：0条
-2019-10-24 16:27:13,299 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi, 一共：0条
-2019-10-24 16:33:42,050 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi, 一共：1条
-2019-10-25 10:07:45,686 - webcrawer service - ERROR - 运行失败: chengdushigonggongziyuanjiaoyizhongxin
-2019-10-25 10:07:45,781 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 29, in RunMain
-    html_str = model.parse_url(original_url)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 54, in parse_url
-    html_str = self.driver.page_source
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 679, in page_source
-    return self.execute(Command.GET_PAGE_SOURCE)['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-25 10:14:13,368 - webcrawer service - ERROR - 运行失败: chengdushigonggongziyuanjiaoyizhongxin
-2019-10-25 10:14:13,372 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 29, in RunMain
-    html_str = model.parse_url(original_url)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 53, in parse_url
-    self.driver.get(href_title)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
-    self.execute(Command.GET, {'url': url})
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: timeout
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-25 10:20:34,135 - webcrawer service - ERROR - 运行失败: chengdushigonggongziyuanjiaoyizhongxin
-2019-10-25 10:20:34,145 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 29, in RunMain
-    html_str = model.parse_url(original_url)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 53, in parse_url
-    self.driver.get(href_title)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
-    self.execute(Command.GET, {'url': url})
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: timeout
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-25 10:26:41,628 - webcrawer service - ERROR - 运行失败: chengdushigonggongziyuanjiaoyizhongxin
-2019-10-25 10:26:41,630 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 29, in RunMain
-    html_str = model.parse_url(original_url)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 53, in parse_url
-    self.driver.get(href_title)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
-    self.execute(Command.GET, {'url': url})
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: timeout
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-25 10:44:31,038 - webcrawer service - ERROR - 运行失败: zhongguoyouzheng
-2019-10-25 10:44:31,044 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 29, in RunMain
-    html_str = model.parse_url(original_url)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 53, in parse_url
-    self.driver.get(href_title)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
-    self.execute(Command.GET, {'url': url})
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.TimeoutException: Message: timeout
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-25 10:48:51,472 - webcrawer service - INFO - 运行成功: zhongguoyouzheng, 一共：4条
-2019-10-25 10:51:22,017 - webcrawer service - INFO - 运行成功: zhongguoyouzheng, 一共：4条
-2019-10-25 10:52:44,907 - webcrawer service - ERROR - 运行失败: zhongguoyouzheng
-2019-10-25 10:52:44,916 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 29, in RunMain
-    html_str = model.parse_url(original_url)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 54, in parse_url
-    html_str = self.driver.page_source
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 679, in page_source
-    return self.execute(Command.GET_PAGE_SOURCE)['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-25 10:55:00,757 - webcrawer service - INFO - 运行成功: zhongguoyouzheng, 一共：4条
-2019-10-25 11:33:55,640 - webcrawer service - INFO - 运行成功: bingtuanzhengfucaigouwang, 一共：0条
-2019-10-25 11:37:35,001 - webcrawer service - INFO - 运行成功: bingtuanzhengfucaigouwang, 一共：2条
-2019-10-25 11:50:24,511 - webcrawer service - INFO - 运行成功: anzhaocai2, 一共：0条
-2019-10-25 13:15:00,127 - webcrawer service - INFO - 运行成功: anzhaocai2, 一共：2条
-2019-10-25 13:26:41,230 - webcrawer service - INFO - 运行成功: anzhaocai2, 一共：0条
-2019-10-25 13:33:14,124 - webcrawer service - INFO - 运行成功: anzhaocai2, 一共：0条
-2019-10-25 14:09:14,030 - webcrawer service - ERROR - 运行失败: anzhaocai2
-2019-10-25 15:23:33,789 - webcrawer service - INFO - 运行成功: anzhaocai2, 一共：2条
-2019-10-25 15:27:32,825 - webcrawer service - ERROR - 运行失败: anzhaocai2
-2019-10-25 15:27:32,827 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 76, in RunMain
-    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 66, in parse_url
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 126, in RunMain
+    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 156, in parse_url
     self.driver.find_element_by_xpath(url_param["button"]).click()
   File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
     return self.find_element(by=By.XPATH, value=xpath)
   File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
     'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: The result of the xpath expression "//*[@id="gridcontainer1"]/div/div[2]/div/a/text()" is: [object Text]. It should be an element.
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-25 15:38:20,516 - webcrawer service - ERROR - 运行失败: anzhaocai2
-2019-10-25 15:38:20,759 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 135, in Pipeline
-    pd.DataFrame(self.time_change(result)).to_csv(csv, encoding='utf_8_sig')
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\core\generic.py", line 3228, in to_csv
-    formatter.save()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\formats\csvs.py", line 183, in save
-    compression=self.compression,
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\common.py", line 399, in _get_handle
-    f = open(path_or_buf, mode, encoding=encoding, newline="")
-PermissionError: [Errno 13] Permission denied: './data/anzhaocai2.csv'
-
-2019-10-25 15:40:35,743 - webcrawer service - ERROR - 运行失败: anzhaocai2
-2019-10-25 15:40:35,747 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 135, in Pipeline
-    pd.DataFrame(self.time_change(result)).to_csv(csv, encoding='utf_8_sig')
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\core\generic.py", line 3228, in to_csv
-    formatter.save()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\formats\csvs.py", line 183, in save
-    compression=self.compression,
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\common.py", line 399, in _get_handle
-    f = open(path_or_buf, mode, encoding=encoding, newline="")
-PermissionError: [Errno 13] Permission denied: './data/anzhaocai2.csv'
-
-2019-10-25 15:47:45,460 - webcrawer service - ERROR - 运行失败: chengdushigonggongziyuanjiaoyizhongxin
-2019-10-25 15:47:45,462 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 133, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 76, in RunMain
-    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 66, in parse_url
-    self.driver.find_element_by_xpath(url_param["button"]).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="Pager"]/a[text()=11]"}
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-28 09:41:22,420 - webcrawer service - ERROR - 运行失败: zhongguoyouzheng
-2019-10-28 09:41:22,467 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 113, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-28 09:42:06,217 - webcrawer service - INFO - 运行成功: zhongguoyouzheng, 一共：0条
-2019-10-28 09:42:47,739 - webcrawer service - INFO - 运行成功: zhongguoyouzheng, 一共：0条
-2019-10-28 10:01:43,187 - webcrawer service - ERROR - 运行失败: shanghaigonggongziyuanjiaoyiwang
-2019-10-28 10:01:43,713 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 141, in Pipeline
-    result = self.bank(result,text["type"])
-KeyError: 'type'
-
-2019-10-28 10:29:02,007 - webcrawer service - ERROR - 运行失败: shanghaigonggongziyuanjiaoyiwang
-2019-10-28 10:29:02,007 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 141, in Pipeline
-    result = self.bank(result,text["type"])
-KeyError: 'type'
-
-2019-10-28 10:31:34,757 - webcrawer service - ERROR - 运行失败: shanghaigonggongziyuanjiaoyiwang
-2019-10-28 10:31:34,757 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 141, in Pipeline
-    result = self.bank(result,text["type"])
-KeyError: 'type'
-
-2019-10-28 11:15:07,209 - webcrawer service - ERROR - 运行失败: shanghaigonggongziyuanjiaoyiwang
-2019-10-28 11:15:07,211 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 141, in Pipeline
-    result = self.bank(result,text["type"])
-KeyError: 'type'
-
-2019-10-28 11:24:23,849 - webcrawer service - INFO - 运行成功: shanghaigonggongziyuanjiaoyiwang, 一共：1条
-2019-10-28 11:26:47,716 - webcrawer service - INFO - 运行成功: hainanshenggonggongziyuanjiaoyiwang, 一共：0条
-2019-10-28 11:35:13,482 - webcrawer service - ERROR - 运行失败: hainanshenggonggongziyuanjiaoyiwang
-2019-10-28 11:35:13,483 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 115, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-28 11:45:33,778 - webcrawer service - INFO - 运行成功: hainanshenggonggongziyuanjiaoyiwang, 一共：1条
-2019-10-28 16:04:13,381 - webcrawer service - INFO - 运行成功: chengdushigonggongziyuanjiaoyizhongxin, 一共：0条
-2019-10-29 09:27:31,667 - webcrawer service - ERROR - 运行失败: chengdushigonggongziyuanjiaoyizhongxin
-2019-10-29 09:27:31,797 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 30, in RunMain
-    html_str = model.parse_url(original_url)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 77, in parse_url
-    html_str = self.driver.page_source
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 679, in page_source
-    return self.execute(Command.GET_PAGE_SOURCE)['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-29 09:42:32,394 - webcrawer service - ERROR - 运行失败: chengdushigonggongziyuanjiaoyizhongxin
-2019-10-29 09:42:32,398 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 72, in RunMain
-    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 97, in parse_url
-    self.driver.find_element_by_xpath(url_param["button"]).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="Pager"]/a[text()=11]"}
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-29 09:56:31,887 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai, 一共：0条
-2019-10-29 10:30:53,803 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang, 一共：0条
-2019-10-29 10:41:52,010 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang
-2019-10-29 10:41:52,012 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 34, in RunMain
-    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 97, in parse_url
-    self.driver.find_element_by_xpath(url_param["button"]).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="searchMoreContent"]/a"}
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-29 10:49:35,569 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang, 一共：1条
-2019-10-29 10:54:02,466 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang
-2019-10-29 10:54:02,482 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 115, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-29 10:57:27,555 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang
-2019-10-29 10:57:28,494 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 115, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-29 11:11:27,438 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang
-2019-10-29 11:11:27,439 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 115, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-29 11:37:43,084 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang
-2019-10-29 11:37:43,668 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 115, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-29 11:38:24,200 - webcrawer service - ERROR - 运行失败: zhonggangzhaobiaoyouxianzerengongsi
-2019-10-29 11:38:24,201 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 115, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-29 11:42:26,143 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang
-2019-10-29 11:42:26,232 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 142, in Pipeline
-    pd.DataFrame(self.time_change(result)).to_csv(csv, encoding='utf_8_sig')
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\core\generic.py", line 3228, in to_csv
-    formatter.save()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\formats\csvs.py", line 183, in save
-    compression=self.compression,
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\common.py", line 399, in _get_handle
-    f = open(path_or_buf, mode, encoding=encoding, newline="")
-PermissionError: [Errno 13] Permission denied: './data/xiamenshigongongziyuanjiaoyiwang.csv'
-
-2019-10-29 11:44:03,865 - webcrawer service - ERROR - 运行失败: zhonggangzhaobiaoyouxianzerengongsi
-2019-10-29 11:44:03,867 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 115, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-29 12:04:39,885 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang
-2019-10-29 12:04:39,909 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 39, in RunMain
-    ori_number = model.number_page(parame["number_xpath"], html_str)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 255, in number_page
-    number = html_element.xpath(number_xpath)
-AttributeError: 'NoneType' object has no attribute 'xpath'
-
-2019-10-29 13:47:33,406 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang, 一共：1条
-2019-10-29 13:51:52,754 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang
-2019-10-29 13:51:52,758 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-29 13:57:50,761 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang, 一共：1条
-2019-10-29 14:02:30,808 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi, 一共：0条
-2019-10-29 14:04:33,741 - webcrawer service - ERROR - 运行失败: zhonggangzhaobiaoyouxianzerengongsi
-2019-10-29 14:04:33,785 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 72, in RunMain
-    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 97, in parse_url
-    self.driver.find_element_by_xpath(url_param["button"]).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression /html/body/div[2]/div[2]/div[2]/div/div[5]/div[2]/div/ul/li[1]/a/@data-page-index=2 because of the following error:
-TypeError: Failed to execute 'evaluate' on 'Document': The result is not a node set, and therefore cannot be converted to the desired type.
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-29 14:14:57,792 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi, 一共：1条
-2019-10-29 14:25:57,983 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang, 一共：0条
-2019-10-29 14:29:15,688 - webcrawer service - ERROR - 运行失败: neimengguzizhiqugonggongziyuanjiaoyiwang
-2019-10-29 14:29:15,692 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 64, in RunMain
-    original_url = model.page_url(original_url, tmp_parame, i)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 238, in page_url
-    next_url = page_name["style"].replace(page_name["replaceKey"],str(cur_page_num))
-KeyError: 'replaceKey'
-
-2019-10-29 14:32:25,610 - webcrawer service - ERROR - 运行失败: neimengguzizhiqugonggongziyuanjiaoyiwang
-2019-10-29 14:32:25,610 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 64, in RunMain
-    original_url = model.page_url(original_url, tmp_parame, i)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 238, in page_url
-    next_url = page_name["style"].replace(page_name["replaceKey"],str(cur_page_num))
-KeyError: 'replaceKey'
-
-2019-10-29 14:36:47,829 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang, 一共：5条
-2019-10-29 15:04:58,340 - webcrawer service - ERROR - 运行失败: taipingyangbaoxian
-2019-10-29 15:04:58,341 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 17, in RunMain
-    parame = parameter[html_name]
-KeyError: 'taipingyangbaoxian'
-
-2019-10-29 15:06:08,888 - webcrawer service - INFO - 运行成功: taipingyangbaoxian, 一共：1条
-2019-10-29 16:59:40,138 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang
-2019-10-29 16:59:40,259 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 34, in RunMain
-    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 101, in parse_url
-    self.driver.find_element_by_id(tmp_param["name"]).send_keys(tmp_param["value"])
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 360, in find_element_by_id
-    return self.find_element(by=By.ID, value=id_)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dropdown-item dropdown-item-button"]"}
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-29 17:00:20,585 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang
-2019-10-29 17:00:20,588 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 34, in RunMain
-    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 101, in parse_url
-    self.driver.find_element_by_id(tmp_param["name"]).send_keys(tmp_param["value"])
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 360, in find_element_by_id
-    return self.find_element(by=By.ID, value=id_)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-29 17:06:48,417 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang
-2019-10-29 17:06:48,783 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 34, in RunMain
-    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 101, in parse_url
-    self.driver.find_element_by_id(tmp_param["name"]).send_keys(tmp_param["value"])
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 360, in find_element_by_id
-    return self.find_element(by=By.ID, value=id_)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="dropdown-item dropdown-item-button"]"}
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-29 17:12:48,634 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang
-2019-10-29 17:12:48,637 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 34, in RunMain
-    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 105, in parse_url
-    self.driver.find_elements_by_xpath(tmp_param["name"]).send_keys(tmp_param["value"])
-AttributeError: 'list' object has no attribute 'send_keys'
-
-2019-10-29 17:13:31,503 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang
-2019-10-29 17:13:31,507 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 34, in RunMain
-    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 105, in parse_url
-    self.driver.find_elements_by_xpath(tmp_param["name"]).send_keys(tmp_param["value"])
-AttributeError: 'list' object has no attribute 'send_keys'
-
-2019-10-30 09:50:59,402 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang, 一共：0条
-2019-10-30 09:57:26,990 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang, 一共：0条
-2019-10-30 10:03:32,521 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang, 一共：1条
-2019-10-30 10:30:54,035 - webcrawer service - INFO - 运行成功: chengdushigonggongziyuanjiaoyizhongxin, 一共：0条
-2019-10-30 10:36:39,326 - webcrawer service - INFO - 运行成功: chengdushigonggongziyuanjiaoyizhongxin, 一共：9条
-2019-10-30 10:39:44,377 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai, 一共：0条
-2019-10-30 10:50:06,193 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai, 一共：0条
-2019-10-30 10:50:58,988 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai, 一共：0条
-2019-10-30 13:52:13,717 - webcrawer service - INFO - 运行成功: zhongguoyouzheng, 一共：9条
-2019-10-30 13:52:29,247 - webcrawer service - ERROR - 运行失败: zhongguoyouzheng2
-2019-10-30 13:52:29,384 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-30 13:54:29,888 - webcrawer service - INFO - 运行成功: zhongguoyouzheng, 一共：9条
-2019-10-30 13:57:43,034 - webcrawer service - INFO - 运行成功: zhongguoyouzheng2, 一共：20条
-2019-10-30 14:12:11,624 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang, 一共：0条
-2019-10-30 14:12:54,182 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang2, 一共：1条
-2019-10-30 14:14:49,094 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang, 一共：0条
-2019-10-30 14:16:34,898 - webcrawer service - ERROR - 运行失败: lasagonggongziyuanjiaoyiwang2
-2019-10-30 14:16:35,448 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 72, in RunMain
-    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 97, in parse_url
-    self.driver.find_element_by_xpath(url_param["button"]).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="listCon"]/div/div/a[text()=2]"}
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-30 14:20:49,202 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang, 一共：0条
-2019-10-30 14:27:35,413 - webcrawer service - ERROR - 运行失败: lasagonggongziyuanjiaoyiwang2
-2019-10-30 14:27:36,032 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 72, in RunMain
-    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 97, in parse_url
-    self.driver.find_element_by_xpath(url_param["button"]).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="listCon"]/div/div/a[text()=2]"}
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-30 14:33:38,476 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang, 一共：0条
-2019-10-30 14:34:52,359 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang2, 一共：1条
-2019-10-30 15:30:11,106 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang, 一共：0条
-2019-10-30 15:30:58,063 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang2, 一共：1条
-2019-10-30 16:14:22,427 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi, 一共：4条
-2019-10-30 16:15:20,264 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi2, 一共：5条
-2019-10-30 16:28:17,861 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai, 一共：7条
-2019-10-30 16:31:05,118 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai, 一共：7条
-2019-10-30 16:33:44,867 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai2, 一共：18条
-2019-10-30 16:37:28,374 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang, 一共：0条
-2019-10-30 16:48:21,008 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-30 16:48:21,012 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 72, in RunMain
-    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 99, in parse_url
-    self.driver.find_element_by_xpath(button).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: The result of the xpath expression "/" is: [object HTMLDocument]. It should be an element.
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-30 16:50:39,642 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-30 16:50:39,644 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-30 16:55:42,665 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-30 16:55:43,058 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 72, in RunMain
-    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 99, in parse_url
-    self.driver.find_element_by_xpath(button).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: The result of the xpath expression "/" is: [object HTMLDocument]. It should be an element.
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-30 17:12:17,960 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-30 17:12:17,961 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-30 17:21:44,535 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-30 17:21:44,536 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 72, in RunMain
-    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 100, in parse_url
-    self.driver.find_element_by_xpath(button).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: The result of the xpath expression "/" is: [object HTMLDocument]. It should be an element.
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-30 17:24:48,155 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-30 17:24:48,156 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-30 17:25:15,424 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-30 17:25:15,425 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-30 17:48:19,992 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-30 17:48:19,993 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-30 17:55:34,263 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang2, 一共：0条
-2019-10-30 17:58:57,286 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang2, 一共：0条
-2019-10-30 18:00:56,565 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-30 18:00:56,567 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-30 18:01:47,795 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-30 18:01:47,796 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-31 10:05:52,576 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang, 一共：3条
-2019-10-31 10:27:20,023 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang, 一共：5条
-2019-10-31 10:36:00,296 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang2, 一共：6条
-2019-10-31 10:47:48,120 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang, 一共：6条
-2019-10-31 10:50:07,488 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang2, 一共：7条
-2019-10-31 10:54:00,060 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang, 一共：1条
-2019-10-31 10:56:51,669 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang2, 一共：0条
-2019-10-31 11:04:14,915 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang, 一共：1条
-2019-10-31 11:04:52,664 - webcrawer service - ERROR - 运行失败: zhejiangshenggonggongziyuanjiaoyiwang2
-2019-10-31 11:04:52,753 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 142, in Pipeline
-    pd.DataFrame(self.time_change(result)).to_csv(csv, encoding='utf_8_sig')
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\core\generic.py", line 3228, in to_csv
-    formatter.save()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\formats\csvs.py", line 183, in save
-    compression=self.compression,
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\common.py", line 399, in _get_handle
-    f = open(path_or_buf, mode, encoding=encoding, newline="")
-PermissionError: [Errno 13] Permission denied: './data/zhejiangshenggonggongziyuanjiaoyiwang2.csv'
-
-2019-10-31 11:11:24,051 - webcrawer service - ERROR - 运行失败: zhejiangshenggonggongziyuanjiaoyiwang2
-2019-10-31 11:11:24,054 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 142, in Pipeline
-    pd.DataFrame(self.time_change(result)).to_csv(csv, encoding='utf_8_sig')
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\core\generic.py", line 3228, in to_csv
-    formatter.save()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\formats\csvs.py", line 183, in save
-    compression=self.compression,
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\pandas\io\common.py", line 399, in _get_handle
-    f = open(path_or_buf, mode, encoding=encoding, newline="")
-PermissionError: [Errno 13] Permission denied: './data/zhejiangshenggonggongziyuanjiaoyiwang2.csv'
-
-2019-10-31 11:20:50,149 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai, 一共：20条
-2019-10-31 11:34:44,881 - webcrawer service - ERROR - 运行失败: shandongshengzhengfucaigouxinxigongkaipingtai2
-2019-10-31 11:34:44,972 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-31 11:36:02,575 - webcrawer service - ERROR - 运行失败: shandongshengzhengfucaigouxinxigongkaipingtai2
-2019-10-31 11:36:02,576 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-31 13:34:36,915 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai2, 一共：3条
-2019-10-31 13:38:56,202 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai, 一共：20条
-2019-10-31 13:40:06,669 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai2, 一共：0条
-2019-10-31 13:45:07,780 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang, 一共：0条
-2019-10-31 13:45:37,071 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang2, 一共：0条
-2019-10-31 13:47:24,016 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang, 一共：5条
-2019-10-31 13:47:51,093 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang2, 一共：0条
-2019-10-31 13:48:55,995 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang2, 一共：0条
-2019-10-31 13:58:11,622 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang2, 一共：1条
-2019-10-31 13:59:25,174 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang, 一共：5条
-2019-10-31 14:05:48,861 - webcrawer service - INFO - 运行成功: tianjinshizhengfucaigoupingtai, 一共：9条
-2019-10-31 14:11:01,908 - webcrawer service - ERROR - 运行失败: zhonggangzhaobiaoyouxianzerengongsi
-2019-10-31 14:11:01,936 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 72, in RunMain
-    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 100, in parse_url
-    self.driver.find_element_by_xpath(button).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: The result of the xpath expression "/" is: [object HTMLDocument]. It should be an element.
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-31 14:11:11,417 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi2, 一共：0条
-2019-10-31 14:38:52,519 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi, 一共：1条
-2019-10-31 14:39:02,680 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi2, 一共：0条
-2019-10-31 14:40:23,776 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi2, 一共：0条
-2019-10-31 14:47:51,975 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi2, 一共：2条
-2019-10-31 14:50:09,507 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-31 14:50:09,508 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-10-31 14:59:24,642 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang2, 一共：0条
-2019-10-31 15:02:37,595 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-31 15:02:38,073 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 34, in RunMain
-    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 100, in parse_url
-    self.driver.find_element_by_xpath(button).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@onclick="clickMore(3)"]"}
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-31 15:12:40,772 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-31 15:12:40,860 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 34, in RunMain
-    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 100, in parse_url
-    self.driver.find_element_by_xpath(button).submit()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webelement.py", line 85, in submit
-    form = self.find_element(By.XPATH, "./ancestor-or-self::form")
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webelement.py", line 659, in find_element
-    {"using": by, "value": value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"./ancestor-or-self::form"}
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-31 15:30:30,731 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-31 15:30:30,733 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 34, in RunMain
-    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 100, in parse_url
-    self.driver.find_element_by_xpath(button).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[@onclick="doSearch(this,"5")"] because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@onclick="doSearch(this,"5")"]' is not a valid XPath expression.
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-31 16:07:11,864 - webcrawer service - INFO - 运行成功: anzhaocai, 一共：2条
-2019-10-31 16:09:40,493 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-31 16:09:40,494 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 34, in RunMain
-    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 104, in parse_url
-    self.driver.find_element_by_xpath(button).send_keys(Keys.ENTER)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
-    'value': keys_to_typing(value)})
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-10-31 16:11:18,582 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang2
-2019-10-31 16:11:18,584 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 34, in RunMain
-    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 104, in parse_url
-    self.driver.find_element_by_xpath(button).send_keys(Keys.ENTER)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webelement.py", line 479, in send_keys
-    'value': keys_to_typing(value)})
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-11-01 09:41:25,052 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang
-2019-11-01 09:41:25,068 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-11-01 09:41:54,435 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang
-2019-11-01 09:41:54,440 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-11-01 10:15:12,008 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang
-2019-11-01 10:15:12,022 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-11-01 10:43:07,330 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang
-2019-11-01 10:43:07,332 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 140, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 40, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 116, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-11-01 16:03:14,925 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_0, 一共：0条
-2019-11-01 16:04:55,230 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_0, 一共：0条
-2019-11-01 16:17:35,647 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_0, 一共：0条
-2019-11-04 14:05:58,700 - webcrawer service - INFO - 运行成功: hebeizhaobiaocaigouwang_3_9_0, 一共：0条
-2019-11-04 14:48:35,651 - webcrawer service - INFO - 运行成功: hebeizhaobiaocaigouwang_3_9_0, 一共：237条
-2019-11-04 14:53:56,635 - webcrawer service - INFO - 运行成功: dalianshizhaobiaowang_3_13_0, 一共：0条
-2019-11-04 14:56:52,131 - webcrawer service - INFO - 运行成功: dalianshizhaobiaowang_3_13, 一共：5条
-2019-11-04 17:14:38,950 - webcrawer service - ERROR - 运行失败: jilinshengcaigouzhaobiaowang_3_11_0
-2019-11-04 17:14:39,056 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 142, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 28, in RunMain
-    driver = model.log_in_web(*login_infos)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 103, in log_in_web
-    self.driver = model_log_in_web(self.driver, url, login_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 84, in model_log_in_web
-    driver.find_element_by_xpath(login_info["button"]).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[@class="login_left"]/form/input] because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@class="login_left"]/form/input]' is not a valid XPath expression.
-  (Session info: chrome=76.0.3809.87)
-
-
-2019-11-04 17:36:39,454 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
-2019-11-05 09:14:25,206 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
-2019-11-05 09:16:32,719 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
-2019-11-05 09:19:54,133 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
-2019-11-05 09:26:18,416 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
-2019-11-05 09:32:34,943 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
-2019-11-05 09:46:06,552 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：0条
-2019-11-05 09:48:29,183 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：6条
-2019-11-05 10:05:57,796 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：22条
-2019-11-05 10:11:52,012 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_1, 一共：12条
-2019-11-05 10:32:53,067 - webcrawer service - INFO - 运行成功: liaoningshengcaigouzhaobiaowang_3_12_0, 一共：43条
-2019-11-05 10:42:26,398 - webcrawer service - INFO - 运行成功: liaoningshengcaigouzhaobiaowang_3_12_1, 一共：19条
-2019-11-05 11:39:19,398 - webcrawer service - INFO - 运行成功: shenzhenqinglima_3_21_0, 一共：12条
-2019-11-05 14:39:06,129 - webcrawer service - INFO - 运行成功: shenzhenqinglima_3_21_0, 一共：12条
-2019-11-05 14:47:21,025 - webcrawer service - INFO - 运行成功: shenzhenqinglima_3_21_1, 一共：14条
-2019-11-05 15:22:00,867 - webcrawer service - ERROR - 运行失败: huazhongzhaobiaowang_3_8_0
-2019-11-05 15:22:00,969 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 142, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 28, in RunMain
-    driver = model.log_in_web(*login_infos)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 104, in log_in_web
-    self.cookie_info = self.driver.get_cookies()                 # 列表中包含多个字典
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 841, in get_cookies
-    return self.execute(Command.GET_ALL_COOKIES)['value']
   File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
     self.error_handler.check_response(response)
   File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 241, in check_response
     raise exception_class(message, screen, stacktrace, alert_text)
-selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: 用户名不能为空!
-Message: unexpected alert open: {Alert text : 用户名不能为空!}
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: 系统异常请联系管理员！
+Message: unexpected alert open: {Alert text : 系统异常请联系管理员！}
   (Session info: chrome=76.0.3809.87)
 
 
-2019-11-05 15:33:13,886 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：0条
-2019-11-05 15:53:41,280 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：0条
-2019-11-05 16:22:11,264 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：0条
-2019-11-05 16:23:11,351 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_1, 一共：0条
-2019-11-06 10:40:14,687 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：0条
-2019-11-06 10:49:40,465 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：30条
-2019-11-06 10:51:42,497 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_1, 一共：0条
-2019-11-06 11:21:20,371 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_1, 一共：113条
-2019-11-06 11:28:23,394 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang_3_26_0_test
-2019-11-06 11:28:23,413 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
+2019-11-11 15:54:49,368 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_1, 一共：0条
+2019-11-11 15:54:59,531 - webcrawer service - INFO - 运行成功: chongqingguojitouzizixunjituanyouxiangongsi_3_27, 一共：0条
+2019-11-11 15:55:16,953 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang_3_28_0, 一共：0条
+2019-11-11 15:55:27,391 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang_3_28_1, 一共：0条
+2019-11-11 15:55:56,413 - webcrawer service - INFO - 运行成功: chengdushigonggongziyuanjiaoyizhongxin_3_29, 一共：0条
+2019-11-11 15:56:10,157 - webcrawer service - INFO - 运行成功: zhongguoyouzheng_3_31_0, 一共：0条
+2019-11-11 15:56:30,303 - webcrawer service - INFO - 运行成功: zhongguoyouzheng_3_31_1, 一共：0条
+2019-11-11 15:56:45,966 - webcrawer service - INFO - 运行成功: bingtuanzhengfucaigouwang_3_32, 一共：0条
+2019-11-11 16:03:07,609 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：1条
+2019-11-11 16:03:34,051 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_1, 一共：0条
+2019-11-11 16:04:12,612 - webcrawer service - INFO - 运行成功: hebeizhaobiaocaigouwang_3_9, 一共：0条
+2019-11-11 16:13:17,223 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0, 一共：0条
+2019-11-11 16:15:20,594 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_0, 一共：0条
+2019-11-11 16:15:38,391 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1, 一共：0条
+2019-11-11 16:19:49,751 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：6条
+2019-11-11 16:21:12,777 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1, 一共：2条
+2019-11-11 16:23:10,643 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_0, 一共：0条
+2019-11-11 16:23:30,564 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1, 一共：0条
+2019-11-11 16:26:33,657 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：6条
+2019-11-11 16:27:57,281 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1, 一共：2条
+2019-11-11 16:30:19,062 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0, 一共：0条
+2019-11-11 16:30:35,765 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1, 一共：0条
+2019-11-11 16:30:44,854 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi_3_2_0, 一共：0条
+2019-11-11 16:30:53,734 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi_3_2_1, 一共：0条
+2019-11-11 16:31:09,859 - webcrawer service - INFO - 运行成功: taipingyangbaoxian_3_3_0, 一共：0条
+2019-11-11 16:32:22,282 - webcrawer service - INFO - 运行成功: tianjinshizhengfucaigoupingtai_3_4, 一共：0条
+2019-11-11 16:32:31,937 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_0, 一共：0条
+2019-11-11 16:32:41,265 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_1, 一共：0条
+2019-11-11 16:32:52,563 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_0, 一共：0条
+2019-11-11 16:33:08,937 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1, 一共：0条
+2019-11-11 16:36:02,189 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：6条
+2019-11-11 16:37:59,750 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1, 一共：2条
+2019-11-11 16:38:29,454 - webcrawer service - INFO - 运行成功: shanghaigonggongziyuanjiaoyiwang_3_14, 一共：0条
+2019-11-11 16:38:51,408 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang_3_15_0, 一共：0条
+2019-11-11 16:39:14,187 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang_3_15_1, 一共：0条
+2019-11-11 16:39:49,253 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang_3_16_0, 一共：0条
+2019-11-11 16:40:24,281 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang_3_16_1, 一共：0条
+2019-11-11 16:41:24,466 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_0, 一共：0条
+2019-11-11 16:41:49,150 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：0条
+2019-11-11 16:42:19,221 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_0, 一共：0条
+2019-11-11 16:42:40,684 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_1, 一共：0条
+2019-11-11 16:43:09,928 - webcrawer service - INFO - 运行成功: hainanshenggonggongziyuanjiaoyiwang_3_20, 一共：0条
+2019-11-11 16:43:46,604 - webcrawer service - INFO - 运行成功: anzhaocai_3_23, 一共：0条
+2019-11-11 16:43:57,292 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi_3_24_0, 一共：0条
+2019-11-11 16:44:18,437 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi_3_24_1, 一共：0条
+2019-11-11 16:44:43,949 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_0, 一共：0条
+2019-11-11 16:45:00,605 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_1, 一共：0条
+2019-11-11 16:45:15,500 - webcrawer service - INFO - 运行成功: chongqingguojitouzizixunjituanyouxiangongsi_3_27, 一共：0条
+2019-11-11 16:45:44,828 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang_3_28_0, 一共：0条
+2019-11-11 16:45:56,861 - webcrawer service - INFO - 运行成功: lasagonggongziyuanjiaoyiwang_3_28_1, 一共：0条
+2019-11-11 16:46:37,703 - webcrawer service - INFO - 运行成功: chengdushigonggongziyuanjiaoyizhongxin_3_29, 一共：0条
+2019-11-11 16:46:54,355 - webcrawer service - INFO - 运行成功: zhongguoyouzheng_3_31_0, 一共：0条
+2019-11-11 16:47:14,549 - webcrawer service - INFO - 运行成功: zhongguoyouzheng_3_31_1, 一共：0条
+2019-11-11 16:47:30,405 - webcrawer service - INFO - 运行成功: bingtuanzhengfucaigouwang_3_32, 一共：0条
+2019-11-11 16:54:45,719 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：1条
+2019-11-11 16:55:27,722 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_1, 一共：0条
+2019-11-11 17:06:36,695 - webcrawer service - INFO - 运行成功: hebeizhaobiaocaigouwang_3_9, 一共：3条
+2019-11-11 17:12:24,845 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_0, 一共：2条
+2019-11-11 17:16:08,922 - webcrawer service - INFO - 运行成功: jilinshengcaigouzhaobiaowang_3_11_1, 一共：0条
+2019-11-11 17:24:25,705 - webcrawer service - INFO - 运行成功: liaoningshengcaigouzhaobiaowang_3_12_0, 一共：6条
+2019-11-11 17:24:40,243 - webcrawer service - ERROR - 运行失败: liaoningshengcaigouzhaobiaowang_3_12_1
+2019-11-11 17:24:40,330 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
     result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 19, in RunMain
-    parame = parameter[html_name]
-KeyError: 'yunnanshengzhengfucaigouwang_3_26_0_test'
-
-2019-11-06 11:30:20,815 - webcrawer service - ERROR - 运行失败: yunnanshengzhengfucaigouwang_3_26_0_test
-2019-11-06 11:30:20,917 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 42, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 120, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
-
-2019-11-06 11:32:29,880 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_0_test, 一共：0条
-2019-11-06 11:40:35,813 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_0_test, 一共：0条
-2019-11-06 14:13:53,291 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_0_test, 一共：0条
-2019-11-06 14:41:35,498 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_0_test, 一共：22条
-2019-11-06 15:00:27,374 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_1, 一共：17条
-2019-11-06 15:18:27,260 - webcrawer service - ERROR - 运行失败: xiamenshigongongziyuanjiaoyiwang_3_18_1
-2019-11-06 15:18:27,376 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 36, in RunMain
-    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 140, in parse_url
-    self.driver.find_element_by_xpath(url_param["button"]).click()
-  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
-    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 109, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 78, in model_log_in_web
+    WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.ID, param["name"])))
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(self._driver)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 64, in __call__
+    return _find_element(driver, self.locator)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 415, in _find_element
+    raise e
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 411, in _find_element
+    return driver.find_element(*by)
   File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
     'value': value})['value']
   File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
     self.error_handler.check_response(response)
   File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
     raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="noticeTypeList"]/li[6]"}
+selenium.common.exceptions.WebDriverException: Message: disconnected: Unable to receive message from renderer
   (Session info: chrome=76.0.3809.87)
 
 
-2019-11-06 15:38:46,152 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：0条
-2019-11-06 15:52:36,987 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：0条
-2019-11-06 15:54:25,548 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：0条
-2019-11-06 15:56:14,634 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：0条
-2019-11-06 16:13:29,018 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：2条
-2019-11-06 16:17:47,209 - webcrawer service - ERROR - 运行失败: hunanguolianzhaobiaoyouxiangongsi_3_22_0
-2019-11-06 16:17:47,212 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
+2019-11-11 17:30:28,718 - webcrawer service - INFO - 运行成功: dalianshizhaobiaowang_3_13, 一共：0条
+2019-11-11 18:23:48,929 - webcrawer service - ERROR - 运行失败: shenzhenqinglima_3_21_0
+2019-11-11 18:23:48,929 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
     result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 42, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 120, in retotalPage
-    number = max(re.findall(r'\d+', ''.join(ori_number)))
-ValueError: max() arg is an empty sequence
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 129, in RunMain
+    self.getUrlList(model, parame, html_str, original_url,isloopBytime)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 22, in getUrlList
+    ori_number = model.number_page(parame["number_xpath"], html_str)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 520, in number_page
+    number = html_element.xpath(number_xpath)
+AttributeError: 'NoneType' object has no attribute 'xpath'
 
-2019-11-06 16:23:18,513 - webcrawer service - INFO - 运行成功: hunanguolianzhaobiaoyouxiangongsi_3_22_0, 一共：0条
-2019-11-06 17:08:58,854 - webcrawer service - ERROR - 运行失败: chongqingguojitouzizixun_3_22_0
-2019-11-06 17:08:58,856 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
+2019-11-11 18:25:23,752 - webcrawer service - INFO - 运行成功: shenzhenqinglima_3_21_1, 一共：0条
+2019-11-11 18:25:59,861 - webcrawer service - ERROR - 运行失败: chongqingguojitouzizixun_3_26
+2019-11-11 18:25:59,861 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
     result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 42, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 118, in retotalPage
-    number = ''.join(re.findall(r'\d+页', ''.join(ori_number))).replace("页","")
-TypeError: sequence item 0: expected str instance, lxml.etree._Element found
-
-2019-11-06 17:10:38,325 - webcrawer service - ERROR - 运行失败: chongqingguojitouzizixun_3_22_0
-2019-11-06 17:10:38,327 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 99, in RunMain
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 106, in RunMain
+    self.getUrlList(model, parame, html_str, original_url,isloopBytime)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 86, in getUrlList
     html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
-  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 140, in parse_url
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 156, in parse_url
     self.driver.find_element_by_xpath(url_param["button"]).click()
   File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
     return self.find_element(by=By.XPATH, value=xpath)
@@ -1539,72 +213,3 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
   (Session info: chrome=76.0.3809.87)
 
 
-2019-11-06 17:18:00,774 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi_3_2_0, 一共：0条
-2019-11-06 17:18:15,135 - webcrawer service - INFO - 运行成功: zhonggangzhaobiaoyouxianzerengongsi_3_2_1, 一共：0条
-2019-11-06 17:18:31,306 - webcrawer service - INFO - 运行成功: taipingyangbaoxian_3_3_0, 一共：0条
-2019-11-06 17:25:08,085 - webcrawer service - INFO - 运行成功: tianjinshizhengfucaigoupingtai_3_4, 一共：11条
-2019-11-06 17:25:22,054 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_0, 一共：0条
-2019-11-06 17:25:36,286 - webcrawer service - INFO - 运行成功: neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_1, 一共：0条
-2019-11-06 17:25:52,958 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_0, 一共：0条
-2019-11-06 17:26:10,977 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1, 一共：0条
-2019-11-06 17:28:03,387 - webcrawer service - INFO - 运行成功: shanghaigonggongziyuanjiaoyiwang_3_14, 一共：3条
-2019-11-06 17:28:20,232 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang_3_15_0, 一共：0条
-2019-11-06 17:28:43,550 - webcrawer service - INFO - 运行成功: zhejiangshenggonggongziyuanjiaoyiwang_3_15_1, 一共：0条
-2019-11-06 17:31:39,372 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang_3_16_0, 一共：5条
-2019-11-06 17:34:08,714 - webcrawer service - INFO - 运行成功: jiangsuzhengfucaigouwang_3_16_1, 一共：5条
-2019-11-06 17:34:52,094 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_0, 一共：0条
-2019-11-06 17:35:24,288 - webcrawer service - INFO - 运行成功: xiamenshigongongziyuanjiaoyiwang_3_18_1, 一共：0条
-2019-11-06 17:37:04,207 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_0, 一共：2条
-2019-11-06 17:38:04,503 - webcrawer service - INFO - 运行成功: guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_1, 一共：0条
-2019-11-06 17:38:29,460 - webcrawer service - INFO - 运行成功: hainanshenggonggongziyuanjiaoyiwang_3_20, 一共：0条
-2019-11-07 09:11:25,334 - webcrawer service - INFO - 运行成功: hunanguolianzhaobiaoyouxiangongsi_3_22_0, 一共：4条
-2019-11-07 09:12:39,457 - webcrawer service - INFO - 运行成功: anzhaocai_3_23, 一共：0条
-2019-11-07 09:13:15,953 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi_3_24_0, 一共：0条
-2019-11-07 09:13:47,013 - webcrawer service - INFO - 运行成功: jiangxiguozhengzhaobiaoyouxiangongsi_3_24_1, 一共：0条
-2019-11-07 11:25:56,756 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_0, 一共：1条
-2019-11-07 11:28:01,839 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 14:56:17,222 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 15:04:30,604 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 15:11:22,615 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 15:12:11,900 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 15:13:51,797 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 15:24:09,577 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 15:25:58,677 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1, 一共：1条
-2019-11-07 15:27:19,079 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 15:42:13,286 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 15:51:37,555 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 16:12:07,463 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 16:19:24,842 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 16:24:42,019 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 16:30:51,502 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：0条
-2019-11-07 16:53:44,445 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0, 一共：40条
-2019-11-08 09:31:19,966 - webcrawer service - INFO - 运行成功: shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1, 一共：52条
-2019-11-08 10:13:23,870 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0, 一共：5条
-2019-11-08 10:20:03,213 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0, 一共：8条
-2019-11-08 10:24:33,293 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0, 一共：8条
-2019-11-08 10:25:35,517 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1, 一共：0条
-2019-11-08 10:27:10,056 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1, 一共：0条
-2019-11-08 10:28:59,986 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1, 一共：0条
-2019-11-08 10:32:38,016 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1, 一共：0条
-2019-11-08 10:44:18,567 - webcrawer service - INFO - 运行成功: zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1, 一共：2条
-2019-11-08 10:57:29,727 - webcrawer service - ERROR - 运行失败: chongqingguojitouzizixunjituanyouxiangongsi_3_27_0
-2019-11-08 10:57:29,757 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 42, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 118, in retotalPage
-    number = ''.join(re.findall(r'\d+页', ''.join(ori_number))).replace("页","")
-TypeError: sequence item 0: expected str instance, lxml.etree._Element found
-
-2019-11-08 10:58:51,978 - webcrawer service - ERROR - 运行失败: chongqingguojitouzizixunjituanyouxiangongsi_3_27_0
-2019-11-08 10:58:51,979 - webcrawer service - ERROR - Traceback (most recent call last):
-  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 143, in Pipeline
-    result = testClass.RunMain(text["original_url"], self.key_array, key)
-  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 42, in RunMain
-    number = utils.retotalPage(ori_number)
-  File "D:\crawler\Web_crawler\new_Crawler\utils.py", line 118, in retotalPage
-    number = ''.join(re.findall(r'\d+页', ''.join(ori_number))).replace("页","")
-TypeError: sequence item 0: expected str instance, lxml.etree._Element found
-
-2019-11-08 11:03:23,842 - webcrawer service - INFO - 运行成功: chongqingguojitouzizixunjituanyouxiangongsi_3_27_0, 一共：3条
