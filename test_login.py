@@ -24,6 +24,8 @@ class Test_login:
             number = int(number)+1
             
             next_type = parame["page_name"]["type"]  # 0:pageNo/page ;1:index_count.html ;2:post ;3:onclick;
+            
+            number = 2
             #控制页面
             for i in range(parame["page_name"]["startNum"], number):
                 if parame["li"] != "":
@@ -81,7 +83,7 @@ class Test_login:
                 else:
                     html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
 
-    def RunMain(self, url_info, key, html_name):
+    def RunMain(self, url_info, key, html_name,vericode):
         #初始化
         model = Crawler_URL()
         parame = parameter[html_name]
@@ -90,7 +92,7 @@ class Test_login:
             isloopBytime = parame["isloopBytime"]
         
         original_url = ""
-        login_infos = [url_info, parame["login"]]
+        login_infos = [url_info, parame["login"],vericode]
         #登陆
         driver = model.log_in_web(*login_infos)
         
@@ -99,7 +101,17 @@ class Test_login:
         
         #判断失败： 验证码错误 循环（maxnum =5)
         if not isLogin:
-            return self.result
+            count = 0
+            for i in range(3):
+                driver = model.log_in_web(*login_infos)
+                isLogin = globals()[parame["login"]["login_status"]["class"]](driver,parame["login"]["login_status"]["params"]) 
+                if isLogin:
+                    break
+                count = count+1
+            if count == 2:
+                print("{} is login error".format(html_name))
+                #return self.result
+    
         #判断成功
         #self.cookie_info = self.driver.get_cookies()                     # 列表中包含多个字典
         #self.cookie_dict = {i["name"]: i["value"] for i in self.cookie_info}  # 字典推导式
@@ -128,7 +140,7 @@ class Test_login:
                 html_str = model.parse_url("",url_type=parame["startPage"]["type"],url_params=parame["startPage"])
             self.getUrlList(model, parame, html_str, original_url,isloopBytime)        
             
-
+        login_infos = [url_info, parame["login"],None]
         if ContentAnalysis(model,login_infos) :
         #if model.ContentAnalysis() :
             self.result = model.result()

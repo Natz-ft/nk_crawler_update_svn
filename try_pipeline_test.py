@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # 整合
+from mail import Mail
 import re
 import pandas as pd
 from config import config, default, include_keys, information,bank
@@ -13,7 +14,9 @@ from test_loop3 import Test_loop3
 from test_json import TestJson
 import utils
 import time
-
+import os
+import sys
+from verify_model_predict import Verify_code_predict
 
 
 
@@ -134,7 +137,7 @@ class Focus():
         if 'Unnamed: 0' in result.keys():
             result = result.drop(columns=['Unnamed: 0'])  
         return result
-    def Pipeline(self, key):
+    def Pipeline(self, key,vericode):
         try:
             text = information[key]
             csv = default.file_path + "/" + text["csv"]
@@ -142,7 +145,7 @@ class Focus():
             print(text["classname"])
             testClass = globals()[text["classname"]]()
             # 运行程序
-            result = testClass.RunMain(text["original_url"], self.key_array, key)
+            result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
             result = self.bank(result,text["type"])
             pd.DataFrame(self.time_change(result)).to_csv(csv, encoding='utf_8_sig')
             sum = 0
@@ -161,9 +164,10 @@ class Focus():
 
     # 动态调用网址
     def find_all(self):
+        vericode = Verify_code_predict()
         print("--------------------------------------------程序开始--------------------------------------------")
         for i, key in enumerate(information):
-            self.Pipeline(key)
+            self.Pipeline(key,vericode)
         print("--------------------------------------------程序结束--------------------------------------------")
 
     def format_date(self, time):
@@ -184,4 +188,58 @@ if __name__ == "__main__":
     focus = Focus()
     focus.find_all()
     rangeTime = time.time()-startTime
-    print("cost total time is {}".format(rangeTime))
+    print("cost total time is {}".format(rangeTime))    
+    
+    #args = parse_args()
+    #while True:
+        #current_time = time.strftime('%H:%M:%S', time.localtime(time.time()))
+        #if current_time == args.start_time: 
+            #startTime = time.time()
+            ## 执行爬虫代码
+            #focus = Focus()
+            #focus.find_all()
+            
+            ##添加省市区信息
+            #file_list = os.listdir(args.file_path)
+            #print(file_list)
+            #df1 = pd.read_csv(args.file_path + '/' + file_list[0], encoding='utf_8_sig')  # 读取首个csv文件，保存到df1中
+            #for file in file_list[1:]:
+                #df_next = pd.read_csv(args.file_path + '/' + file, encoding='utf_8_sig')  # 打开csv文件，注意编码问题，保存到df2中
+                #df1 = pd.concat([df1, df_next], axis=0, ignore_index=True, sort=False)  # 将df2数据与df1合并
+            #df1 = df1.drop_duplicates()  # 去重
+            ## df1['网址'] = '=HYPERLINK("'+df1['网址']+'")'
+            #for i, v in enumerate(df1['省市区']):
+                #df1['省市区'][i] = area_tpye(str(v))
+            ##格式化时间信息为 xxxx年xx月xx日
+            #current_year = time.strftime('%Y', time.localtime(time.time()))
+            #for k in ['投标时间', '报名时间', '截止时间']:
+                #for i, v in enumerate(df1[k]):
+                    #str_v = str(v)
+                    #if str_v != "nan":
+                        #if str_v < current_year:
+                            #df1[k][i] = None
+                        #else:
+                            #df1[k][i] = format_date(str_v)
+
+            #df1 = df1.reset_index(drop=True)  # 重新生成index
+
+            ##保存昨天xlsx
+            #today = datetime.date.today()
+            #yesterday = str(today - datetime.timedelta(days=1))
+            #save_filename = args.save_path + '/'+'result_merge' + "_" + yesterday+ '.xls'
+            #df1.to_excel(save_filename, index=False)  # 将结果保存为新的csv文
+    
+    
+            #rangeTime = time.time()-startTime
+            #print("cost total time is {}".format(rangeTime))
+            
+            #mail = Mail(smtp_server=smtp_host_server,
+                                #username=usr_name,
+                                #password=passwd,
+                                    #from_addr=from_addr,
+                                    #to_addr=to_addr,
+                                    #cc_addr=cc_addr,
+                                    #subject = subject,
+                                    #content = content,
+                                    #attach_file=save_filename)
+            #mail.send_email()            

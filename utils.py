@@ -1,8 +1,4 @@
 #-*- coding:utf-8 -*-
-from io import BytesIO
-
-from PIL import Image
-
 from config import include_keys, exclude_keys, area_dict,area_list
 from fake_useragent import UserAgent
 import re
@@ -45,12 +41,12 @@ def filter_title(title):
     :param title:
     :return:
     '''
-    print(title)
     include_pattern = r"(?=(" + '|'.join(include_keys) + r"))"
     exclude_pattern = r"(?=(" + '|'.join(exclude_keys) + r"))"
     r1 = re.findall(include_pattern, title)
     r2 = re.findall(exclude_pattern, title)
     if len(r1) > 0 and len(r2) == 0:
+        print(title)
         return False
     else:
         return True       #真的需要过滤
@@ -300,45 +296,6 @@ def scrollVerify(driver,moveElementXPath,distance):
     ##释放元素
     #ActionChains(driver).release(on_element=moveElement).perform()
     pass
-
-
-############################zl 粘贴 手动输入验证码####################################
-    def get_position(self):
-        """
-        获取验证码位置
-        :return: 验证码位置元组
-        """
-        img = self.wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'geetest_canvas_img')))
-        time.sleep(2)
-        location = img.location
-        size = img.size
-        top, bottom, left, right = location['y'], location['y'] + size['height'], location['x'], location['x'] + size[
-            'width']
-        return (top, bottom, left, right)
-
-    def get_screenshot(self):
-        """
-        获取网页截图
-        :return: 截图对象
-        """
-        screenshot = self.browser.get_screenshot_as_png()
-        screenshot = Image.open(BytesIO(screenshot))
-        return screenshot
-
-    def get_geetest_image(self, name='captcha.png'):
-        """
-        获取验证码图片
-        :return: 图片对象
-        """
-        top, bottom, left, right = self.get_position()
-        print('验证码位置', top, bottom, left, right)
-        screenshot = self.get_screenshot()
-        captcha = screenshot.crop((left, top, right, bottom))
-        captcha.save(name)
-        return captcha
-
-
-
 
 #if __name__ == '__main__':
     ###from CrawlerModule import Init_driver

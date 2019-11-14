@@ -213,3 +213,526 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
   (Session info: chrome=76.0.3809.87)
 
 
+2019-11-13 11:20:36,038 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-13 11:20:36,448 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 115, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 93, in model_log_in_web
+    if login_info["params"]["captcha"] :
+TypeError: list indices must be integers or slices, not str
+
+2019-11-13 11:24:16,783 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-13 11:24:17,220 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 115, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 94, in model_log_in_web
+    capt = utils.get_image_captcha()
+TypeError: get_image_captcha() missing 1 required positional argument: 'self'
+
+2019-11-13 13:44:58,733 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-13 13:44:59,166 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 158, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 98, in model_log_in_web
+    capt = utils.get_image_captcha()
+TypeError: get_image_captcha() missing 1 required positional argument: 'self'
+
+2019-11-13 13:50:28,634 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-13 13:50:29,081 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 158, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 98, in model_log_in_web
+    capt = get_image_captcha(driver)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 134, in get_image_captcha
+    top, bottom, left, right = get_position(driver)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 112, in get_position
+    img = WebDriverWait(driver, 10, 0.5).wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'rzmimg')))
+AttributeError: 'WebDriverWait' object has no attribute 'wait'
+
+2019-11-13 13:53:31,464 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-13 13:53:32,211 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 158, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 98, in model_log_in_web
+    capt = get_image_captcha(driver)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 134, in get_image_captcha
+    top, bottom, left, right = get_position(driver)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 112, in get_position
+    img = WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.CLASS_NAME, 'rzmimg')))
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+2019-11-13 14:33:33,583 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-13 14:33:33,585 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 158, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 99, in model_log_in_web
+    driver.find_element_by_id(login_info["params"]["captcha"]).send_keys(capt)
+TypeError: list indices must be integers or slices, not str
+
+2019-11-13 14:39:39,902 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-13 14:39:39,904 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 158, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 99, in model_log_in_web
+    driver.find_element_by_id(login_info["captcha"]).send_keys(capt)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 360, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="topLoginRand"]"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-13 14:43:33,557 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-13 14:43:33,559 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 158, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 101, in model_log_in_web
+    driver.find_element_by_xpath(login_info["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="loginErrForm"]/span[6]/input"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-13 14:52:27,171 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-13 14:52:27,172 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 158, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 101, in model_log_in_web
+    driver.find_element_by_class(login_info["button"]).click()
+AttributeError: 'WebDriver' object has no attribute 'find_element_by_class'
+
+2019-11-13 14:59:36,495 - webcrawer service - INFO - 运行成功: ningxiazhaobiaowang_3_30_1, 一共：5条
+2019-11-13 15:28:34,286 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-13 15:28:34,371 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 188, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 104, in model_log_in_web
+    driver.find_element_by_class_name(captcha["name"]).send_keys(capt)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 564, in find_element_by_class_name
+    return self.find_element(by=By.CLASS_NAME, value=name)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".yzm"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-13 15:32:39,446 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-13 15:32:39,448 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 188, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 115, in model_log_in_web
+    driver.find_element_by_id(button["name"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 360, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="btn01"]"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-13 15:51:02,530 - webcrawer service - ERROR - 运行失败: guangdongzhaobiaowang_3_17_1
+2019-11-13 15:51:02,531 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 188, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 102, in model_log_in_web
+    driver.find_element_by_id(captcha["name"]).send_keys(capt)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 360, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="yzm"]"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-13 15:55:43,398 - webcrawer service - ERROR - 运行失败: guangdongzhaobiaowang_3_17_1
+2019-11-13 15:55:43,400 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 188, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 117, in model_log_in_web
+    driver.find_element_by_class_name(button["name"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 564, in find_element_by_class_name
+    return self.find_element(by=By.CLASS_NAME, value=name)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".btn01"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-13 16:07:56,037 - webcrawer service - INFO - 运行成功: guangdongzhaobiaowang_3_17_1, 一共：81条
+2019-11-13 16:31:03,555 - webcrawer service - INFO - 运行成功: guangdongzhaobiaowang_3_17_1, 一共：81条
+2019-11-13 16:43:30,114 - webcrawer service - ERROR - 运行失败: guangdongzhaobiaowang_3_17_1
+2019-11-13 16:43:30,117 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 190, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 125, in model_log_in_web
+    driver.find_elemnt_by_xpath("/html/body/div[3]/div[1]/div[1]/div/input")
+AttributeError: 'WebDriver' object has no attribute 'find_elemnt_by_xpath'
+
+2019-11-13 16:56:59,355 - webcrawer service - INFO - 运行成功: guangdongzhaobiaowang_3_17_1, 一共：81条
+2019-11-13 16:59:13,414 - webcrawer service - ERROR - 运行失败: guangdongzhaobiaowang_3_17_1
+2019-11-13 16:59:13,494 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 190, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 83, in model_log_in_web
+    WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.ID, param["name"])))
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\support\wait.py", line 71, in until
+    value = method(self._driver)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 64, in __call__
+    return _find_element(driver, self.locator)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 415, in _find_element
+    raise e
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 411, in _find_element
+    return driver.find_element(*by)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: chrome not reachable
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-13 17:00:35,648 - webcrawer service - ERROR - 运行失败: guangdongzhaobiaowang_3_17_1
+2019-11-13 17:00:35,649 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 128, in RunMain
+    html_str = model.parse_url("",url_type=parame["startPage"]["type"],url_params=parame["startPage"])
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 238, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div[1]/div[1]/div/input"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-13 17:05:56,160 - webcrawer service - ERROR - 运行失败: guangdongzhaobiaowang_3_17_1
+2019-11-13 17:05:56,163 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 128, in RunMain
+    html_str = model.parse_url("",url_type=parame["startPage"]["type"],url_params=parame["startPage"])
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 238, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div[1]/div[1]/div/input"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-13 17:07:12,781 - webcrawer service - ERROR - 运行失败: guangdongzhaobiaowang_3_17_1
+2019-11-13 17:07:12,784 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 128, in RunMain
+    html_str = model.parse_url("",url_type=parame["startPage"]["type"],url_params=parame["startPage"])
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 238, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div[1]/div[1]/div/input"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-13 17:08:37,352 - webcrawer service - ERROR - 运行失败: guangdongzhaobiaowang_3_17_1
+2019-11-13 17:08:37,355 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 128, in RunMain
+    html_str = model.parse_url("",url_type=parame["startPage"]["type"],url_params=parame["startPage"])
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 238, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div[1]/div[1]/div/input"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-13 17:35:14,888 - webcrawer service - ERROR - 运行失败: guangdongzhaobiaowang_3_17_1
+2019-11-13 17:35:14,895 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 192, in log_in_web
+    self.cookie_info = self.driver.get_cookies()                 # 列表中包含多个字典
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 841, in get_cookies
+    return self.execute(Command.GET_ALL_COOKIES)['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 241, in check_response
+    raise exception_class(message, screen, stacktrace, alert_text)
+selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: 验证码错误，请重新输入验证码。
+Message: unexpected alert open: {Alert text : 验证码错误，请重新输入验证码。}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-14 09:23:46,713 - webcrawer service - INFO - 运行成功: guangdongzhaobiaowang_3_17_1, 一共：0条
+2019-11-14 09:30:51,367 - webcrawer service - ERROR - 运行失败: guangdongzhaobiaowang_3_17_1
+2019-11-14 09:30:51,464 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 145, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 95, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 186, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 83, in model_log_in_web
+    WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.ID, param["name"])))
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+2019-11-14 11:01:32,480 - webcrawer service - ERROR - 运行失败: heilongjiangzhaobiaowang_3_10_0
+2019-11-14 11:01:32,511 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 148, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 97, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 134, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 98, in model_log_in_web
+    driver.find_element_by_xpath(login_info["verifyCodexpath"]).send_keys(res)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='yzm']"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-14 11:02:20,433 - webcrawer service - ERROR - 运行失败: heilongjiangzhaobiaowang_3_10_0
+2019-11-14 11:02:20,433 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 148, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 97, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 134, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 98, in model_log_in_web
+    driver.find_element_by_xpath(login_info["verifyCodexpath"]).send_keys(res)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='yzm']"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-14 11:07:52,354 - webcrawer service - INFO - 运行成功: heilongjiangzhaobiaowang_3_10_0, 一共：0条
+2019-11-14 11:10:20,167 - webcrawer service - INFO - 运行成功: heilongjiangzhaobiaowang_3_10_0, 一共：0条
+2019-11-14 11:14:20,432 - webcrawer service - INFO - 运行成功: heilongjiangzhaobiaowang_3_10_0, 一共：0条
+2019-11-14 11:18:37,275 - webcrawer service - INFO - 运行成功: heilongjiangzhaobiaowang_3_10_0, 一共：23条
+2019-11-14 11:25:47,747 - webcrawer service - INFO - 运行成功: heilongjiangzhaobiaowang_3_10_1, 一共：11条
+2019-11-14 11:37:01,766 - webcrawer service - INFO - 运行成功: guangdongzhaobiaowang_3_17_0, 一共：36条
+2019-11-14 11:39:13,344 - webcrawer service - ERROR - 运行失败: guangdongzhaobiaowang_3_17_1
+2019-11-14 11:39:13,497 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 148, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 97, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 134, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 103, in model_log_in_web
+    driver.find_element_by_xpath(login_info["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: 'value' must be a string
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-14 13:46:51,729 - webcrawer service - INFO - 运行成功: guangdongzhaobiaowang_3_17_1, 一共：104条
+2019-11-14 13:49:52,790 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_0
+2019-11-14 13:49:52,879 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 148, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 97, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 134, in log_in_web
+    self.driver = model_log_in_web(self.driver, url, login_info,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 103, in model_log_in_web
+    driver.find_element_by_xpath(login_info["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="loginErrForm"]/span[6]/input"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-14 13:55:04,220 - webcrawer service - INFO - 运行成功: ningxiazhaobiaowang_3_30_0, 一共：2条
+2019-11-14 13:56:19,301 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-14 13:56:19,301 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 148, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 140, in RunMain
+    html_str = model.parse_url("",url_type=parame["startPage"]["type"],url_params=parame["startPage"])
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 181, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div[1]/div[1]/div/input"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-14 13:57:36,882 - webcrawer service - ERROR - 运行失败: ningxiazhaobiaowang_3_30_1
+2019-11-14 13:57:36,898 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 148, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 140, in RunMain
+    html_str = model.parse_url("",url_type=parame["startPage"]["type"],url_params=parame["startPage"])
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 181, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[3]/div[1]/div[1]/div/input"}
+  (Session info: chrome=76.0.3809.87)
+
+
+2019-11-14 14:00:28,282 - webcrawer service - INFO - 运行成功: ningxiazhaobiaowang_3_30_1, 一共：6条

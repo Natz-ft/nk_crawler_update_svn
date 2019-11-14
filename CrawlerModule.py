@@ -18,9 +18,13 @@ import traceback
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+import cv2
+import math
+from verify_model_predict import getVerifyCode_func
 
 def parse_url_request(page_url,headers,cookie_dict):
     response = requests.get(page_url, headers=headers,cookies=cookie_dict)
+    print(response.status_code)
     time.sleep(3)
     html_str = response.content.decode("utf-8")
     return html_str    
@@ -62,7 +66,7 @@ def parse_url_get(driver,href_title,waitFocName): #url_type == 'get'
 
 
 # 登陆浏览器 子进程专用
-def model_log_in_web(driver,url, login_info):
+def model_log_in_web(driver,url, login_info,vericode=None):
     try:   
         driver.get(url)
     except:
@@ -87,13 +91,34 @@ def model_log_in_web(driver,url, login_info):
             driver.find_element_by_xpath(param["name"]).click()
             driver.find_element_by_xpath(param["name"]).send_keys(param["value"])
     if login_info["isHasVerify_code"]:
-        pass
+        WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, login_info["imgxPath"])))
+        cutImg = getVerifyCodeImg(driver,login_info)
+        if vericode != None:
+            res = vericode.getVerifyCode(cutImg,login_info["modelname"])
+            driver.find_element_by_xpath(login_info["verifyCodexpath"]).send_keys(res)   
+        else:
+            res = getVerifyCode_func(cutImg,login_info["modelname"])
+            driver.find_element_by_xpath(login_info["verifyCodexpath"]).send_keys(res)  
+            
     driver.find_element_by_xpath(login_info["button"]).click()
     #driver.implicitly_wait(5) 
     time.sleep(5)
     return driver
 
 
+def getVerifyCodeImg(driver,verifyParam):
+    #driver.get(verifyParam["url"])
+    #time.sleep(5)
+    driver.save_screenshot(r'./code_full.png')#截图
+    img = WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, verifyParam["imgxPath"]))) #获取验证码坐标
+    location = img.location
+    size = img.size        
+    top, bottom, left, right = location['y'], location['y'] + size['height'], location['x'], location['x'] + size['width']
+    
+    login_img = cv2.imread('./code_full.png')
+    #截图
+    cut_image = login_img[top:bottom,left:right]     
+    return cut_image
     
 
 class Crawler_URL:
@@ -103,12 +128,12 @@ class Crawler_URL:
         self.content_item = defaultdict(list)
         # 加载chromedriver
         self.driver = Init_driver()
-
+    
     # 登陆浏览器
-    def log_in_web(self,url, login_info):
-        self.driver = model_log_in_web(self.driver, url, login_info)
+    def log_in_web(self,url, login_info,vericode=None):
+        self.driver = model_log_in_web(self.driver, url, login_info,vericode)
         self.cookie_info = self.driver.get_cookies()                 # 列表中包含多个字典
-        self.cookie_dict = {i["name"]: i["value"] for i in self.cookie_info}        
+        self.cookie_dict = {i["name"]: i["value"] for i in self.cookie_info} 
         return self.driver
     # 字符串 通过 requests    
     def parse_url_2(self,pageurl,url_type="get",url_params={}):
@@ -199,6 +224,7 @@ class Crawler_URL:
                 if isloopBytime:
                     # 昨天日期
                     today = datetime.date.today()
+                    #yesterday = str(today)
                     yesterday = str(today - datetime.timedelta(days=1))
         
                     #if submit_time != yesterday:
@@ -304,8 +330,9 @@ class Crawler_URL:
                         
                         # 昨天日期
                         today = datetime.date.today()
-                        yesterday = str(today - datetime.timedelta(days=1))
-                        #yesterday = str(today)
+                        #yesterday = today
+                        yesterday = str(today - datetime.timedelta(days=1))                        
+                        
                         #发布的时间不是昨天的时间，就结束本次循环
                         
                         if submit_time > yesterday:
@@ -392,8 +419,9 @@ class Crawler_URL:
                 if isloopBytime:
                     # 昨天日期
                     today = datetime.date.today()
-                    yesterday = str(today - datetime.timedelta(days=1))
                     #yesterday = str(today)
+                    yesterday = str(today - datetime.timedelta(days=1))
+                    
                     #发布的时间不是昨天的时间，就结束本次循环
                     
                     if submit_time > yesterday:

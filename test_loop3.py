@@ -31,7 +31,7 @@ class Test_loop3:
     def __init__(self):
         self.result = defaultdict(list)
 
-    def RunMain(self, url_info, key, html_name):
+    def RunMain(self, url_info, key, html_name,vericode):
         #初始化
         model = Crawler_URL()
         parame = parameter[html_name]

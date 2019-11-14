@@ -85,7 +85,7 @@ class Test:
                 else:
                     html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)    
 
-    def RunMain(self, url_info, key, html_name):
+    def RunMain(self, url_info, key, html_name,vericode):
         #初始化
         model = Crawler_URL()
         parame = parameter[html_name]
