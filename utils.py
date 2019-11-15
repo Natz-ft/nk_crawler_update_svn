@@ -46,7 +46,7 @@ def filter_title(title):
     r1 = re.findall(include_pattern, title)
     r2 = re.findall(exclude_pattern, title)
     if len(r1) > 0 and len(r2) == 0:
-        print(title)
+        #print(title)
         return False
     else:
         return True       #真的需要过滤
@@ -181,7 +181,6 @@ def loopRefresh(driver):
             break
         except:
             count = count+1
-            pass
     if count ==3:
         return False
     else:

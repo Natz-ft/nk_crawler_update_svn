@@ -25,7 +25,7 @@ class Test_login:
             
             next_type = parame["page_name"]["type"]  # 0:pageNo/page ;1:index_count.html ;2:post ;3:onclick;
             
-            number = 2
+            #number = 2
             #控制页面
             for i in range(parame["page_name"]["startNum"], number):
                 if parame["li"] != "":

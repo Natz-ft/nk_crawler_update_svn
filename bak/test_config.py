@@ -73,19 +73,17 @@ parameter = {
             "style":"post",
             "startNum":1,
             "headers":{
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+                'Accept': '*/*',
                 'Accept-Encoding': 'gzip, deflate, br',
-                'Accept-Language': 'zh-CN,zh;q=0.9',
-                'Cache-Control': 'max-age=0',
-                'Connection': 'keep-alive',
-                'Cookie': 'JSESSIONID=mhoX9yE4tFvB6cMJtU8NDTnJKrA5bgE6Ny0M_SAPLAGiB9L3KWvZb_Hg9zydgUW3; saplb_*=(J2EE204289820)204289852',
+                'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+                'Connection':'keep-alive',
+                'Content-Length': '140',
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                'Cookie': 'saplb_*=(J2EE204289720)204289750',
                 'Host': 'b2b.10086.cn',
-                'Referer': 'https://b2b.10086.cn/b2b/main/showBiao!preShowBiao.html?noticeType=list1',
-                'Sec-Fetch-Mode': 'navigate',
-                'Sec-Fetch-Site': 'same-origin',
-                'Sec-Fetch-User': '?1',               
+                'Referer': 'https://b2b.10086.cn/b2b/main/showBiao!preShowBiao.html?noticeType=list1',      
                 'User-Agent': UserAgent().chrome,
-                'Upgrade-Insecure-Requests': '1',
+                'X-Requested-With' : 'XMLHttpRequest'
                 },
             "data":{"page.currentPage" : "1",
                     "page.perPageSize" : "20",
@@ -811,7 +809,7 @@ parameter = {
         "search" : "",            
     },
 
-#zl excel colomn3
+# excel colomn3333333
 
 
     # 中招国际招标有限公司
@@ -1465,17 +1463,7 @@ parameter = {
 
 
     ########################
-    #zl need_login
-
-
-
-
-
-
-
-
-
-
+    #3 need_login
 
     # 华中招标网
     "huazhongzhaobiaowang_3_8_0": {
@@ -1811,13 +1799,15 @@ parameter = {
                          "search": "",
                          },
 
-
-    #need captcha
+#3 need captcha
     #黑龙江招标网
     "heilongjiangzhaobiaowang_3_10_0":{
         #登陆
         "login":{"button":'//*[@id="loginErrForm"]/span[6]/input',
                  "isHasVerify_code":True,
+                 "modelname":"model_1.h5",
+                 "imgxPath":"//*[@id='randimg']",
+                 "verifyCodexpath":"//*[@id='topLoginRand']",
                  "params":[{"type":"id","name":"topLoginUserId","value":"jingbeifang123"},
                            {"type":"id","name":"topLoginPassword","value":"jbf123"}
                            ],
@@ -1848,6 +1838,9 @@ parameter = {
         # 登陆
         "login": {"button": '//*[@id="loginErrForm"]/span[6]/input',
                   "isHasVerify_code": True,
+                  "modelname":"model_1.h5",
+                  "imgxPath":"//*[@id='randimg']",
+                  "verifyCodexpath":"//*[@id='topLoginRand']",
                   "params": [{"type": "id", "name": "topLoginUserId", "value": "jingbeifang123"},
                              {"type": "id", "name": "topLoginPassword", "value": "jbf123"}
                              ],
@@ -1880,6 +1873,9 @@ parameter = {
         # 登陆
         "login": {"button": '//*[@id="loginErrForm"]/span[6]/input',
                   "isHasVerify_code": True,
+                  "modelname":"model_1.h5",
+                  "imgxPath":"//*[@id='randimg']",
+                  "verifyCodexpath":"//*[@id='topLoginRand']",
                   "params": [{"type": "id", "name": "topLoginUserId", "value": "jingbeifang123"},
                              {"type": "id", "name": "topLoginPassword", "value": "jbf123"}
                              ],
@@ -1910,13 +1906,14 @@ parameter = {
     # 广东招标网
     "guangdongzhaobiaowang_3_17_1": {
         # 登陆
-        "login": {"button":{"type": "xpath","name":'//*[@id="loginErrForm"]/span[6]/input'} ,# '//*[@id="loginErrForm"]/span[6]/input'
-                  "isHasVerify_code": False,
+        "login": {"button":'//*[@id="loginErrForm"]/span[6]/input' ,#
+                  "isHasVerify_code": True,
+                  "modelname":"model_1.h5",
+                  "imgxPath":"//*[@id='randimg']",
+                  "verifyCodexpath":"//*[@id='topLoginRand']",
                   "params": [{"type": "id", "name": "topLoginUserId", "value": "jingbeifang123"},
                              {"type": "id", "name": "topLoginPassword", "value": "jbf123"}
                              ],
-                  "captcha":{"type":"id","name":"topLoginRand"},
-                  "img":{"type": "id","name":"randimg"},
                   "login_status": {"class": "isLogin_byXpath", "params": "//*[@id='light']"}
                   },
         # start页  进入到显示 标题列表的页
@@ -1944,8 +1941,11 @@ parameter = {
     # 宁夏招标网
     "ningxiazhaobiaowang_3_30_0": {
         # 登陆
-        "login": {"button": '//*[@id="loginErrForm"]/span[6]/input',
+        "login": {"button": '//*[@class="btn01"]',
                   "isHasVerify_code": True,
+                  "modelname":"model_1.h5",
+                  "imgxPath":"//*[@id='randimg']",
+                  "verifyCodexpath":"//*[@id='yzm']",
                   "params": [{"type": "id", "name": "userid", "value": "jingbeifang666"},
                              {"type": "id", "name": "pwd", "value": "123qwe!"}
                              ],
@@ -1976,18 +1976,19 @@ parameter = {
     # 宁夏招标网
     "ningxiazhaobiaowang_3_30_1": {
         # 登陆
-        "login": {"button": {"type": "class","name":"btn01"},
-                  "isHasVerify_code": False,
+        "login": {"button": '//*[@class="btn01"]',
+                  "isHasVerify_code": True,
+                 "modelname":"model_1.h5",
+                 "imgxPath":"//*[@id='randimg']",
+                 "verifyCodexpath":"//*[@id='yzm']",
                   "params": [{"type": "id", "name": "userid", "value": "jingbeifang666"},
                              {"type": "id", "name": "pwd", "value": "123qwe!"}
                              ],
-                  "captcha":{"type":"id","name":"yzm"},
-                  "img":{"type": "id","name":"randimg"},
                   "login_status": {"class": "isLogin_byXpath", "params": "//*[@id='light']"}
                   },
         # start页  进入到显示 标题列表的页
         "startPage": {"type": "onclick",
-                      "onclick": [{"button": "/html/body/div[3]/div[1]/div[1]/div/input",
+                      "onclick": [{"button": "",
                                    "params": [],
                                    "url": "https://ningxia.zhaobiao.cn/DQtender.do?area=640000&type=succeed&page=1"
                                    },
@@ -2007,6 +2008,8 @@ parameter = {
         "search": "",
     },
 
+
+    #############################################################################################################################
 #  中信国际招标有限公司_2_1_0
     "zhongxinguojizhaobiao_2_1_0": {"li": '//div[@class="newstitle"]/ul',  # 标题的上一级
                                     "li_time": "./li[@class='date']/text()",  # 时间
@@ -2658,6 +2661,38 @@ parameter = {
                                                  "search": "",
 
                                                  },
+    "heibeizhaobiaowang":{
+        #登陆
+        "login":{"button":"//*[@id='loginDiv']/form/div/input[2]",
+                 "isHasVerify_code":True,
+                 "modelname":"model_1.h5",
+                 "imgxPath":"//*[@id='randimg']",
+                 "verifyCodexpath":"//*[@id='yzm']",
+                 "params":[{"type":"id","name":"userid","value":"jbfhb826"},
+                           {"type":"id","name":"pwd","value":"jbfhb82652688"}
+                           ],
+                 "login_status":{"class":"isLogin_byXpath","params":"//*[@id='randimg']"}
+                 },
+        #start页  进入到显示 标题列表的页
+        "startPage":{"type":"onclick",
+                     "onclick":[{"button":"",
+                                 "params":[],
+                                 "url":"http://hebei.bidchance.com/tspt_130000_0_02_0_1.html"
+                                 },                                
+                                ],
+                     },
+        
+        "li" : "//*[@id='lie']/tbody/tr", #标题的上一级
+        "li_time" : "./td[4]/text()" , #时间
+        "title" : "./td[2]/a/@title", #标题
+        "href" : "./td[2]/a/@href", #标题地址
+        "domainName_url" : "", #拼接域名
+        "li_area": "./td[3]/a/text()",  #区域
+        "isloopBytime": True, #是否控制时间循环
+        "page_name" : {"type":1,"style":"http://hebei.bidchance.com/tsp_130000_0_02_0_count.html","replaceKey":"count","startNum":1},#{"type":0,"style":r'page=\d+',"startNum":1},
+        "number_xpath" : "//div[@class='page']/span/i[2]/text()", #页数区域
+        "search" : "",              
+    },
 
 }
 

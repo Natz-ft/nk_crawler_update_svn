@@ -12,18 +12,28 @@ import cv2
 import os
 import sys
 sys.path.append(os.path.abspath("./model"))
-from model.pred import captcha_1_pred
-
+from pred import captcha_1_pred,captcha_2_pred
+import platform
+import re
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from selenium import webdriver
 class Loop():
     #初始化url;启动web_driver
     def __init__(self,url):      
         self.temp_url = url
-        self.driver = webdriver.Chrome('chromedriver.exe')
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--start-maximized")
+        chrome_options.add_argument("--allow-file-access-from-files")
+        #chrome_options.add_argument('--headless')  #服务器上不注释
+        chrome_options.add_argument('--disable-gpu')
+        chrome_options.add_argument("--no-sandbox")
+        platform_info = platform.platform()
+        platform_info = ''.join(re.findall(r'Windows', platform_info))
+        self.driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
     
-    def get_img(self,drivers,imgxpath):
+    def get_img(self,driver,imgxpath):
         driver.get(self.temp_url)
         img = WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, imgxpath)))
         driver.save_screenshot(r'./code_full.png')#截图
@@ -58,13 +68,13 @@ class Loop():
 
         #picture.save('./captcha_img.jpg')
 if __name__ == '__main__':
-    url = 'http://liaoning.bidchance.com/tspt_210000_0_02_0_1.html'
+    url = 'https://www.okcis.cn/login/'
     loop = Loop(url)
-    #cut_image = loop.get_char(loop.driver,'//*[@id="randimg"]',5)
-    cut_image = loop.get_img(loop.driver,'//*[@id="randimg"]')
+    cut_image = loop.get_char(loop.driver,'//*[@id="setcode"]',5)
+    #cut_image = loop.get_img(loop.driver,'//*[@id="setcode"]')
     cv2.imshow("cut_image",cut_image);cv2.waitKey(0)
     from tensorflow.keras.models import load_model
-    model = load_model(os.path.abspath("./model/model_1.h5"))
-    res = captcha_1_pred(cut_image,model)
+    model = load_model(os.path.abspath("./model/model_2.h5"))
+    res = captcha_2_pred(cut_image,model)
     print(res)
     

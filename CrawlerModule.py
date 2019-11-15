@@ -20,6 +20,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 import cv2
 import math
+import numpy as np
 from verify_model_predict import getVerifyCode_func
 
 def parse_url_request(page_url,headers,cookie_dict):
@@ -36,13 +37,14 @@ def Init_driver():
     #chrome_options.add_argument('--headless')  #服务器上不注释
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("window-size=1366x768")
     platform_info = platform.platform()
     platform_info = ''.join(re.findall(r'Windows', platform_info))
-
+    
     if platform_info == "Windows":
         driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
     else:
-        driver = webdriver.Chrome(config.driver_linux, chrome_options=chrome_options)
+        driver = webdriver.Chrome(config.driver_linux, options=chrome_options)
     return driver
     
 
@@ -92,7 +94,8 @@ def model_log_in_web(driver,url, login_info,vericode=None):
             driver.find_element_by_xpath(param["name"]).send_keys(param["value"])
     if login_info["isHasVerify_code"]:
         WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, login_info["imgxPath"])))
-        cutImg = getVerifyCodeImg(driver,login_info)
+        #cutImg = getVerifyCodeImg(driver,login_info)
+        cutImg = getVerifyCodeImg_2(driver,login_info)
         if vericode != None:
             res = vericode.getVerifyCode(cutImg,login_info["modelname"])
             driver.find_element_by_xpath(login_info["verifyCodexpath"]).send_keys(res)   
@@ -107,17 +110,45 @@ def model_log_in_web(driver,url, login_info,vericode=None):
 
 
 def getVerifyCodeImg(driver,verifyParam):
+    #driver.set_window_size(1349,948)
+    time.sleep(1)
     #driver.get(verifyParam["url"])
     #time.sleep(5)
-    driver.save_screenshot(r'./code_full.png')#截图
+    #driver.save_screenshot(r'./code_full.png')#截图
+    
+    image = driver.get_screenshot_as_png()
+    image = np.asarray(bytearray(image), dtype="uint8")
+    login_img = cv2.imdecode(image, cv2.IMREAD_COLOR) 
+    
     img = WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, verifyParam["imgxPath"]))) #获取验证码坐标
     location = img.location
     size = img.size        
     top, bottom, left, right = location['y'], location['y'] + size['height'], location['x'], location['x'] + size['width']
     
-    login_img = cv2.imread('./code_full.png')
-    #截图
+
     cut_image = login_img[top:bottom,left:right]     
+    return cut_image
+
+def getVerifyCodeImg_2(driver,verifyParam,num_left=5):
+    #driver.save_screenshot(r'./code_full.png')#截图
+    time.sleep(1)
+    image = driver.get_screenshot_as_png()
+    image = np.asarray(bytearray(image), dtype="uint8")
+    login_img = cv2.imdecode(image, cv2.IMREAD_COLOR) 
+    
+    href=driver.find_element_by_xpath(verifyParam["imgxPath"]) #获取验证码坐标
+    #login_img = cv2.imread('./code_full.png')
+    login_height,login_width = login_img.shape[:2]
+    size_window = driver.get_window_size()
+    #计算浏览器与截图比例
+    scale = size_window['width'] / login_width
+    #获取验证码位置，根据前端调整 + number
+    location_X = math.ceil(href.location['x'] / scale) + num_left
+    location_Y = math.ceil(href.location['y'] / scale)
+    location_height = math.ceil(href.size['height'] / scale)
+    location_width = math.ceil(href.size['width'] / scale)
+    #截图
+    cut_image = login_img[location_Y:location_Y + location_height,location_X:location_X + location_width]
     return cut_image
     
 
@@ -420,7 +451,7 @@ class Crawler_URL:
                     # 昨天日期
                     today = datetime.date.today()
                     #yesterday = str(today)
-                    yesterday = str(today - datetime.timedelta(days=1))
+                    yesterday = str(today - datetime.timedelta(days=1))                    
                     
                     #发布的时间不是昨天的时间，就结束本次循环
                     

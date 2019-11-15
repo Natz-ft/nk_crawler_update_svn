@@ -261,126 +261,156 @@ information = {
     #"sichuanzhaobiaocaigou_1_29_0":{"original_url" : "http://www.sczbcg.com/index.html", "csv" : "sichuanzhaobiaocaigou_1_29_0.csv", "classname" : "Test_login","type":"招标"},
 
     ## execl的第三列 no_login
-    ###中招国际招标有限公司
-    #"zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0" :{"original_url" : "http://www.cntcitc.com.cn/column.html?currentPage=1&chanId=12" , "csv" : "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0" , "classname" : "Test","type":"招标" },
-    ###中招国际招标有限公司
-    #"zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1": {"original_url": "http://www.cntcitc.com.cn/column.html?currentPage=1&chanId=13","csv": "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1", "classname": "Test", "type": "中标"},
-    ###中钢招标有限责任公司
-    #"zhonggangzhaobiaoyouxianzerengongsi_3_2_0" :{"original_url" : "http://tendering.sinosteel.com/zgzb/zbzq/005001/secondPage.html" , "csv" : "zhonggangzhaobiaoyouxianzerengongsi_3_2_0.csv" , "classname" : "Test","type":"招标" },
-    ###中钢招标有限责任公司
-    #"zhonggangzhaobiaoyouxianzerengongsi_3_2_1" :{"original_url" : "http://tendering.sinosteel.com/zgzb/zbzq/005004/secondPage2.html" , "csv" : "zhonggangzhaobiaoyouxianzerengongsi_3_2_1.csv" , "classname" : "Test","type":"中标" },
-    ###太平洋保险
-    #"taipingyangbaoxian_3_3_0" :{"original_url" : "http://purchase.cpic.com.cn/cms/channel/ywgg/index.htm" , "csv" : "taipingyangbaoxian_3_3_0.csv" , "classname" : "Test","type":"招标" },
-    ###天津市政府采购网
-    #"tianjinshizhengfucaigoupingtai_3_4" :{"original_url" : "http://60.30.25.51/portal/topicView.do?method=find" , "csv" : "tianjinshizhengfucaigoupingtai_3_4.csv" , "classname" : "Test","type":"" },
-    ###内蒙古自治区公共资源交易网
-    #"neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_0": {"original_url" : "http://ggzyjy.nmg.gov.cn/jyxx/jsgcZbgg" , "csv" : "neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_0.csv" , "classname" : "Test","type":"招标" },
-    ###内蒙古自治区公共资源交易网
-    #"neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_1": {"original_url" : "http://ggzyjy.nmg.gov.cn/jyxx/jsgcZbhxrgs" , "csv" : "neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_1.csv" , "classname" : "Test","type":"中标" },
-    ###山东省政府采购信息公开平台
-      #"shandongshengzhengfucaigouxinxigongkaipingtai_3_6_0": {"original_url" : "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?colcode=0301" , "csv" : "shandongshengzhengfucaigouxinxigongkaipingtai_3_6_0.csv" , "classname" : "Test","type":"招标" },
-    ## ##山东省政府采购信息公开平台
-     #"shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1": {"original_url" : "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?colcode=0302" , "csv" : "shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1.csv" , "classname" : "Test","type":"中标" },
-    ## ##山东省政府采购信息公开平台_市县
-      #"shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0": {"original_url" : "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?colcode=0303" , "csv" : "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0.csv" , "classname" : "Test","type":"招标" },
-    ## ##山东省政府采购信息公开平台_市县
-      #"shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1": {"original_url" : "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?colcode=0304" , "csv" : "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1.csv" , "classname" : "Test","type":"中标" },
-    ## ##上海公共资源交易网
-    #"shanghaigonggongziyuanjiaoyiwang_3_14" : {"original_url" : "http://www.zgazxxw.com/sh-000012.html" , "csv" : "shanghaigonggongziyuanjiaoyiwang_3_14.csv" , "classname" : "Test" ,"type":""},
-    ###浙江省公共资源交易网
-    #"zhejiangshenggonggongziyuanjiaoyiwang_3_15_0" : {"original_url" : "http://new.zmctc.com/zjgcjy/jyxx/004001/004001003/?Paging=1" , "csv" : "zhejiangshenggonggongziyuanjiaoyiwang_3_15_0.csv" , "classname" : "Test","type":"招标" },
-    ###浙江省公共资源交易网
-    #"zhejiangshenggonggongziyuanjiaoyiwang_3_15_1" : {"original_url" : "http://new.zmctc.com/zjgcjy/jyxx/004010/004010003/?Paging=1" , "csv" : "zhejiangshenggonggongziyuanjiaoyiwang_3_15_1.csv" , "classname" : "Test","type":"中标" },
-    ###江苏政府采购网
-    #"jiangsuzhengfucaigouwang_3_16_0" : {"original_url" : "http://www.ccgp-jiangsu.gov.cn/ggxx/gkzbgg/index.html" , "csv" : "jiangsuzhengfucaigouwang_3_16_0.csv" , "classname" : "Test","type":"招标" },
-    ###江苏政府采购网
-    #"jiangsuzhengfucaigouwang_3_16_1" : {"original_url" : "http://www.ccgp-jiangsu.gov.cn/ggxx/zbgg/index.html" , "csv" : "jiangsuzhengfucaigouwang_3_16_1.csv" , "classname" : "Test","type":"中标" },#9-2江苏政府采购网
-    ###厦门政府采购网
-    #"xiamenshigongongziyuanjiaoyiwang_3_18_0" : {"original_url" :{"type":"onclick",
-                                          #"onclick":[{"button":'//*[@id="searchMoreContent"]/a',"params":[],"url":"http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/default.do"}], },
-                                          #"csv" : "xiamenshigongongziyuanjiaoyiwang_3_18_0.csv","classname" : "Test","type":"招标"},
-    ###厦门政府采购网
-    #"xiamenshigongongziyuanjiaoyiwang_3_18_1" : {"original_url" :{"type":"onclick",
-                                                  #"onclick":[{"button":'//*[@id="noticeTypeList"]/li[6]',"params":[],"url":"http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/default.do"},
-                                                             #{"button":'//*[@id="searchMoreContent"]/a',"params":[]}],
-                                                                 #},
-                                                  #"csv" : "xiamenshigongongziyuanjiaoyiwang_3_18_1.csv","classname" : "Test","type":"中标"},
-    ###广西招标投标公共服务平台
-    #"guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_0" : {"original_url" : "http://zbtb.gxi.gov.cn:9000/xxfbcms/category/bulletinList.html?dates=300&categoryId=88&tabName=%E6%8B%9B%E6%A0%87%E5%85%AC%E5%91%8A&page=1&showStatus=1" , "csv" : "guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_0.csv" , "classname" : "Test","type":"招标" },
-    ###广西招标投标公共服务平台
-    #"guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_1" : {"original_url" : "http://zbtb.gxi.gov.cn:9000/xxfbcms/category/resultBulletinList.html?searchDate=1994-10-30&dates=300&word=&categoryId=90&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1" , "csv" : "guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_1.csv" , "classname" : "Test","type":"中标" },#11-2 广西招标投标公共服务平台
-    ###海南省公共资源交易网
-    #"hainanshenggonggongziyuanjiaoyiwang_3_20": {"original_url": "http://www.zgazxxw.com/wap/hi-001012.html","csv": "hainanshenggonggongziyuanjiaoyiwang_3_20.csv", "classname": "Test","type":""},
-    ###湖南国联招标有限公司 不能用
-    ######"hunanguolianzhaobiaoyouxiangongsi_3_22_0000000": {"original_url": "https://hnglzb.dlzb.com/fuwu/","csv": "hunanguolianzhaobiaoyouxiangongsi_3_22_0.csv", "classname": "Test","type":"招标"},
-    ###安招采
-    #"anzhaocai_3_23": {"original_url": "http://www.anzhaocai.com/Transaction?","csv": "anzhaocai_3_23.csv", "classname": "Test","type":""},
-    ###江西国政招标有限公司
-    #"jiangxiguozhengzhaobiaoyouxiangongsi_3_24_0": {"original_url": "http://www.jxgzzb.com.cn/Index/notice/inftype/1/page/1.html","csv": "jiangxiguozhengzhaobiaoyouxiangongsi_3_24_0.csv", "classname": "Test","type":"招标"},
-    ###江西国政招标有限公司
-    #"jiangxiguozhengzhaobiaoyouxiangongsi_3_24_1": {"original_url": "http://www.jxgzzb.com.cn/notice/2.html","csv": "jiangxiguozhengzhaobiaoyouxiangongsi_3_24_1.csv", "classname": "Test","type":"中标"},
-    ###云南省政府采购网
-    #"yunnanshengzhengfucaigouwang_3_26_0" : {"original_url" :{"type":"onclick",
-                                                          #"onclick":[{"button":'/html/body/div[3]/div[2]/div[2]/div[1]/div/a',"params":[],"url":"http://www.yngp.com/login.do?method=beginlogin&menuSelect=nav1"}], },
-                                                          #"csv" : "yunnanshengzhengfucaigouwang_3_26_0.csv","classname" : "Test","type":"招标"},
-    ###云南省政府采购网
-    #"yunnanshengzhengfucaigouwang_3_26_1" : {"original_url" :{"type":"onclick",
-                                                          #"onclick":[{"button":'//*[@id="query2"]/font/b',"params":[],"url":"http://www.yngp.com/bulletin.do?method=moreList&menuSelect=nav2"}], },
-                                                          #"csv" : "yunnanshengzhengfucaigouwang_3_26_1.csv","classname" : "Test","type":"中标"},
-    ###重庆国际投资咨询集团有限公司
-    #"chongqingguojitouzizixunjituanyouxiangongsi_3_27": {"original_url": "http://cqiic.com/CZJTweb/zbgg","csv": "chongqingguojitouzizixunjituanyouxiangongsi_3_27.csv", "classname": "Test","type":""},
-    ###拉萨公共资源交易网
-    #"lasagonggongziyuanjiaoyiwang_3_28_0": {"original_url": "http://ggzy.lasa.gov.cn/Category/More?id=643&typeId=0","csv": "lasagonggongziyuanjiaoyiwang_3_28_0.csv", "classname": "Test","type":"招标"},
-    ###拉萨公共资源交易网
-    #"lasagonggongziyuanjiaoyiwang_3_28_1": {"original_url": "http://ggzy.lasa.gov.cn/Category/More?id=661&typeId=0","csv": "lasagonggongziyuanjiaoyiwang_3_28_1.csv", "classname": "Test","type":"中标"},
-    ###成都市公共资源交易服务中心
-    #"chengdushigonggongziyuanjiaoyizhongxin_3_29": {"original_url": "https://www.cdggzy.com/site/JSGC/List.aspx","csv": "chengdushigonggongziyuanjiaoyizhongxin_3_29.csv", "classname": "Test","type":""},
-    ###中国邮政
-    #"zhongguoyouzheng_3_31_0": {"original_url": "http://www.chinapost.com.cn/html1/category/181313/7338-1.htm","csv": "zhongguoyouzheng_3_31_0.csv", "classname": "Test","type":"招标"},  # 19 中国邮政
-    ###中国邮政
-    #"zhongguoyouzheng_3_31_1": {"original_url": "http://www.chinapost.com.cn/html1/category/181313/7334-1.htm","csv": "zhongguoyouzheng_3_31_1.csv", "classname": "Test","type":"中标"},  # 19-2 中国邮政
-    ###兵团政府采购网
-    #"bingtuanzhengfucaigouwang_3_32": {"original_url": "http://cgw.xjbt.gov.cn/cggg/index.shtml","csv": "bingtuanzhengfucaigouwang_3_32.csv", "classname": "Test","type":""},
+    ##中招国际招标有限公司
+    "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0" :{"original_url" : "http://www.cntcitc.com.cn/column.html?currentPage=1&chanId=12" , "csv" : "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_0" , "classname" : "Test","type":"招标" },
+    ##中招国际招标有限公司
+    "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1": {"original_url": "http://www.cntcitc.com.cn/column.html?currentPage=1&chanId=13","csv": "zhongzhaoguojizhaobiaoyouxiangongsi_3_1_1", "classname": "Test", "type": "中标"},
+    ##中钢招标有限责任公司
+    "zhonggangzhaobiaoyouxianzerengongsi_3_2_0" :{"original_url" : "http://tendering.sinosteel.com/zgzb/zbzq/005001/secondPage.html" , "csv" : "zhonggangzhaobiaoyouxianzerengongsi_3_2_0.csv" , "classname" : "Test","type":"招标" },
+    ##中钢招标有限责任公司
+    "zhonggangzhaobiaoyouxianzerengongsi_3_2_1" :{"original_url" : "http://tendering.sinosteel.com/zgzb/zbzq/005004/secondPage2.html" , "csv" : "zhonggangzhaobiaoyouxianzerengongsi_3_2_1.csv" , "classname" : "Test","type":"中标" },
+    ##太平洋保险
+    "taipingyangbaoxian_3_3_0" :{"original_url" : "http://purchase.cpic.com.cn/cms/channel/ywgg/index.htm" , "csv" : "taipingyangbaoxian_3_3_0.csv" , "classname" : "Test","type":"招标" },
+    ##天津市政府采购网
+    "tianjinshizhengfucaigoupingtai_3_4" :{"original_url" : "http://60.30.25.51/portal/topicView.do?method=find" , "csv" : "tianjinshizhengfucaigoupingtai_3_4.csv" , "classname" : "Test","type":"" },
+    ##内蒙古自治区公共资源交易网
+    "neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_0": {"original_url" : "http://ggzyjy.nmg.gov.cn/jyxx/jsgcZbgg" , "csv" : "neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_0.csv" , "classname" : "Test","type":"招标" },
+    ##内蒙古自治区公共资源交易网
+    "neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_1": {"original_url" : "http://ggzyjy.nmg.gov.cn/jyxx/jsgcZbhxrgs" , "csv" : "neimengguzizhiqugonggongziyuanjiaoyiwang_3_5_1.csv" , "classname" : "Test","type":"中标" },
+    ##山东省政府采购信息公开平台
+      "shandongshengzhengfucaigouxinxigongkaipingtai_3_6_0": {"original_url" : "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?colcode=0301" , "csv" : "shandongshengzhengfucaigouxinxigongkaipingtai_3_6_0.csv" , "classname" : "Test","type":"招标" },
+    # ##山东省政府采购信息公开平台
+     "shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1": {"original_url" : "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?colcode=0302" , "csv" : "shandongshengzhengfucaigouxinxigongkaipingtai_3_6_1.csv" , "classname" : "Test","type":"中标" },
+    # ##山东省政府采购信息公开平台_市县
+      "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0": {"original_url" : "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?colcode=0303" , "csv" : "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_0.csv" , "classname" : "Test","type":"招标" },
+    # ##山东省政府采购信息公开平台_市县
+      "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1": {"original_url" : "http://www.ccgp-shandong.gov.cn/sdgp2017/site/channelall.jsp?colcode=0304" , "csv" : "shandongshengzhengfucaigouxinxigongkaipingtai_shixian_3_6_1.csv" , "classname" : "Test","type":"中标" },
 
-    ###zl need_login
+    ##华中招标网
+    "huazhongzhaobiaowang_3_8_0": {"original_url": "http://hnzhaobiao.com/index.asp",
+                                   "csv": "huazhongzhaobiaowang_3_8_0.csv", "classname": "Test_login", "type": "招标"},
+    ##华中招标网
+    "huazhongzhaobiaowang_3_8_1": {"original_url": "http://hnzhaobiao.com/index.asp",
+                                   "csv": "huazhongzhaobiaowang_3_8_1.csv", "classname": "Test_login", "type": "中标"},
 
-    ###华中招标网
-    #"huazhongzhaobiaowang_3_8_0": {"original_url": "http://hnzhaobiao.com/index.asp", "csv": "huazhongzhaobiaowang_3_8_0.csv","classname": "Test_login", "type": "招标"},
-    ###华中招标网
-    #"huazhongzhaobiaowang_3_8_1": {"original_url": "http://hnzhaobiao.com/index.asp","csv": "huazhongzhaobiaowang_3_8_1.csv", "classname": "Test_login", "type": "中标"},
+    ##河北招标网
+    "hebeizhaobiaocaigouwang_3_9": {"original_url": "https://sso.bidcenter.com.cn/login",
+                                    "csv": "hebeizhaobiaocaigouwang_3_9.csv", "classname": "Test_login", "type": ""},
 
-    ###河北招标网
-    #"hebeizhaobiaocaigouwang_3_9": {"original_url": "https://sso.bidcenter.com.cn/login", "csv": "hebeizhaobiaocaigouwang_3_9.csv","classname": "Test_login", "type": ""},
-    ###吉林省采购招标网
-    #"jilinshengcaigouzhaobiaowang_3_11_0": {"original_url": "http://www.gc-zb.com/login/index.html", "csv": "jilinshengcaigouzhaobiaowang_3_11_0.csv","classname": "Test_login", "type": "招标"},
-    ###吉林省采购招标网
-    #"jilinshengcaigouzhaobiaowang_3_11_1": {"original_url": "http://www.gc-zb.com/login/index.html","csv": "jilinshengcaigouzhaobiaowang_3_11_1.csv", "classname": "Test_login","type": "中标"},
-    ###辽宁省采购招标网
-    #"liaoningshengcaigouzhaobiaowang_3_12_0": {"original_url": "http://www.gc-zb.com/login/index.html","csv": "jilinshengcaigouzhaobiaowang_3_12_0.csv", "classname": "Test_login","type": "招标"},
-    ###辽宁省采购招标网
-    #"liaoningshengcaigouzhaobiaowang_3_12_1": {"original_url": "http://www.gc-zb.com/login/index.html","csv": "jilinshengcaigouzhaobiaowang_3_12_1.csv","classname": "Test_login", "type": "中标"},
-    ###大连市招标网
-    #"dalianshizhaobiaowang_3_13": {"original_url": "https://sso.bidcenter.com.cn/login", "csv": "dalianshizhaobiaowang_3_13.csv","classname": "Test_login", "type": ""},
-    ###深圳_千里马
-    #"shenzhenqinglima_3_21_0":{"original_url" : "http://center.qianlima.com/login.jsp", "csv" : "shenzhenqinglima_3_21_0.csv", "classname" : "Test_login","type":"招标"},
-    ###深圳_千里马
-    #"shenzhenqinglima_3_21_1":{"original_url" : "http://center.qianlima.com/login.jsp", "csv" : "shenzhenqinglima_3_21_1.csv", "classname" : "Test_login","type":"中标"},
-    ###重庆国际投资咨询集团有限公司
-    #"chongqingguojitouzizixun_3_26":{"original_url" : "http://cqiic.com/CZJTweb/zbgg/", "csv" : "chongqingguojitouzizixun_3_22_0.csv", "classname" : "Test","type":"招标"},
+    ##黑龙江招标网
+    "heilongjiangzhaobiaowang_3_10_0": {"original_url": "http://heilongjiang.zhaobiao.cn/",
+                                        "csv": "heilongjiangzhaobiaowang_3_10_0.csv", "classname": "Test_login",
+                                        "type": "招标"},
+    ##黑龙江招标网
+    "heilongjiangzhaobiaowang_3_10_1": {"original_url": "http://heilongjiang.zhaobiao.cn/",
+                                        "csv": "heilongjiangzhaobiaowang_3_10_1.csv", "classname": "Test_login",
+                                        "type": "中标"},
 
-    # #zl need captcha
-    # ##黑龙江招标网
-    # "heilongjiangzhaobiaowang_3_10_0": {"original_url": "http://heilongjiang.zhaobiao.cn/","csv": "heilongjiangzhaobiaowang_3_10_0.csv", "classname": "Test_login", "type": "招标"},
-    # ##黑龙江招标网
-    # "heilongjiangzhaobiaowang_3_10_1": {"original_url": "http://heilongjiang.zhaobiao.cn/","csv": "heilongjiangzhaobiaowang_3_10_1.csv", "classname": "Test_login", "type": "中标"},
-    # ##广东招标网
-    # "guangdongzhaobiaowang_3_17_0": {"original_url": "http://guangdong.zhaobiao.cn/","csv": "guangdongzhaobiaowang_3_17_0.csv", "classname": "Test_login", "type": "招标"},
-    # ##广东招标网
-    # "guangdongzhaobiaowang_3_17_1": {"original_url": "http://guangdong.zhaobiao.cn/","csv": "guangdongzhaobiaowang_3_17_1.csv", "classname": "Test_login","type": "中标"},
-    # ##宁夏招标网
-    # "ningxiazhaobiaowang_3_30_0": {"original_url": "http://ningxia.bidchance.com/","csv": "ningxiazhaobiaowang_3_30_0.csv", "classname": "Test_login","type": "招标"},
+    ##吉林省采购招标网
+    "jilinshengcaigouzhaobiaowang_3_11_0": {"original_url": "http://www.gc-zb.com/login/index.html",
+                                            "csv": "jilinshengcaigouzhaobiaowang_3_11_0.csv", "classname": "Test_login",
+                                            "type": "招标"},
+    ##吉林省采购招标网
+    "jilinshengcaigouzhaobiaowang_3_11_1": {"original_url": "http://www.gc-zb.com/login/index.html",
+                                            "csv": "jilinshengcaigouzhaobiaowang_3_11_1.csv", "classname": "Test_login",
+                                            "type": "中标"},
+    ##辽宁省采购招标网
+    "liaoningshengcaigouzhaobiaowang_3_12_0": {"original_url": "http://www.gc-zb.com/login/index.html",
+                                               "csv": "jilinshengcaigouzhaobiaowang_3_12_0.csv",
+                                               "classname": "Test_login", "type": "招标"},
+    ##辽宁省采购招标网
+    "liaoningshengcaigouzhaobiaowang_3_12_1": {"original_url": "http://www.gc-zb.com/login/index.html",
+                                               "csv": "jilinshengcaigouzhaobiaowang_3_12_1.csv",
+                                               "classname": "Test_login", "type": "中标"},
+    ##大连市招标网
+    "dalianshizhaobiaowang_3_13": {"original_url": "https://sso.bidcenter.com.cn/login",
+                                   "csv": "dalianshizhaobiaowang_3_13.csv", "classname": "Test_login", "type": ""},
+
+    # ##上海公共资源交易网
+    "shanghaigonggongziyuanjiaoyiwang_3_14" : {"original_url" : "http://www.zgazxxw.com/sh-000012.html" , "csv" : "shanghaigonggongziyuanjiaoyiwang_3_14.csv" , "classname" : "Test" ,"type":""},
+    ##浙江省公共资源交易网
+    "zhejiangshenggonggongziyuanjiaoyiwang_3_15_0" : {"original_url" : "http://new.zmctc.com/zjgcjy/jyxx/004001/004001003/?Paging=1" , "csv" : "zhejiangshenggonggongziyuanjiaoyiwang_3_15_0.csv" , "classname" : "Test","type":"招标" },
+    ##浙江省公共资源交易网
+    "zhejiangshenggonggongziyuanjiaoyiwang_3_15_1" : {"original_url" : "http://new.zmctc.com/zjgcjy/jyxx/004010/004010003/?Paging=1" , "csv" : "zhejiangshenggonggongziyuanjiaoyiwang_3_15_1.csv" , "classname" : "Test","type":"中标" },
+    ##江苏政府采购网
+    "jiangsuzhengfucaigouwang_3_16_0" : {"original_url" : "http://www.ccgp-jiangsu.gov.cn/ggxx/gkzbgg/index.html" , "csv" : "jiangsuzhengfucaigouwang_3_16_0.csv" , "classname" : "Test","type":"招标" },
+    ##江苏政府采购网
+    "jiangsuzhengfucaigouwang_3_16_1" : {"original_url" : "http://www.ccgp-jiangsu.gov.cn/ggxx/zbgg/index.html" , "csv" : "jiangsuzhengfucaigouwang_3_16_1.csv" , "classname" : "Test","type":"中标" },#9-2江苏政府采购网
+
+    ##广东招标网
+    "guangdongzhaobiaowang_3_17_0": {"original_url": "http://guangdong.zhaobiao.cn/","csv": "guangdongzhaobiaowang_3_17_0.csv", "classname": "Test_login", "type": "招标"},
+    ##广东招标网
+    "guangdongzhaobiaowang_3_17_1": {"original_url": "http://guangdong.zhaobiao.cn/","csv": "guangdongzhaobiaowang_3_17_1.csv", "classname": "Test_login","type": "中标"},
+
+
+    ##厦门政府采购网
+    "xiamenshigongongziyuanjiaoyiwang_3_18_0" : {"original_url" :{"type":"onclick",
+                                          "onclick":[{"button":'//*[@id="searchMoreContent"]/a',"params":[],"url":"http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/default.do"}], },
+                                          "csv" : "xiamenshigongongziyuanjiaoyiwang_3_18_0.csv","classname" : "Test","type":"招标"},
+    ##厦门政府采购网
+    "xiamenshigongongziyuanjiaoyiwang_3_18_1" : {"original_url" :{"type":"onclick",
+                                                  "onclick":[{"button":'//*[@id="noticeTypeList"]/li[6]',"params":[],"url":"http://www.xmzyjy.cn/XmUiForWeb2.0/xmebid/default.do"},
+                                                             {"button":'//*[@id="searchMoreContent"]/a',"params":[]}],
+                                                                 },
+                                                  "csv" : "xiamenshigongongziyuanjiaoyiwang_3_18_1.csv","classname" : "Test","type":"中标"},
+    ##广西招标投标公共服务平台
+    "guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_0" : {"original_url" : "http://zbtb.gxi.gov.cn:9000/xxfbcms/category/bulletinList.html?dates=300&categoryId=88&tabName=%E6%8B%9B%E6%A0%87%E5%85%AC%E5%91%8A&page=1&showStatus=1" , "csv" : "guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_0.csv" , "classname" : "Test","type":"招标" },
+    ##广西招标投标公共服务平台
+    "guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_1" : {"original_url" : "http://zbtb.gxi.gov.cn:9000/xxfbcms/category/resultBulletinList.html?searchDate=1994-10-30&dates=300&word=&categoryId=90&industryName=&area=&status=&publishMedia=&sourceInfo=&showStatus=&page=1" , "csv" : "guangxizhaobiaotoubiaogonggongfuwupingtai_3_19_1.csv" , "classname" : "Test","type":"中标" },#11-2 广西招标投标公共服务平台
+    ##海南省公共资源交易网
+    "hainanshenggonggongziyuanjiaoyiwang_3_20": {"original_url": "http://www.zgazxxw.com/wap/hi-001012.html","csv": "hainanshenggonggongziyuanjiaoyiwang_3_20.csv", "classname": "Test","type":""},
+
+    ##深圳_千里马
+    "shenzhenqinglima_3_21_0":{"original_url" : "http://center.qianlima.com/login.jsp", "csv" : "shenzhenqinglima_3_21_0.csv", "classname" : "Test_login","type":"招标"},
+    ##深圳_千里马
+    "shenzhenqinglima_3_21_1":{"original_url" : "http://center.qianlima.com/login.jsp", "csv" : "shenzhenqinglima_3_21_1.csv", "classname" : "Test_login","type":"中标"},
+
+
+    ##湖南国联招标有限公司 不能用
+    #####"hunanguolianzhaobiaoyouxiangongsi_3_22_0000000": {"original_url": "https://hnglzb.dlzb.com/fuwu/","csv": "hunanguolianzhaobiaoyouxiangongsi_3_22_0.csv", "classname": "Test","type":"招标"},
+    ##安招采
+    "anzhaocai_3_23": {"original_url": "http://www.anzhaocai.com/Transaction?","csv": "anzhaocai_3_23.csv", "classname": "Test","type":""},
+    ##江西国政招标有限公司
+    "jiangxiguozhengzhaobiaoyouxiangongsi_3_24_0": {"original_url": "http://www.jxgzzb.com.cn/Index/notice/inftype/1/page/1.html","csv": "jiangxiguozhengzhaobiaoyouxiangongsi_3_24_0.csv", "classname": "Test","type":"招标"},
+    ##江西国政招标有限公司
+    "jiangxiguozhengzhaobiaoyouxiangongsi_3_24_1": {"original_url": "http://www.jxgzzb.com.cn/notice/2.html","csv": "jiangxiguozhengzhaobiaoyouxiangongsi_3_24_1.csv", "classname": "Test","type":"中标"},
+    ##云南省政府采购网
+    "yunnanshengzhengfucaigouwang_3_26_0" : {"original_url" :{"type":"onclick",
+                                                          "onclick":[{"button":'/html/body/div[3]/div[2]/div[2]/div[1]/div/a',"params":[],"url":"http://www.yngp.com/login.do?method=beginlogin&menuSelect=nav1"}], },
+                                                          "csv" : "yunnanshengzhengfucaigouwang_3_26_0.csv","classname" : "Test","type":"招标"},
+    ##云南省政府采购网
+    "yunnanshengzhengfucaigouwang_3_26_1" : {"original_url" :{"type":"onclick",
+                                                          "onclick":[{"button":'//*[@id="query2"]/font/b',"params":[],"url":"http://www.yngp.com/bulletin.do?method=moreList&menuSelect=nav2"}], },
+                                                          "csv" : "yunnanshengzhengfucaigouwang_3_26_1.csv","classname" : "Test","type":"中标"},
+    ##重庆国际投资咨询集团有限公司
+    "chongqingguojitouzizixunjituanyouxiangongsi_3_27": {"original_url": "http://cqiic.com/CZJTweb/zbgg","csv": "chongqingguojitouzizixunjituanyouxiangongsi_3_27.csv", "classname": "Test","type":""},
+    ##拉萨公共资源交易网
+    "lasagonggongziyuanjiaoyiwang_3_28_0": {"original_url": "http://ggzy.lasa.gov.cn/Category/More?id=643&typeId=0","csv": "lasagonggongziyuanjiaoyiwang_3_28_0.csv", "classname": "Test","type":"招标"},
+    ##拉萨公共资源交易网
+    "lasagonggongziyuanjiaoyiwang_3_28_1": {"original_url": "http://ggzy.lasa.gov.cn/Category/More?id=661&typeId=0","csv": "lasagonggongziyuanjiaoyiwang_3_28_1.csv", "classname": "Test","type":"中标"},
+    ##成都市公共资源交易服务中心
+    "chengdushigonggongziyuanjiaoyizhongxin_3_29": {"original_url": "https://www.cdggzy.com/site/JSGC/List.aspx","csv": "chengdushigonggongziyuanjiaoyizhongxin_3_29.csv", "classname": "Test","type":""},
+
     ##宁夏招标网
-    "ningxiazhaobiaowang_3_30_1": {"original_url": "http://ningxia.bidchance.com/","csv": "ningxiazhaobiaowang_3_30_1.csv", "classname": "Test_login","type": "中标"},
+    "ningxiazhaobiaowang_3_30_0": {"original_url": "http://ningxia.bidchance.com/",
+                                   "csv": "ningxiazhaobiaowang_3_30_0.csv", "classname": "Test_login", "type": "招标"},
+    # 宁夏招标网
+    "ningxiazhaobiaowang_3_30_1": {"original_url": "http://ningxia.bidchance.com/",
+                                   "csv": "ningxiazhaobiaowang_3_30_1.csv", "classname": "Test_login", "type": "中标"},
+
+    ##中国邮政
+    "zhongguoyouzheng_3_31_0": {"original_url": "http://www.chinapost.com.cn/html1/category/181313/7338-1.htm","csv": "zhongguoyouzheng_3_31_0.csv", "classname": "Test","type":"招标"},  # 19 中国邮政
+    ##中国邮政
+    "zhongguoyouzheng_3_31_1": {"original_url": "http://www.chinapost.com.cn/html1/category/181313/7334-1.htm","csv": "zhongguoyouzheng_3_31_1.csv", "classname": "Test","type":"中标"},  # 19-2 中国邮政
+    ##兵团政府采购网
+    "bingtuanzhengfucaigouwang_3_32": {"original_url": "http://cgw.xjbt.gov.cn/cggg/index.shtml","csv": "bingtuanzhengfucaigouwang_3_32.csv", "classname": "Test","type":""},
+
+
+    # ##重庆国际投资咨询集团有限公司
+    #     "chongqingguojitouzizixun_3_27":{"original_url" : "http://cqiic.com/CZJTweb/zbgg/", "csv" : "chongqingguojitouzizixun_3_22_0.csv", "classname" : "Test","type":""},
+
+
+
 
 
 
