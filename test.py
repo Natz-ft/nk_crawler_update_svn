@@ -2,8 +2,8 @@
 import re
 from CrawlerModule import Crawler_URL
 #from ContentAnalysis_multi_process import ContentAnalysis
-#from ContentAnalysis_multi_process_request import ContentAnalysis
-from ContentAnalysis_multi_process_refresh import ContentAnalysis
+from ContentAnalysis_multi_process_request import ContentAnalysis
+#from ContentAnalysis_multi_process_refresh import ContentAnalysis
 from test_config import parameter
 import time
 from collections import defaultdict

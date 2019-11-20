@@ -96,8 +96,7 @@ def loop(func_parse_url,func_utils_regex,lock,queue,i,results,login_infos):
 def multi_process_func(func_parse_url,func_utils_regex,href_titles_and_drivers,login_infos,max_process=4,maxsize_num = 100000):
     '''
     多进程
-    '''
-    # 将hreftitle放入队列
+    ''' 
     queue_job = Queue(maxsize = maxsize_num + 1) ## 1: put(-1)
     for href_title_and_driver in href_titles_and_drivers:
         queue_job.put(href_title_and_driver)

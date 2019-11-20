@@ -3,11 +3,11 @@ from tensorflow.keras.models import load_model
 import os
 import sys
 sys.path.append(os.path.abspath("./model"))
-from pred import captcha_1_pred,captcha_2_pred
+from pred import captcha_1_pred,captcha_2_pred,captcha_3_pred
 import traceback
 
 def getVerifyCode_func(cutImg,modelpath):
-    modelPathdic = {"model_1.h5":captcha_1_pred,"model_2.h5":captcha_2_pred}
+    modelPathdic = {"model_1.h5":captcha_1_pred,"model_2.h5":captcha_2_pred,"model_3.h5":captcha_3_pred}
     model = load_model(os.path.abspath("./model/"+modelpath))
     func = modelPathdic[modelpath]
     try:
@@ -20,7 +20,7 @@ def getVerifyCode_func(cutImg,modelpath):
 
 class Verify_code_predict:
     def __init__(self):
-        self.modelPathdic =  {"model_1.h5":captcha_1_pred,"model_2.h5":captcha_2_pred}
+        self.modelPathdic =  {"model_1.h5":captcha_1_pred,"model_2.h5":captcha_2_pred,"model_3.h5":captcha_3_pred}
         self.model = {}
         for modelpath in self.modelPathdic.keys():
             self.model[modelpath] = load_model(os.path.abspath("./model/"+modelpath))

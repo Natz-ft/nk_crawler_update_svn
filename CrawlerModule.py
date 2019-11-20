@@ -34,7 +34,7 @@ def Init_driver():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--start-maximized")
     chrome_options.add_argument("--allow-file-access-from-files")
-    #chrome_options.add_argument('--headless')  #服务器上不注释
+    chrome_options.add_argument('--headless')  #服务器上不注释
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("window-size=1366x768")
@@ -77,35 +77,47 @@ def model_log_in_web(driver,url, login_info,vericode=None):
             return ""
     time.sleep(5)
     
-    
-    params = login_info["params"]
-    for param in params:
-        if param["type"]=="id":
-            WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.ID, param["name"])))
-            driver.find_element_by_id(param["name"]).click()
-            driver.find_element_by_id(param["name"]).send_keys(param["value"])
-        elif param["type"]=="class":
-            WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.CLASS_NAME, param["name"])))
-            driver.find_element_by_class_name(param["name"]).click()
-            driver.find_element_by_class_name(param["name"]).send_keys(param["value"])
-        elif param["type"]=="xpath":
-            WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, param["name"])))
-            driver.find_element_by_xpath(param["name"]).click()
-            driver.find_element_by_xpath(param["name"]).send_keys(param["value"])
-    if login_info["isHasVerify_code"]:
-        WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, login_info["imgxPath"])))
-        #cutImg = getVerifyCodeImg(driver,login_info)
-        cutImg = getVerifyCodeImg_2(driver,login_info)
-        if vericode != None:
-            res = vericode.getVerifyCode(cutImg,login_info["modelname"])
-            driver.find_element_by_xpath(login_info["verifyCodexpath"]).send_keys(res)   
-        else:
-            res = getVerifyCode_func(cutImg,login_info["modelname"])
-            driver.find_element_by_xpath(login_info["verifyCodexpath"]).send_keys(res)  
-            
-    driver.find_element_by_xpath(login_info["button"]).click()
-    #driver.implicitly_wait(5) 
-    time.sleep(5)
+    try:
+        params = login_info["params"]
+        for param in params:
+            if param["type"]=="id":
+                WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.ID, param["name"])))
+                driver.find_element_by_id(param["name"]).click()
+                driver.find_element_by_id(param["name"]).send_keys(param["value"])
+            elif param["type"]=="class":
+                WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.CLASS_NAME, param["name"])))
+                driver.find_element_by_class_name(param["name"]).click()
+                driver.find_element_by_class_name(param["name"]).send_keys(param["value"])
+            elif param["type"]=="xpath":
+                WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, param["name"])))
+                driver.find_element_by_xpath(param["name"]).click()
+                driver.find_element_by_xpath(param["name"]).send_keys(param["value"])
+        if login_info["isHasVerify_code"]:
+            flag =True
+            if "imgisAllexits" in login_info.keys():
+                if not login_info["imgisAllexits"]:
+                    try:
+                        driver.find_element_by_xpath(login_info["imgxPath"])
+                    except:
+                        flag = False
+            if flag:
+                WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, login_info["imgxPath"])))
+                cutImg = getVerifyCodeImg(driver,login_info)
+                #cutImg = getVerifyCodeImg_2(driver,login_info)
+                if vericode != None:
+                    res = vericode.getVerifyCode(cutImg,login_info["modelname"])
+                    driver.find_element_by_xpath(login_info["verifyCodexpath"]).send_keys(res)   
+                else:
+                    res = getVerifyCode_func(cutImg,login_info["modelname"])
+                    driver.find_element_by_xpath(login_info["verifyCodexpath"]).send_keys(res)  
+                
+        driver.find_element_by_xpath(login_info["button"]).click()
+        #driver.implicitly_wait(5) 
+        time.sleep(5)
+    except Exception as e:
+        print('model_log_in_web: ', e)
+        traceback.print_exc()
+        return False 
     return driver
 
 
@@ -142,6 +154,8 @@ def getVerifyCodeImg_2(driver,verifyParam,num_left=5):
     size_window = driver.get_window_size()
     #计算浏览器与截图比例
     scale = size_window['width'] / login_width
+    if "num_left" in verifyParam.keys():
+        num_left = verifyParam["num_left"]
     #获取验证码位置，根据前端调整 + number
     location_X = math.ceil(href.location['x'] / scale) + num_left
     location_Y = math.ceil(href.location['y'] / scale)
@@ -157,12 +171,15 @@ class Crawler_URL:
         self.headers = {"User-Agent": UserAgent().chrome}
         # 创建存储信息的列表
         self.content_item = defaultdict(list)
+        self.cookie_dict = defaultdict(list)
         # 加载chromedriver
         self.driver = Init_driver()
+        self.searchTime = config.searchTime
     
     # 登陆浏览器
     def log_in_web(self,url, login_info,vericode=None):
         self.driver = model_log_in_web(self.driver, url, login_info,vericode)
+        time.sleep(1)
         self.cookie_info = self.driver.get_cookies()                 # 列表中包含多个字典
         self.cookie_dict = {i["name"]: i["value"] for i in self.cookie_info} 
         return self.driver
@@ -253,19 +270,12 @@ class Crawler_URL:
                 submit_time = effect_time_list[i]
                 
                 if isloopBytime:
-                    # 昨天日期
-                    today = datetime.date.today()
-                    #yesterday = str(today)
-                    yesterday = str(today - datetime.timedelta(days=1))
-        
-                    #if submit_time != yesterday:
-                        #continue
-                    if submit_time > yesterday:
+                    if submit_time > self.searchTime:
                         big_count = big_count+1
                         continue
-                    elif submit_time < yesterday :
+                    elif submit_time < self.searchTime :
                         continue
-                    elif submit_time == yesterday:
+                    elif submit_time == self.searchTime:
                         equal_count = equal_count+1                    
                 # 获取项目地址
                 href_suf = ip_id_list[i] 
@@ -357,21 +367,16 @@ class Crawler_URL:
                     if isloopBytime:
                         stime = times[i]
                         #时间处理
-                        submit_time = utils.getTitleTimeStr(stime)
-                        
-                        # 昨天日期
-                        today = datetime.date.today()
-                        #yesterday = today
-                        yesterday = str(today - datetime.timedelta(days=1))                        
+                        submit_time = utils.getTitleTimeStr(stime)                    
                         
                         #发布的时间不是昨天的时间，就结束本次循环
                         
-                        if submit_time > yesterday:
+                        if submit_time > self.searchTime:
                             big_count = big_count+1
                             continue
-                        elif submit_time < yesterday :
+                        elif submit_time < self.searchTime :
                             continue
-                        elif submit_time == yesterday:
+                        elif submit_time == self.searchTime:
                             equal_count = equal_count+1
                     # 过滤处理
                     result = utils.filter_title(titles[i])
@@ -447,20 +452,16 @@ class Crawler_URL:
                     #时间处理
                     submit_time = utils.getTitleTimeStr(stime)
                     
-                if isloopBytime:
-                    # 昨天日期
-                    today = datetime.date.today()
-                    #yesterday = str(today)
-                    yesterday = str(today - datetime.timedelta(days=1))                    
+                if isloopBytime:              
                     
                     #发布的时间不是昨天的时间，就结束本次循环
                     
-                    if submit_time > yesterday:
+                    if submit_time > self.searchTime:
                         big_count = big_count+1
                         continue
-                    elif submit_time < yesterday :
+                    elif submit_time < self.searchTime :
                         continue
-                    elif submit_time == yesterday:
+                    elif submit_time == self.searchTime:
                         equal_count = equal_count+1
 
                 # 获取项目标题
