@@ -21,39 +21,49 @@ from selenium.webdriver.support import expected_conditions as EC
 import cv2
 import math
 import numpy as np
-from verify_model_predict import getVerifyCode_func
+from verify_model_predict import getVerifyCode_func 
+import os
+#import eventlet
+#eventlet.monkey_patch()
 
-def parse_url_request(page_url,headers,cookie_dict):
-    response = requests.get(page_url, headers=headers,cookies=cookie_dict)
-    print(response.status_code)
+def parse_url_request(page_url,headers,cookie_dict,lock,i):
+    #import eventlet
+    #eventlet.monkey_patch()    
+    ##get请求获取页面操作 持续时间不得超过30秒
+    #with eventlet.Timeout(30,False):
+    if cookie_dict:
+        response = requests.get(page_url, headers=headers,cookies=cookie_dict)
+    else:
+        response = requests.get(page_url)
+    status = response.status_code
+    with lock:
+        print("{} status_code {}".format(i,status))
     time.sleep(3)
     html_str = response.content.decode("utf-8")
-    return html_str    
+    return html_str
+    #print("parse_url_request 超时")
+    #return ""
     
 def Init_driver():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--start-maximized")
     chrome_options.add_argument("--allow-file-access-from-files")
-    chrome_options.add_argument('--headless')  #服务器上不注释
+    chrome_options.add_argument('--headless')#服务器上不注释
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("window-size=1366x768")
     platform_info = platform.platform()
     platform_info = ''.join(re.findall(r'Windows', platform_info))
-    
+
     if platform_info == "Windows":
         driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
     else:
-        driver = webdriver.Chrome(config.driver_linux, options=chrome_options)
+        driver = webdriver.Chrome(config.driver_linux, chrome_options=chrome_options) 
+    print("driver init end")
     return driver
-    
-
-
-
 
 # 得到html字符串 子进程专用
 def parse_url_get(driver,href_title,waitFocName): #url_type == 'get'
-    # 发送selenium请求
     try:   
         driver.get(href_title)
     except:
@@ -74,7 +84,7 @@ def model_log_in_web(driver,url, login_info,vericode=None):
     except:
         flag = utils.loopRefresh(driver)
         if not flag:
-            return ""
+            return driver
     time.sleep(5)
     
     try:
@@ -97,7 +107,7 @@ def model_log_in_web(driver,url, login_info,vericode=None):
             if "imgisAllexits" in login_info.keys():
                 if not login_info["imgisAllexits"]:
                     try:
-                        driver.find_element_by_xpath(login_info["imgxPath"])
+                        driver.find_element_by_xpath(verifyParam["imgxPath"])
                     except:
                         flag = False
             if flag:
@@ -117,7 +127,6 @@ def model_log_in_web(driver,url, login_info,vericode=None):
     except Exception as e:
         print('model_log_in_web: ', e)
         traceback.print_exc()
-        return False 
     return driver
 
 
@@ -433,8 +442,20 @@ class Crawler_URL:
 
             #当页面信息为0的时候，结束爬虫
             if len(li_list) == 0:
-                print("li_list:", len(li_list))
-                return False
+                next_type = parame["page_name"]["type"]
+                # 获取下一页的方式不是post 
+                if next_type != 2:
+                    try:
+                        self.driver.refresh()
+                        WebDriverWait(self.driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, li)))
+                    except:
+                        print("get_title_list get the length of li is time out")
+                    page_html_str = self.driver.page_source
+                    html_element = etree.HTML(page_html_str)
+                    li_list = html_element.xpath(li)
+                    if len(li_list)==0:
+                        print("li_list:", len(li_list))
+                        return False
             
             
 

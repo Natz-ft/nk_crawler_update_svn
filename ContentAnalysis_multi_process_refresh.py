@@ -58,15 +58,15 @@ def loop(func_parse_url,func_utils_regex,lock,queue,i,results,login_infos,other_
         
     driver = Init_driver()
     if len(login_infos):
-        try:
-            driver = model_log_in_web(driver,*login_infos)
-        except:
-            with lock:
-                print('process {} log_in_web Error'.format(i))
-                print(traceback.format_exc()) #return str
-                print('process  {}  exit...'.format(i))
-            driver.quit()
-            return
+        #try:
+        driver = model_log_in_web(driver,*login_infos)
+        #except:
+            #with lock:
+                #print('process {} log_in_web Error'.format(i))
+                #print(traceback.format_exc()) #return str
+                #print('process  {}  exit...'.format(i))
+            #driver.quit()
+            #return
 
     
     wait_foc_func = other_argvs[0]
@@ -85,7 +85,7 @@ def loop(func_parse_url,func_utils_regex,lock,queue,i,results,login_infos,other_
         except:
             with lock:
                 print()
-                print('{} Error'.format(html_str))
+                print('{} Error'.format(href_title))
                 print(traceback.format_exc()) #return str  
             
     driver.quit()

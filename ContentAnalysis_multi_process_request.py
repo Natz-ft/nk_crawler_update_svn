@@ -16,7 +16,7 @@ from CrawlerModule import parse_url_request
 
 
 #对全部的标题进行获取
-def ContentAnalysis(model,login_infos,max_process = 4,time_verbose= 1 ):
+def ContentAnalysis(model,login_infos,max_process = 4,time_verbose= 0 ):
     if time_verbose:
         time1 = time.clock()
         resContentAnalysis = _ContentAnalysis(model,login_infos,max_process = max_process)
@@ -75,16 +75,17 @@ def loop(func_parse_url,func_utils_regex,lock,queue,i,results,other_argvs):
         if href_title == -1:
             queue.put(-1)
             break
-        
-        try:
-            html_str = func_parse_url(href_title,headers,cookie_dict)
+
+        try:           
+            html_str = func_parse_url(href_title,headers,cookie_dict,lock,i)        
             content_time, content_area = func_utils_regex(html_str)
             results.append((href_title,content_time,content_area))
             time.sleep(random.randint(1,3))
         except:
-            print()
-            print('{} Error'.format(html_str))
-            print(traceback.format_exc()) #return str  
+            with lock:
+                print()
+                print('{} {} Error'.format(i,href_title))
+                print(traceback.format_exc()) #return str  
             
     with lock:
         print('process  {}  exit...'.format(i))

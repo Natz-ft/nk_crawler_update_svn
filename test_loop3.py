@@ -13,7 +13,7 @@ from utils import isLogin_byXpath,retotalPage
 #from test_config import content_wait_func_dic
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+import urllib
 def wait(driver):
     return not ('您访问频率太高' in driver.page_source)
 def isWaite_loop3(driver):
@@ -46,15 +46,27 @@ class Test_loop3:
         #生成需要  获取的查询列表
         #h_lx
         #0：全部 1：招标信息 2：采购信息 3：项目信息
-        urlList = [url_info["formatUrl"].format(j, i) for i in range(1, 3) for j in url_info["include_keys"]]
+        decode_key_array = [urllib.parse.quote(i) for i in url_info["include_keys"]]
+        urlList = [url_info["formatUrl"].format(j, i) for i in range(1, 3) for j in decode_key_array]
         
-        for original_url in urlList:
-            
+        for i,original_url in enumerate(urlList):
+            print("url is {} ".format(original_url))
             #获取页面信息
             html_str = model.parse_url(original_url)
             if html_str == "":
                 print("{} parse_url is empty ".format(original_url))
                 continue
+            if '您访问频率太高' in html_str:
+                model.driver.refresh()
+                time.sleep(5)
+                html_str = model.parse_url(original_url)
+                for loop_i in range(3):
+                    if '您访问频率太高' in html_str:
+                        model.driver.refresh()
+                        time.sleep(5)
+                        html_str = model.parse_url(original_url)
+                    else:
+                        continue
             if parame["number_xpath"] != "":
                 #获取一共的页数
                 num_str = model.number_page(parame["number_xpath"], html_str)
@@ -102,7 +114,7 @@ class Test_loop3:
         
         #if "content_wait_class" in parame.keys():
             #wait_fuc_name = parame["content_wait_class"] #return 'isWaite_loop3'
-
+        print("start ContentAnalysis")
         if ContentAnalysis(model,login_infos,wait_foc_func=isWaite_loop3) :
         #if model.ContentAnalysis(content_wait_func_dic[wait_fuc_name]) :
             self.result = model.result()
@@ -116,6 +128,6 @@ class Test_loop3:
 
 
 if __name__ == "__main__":
-    test  = Test()
-    key = ["银行"]
+    test  = Test_loop3()
+    key = ['银行', '保险', '外包', '人力', '开发', '测试', '扫描', '录入', '入围', '客服', '外呼', '基地', '离场']
     test.RunMain("http://caigou.epicc.com.cn/epp-esp/notice/noticePageList?", key, "zhongguorenminbaoxian")

@@ -40,7 +40,7 @@ logger = log.logger_Info()
 class Focus():
     def __init__(self):
         self.key_array = include_keys
-
+        self.vericode = Verify_code_predict()
     def time_change(self, df):
         d = defaultdict(list)
         df = pd.DataFrame(df)
@@ -143,6 +143,7 @@ class Focus():
             csv = default.file_path + "/" + text["csv"]
             # 实例化对象
             print(text["classname"])
+            logger.info("current website is {}".format(key))
             testClass = globals()[text["classname"]]()
             # 运行程序
             result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
@@ -164,10 +165,10 @@ class Focus():
 
     # 动态调用网址
     def find_all(self):
-        vericode = Verify_code_predict()
+        
         print("--------------------------------------------程序开始--------------------------------------------")
         for i, key in enumerate(information):
-            self.Pipeline(key,vericode)
+            self.Pipeline(key,self.vericode)
         print("--------------------------------------------程序结束--------------------------------------------")
 
     def format_date(self, time):
@@ -203,10 +204,11 @@ if __name__ == "__main__":
     args = parse_args()
     while True:
         current_time = time.strftime('%H:%M:%S', time.localtime(time.time()))
+        
         if current_time == args.start_time: 
             startTime = time.time()
-            # 执行爬虫代码
             focus = Focus()
+            # 执行爬虫代码
             focus.find_all()
             
             #添加省市区信息

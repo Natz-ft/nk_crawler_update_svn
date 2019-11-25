@@ -119,7 +119,7 @@ parameter = {
         "li_time" : "./span/text()" , #时间
         "title" : "./a/text()", #标题
         "href" : "./a/@href", #标题地址
-        "domainName_url" : ["http://www.ccgp-beijing.gov.cn/xxgg/sjzfcggg","http://www.ccgp-beijing.gov.cn/xxgg/qjzfcggg"], #拼接域名
+        "domainName_url" : ["http://www.ccgp-beijing.gov.cn/xxgg/sjzfcggg/","http://www.ccgp-beijing.gov.cn/xxgg/qjzfcggg/"], #拼接域名
         "li_area": "",  #区域 
         "page_name" :  {"type":0,"style":r'index_*\d*',"startNum":0}, #页数
         "number_xpath" : "", #页数区域
@@ -2547,12 +2547,33 @@ parameter = {
                                   "href":"./td[1]/a/@data-bulletin_id",
                                   "domainName_url":"http://www.yngp.com/newbulletin_zz.do?method=preinsertgomodify&operator_state=1&flag=view&bulletin_id=",
                                   "li_area": "./td[3]/@title",  # 区域
-                                   "page_name" : {
-                                       "type":3,
-                                       "style":"onclick",
-                                       "startNum":1,
-                                       "onclick":[{"replaceKey":"count","button":'//*[@id="bulletinlistid-footer"]/div/div[1]/ul/li/a[text()=count]',"params":[]}]
-                                       },
+                                            "page_name": {
+                                                "type": 2,
+                                                "style": "post",
+                                                "startNum": 1,
+                                                # "headers": {
+                                                #     'Accept': '*/*',
+                                                #     'Accept-Encoding': 'gzip, deflate',
+                                                #     'Accept-Language': 'zh-CN,zh;q=0.9',
+                                                #     'Connection': 'keep-alive',
+                                                #     'Content-Length': '65',
+                                                #     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                                                #     'Cookie': 'uid=112; JSESSIONID=dZbtjG3SxsOV0T-53JO31Fl4aW7UsGZc2OTvgTyjBd6dyx9C-B6R!1932321690; insert_cookie=19021653',
+                                                #     'Host': '60.30.25.51',
+                                                #     'Origin': 'http://60.30.25.51',
+                                                #     'Referer': 'http://60.30.25.51/portal/topicView.do?method=find',
+                                                #     'User-Agent': "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36",
+                                                #     'X-Requested-With': 'XMLHttpRequest'
+                                                # },
+                                                "data": {
+                                                    'current': '',
+                                                    'rowCount': '10',
+                                                    'searchPhase': '',
+                                                    'query_sign': '1',
+                                                },
+                                                "post_url": "http://www.yngp.com/bulletin.do?method=moreListQuery",
+                                                "pageNoKey": "current"
+                                            },
                                   "number_xpath": '',  # 页数区域//*[@id="bulletinlistid-footer"]/div/div[1]/ul/li/text()
                                   "search": "",
 

@@ -116,8 +116,8 @@ def rehref(href_title):
         else:
             href = href_title
         
-    # 去除 第一个.
-    href = re.sub(r'^[\.]',"",href)    
+    # 去除 ./ ../
+    href = re.sub(r"(\.{1,2})[/]","",href)    
     return href
 
 #获取总的页数

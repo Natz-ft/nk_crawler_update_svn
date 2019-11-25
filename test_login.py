@@ -10,6 +10,9 @@ from collections import defaultdict
 import copy
 import time
 from utils import isLogin_byXpath,retotalPage
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 
 class Test_login:
     def __init__(self):
@@ -18,8 +21,19 @@ class Test_login:
         
     def getUrlList(self,model,parame,html_str,original_url,isloopBytime):
         if parame["number_xpath"] != "":
+            next_type = parame["page_name"]["type"]  # 0:pageNo/page ;1:index_count.html ;2:post ;3:onclick;
+            
             #获取一共的页数
             ori_number = model.number_page(parame["number_xpath"], html_str)
+            if next_type != 2 and len(ori_number)==0:
+                try:
+                    model.driver.refresh()
+                    WebDriverWait(model.driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, parame["number_xpath"])))
+                    html_str = self.driver.page_source
+                    ori_number = model.number_page(parame["number_xpath"], html_str)
+                except:
+                    print("getUrlList number_xpath is timeout ")                
+                    
             number = retotalPage(ori_number)
             number = int(number)+1
             
@@ -138,8 +152,9 @@ class Test_login:
             else:    
                 
                 html_str = model.parse_url("",url_type=parame["startPage"]["type"],url_params=parame["startPage"])
-            self.getUrlList(model, parame, html_str, original_url,isloopBytime)        
+            self.getUrlList(model, parame, html_str, original_url,isloopBytime) 
             
+        print("start ContentAnalysis")   
         login_infos = [url_info, parame["login"],None]
         if ContentAnalysis(model,login_infos) :
         #if model.ContentAnalysis() :

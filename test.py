@@ -10,6 +10,9 @@ from collections import defaultdict
 import copy
 import utils
 #from test_loop3 import isWaite_loop3
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 
 class Test:
     def __init__(self):
@@ -22,18 +25,31 @@ class Test:
         pass
     def getUrlList(self,model,parame,html_str,original_url,isloopBytime):
         if parame["number_xpath"] != "":
+            next_type = parame["page_name"]["type"]  # 0:pageNo/page ;1:index_count.html ;2:post ;3:onclick;
+            
             #获取一共的页数
             ori_number = model.number_page(parame["number_xpath"], html_str)
+            if next_type != 2 and len(ori_number)==0:
+                try:
+                    model.driver.refresh()
+                    WebDriverWait(model.driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, parame["number_xpath"])))
+                    html_str = self.driver.page_source
+                    ori_number = model.number_page(parame["number_xpath"], html_str)
+                except:
+                    print("getUrlList number_xpath is timeout ")                
+            
             number = utils.retotalPage(ori_number)
             number = int(number)+1
 
-            next_type = parame["page_name"]["type"]  # 0:pageNo/page ;1:index_count.html ;2:post ;3:onclick;
+            
             #控制页面
+            print("total num is {}".format(number))
             for i in range(parame["page_name"]["startNum"], number):
                 if parame["li"] != "":
                     #获取页面信息
                     bool = model.get_title_list(html_str, parame,isloopBytime=isloopBytime)
                 else :
+                    print("get_title_list is error")
                     return self.result
                 #当页面发生错误时退出循环
                 if bool == False :
@@ -125,7 +141,8 @@ class Test:
             #获取页面信息
             html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
             self.getUrlList(model, parame, html_str, original_url,isloopBytime)
-
+        
+        print("start ContentAnalysis")
         if ContentAnalysis(model,[]) :
         #if model.ContentAnalysis() :
             self.result = model.result()
