@@ -4,7 +4,8 @@ from CrawlerModule import Crawler_URL
 #from ContentAnalysis_multi_process import ContentAnalysis
 from ContentAnalysis_multi_process_request import ContentAnalysis
 #from ContentAnalysis_multi_process_refresh import ContentAnalysis
-from test_config import parameter
+from importlib import reload
+import test_config
 import time
 from collections import defaultdict
 import copy
@@ -26,7 +27,9 @@ class Test:
     def getUrlList(self,model,parame,html_str,original_url,isloopBytime):
         if parame["number_xpath"] != "":
             next_type = parame["page_name"]["type"]  # 0:pageNo/page ;1:index_count.html ;2:post ;3:onclick;
-            
+            #get 三次都超时 
+            if html_str == "":
+                return
             #获取一共的页数
             ori_number = model.number_page(parame["number_xpath"], html_str)
             if next_type != 2 and len(ori_number)==0:
@@ -102,9 +105,10 @@ class Test:
                     html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)    
 
     def RunMain(self, url_info, key, html_name,vericode):
+        reload(test_config)
         #初始化
         model = Crawler_URL()
-        parame = parameter[html_name]
+        parame = test_config.parameter[html_name]
         isloopBytime = True
         if "isloopBytime" in parame.keys():
             isloopBytime = parame["isloopBytime"]
@@ -112,13 +116,14 @@ class Test:
         original_url = ""
         #get请求
         if isinstance(url_info,str):
-            original_url = url_info        
-        
+            original_url = url_info
             if parame["search"] != "" :
                 original_url = model.Search(original_url, parame["search"])
             #获取页面信息
+            print("get Url")
             html_str = model.parse_url(original_url)
             #print(html_str)
+            print("start getUrlList")
             self.getUrlList(model, parame, html_str, original_url,isloopBytime)
         elif isinstance(url_info,list):
             totalDimainUrl = []
@@ -146,9 +151,11 @@ class Test:
         if ContentAnalysis(model,[]) :
         #if model.ContentAnalysis() :
             self.result = model.result()
-        else:
-            return self.result
-
+            
+        if len(self.result)==0 and len(model.content_item['网址']) >0:
+            model.content_item['时间信息'] = [[]] * len(model.content_item['网址'])
+            self.result = model.result()
+            
         print(self.result)
         model.quit()
         return self.result

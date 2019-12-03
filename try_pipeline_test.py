@@ -3,7 +3,7 @@
 from mail import Mail
 import re
 import pandas as pd
-from config import config, default, include_keys, information,bank,mailParams
+import config
 from collections import defaultdict
 from logger import Logger
 import argparse
@@ -19,15 +19,16 @@ import sys
 from verify_model_predict import Verify_code_predict
 from area import area_tpye
 import datetime
+from importlib import reload
 
 def parse_args():
     parser = argparse.ArgumentParser(description="config_info")
-    parser.add_argument('--start-time', type=str, default=default.start_time, help='default config')
-    parser.add_argument('--file-path', type=str, default=default.file_path, help='default config')
-    parser.add_argument('--save-path', type=str, default=default.save_path, help='default config')
+    parser.add_argument('--start-time', type=str, default=config.default.start_time, help='default config')
+    parser.add_argument('--file-path', type=str, default=config.default.file_path, help='default config')
+    parser.add_argument('--save-path', type=str, default=config.default.save_path, help='default config')
     #parser.add_argument('--save-filename', type=str, default=default.save_filename, help='default config')
-    parser.add_argument('--interactive_file', type=str, default=default.interactive_file, help='default config')
-    parser.add_argument('--choice-run', type=str, default=default.choice_run, help='default config')
+    parser.add_argument('--interactive_file', type=str, default=config.default.interactive_file, help='default config')
+    parser.add_argument('--choice-run', type=str, default=config.default.choice_run, help='default config')
 
     args = parser.parse_args()
     return args
@@ -39,7 +40,8 @@ logger = log.logger_Info()
 
 class Focus():
     def __init__(self):
-        self.key_array = include_keys
+        reload(config)
+        self.key_array = config.include_keys
         self.vericode = Verify_code_predict()
     def time_change(self, df):
         d = defaultdict(list)
@@ -103,7 +105,7 @@ class Focus():
         d = defaultdict(list)
         str_text = ""
         #拼接正则表达式
-        for i in bank:
+        for i in config.bank:
             str_text = str_text + ".*?("  + i + ").*?" + "|"
         str_text = str_text[0:len(str_text)-1]
         pattern_t = re.compile(str_text)        
@@ -139,16 +141,18 @@ class Focus():
         return result
     def Pipeline(self, key,vericode):
         try:
-            text = information[key]
-            csv = default.file_path + "/" + text["csv"]
+            text = config.information[key]
+            csv = config.default.file_path + "/" + text["csv"]
             # 实例化对象
-            print(text["classname"])
+            print("{} use {}".format(key,text["classname"]))
             logger.info("current website is {}".format(key))
             testClass = globals()[text["classname"]]()
             # 运行程序
             result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
-            result = self.bank(result,text["type"])
-            pd.DataFrame(self.time_change(result)).to_csv(csv, encoding='utf_8_sig')
+            if len(result):
+                result = self.bank(result,text["type"])
+                result = self.time_change(result)
+            pd.DataFrame(result).to_csv(csv, encoding='utf_8_sig')
             sum = 0
             res = pd.DataFrame({})
             if type(res) == type(result):
@@ -167,7 +171,7 @@ class Focus():
     def find_all(self):
         
         print("--------------------------------------------程序开始--------------------------------------------")
-        for i, key in enumerate(information):
+        for i, key in enumerate(config.information):
             self.Pipeline(key,self.vericode)
         print("--------------------------------------------程序结束--------------------------------------------")
 
@@ -195,14 +199,30 @@ def format_date(time):
     return time
 
 if __name__ == "__main__":
-    startTime = time.time()
-    focus = Focus()
-    focus.find_all()
-    rangeTime = time.time()-startTime
-    print("cost total time is {}".format(rangeTime))
+    #args = parse_args()
+    #today = datetime.date.today()
+    #yesterday = str(today - datetime.timedelta(days=1))    
+    #save_filename = args.save_path + '/'+'result_merge' + "_" + yesterday+ '.xls'
+    
+    #mail = Mail(smtp_server=config.mailParams.smtp_host_server,
+                        #username=config.mailParams.usr_name,
+                                #password=config.mailParams.passwd,
+                                #from_addr=config.mailParams.from_addr,
+                                    #to_addr=config.mailParams.to_addr,
+                                    #cc_addr=config.mailParams.cc_addr,
+                                    #subject =config.mailParams.subject,
+                                    #content = config.mailParams.content,
+                                    #attach_file=save_filename)
+    #mail.send_email()    
+    ####startTime = time.time()
+    ####focus = Focus()
+    ####focus.find_all()
+    ####rangeTime = time.time()-startTime
+    ####print("cost total time is {}".format(rangeTime))    
     
     args = parse_args()
-    while True:
+    flag = True
+    while flag:
         current_time = time.strftime('%H:%M:%S', time.localtime(time.time()))
         
         if current_time == args.start_time: 
@@ -221,7 +241,11 @@ if __name__ == "__main__":
             df1 = df1.drop_duplicates()  # 去重
             # df1['网址'] = '=HYPERLINK("'+df1['网址']+'")'
             for i, v in enumerate(df1['省市区']):
-                df1['省市区'][i] = area_tpye(str(v))
+                str_v = str(v)
+                if str_v != "nan":
+                    df1['省市区'].iloc[i] = area_tpye(str_v)
+                else:
+                    df1['省市区'].iloc[i] = "中国"
             #格式化时间信息为 xxxx年xx月xx日
             current_year = time.strftime('%Y', time.localtime(time.time()))
             for k in ['投标时间', '报名时间', '截止时间']:
@@ -229,9 +253,9 @@ if __name__ == "__main__":
                     str_v = str(v)
                     if str_v != "nan":
                         if str_v < current_year:
-                            df1[k][i] = None
+                            df1[k].iloc[i] = None
                         else:
-                            df1[k][i] = format_date(str_v)
+                            df1[k].iloc[i] = format_date(str_v)
         
             df1 = df1.reset_index(drop=True)  # 重新生成index
         
@@ -244,14 +268,17 @@ if __name__ == "__main__":
         
             rangeTime = time.time()-startTime
             print("cost total time is {}".format(rangeTime))
-            
-            mail = Mail(smtp_server=mailParams.smtp_host_server,
-                                username=mailParams.usr_name,
-                                password=mailParams.passwd,
-                                    from_addr=mailParams.from_addr,
-                                    to_addr=mailParams.to_addr,
-                                    cc_addr=mailParams.cc_addr,
-                                    subject = mailParams.subject,
-                                    content = mailParams.content,
+            save_filename = args.save_path + '/'+'result_merge' + "_" + yesterday+ '.xls'
+            mail = Mail(smtp_server=config.mailParams.smtp_host_server,
+                                username=config.mailParams.usr_name,
+                                password=config.mailParams.passwd,
+                                    from_addr=config.mailParams.from_addr,
+                                    to_addr=config.mailParams.to_addr,
+                                    cc_addr=config.mailParams.cc_addr,
+                                    subject = config.mailParams.subject,
+                                    content = config.mailParams.content,
                                     attach_file=save_filename)
-            mail.send_email()            
+            mail.send_email() 
+            #flag = False
+            
+        

@@ -8,7 +8,9 @@ from fake_useragent import UserAgent
 from collections import defaultdict
 import random
 import platform
-from config import config
+from importlib import reload
+import config
+#from config import config
 import utils
 import urllib.request
 import urllib.parse
@@ -23,27 +25,8 @@ import math
 import numpy as np
 from verify_model_predict import getVerifyCode_func 
 import os
-#import eventlet
-#eventlet.monkey_patch()
-
-def parse_url_request(page_url,headers,cookie_dict,lock,i):
-    #import eventlet
-    #eventlet.monkey_patch()    
-    ##get请求获取页面操作 持续时间不得超过30秒
-    #with eventlet.Timeout(30,False):
-    if cookie_dict:
-        response = requests.get(page_url, headers=headers,cookies=cookie_dict)
-    else:
-        response = requests.get(page_url)
-    status = response.status_code
-    with lock:
-        print("{} status_code {}".format(i,status))
-    time.sleep(3)
-    html_str = response.content.decode("utf-8")
-    return html_str
-    #print("parse_url_request 超时")
-    #return ""
-    
+from timeout_check import send_timeout_signal,end_timeout_signal
+#import psutil    
 def Init_driver():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--start-maximized")
@@ -51,25 +34,89 @@ def Init_driver():
     chrome_options.add_argument('--headless')#服务器上不注释
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument("--no-sandbox")
+    chrome_options.addArguments("--disable-dev-shm-usage")
     chrome_options.add_argument("window-size=1366x768")
     platform_info = platform.platform()
     platform_info = ''.join(re.findall(r'Windows', platform_info))
 
     if platform_info == "Windows":
-        driver = webdriver.Chrome(config.driver_windows, chrome_options=chrome_options)
+        driver = webdriver.Chrome(config.config.driver_windows, chrome_options=chrome_options)
     else:
-        driver = webdriver.Chrome(config.driver_linux, chrome_options=chrome_options) 
+        driver = webdriver.Chrome(config.config.driver_linux, options=chrome_options) 
     print("driver init end")
     return driver
 
-# 得到html字符串 子进程专用
-def parse_url_get(driver,href_title,waitFocName): #url_type == 'get'
+def requestsGetByTime(page_url,headers,cookie_dict,timeout=30):
+    timeout = config.timeout
+    int_by_timeout = 0
+    textname = send_timeout_signal(timeout)
+    try:  
+        if cookie_dict:
+            response = requests.get(page_url, headers=headers,cookies=cookie_dict)
+        else:
+            response = requests.get(page_url,headers={"User-Agent": UserAgent().chrome}) 
+    except KeyboardInterrupt:
+        print('Interrupt by timeout_check or Ctrl + C')
+        int_by_timeout = 1
+    finally:
+        end_timeout_signal(textname)    
+    if int_by_timeout == 1:
+        return None
+    return response
+    
+
+
+def driverGetBytime(driver,url,timeout=30):
+    timeout = config.timeout
     try:   
-        driver.get(href_title)
+        get_times = 3
+        
+        while get_times:
+            int_by_timeout = 0
+            textname = send_timeout_signal(timeout)
+            try:  
+                #time.sleep(2)
+                driver.get(url)
+            except KeyboardInterrupt:
+                print('Interrupt by timeout_check or Ctrl + C')
+                int_by_timeout = 1
+            finally:
+                end_timeout_signal(textname)
+            
+            if int_by_timeout:
+                get_times -= 1
+            else:
+                break
+        if int_by_timeout == 1:
+            return False
+        
     except:
         flag = utils.loopRefresh(driver)
         if not flag:
-            return ""
+            return False
+    return True
+
+def parse_url_request(page_url,headers,cookie_dict,lock,i):
+    response = requestsGetByTime(page_url, headers, cookie_dict)
+    if not response:
+        print("parse_url_request  get error")
+        return ""
+    status = response.status_code
+    with lock:
+        print("{} status_code {}".format(i,status))
+    time.sleep(3)
+    try:
+        html_str = response.content.decode("utf-8")
+    except:
+        html_str = response.text
+    return html_str
+
+
+# 得到html字符串 子进程专用
+def parse_url_get(driver,href_title,waitFocName): #url_type == 'get'
+    if not driverGetBytime(driver, href_title):
+        print("parse_url_get  get error")
+        return ""
     if waitFocName:
         waitFocName(driver)
     time.sleep(3)
@@ -79,14 +126,10 @@ def parse_url_get(driver,href_title,waitFocName): #url_type == 'get'
 
 # 登陆浏览器 子进程专用
 def model_log_in_web(driver,url, login_info,vericode=None):
-    try:   
-        driver.get(url)
-    except:
-        flag = utils.loopRefresh(driver)
-        if not flag:
-            return driver
+    if not driverGetBytime(driver, url):
+        print("model_log_in_web  get error")
+        return driver
     time.sleep(5)
-    
     try:
         params = login_info["params"]
         for param in params:
@@ -113,6 +156,7 @@ def model_log_in_web(driver,url, login_info,vericode=None):
             if flag:
                 WebDriverWait(driver, 10, 0.5).until(EC.presence_of_element_located((By.XPATH, login_info["imgxPath"])))
                 cutImg = getVerifyCodeImg(driver,login_info)
+                
                 #cutImg = getVerifyCodeImg_2(driver,login_info)
                 if vericode != None:
                     res = vericode.getVerifyCode(cutImg,login_info["modelname"])
@@ -147,7 +191,9 @@ def getVerifyCodeImg(driver,verifyParam):
     top, bottom, left, right = location['y'], location['y'] + size['height'], location['x'], location['x'] + size['width']
     
 
-    cut_image = login_img[top:bottom,left:right]     
+    cut_image = login_img[top:bottom,left:right]
+    #cv2.imwrite("./all.png",login_img)
+    #cv2.imwrite("./cutImg.png",cut_image)
     return cut_image
 
 def getVerifyCodeImg_2(driver,verifyParam,num_left=5):
@@ -173,7 +219,10 @@ def getVerifyCodeImg_2(driver,verifyParam,num_left=5):
     #截图
     cut_image = login_img[location_Y:location_Y + location_height,location_X:location_X + location_width]
     return cut_image
-    
+
+
+def driver_getUrl(driver,url):
+    pass
 
 class Crawler_URL:
     def __init__(self):  # 初始化url_array;启动web_drive
@@ -183,59 +232,82 @@ class Crawler_URL:
         self.cookie_dict = defaultdict(list)
         # 加载chromedriver
         self.driver = Init_driver()
+        reload(config)
         self.searchTime = config.searchTime
     
     # 登陆浏览器
     def log_in_web(self,url, login_info,vericode=None):
         self.driver = model_log_in_web(self.driver, url, login_info,vericode)
+        #存在 弹出窗口 就 关闭弹出窗口
+        try:
+            alert = driver.switch_to.alert
+            alert.accept()
+        except:
+            pass       
         time.sleep(1)
         self.cookie_info = self.driver.get_cookies()                 # 列表中包含多个字典
         self.cookie_dict = {i["name"]: i["value"] for i in self.cookie_info} 
         return self.driver
     # 字符串 通过 requests    
-    def parse_url_2(self,pageurl,url_type="get",url_params={}):
-        if url_type == 'get':
-            response = requests.session().get(pageurl)
-        elif url_type == 'post':
-            response = requests.session().post(url_params["post_url"], headers=url_params["headers"], data=url_params["data"])
+    def parse_url_2(self,pageurl,url_type="get",url_params={},timeout = 30):
+        timeout = config.timeout
+        int_by_timeout = 0
+        textname = send_timeout_signal(timeout)
+        try:  
+            if url_type == 'get':
+                response = requests.session().get(pageurl)
+            elif url_type == 'post':
+                response = requests.session().post(url_params["post_url"], headers=url_params["headers"], data=url_params["data"])
+        except KeyboardInterrupt:
+            print('Interrupt by timeout_check or Ctrl + C')
+            int_by_timeout = 1
+        finally:
+            end_timeout_signal(textname)
+        if int_by_timeout==1:
+            return ""
         time.sleep(1)
         print("response:", response)
         html_str = response.content.decode("utf-8")
         return html_str
         
     # 得到html字符串
-    def parse_url(self, href_title,url_type="get",url_params={}):
+    def parse_url(self, href_title,url_type="get",url_params={},timeout= 30):
+        timeout = config.timeout
         if url_type=="get":
-            # 发送selenium请求
-            try:   
-                self.driver.get(href_title)
-            except:
-                flag = utils.loopRefresh(self.driver)
-                if not flag:
-                    return ""
+            if not driverGetBytime(self.driver, href_title):
+                return ""
             time.sleep(3)
             html_str = self.driver.page_source
         elif url_type=="post":
-            response = requests.post(url_params["post_url"], headers=url_params["headers"],  data=url_params["data"])
+            int_by_timeout = 0
+            textname = send_timeout_signal(timeout)
+            try:  
+                response = requests.post(url_params["post_url"], headers=url_params["headers"],  data=url_params["data"])
+            except KeyboardInterrupt:
+                print('Interrupt by timeout_check or Ctrl + C')
+                int_by_timeout = 1
+            finally:
+                end_timeout_signal(textname)
+            if int_by_timeout==1:
+                return ""            
             print(response)
             html_str = str(response.content, encoding="utf-8")
         elif url_type=="onclick":
             click_params = url_params["onclick"]
             for url_param in click_params:
                 if "url" in url_param.keys():
-                    try:
-                        self.driver.get(url_param["url"])
-                    except:
-                        flag = utils.loopRefresh(self.driver)
-                        if not flag:
-                            return ""                                    
+                    if not driverGetBytime(self.driver, url_param["url"]):
+                        return ""
                     time.sleep(5)
                 params= url_param["params"]
                 if url_param["button"]=="":
                     html_str = self.driver.page_source
                     return html_str
                 if len(params)==0:
-                    self.driver.find_element_by_xpath(url_param["button"]).click()
+                    target=self.driver.find_element_by_xpath(url_param["button"])
+                    target.location_once_scrolled_into_view
+                    #self.driver.execute_script("arguments[0].click();", target)
+                    target.click()
                 else:
                     for tmp_param in params:
                         if tmp_param["type"]=="id":
@@ -342,6 +414,9 @@ class Crawler_URL:
             return False            
     # 4.提取标题（将需要的标题先保存下来）
     def get_title_list(self, page_html_str, parame,isloopBytime=True):
+        #get 三次都超时
+        if page_html_str == "":
+            return False
         li = parame["li"]
         li_time = parame["li_time"]
         title = parame["title"]
@@ -411,11 +486,8 @@ class Crawler_URL:
                         #从标题获取地区
                         area = utils.getAreaFromStr(titles[i])
                     # 获取项目地址
-                    href_title = utils.rehref(hrefs[i])
+                    href_title = utils.rehref(hrefs[i],domainName_url)
     
-                    #域名判断
-                    if domainName_url != "":
-                        href_title = domainName_url + href_title
                     if href_suf != "":
                         href_title = href_title+href_suf
                     
@@ -503,11 +575,9 @@ class Crawler_URL:
 
                 # 获取项目地址
                 href_title = "".join(li.xpath(href))
-                href_title = utils.rehref(href_title)
+                href_title = utils.rehref(href_title,domainName_url)
 
-                #域名判断
-                if domainName_url != "":
-                    href_title = domainName_url + href_title
+
                 if href_suf != "":
                     href_title = href_title+href_suf                
 
@@ -598,7 +668,10 @@ class Crawler_URL:
     def number_page(self,number_xpath, page_html_str):
         # 把html字符串转换成element对象
         html_element = etree.HTML(page_html_str)
-        number = html_element.xpath(number_xpath)
+        if html_element is not None:
+            number = html_element.xpath(number_xpath)
+        else:
+            number = []
         return number
 
     #拼地址(搜索需要地址拼接)
@@ -616,4 +689,7 @@ class Crawler_URL:
 
     #关闭驱动
     def quit(self):
+        #driver_process = psutil.Process(driver.service.process.pid)
+        #if driver_process.is_running():
+            #driver_process.kill()        
         self.driver.quit()

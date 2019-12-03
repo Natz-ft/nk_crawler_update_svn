@@ -4,7 +4,8 @@ from CrawlerModule import Crawler_URL
 #from ContentAnalysis_multi_process import ContentAnalysis
 #from ContentAnalysis_multi_process_request import ContentAnalysis
 from ContentAnalysis_multi_process_refresh import ContentAnalysis
-from test_config import parameter
+from importlib import reload
+import test_config
 import time
 from collections import defaultdict
 import copy
@@ -20,9 +21,10 @@ class TestJson:
       
 
     def RunMain(self, url_info, key, html_name,vericode):
+        reload(test_config)
         #初始化
         model = Crawler_URL()
-        parame = parameter[html_name]
+        parame = test_config.parameter[html_name]
         isloopBytime = True
         if "isloopBytime" in parame.keys():
             isloopBytime = parame["isloopBytime"]
@@ -65,8 +67,10 @@ class TestJson:
         if ContentAnalysis(model,[]) :
         #if model.ContentAnalysis() :
             self.result = model.result()
-        else:
-            return self.result
+            
+        if len(self.result)==0 and len(model.content_item['网址']) >0:
+            model.content_item['时间信息'] = [[]] * len(model.content_item['网址'])
+            self.result = model.result()
 
         print(self.result)
         model.quit()

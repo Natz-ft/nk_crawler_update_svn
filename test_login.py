@@ -4,7 +4,8 @@ from CrawlerModule import Crawler_URL
 from ContentAnalysis_multi_process_refresh import ContentAnalysis
 #from ContentAnalysis_multi_process import ContentAnalysis
 #from ContentAnalysis_multi_process_request import ContentAnalysis
-from test_config import parameter
+from importlib import reload
+import test_config
 import time
 from collections import defaultdict
 import copy
@@ -22,7 +23,9 @@ class Test_login:
     def getUrlList(self,model,parame,html_str,original_url,isloopBytime):
         if parame["number_xpath"] != "":
             next_type = parame["page_name"]["type"]  # 0:pageNo/page ;1:index_count.html ;2:post ;3:onclick;
-            
+            #get 三次都超时 
+            if html_str == "":
+                return
             #获取一共的页数
             ori_number = model.number_page(parame["number_xpath"], html_str)
             if next_type != 2 and len(ori_number)==0:
@@ -98,9 +101,10 @@ class Test_login:
                     html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
 
     def RunMain(self, url_info, key, html_name,vericode):
+        reload(test_config)
         #初始化
         model = Crawler_URL()
-        parame = parameter[html_name]
+        parame = test_config.parameter[html_name]
         isloopBytime = True
         if "isloopBytime" in parame.keys():
             isloopBytime = parame["isloopBytime"]
@@ -108,17 +112,23 @@ class Test_login:
         original_url = ""
         login_infos = [url_info, parame["login"],vericode]
         #登陆
-        driver = model.log_in_web(*login_infos)
-        
-        isLogin = globals()[parame["login"]["login_status"]["class"]](driver,parame["login"]["login_status"]["params"])        
+        try:
+            driver = model.log_in_web(*login_infos)
+            isLogin = globals()[parame["login"]["login_status"]["class"]](driver,parame["login"]["login_status"]["params"])
+        except:
+            isLogin = False
+                
        
         
         #判断失败： 验证码错误 循环（maxnum =5)
         if not isLogin:
             count = 0
             for i in range(3):
-                driver = model.log_in_web(*login_infos)
-                isLogin = globals()[parame["login"]["login_status"]["class"]](driver,parame["login"]["login_status"]["params"]) 
+                try:
+                    driver = model.log_in_web(*login_infos)
+                    isLogin = globals()[parame["login"]["login_status"]["class"]](driver,parame["login"]["login_status"]["params"])
+                except:
+                    isLogin = False
                 if isLogin:
                     break
                 count = count+1
@@ -156,11 +166,13 @@ class Test_login:
             
         print("start ContentAnalysis")   
         login_infos = [url_info, parame["login"],None]
-        if ContentAnalysis(model,login_infos) :
+        if ContentAnalysis(model,[]) :
         #if model.ContentAnalysis() :
             self.result = model.result()
-        else:
-            return self.result
+            
+        if len(self.result)==0 and len(model.content_item['网址']) >0:
+            model.content_item['时间信息'] = [[]] * len(model.content_item['网址'])
+            self.result = model.result()
 
         print(self.result)
         model.quit()

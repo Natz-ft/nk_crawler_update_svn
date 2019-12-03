@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from fake_useragent import UserAgent
 import datetime
-from config import config
+import config 
 
 yesterday = config.searchTime
 
@@ -601,7 +601,7 @@ parameter = {
                                           "search": "",
                                           },
     # 内蒙古自治区政府采购网
-    "neimengguzizhiquzhengfucaigou": {"li": "//*[@id='itemContainer']/tbody/tr",  # 标题的上一级
+    "neimengguzizhiquzhengfucaigou": {"li": "//*[@id='itemContainer']/tr",  # 标题的上一级
                                       "li_time": "./td[@class='feed-time']/span//text()",  # 时间
                                       "title": "./td[@class='title']/a/@title",  # 标题
                                       "href": "./td[@class='title']/a/@href",  # 标题地址
@@ -612,12 +612,31 @@ parameter = {
                                                     "style": "onclick",
                                                     "startNum": 1,
                                                     "onclick": [{"replaceKey": "count",
-                                                                 "button": "//*[@id='c-main-2']/div/div[2]/div[4]/a[text()=count]",
+                                                                 "button": "//*[@id='model_two']/div/div[2]/div[2]/div[3]/div/a[text()=count]",
                                                                  "params": []}
                                                                 ]
                                           ,
                                                     },
-                                      "number_xpath": "//*[@id='c-main-2']/div/div[2]/div[4]/a/text()",  # 页数区域
+                                      "number_xpath": "//*[@id='model_two']/div/div[2]/div[2]/div[3]/div/a[last()-1]/text()",  # 页数区域
+                                      "search": "",
+                                      },
+    "neimengguzizhiquzhengfucaigou_1": {"li": "//*[@id='itemContainer']/tr",  # 标题的上一级
+                                      "li_time": "./td[@class='feed-time']/span//text()",  # 时间
+                                      "title": "./td[@class='title']/a/@title",  # 标题
+                                      "href": "./td[@class='title']/a/@href",  # 标题地址
+                                      "domainName_url": "",  # 拼接域名
+                                      "li_area": "./td[2]/span/text()",  # 区域
+                                      "isloopBytime": False,  # 是否控制时间循环
+                                      "page_name": {"type": 3,
+                                                    "style": "onclick",
+                                                    "startNum": 1,
+                                                    "onclick": [{"replaceKey": "count",
+                                                                 "button": "//*[@id='model_two']/div/div[2]/div[2]/div[3]/div/a[text()=count]",
+                                                                 "params": []}
+                                                                ]
+                                          ,
+                                                    },
+                                      "number_xpath": "//*[@id='model_two']/div/div[2]/div[2]/div[3]/div/a[last()-1]/text()",  # 页数区域
                                       "search": "",
                                       },
     # 福建省公共资源交易中心
@@ -630,6 +649,20 @@ parameter = {
                                               "isloopBytime": True,  # 是否控制时间循环
                                               "page_name": {"type": 1,
                                                             "style": "http://www.fjggzyjy.cn/news/category/9/?page=count",
+                                                            "replaceKey": "count", "startNum": 1},
+                                              "number_xpath": "//ul[@class='pagination']/li[last()-1]/a/text()",  # 页数区域
+                                              "search": "",
+
+                                              },  # 区域
+    "fujianshengonggongziyuanjiaoyi_1_18_1": {"li": "/html/body/div/div[2]/div/div/div/div[2]/div[2]/div/div[2]/div[1]/a",  # 标题的上一级
+                                              "li_time": "./span[4]",  # 截止时间
+                                              "title": "./span[3]",  # 标题
+                                              "href": "./@href",  # 标题地址
+                                              "domainName_url": "http://www.fjggzyjy.cn",  # 拼接域名
+                                              "li_area": "",  # 区域
+                                              "isloopBytime": True,  # 是否控制时间循环
+                                              "page_name": {"type": 1,
+                                                            "style": "http://www.fjggzyjy.cn/news/category/12/?page=count",
                                                             "replaceKey": "count", "startNum": 1},
                                               "number_xpath": "//ul[@class='pagination']/li[last()-1]/a/text()",  # 页数区域
                                               "search": "",
@@ -685,7 +718,7 @@ parameter = {
                                   ],
                       },
 
-        "li": "/html/body/div[10]/div[1]/div[1]/dl/",  # 标题的上一级
+        "li": "/html/body/div[10]/div[1]/div[1]/dl",  # 标题的上一级
         "li_time": "./dt[2]/text()",  # 时间
         "title": "./dt[1]/a/@title",  # 标题
         "href": "./dt[1]/a/@href",  # 标题地址
@@ -1925,7 +1958,7 @@ parameter = {
         "startPage": {"type": "onclick",
                       "onclick": [{"button": "",
                                    "params": [],
-                                   "url": "http://hnzhaobiao.com/zhongbiao12.asp"
+                                   "url": "http://hnzhaobiao.com/zhongbiao12x.asp"
                                    },
                                   ],
                       },
@@ -2261,7 +2294,7 @@ parameter = {
                                           "href": "./a/@href",  # 标题地址
                                           "domainName_url": "http://www.ccgp-jiangsu.gov.cn/ggxx/zbgg/",  # 拼接域名
                                           "li_area": "",  # 区域
-                                           "page_name" : {"type":1,"style":"http://www.ccgp-jiangsu.gov.cn/ggxx/gkzbgg/index_count.html","replaceKey":"count","startNum":1},
+                                           "page_name" : {"type":1,"style":"http://www.ccgp-jiangsu.gov.cn/ggxx/zbgg/index_count.html","replaceKey":"count","startNum":1},
                                           "number_xpath": '//*[@id="newsPage"]/div/a[2]/@href', # 页数区域
                                           "search": "",
                                  },
@@ -2547,33 +2580,12 @@ parameter = {
                                   "href":"./td[1]/a/@data-bulletin_id",
                                   "domainName_url":"http://www.yngp.com/newbulletin_zz.do?method=preinsertgomodify&operator_state=1&flag=view&bulletin_id=",
                                   "li_area": "./td[3]/@title",  # 区域
-                                            "page_name": {
-                                                "type": 2,
-                                                "style": "post",
-                                                "startNum": 1,
-                                                # "headers": {
-                                                #     'Accept': '*/*',
-                                                #     'Accept-Encoding': 'gzip, deflate',
-                                                #     'Accept-Language': 'zh-CN,zh;q=0.9',
-                                                #     'Connection': 'keep-alive',
-                                                #     'Content-Length': '65',
-                                                #     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                                                #     'Cookie': 'uid=112; JSESSIONID=dZbtjG3SxsOV0T-53JO31Fl4aW7UsGZc2OTvgTyjBd6dyx9C-B6R!1932321690; insert_cookie=19021653',
-                                                #     'Host': '60.30.25.51',
-                                                #     'Origin': 'http://60.30.25.51',
-                                                #     'Referer': 'http://60.30.25.51/portal/topicView.do?method=find',
-                                                #     'User-Agent': "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.87 Safari/537.36",
-                                                #     'X-Requested-With': 'XMLHttpRequest'
-                                                # },
-                                                "data": {
-                                                    'current': '',
-                                                    'rowCount': '10',
-                                                    'searchPhase': '',
-                                                    'query_sign': '1',
-                                                },
-                                                "post_url": "http://www.yngp.com/bulletin.do?method=moreListQuery",
-                                                "pageNoKey": "current"
-                                            },
+                                   "page_name" : {
+                                       "type":3,
+                                       "style":"onclick",
+                                       "startNum":1,
+                                       "onclick":[{"replaceKey":"count","button":'//*[@id="bulletinlistid-footer"]/div/div[1]/ul/li/a[text()=count]',"params":[]}]
+                                       },
                                   "number_xpath": '',  # 页数区域//*[@id="bulletinlistid-footer"]/div/div[1]/ul/li/text()
                                   "search": "",
 
@@ -2672,7 +2684,7 @@ parameter = {
                                        "type":3,
                                        "style":"onclick",
                                        "startNum":1,
-                                       "onclick":[{"replaceKey":"count","button":'//*[@id="Pager"]/a[text()=count]',"params":[]}]
+                                       "onclick":[{"replaceKey":"","button":'//*[@id="Pager"]/a[last()-1]',"params":[]}]
                                        },
                           "number_xpath" : '//*[@id="Pager"]/a[13]/@href', #页数区域
                           "search" : "",
@@ -2957,6 +2969,9 @@ parameter = {
                                           "startNum": 0,
                                           "headers": {
                                               'User-Agent': UserAgent().chrome,
+                                              "Origin": "http://www.ccgp-dalian.gov.cn",
+                                              "Referer": "http://www.ccgp-dalian.gov.cn/dlweb/023/023001/MoreInfo.aspx?CategoryNum=023001",
+                                              "Upgrade-Insecure-Requests": "1"
                                           },
                                           "data": {
                                               "__VIEWSTATEGENERATOR": "4AB1E898",
@@ -2966,7 +2981,7 @@ parameter = {
                                               "__EVENTVALIDATION": "yXqob39Zq9E3R+YwF5Fu+5ACP0VKe0U0jjhLcFKzSjUzl4MGILXB3w8Mni6FOwT4lPpL47OHX7uQrlSS9rnydo7hrdrMjB7eK476zw==",
                                               "MoreInfoList1$Titletxt": "",
                                           },
-                                          "post_url": "http://www.ccgp-jilin.gov.cn/shopHome/morePolicyNews.action",
+                                          "post_url": "http://www.ccgp-dalian.gov.cn/dlweb/023/023001/MoreInfo.aspx?CategoryNum=023001",#"http://www.ccgp-jilin.gov.cn/shopHome/morePolicyNews.action",
                                           "pageNoKey": "__EVENTARGUMENT"
                                       },
                                       "number_xpath": '//*[@id="MoreInfoList1_Pager"]/table/tbody/tr/td[1]/font[2]/b/text()',
@@ -2992,7 +3007,7 @@ parameter = {
                                      "li_time": "./span/text()",  # 时间
                                      "title": "./a/@title",  # 标题地址
                                      "href": "./a/@href",  # 标题地址
-                                     "domainName_url": "http://www.zjzfcg.gov.cn",  # 拼接域名
+                                     "domainName_url": "",  # 拼接域名
                                      "li_area": "",  # 区域
                                      "isloopBytime": True,  # 是否控制时间循环
                                      "page_name": {"type": 3,
@@ -3010,24 +3025,24 @@ parameter = {
                                      },
 
     #  江苏省公共资源交易网_2_16_0
-    "jiangsushenggonggongziyuan_2_16_0": {"li": '//*[@id="page_wraper"]/div[1]/div[1]/dl',  # 标题的上一级
-                                          "li_time": "./dd[2]/text()",  # 时间
-                                          "title": "./dd[1]/a/@title",  # 标题
-                                          "href": "./dd[1]/a/@href",  # 标题地址
+    "jiangsushenggonggongziyuan_2_16_0": {"li": '//*[@id="showList"]/tr',  # 标题的上一级
+                                          "li_time": "./td[4]/text()",  # 时间
+                                          "title": "./td[2]/a/@title",  # 标题
+                                          "href": "./td[2]/a/@onclick",  # 标题地址
                                           "domainName_url": "http://jsggzy.jszwfw.gov.cn",  # 拼接域名
-                                          "li_area": "",  # 区域
+                                          "li_area": "./td[3]/text()",  # 区域
                                           "isloopBytime": True,  # 是否控制时间循环
                                           "page_name": {"type": 3,
                                                         "style": "onclick",
                                                         "startNum": 1,
-                                                        "onclick": [{"replaceKey": "",
-                                                                     "button": '//*[@class = "//div[@class="pager"]/ul/li/a',
+                                                        "onclick": [{"replaceKey": "count",
+                                                                     "button": '//ul[@class="m-pagination-page"]/li/a[text()=count]',
                                                                      # '//*[@class = "paginationjs-page J-paginationjs-page"]/a[text()=count]
                                                                      "params": []}
                                                                     ]  # /
                                               ,
                                                         },
-                                          "number_xpath": '//*[@id="pageNav"]/a[11]/text()',  # 页数区域//*[@id="pageNav"]/a[11]/text()
+                                          "number_xpath": '//ul[@class="m-pagination-page"]/li[last()]/a/text()',  # 页数区域//*[@id="pageNav"]/a[11]/text()
                                           "search": "",
                                           },
     #  海南政府采购网_2_20_0
@@ -3169,23 +3184,23 @@ parameter = {
                                             },
 
     # 重庆市公共资源交易网_2_27_1
-    "chongqingshigonggongziyuan_2_27_1": {"li": "//*[@id='showList']/tr",  # 标题的上一级
+    "chongqingshigonggongziyuan_2_27_1": {"li": "//div[starts-with(@id,'moreinfo')][not(@style) or @style='']/table/tbody/tr",  # 标题的上一级
                                           "li_time": "./td[3]/text()",  # 时间
                                           "title": "./td[2]/a/@title",  # 标题
-                                          "href": "./td[2]/a/@onclick",  # 标题地址
-                                          "domainName_url": "https://www.cqggzy.com/",  # 拼接域名
+                                          "href": "./td[2]/a/@href | ./td[2]/a/@onclick",  # 标题地址
+                                          "domainName_url": "https://www.cqggzy.com",  # 拼接域名
                                           "li_area": "",  # 区域
                                           "isloopBytime": True,  # 是否控制时间循环
                                           "page_name": {"type": 3,
                                                         "style": "onclick",
                                                         "startNum": 1,
                                                         "onclick": [{"replaceKey": "count",
-                                                                     "button": "//*[@id='divInfoReportPage']/a[text()=count]",
+                                                                     "button": "//div[starts-with(@id,'moreinfo')][not(@style) or @style='']/div//a[text()=count]",#//*[@id="divInfoReportPage"]/a[last()-2]
                                                                      "params": []}
                                                                     ]
                                               ,
                                                         },
-                                          "number_xpath": '//*[@class="wb-page-item wb-page-number wb-page-family"]/span/text()',# 页数区域
+                                          "number_xpath": '//*[@id="moreinfo"]/div/ul/li[last()-3]/span/span/text()',# 页数区域
                                           "search": "",
                                           },
 
@@ -3233,7 +3248,7 @@ parameter = {
 
     # 安徽寰亚国际招投有限公司_2_23_1
     "anhuihuanyaguojizhaoyou_2_23_1": {"li": '//div[@class="TTXW_LIST"]/ul/li',  # 标题的上一级
-                                       "li_time": "./div[@class='u-date']",  # 时间
+                                       "li_time": "./div[@class='u-date']/span/text()",  # 时间
                                        "title": "./a/@title",  # 标题
                                        "href": "./a/@href",  # 标题地址
                                        "domainName_url": "http://www.ahhyzb.com.cn",  # 拼接域名
@@ -3285,7 +3300,7 @@ parameter = {
                                          "li_time": "./span/text()",  # 时间
                                          "title": "./a/@title",  # 标题
                                          "href": "./a/@href",  # 标题地址
-                                         "domainName_url": "http://www.zjzfcg.gov.cn",  # 拼接域名
+                                         "domainName_url": "",  # 拼接域名
                                          "li_area": "",  # 区域
                                          "isloopBytime": "True",  # 是否控制时间循环
                                          "page_name": {"type": 3,

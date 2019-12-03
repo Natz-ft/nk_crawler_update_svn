@@ -1261,3 +1261,691 @@ Message: unexpected alert open: {Alert text : 验证码错误，请重新输入验证码。}
 2019-11-21 15:45:49,351 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_0, 一共：0条
 2019-11-21 15:46:17,170 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_1, 一共：0条
 2019-11-21 16:00:10,031 - webcrawer service - INFO - 运行成功: yunnanshengzhengfucaigouwang_3_26_1, 一共：3条
+2019-11-28 00:00:05,509 - webcrawer service - INFO - current website is jincai_1
+2019-11-28 00:01:56,508 - webcrawer service - INFO - 运行成功: jincai_1, 一共：30条
+2019-11-28 00:01:56,508 - webcrawer service - INFO - current website is zhongguozhaobiaoyucaigouwang_3
+2019-11-28 04:08:33,421 - webcrawer service - INFO - 运行成功: zhongguozhaobiaoyucaigouwang_3, 一共：4163条
+2019-11-28 04:08:33,508 - webcrawer service - INFO - current website is zhongguozhengfucaigouwang_4
+2019-11-28 04:51:00,489 - webcrawer service - INFO - 运行成功: zhongguozhengfucaigouwang_4, 一共：381条
+2019-11-28 04:51:00,490 - webcrawer service - INFO - current website is zhongguoyidongcaigouyuzhaobiao_5_0
+2019-11-28 04:51:44,988 - webcrawer service - INFO - 运行成功: zhongguoyidongcaigouyuzhaobiao_5_0, 一共：3条
+2019-11-28 04:51:44,988 - webcrawer service - INFO - current website is guodianzhaobiaowang_7_0
+2019-11-28 04:51:59,119 - webcrawer service - INFO - 运行成功: guodianzhaobiaowang_7_0, 一共：0条
+2019-11-28 04:51:59,120 - webcrawer service - INFO - current website is beijingshizhengfu_8
+2019-11-28 04:53:55,656 - webcrawer service - INFO - 运行成功: beijingshizhengfu_8, 一共：9条
+2019-11-28 04:53:55,656 - webcrawer service - INFO - current website is zhonghuazhaobiao_9_0
+2019-11-28 04:54:28,128 - webcrawer service - INFO - 运行成功: zhonghuazhaobiao_9_0, 一共：1条
+2019-11-28 04:54:28,128 - webcrawer service - INFO - current website is renbao_10
+2019-11-28 04:54:40,855 - webcrawer service - INFO - 运行成功: renbao_10, 一共：0条
+2019-11-28 04:54:40,855 - webcrawer service - INFO - current website is guoshou_11
+2019-11-28 04:54:52,076 - webcrawer service - INFO - 运行成功: guoshou_11, 一共：0条
+2019-11-28 04:54:52,077 - webcrawer service - INFO - current website is anbang_12
+2019-11-28 04:55:03,386 - webcrawer service - INFO - 运行成功: anbang_12, 一共：0条
+2019-11-28 04:55:03,386 - webcrawer service - INFO - current website is taikang_13_0
+2019-11-28 04:55:32,420 - webcrawer service - INFO - 运行成功: taikang_13_0, 一共：3条
+2019-11-28 04:55:32,421 - webcrawer service - INFO - current website is changchengzichan_14
+2019-11-28 04:55:56,163 - webcrawer service - INFO - 运行成功: changchengzichan_14, 一共：1条
+2019-11-28 04:55:56,163 - webcrawer service - INFO - current website is xindazichan_15
+2019-11-28 04:56:12,271 - webcrawer service - INFO - 运行成功: xindazichan_15, 一共：0条
+2019-11-28 04:56:12,272 - webcrawer service - INFO - current website is yangguangbaoxian_16
+2019-11-28 04:56:23,208 - webcrawer service - INFO - 运行成功: yangguangbaoxian_16, 一共：0条
+2019-11-28 04:56:23,208 - webcrawer service - INFO - current website is chukouxinyongbaoxian_17
+2019-11-28 04:56:34,561 - webcrawer service - INFO - 运行成功: chukouxinyongbaoxian_17, 一共：0条
+2019-11-28 04:56:34,561 - webcrawer service - INFO - current website is huahai_18
+2019-11-28 04:56:46,515 - webcrawer service - INFO - 运行成功: huahai_18, 一共：0条
+2019-11-28 04:56:46,516 - webcrawer service - INFO - current website is zhongxinzhaobiao_19
+2019-11-28 04:57:36,299 - webcrawer service - INFO - 运行成功: zhongxinzhaobiao_19, 一共：9条
+2019-11-28 04:57:36,300 - webcrawer service - INFO - current website is zhongzhenxinxi_20
+2019-11-28 04:57:47,949 - webcrawer service - INFO - 运行成功: zhongzhenxinxi_20, 一共：0条
+2019-11-28 04:57:47,949 - webcrawer service - INFO - current website is guojiadianwang_21
+2019-11-28 04:58:17,517 - webcrawer service - INFO - 运行成功: guojiadianwang_21, 一共：1条
+2019-11-28 04:58:17,517 - webcrawer service - INFO - current website is guohang_22
+2019-11-28 04:58:45,933 - webcrawer service - INFO - 运行成功: guohang_22, 一共：1条
+2019-11-28 04:58:45,934 - webcrawer service - INFO - current website is youzheng_23_0
+2019-11-28 04:58:57,482 - webcrawer service - INFO - 运行成功: youzheng_23_0, 一共：0条
+2019-11-28 04:58:57,482 - webcrawer service - INFO - current website is tieta_24
+2019-11-28 04:59:06,215 - webcrawer service - INFO - 运行成功: tieta_24, 一共：0条
+2019-11-28 04:59:06,216 - webcrawer service - INFO - current website is zhongguodianzijinchukou_26
+2019-11-28 04:59:18,029 - webcrawer service - INFO - 运行成功: zhongguodianzijinchukou_26, 一共：0条
+2019-11-28 04:59:18,029 - webcrawer service - INFO - current website is zhongguodianwangzhucexinxi_27
+2019-11-28 04:59:30,808 - webcrawer service - INFO - 运行成功: zhongguodianwangzhucexinxi_27, 一共：0条
+2019-11-28 04:59:30,808 - webcrawer service - INFO - current website is chengEzhaobiao_28
+2019-11-28 05:00:32,704 - webcrawer service - INFO - 运行成功: chengEzhaobiao_28, 一共：7条
+2019-11-28 05:00:32,704 - webcrawer service - INFO - current website is neimengguzhaobiao_29_0
+2019-11-28 05:00:44,894 - webcrawer service - INFO - 运行成功: neimengguzhaobiao_29_0, 一共：0条
+2019-11-28 05:00:44,895 - webcrawer service - INFO - current website is zhonghuashangwupingtai_1_1_0
+2019-11-28 05:01:21,848 - webcrawer service - INFO - 运行成功: zhonghuashangwupingtai_1_1_0, 一共：1条
+2019-11-28 05:01:21,849 - webcrawer service - INFO - current website is zhonghuashangwupingtai_1_1_1
+2019-11-28 05:02:00,197 - webcrawer service - INFO - 运行成功: zhonghuashangwupingtai_1_1_1, 一共：3条
+2019-11-28 05:02:00,197 - webcrawer service - INFO - current website is zhongguorenminbaoxiancaigou_1_3_0
+2019-11-28 05:02:12,470 - webcrawer service - INFO - 运行成功: zhongguorenminbaoxiancaigou_1_3_0, 一共：0条
+2019-11-28 05:02:12,471 - webcrawer service - INFO - current website is qinglima_1_4_0
+2019-11-28 05:07:19,262 - webcrawer service - INFO - 运行成功: qinglima_1_4_0, 一共：42条
+2019-11-28 05:07:19,263 - webcrawer service - INFO - current website is qinglima_1_4_1
+2019-11-28 05:07:54,572 - webcrawer service - INFO - 运行成功: qinglima_1_4_1, 一共：0条
+2019-11-28 05:07:54,573 - webcrawer service - INFO - current website is shandongcaigouyuzhaobiao_1_6_0
+2019-11-28 05:08:50,072 - webcrawer service - INFO - 运行成功: shandongcaigouyuzhaobiao_1_6_0, 一共：4条
+2019-11-28 05:08:50,072 - webcrawer service - INFO - current website is shandongcaigouyuzhaobiao_1_6_1
+2019-11-28 05:09:45,094 - webcrawer service - INFO - 运行成功: shandongcaigouyuzhaobiao_1_6_1, 一共：6条
+2019-11-28 05:09:45,094 - webcrawer service - INFO - current website is shanxishenzhaobiaogonggongfuwupingtai_1_7_0
+2019-11-28 05:11:37,623 - webcrawer service - INFO - 运行成功: shanxishenzhaobiaogonggongfuwupingtai_1_7_0, 一共：7条
+2019-11-28 05:11:37,623 - webcrawer service - INFO - current website is shanxishenzhaobiaogonggongfuwupingtai_1_7_1
+2019-11-28 05:12:41,491 - webcrawer service - INFO - 运行成功: shanxishenzhaobiaogonggongfuwupingtai_1_7_1, 一共：3条
+2019-11-28 05:12:41,492 - webcrawer service - INFO - current website is zhongyuanzhaocai_1_8_0
+2019-11-28 05:13:06,350 - webcrawer service - INFO - 运行成功: zhongyuanzhaocai_1_8_0, 一共：0条
+2019-11-28 05:13:06,350 - webcrawer service - INFO - current website is zhongyuanzhaocai_1_8_1
+2019-11-28 05:13:31,059 - webcrawer service - INFO - 运行成功: zhongyuanzhaocai_1_8_1, 一共：0条
+2019-11-28 05:13:31,059 - webcrawer service - INFO - current website is heibeishenzhaobiaotoubiao_1_9_0
+2019-11-28 05:15:01,676 - webcrawer service - INFO - 运行成功: heibeishenzhaobiaotoubiao_1_9_0, 一共：15条
+2019-11-28 05:15:01,677 - webcrawer service - INFO - current website is heibeishengzhaobiaotoubiao_1_9_1
+2019-11-28 05:15:41,759 - webcrawer service - INFO - 运行成功: heibeishengzhaobiaotoubiao_1_9_1, 一共：3条
+2019-11-28 05:15:41,760 - webcrawer service - INFO - current website is heilongjiangcaigou_1_10_0
+2019-11-28 05:16:34,410 - webcrawer service - INFO - 运行成功: heilongjiangcaigou_1_10_0, 一共：3条
+2019-11-28 05:16:34,411 - webcrawer service - INFO - current website is jilinzhaobiao_1_11_0
+2019-11-28 05:17:16,219 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_0, 一共：0条
+2019-11-28 05:17:16,220 - webcrawer service - INFO - current website is jilinzhaobiao_1_11_1
+2019-11-28 05:17:53,748 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_1, 一共：0条
+2019-11-28 05:17:53,749 - webcrawer service - INFO - current website is liaoningzhaobiao_1_12_0
+2019-11-28 05:28:05,587 - webcrawer service - ERROR - 运行失败: liaoningzhaobiao_1_12_0
+2019-11-28 05:28:05,641 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 151, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test_login.py", line 113, in RunMain
+    driver = model.log_in_web(*login_infos)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 203, in log_in_web
+    self.cookie_info = self.driver.get_cookies()                 # 列表中包含多个字典
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 841, in get_cookies
+    return self.execute(Command.GET_ALL_COOKIES)['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: timeout
+  (Session info: headless chrome=76.0.3809.87)
+
+
+2019-11-28 05:28:05,641 - webcrawer service - INFO - current website is liaoningzhaobiao_1_12_1
+2019-11-28 05:33:36,489 - webcrawer service - INFO - 运行成功: liaoningzhaobiao_1_12_1, 一共：19条
+2019-11-28 05:33:36,489 - webcrawer service - INFO - current website is dalianzhaobiao_1_13_0
+2019-11-28 05:36:18,476 - webcrawer service - INFO - 运行成功: dalianzhaobiao_1_13_0, 一共：7条
+2019-11-28 05:36:18,477 - webcrawer service - INFO - current website is dalianzhaobiao_1_13_1
+2019-11-28 05:39:21,171 - webcrawer service - INFO - 运行成功: dalianzhaobiao_1_13_1, 一共：17条
+2019-11-28 05:39:21,172 - webcrawer service - INFO - current website is shanghaizhaobiao_1_14_0
+2019-11-28 05:39:59,121 - webcrawer service - INFO - 运行成功: shanghaizhaobiao_1_14_0, 一共：0条
+2019-11-28 05:39:59,121 - webcrawer service - INFO - current website is shanghaizhaobiao_1_14_1
+2019-11-28 05:40:36,498 - webcrawer service - INFO - 运行成功: shanghaizhaobiao_1_14_1, 一共：0条
+2019-11-28 05:40:36,498 - webcrawer service - INFO - current website is zhejiangzhaobiao_1_15_0
+2019-11-28 05:41:14,379 - webcrawer service - INFO - 运行成功: zhejiangzhaobiao_1_15_0, 一共：0条
+2019-11-28 05:41:14,379 - webcrawer service - INFO - current website is zhejiangzhaobiao_1_15_1
+2019-11-28 05:41:52,123 - webcrawer service - INFO - 运行成功: zhejiangzhaobiao_1_15_1, 一共：0条
+2019-11-28 05:41:52,123 - webcrawer service - INFO - current website is jiangsuzhaobiao_1_16_0
+2019-11-28 05:44:46,207 - webcrawer service - INFO - 运行成功: jiangsuzhaobiao_1_16_0, 一共：0条
+2019-11-28 05:44:46,208 - webcrawer service - INFO - current website is jiangsuzhaobiao_1_16_1
+2019-11-28 05:45:23,784 - webcrawer service - INFO - 运行成功: jiangsuzhaobiao_1_16_1, 一共：0条
+2019-11-28 05:45:23,785 - webcrawer service - INFO - current website is guangdongshenzhengfucaigou_1_17_0
+2019-11-28 05:47:30,830 - webcrawer service - INFO - 运行成功: guangdongshenzhengfucaigou_1_17_0, 一共：10条
+2019-11-28 05:47:30,830 - webcrawer service - INFO - current website is guangdongshenzhengfucaigou_1_17_1
+2019-11-28 05:49:52,327 - webcrawer service - INFO - 运行成功: guangdongshenzhengfucaigou_1_17_1, 一共：15条
+2019-11-28 05:49:52,328 - webcrawer service - INFO - current website is neimengguzizhiquzhengfucaigou
+2019-11-28 05:51:18,663 - webcrawer service - INFO - 运行成功: neimengguzizhiquzhengfucaigou, 一共：8条
+2019-11-28 05:51:18,663 - webcrawer service - INFO - current website is neimengguzizhiquzhengfucaigou_1
+2019-11-28 05:51:34,506 - webcrawer service - ERROR - 运行失败: neimengguzizhiquzhengfucaigou_1
+2019-11-28 05:51:34,557 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 151, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 145, in RunMain
+    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 259, in parse_url
+    params= url_param["params"]
+KeyError: 'params'
+
+2019-11-28 05:51:34,557 - webcrawer service - INFO - current website is fujianshengonggongziyuanjiaoyi_1_18_0
+2019-11-28 05:51:53,269 - webcrawer service - INFO - 运行成功: fujianshengonggongziyuanjiaoyi_1_18_0, 一共：0条
+2019-11-28 05:51:53,269 - webcrawer service - INFO - current website is guangxizhaobiao_1_19_0
+2019-11-28 05:52:21,363 - webcrawer service - INFO - 运行成功: guangxizhaobiao_1_19_0, 一共：1条
+2019-11-28 05:52:21,363 - webcrawer service - INFO - current website is guangxizhaobiao_1_19_1
+2019-11-28 05:52:37,172 - webcrawer service - INFO - 运行成功: guangxizhaobiao_1_19_1, 一共：0条
+2019-11-28 05:52:37,173 - webcrawer service - INFO - current website is hainanzhaobiao_1_20_0
+2019-11-28 05:54:38,938 - webcrawer service - INFO - 运行成功: hainanzhaobiao_1_20_0, 一共：5条
+2019-11-28 05:54:38,938 - webcrawer service - INFO - current website is hainanzhaobiao_1_20_1
+2019-11-28 05:55:53,931 - webcrawer service - INFO - 运行成功: hainanzhaobiao_1_20_1, 一共：2条
+2019-11-28 05:55:53,932 - webcrawer service - INFO - current website is shenzhenshiguojizhaobiao_1_21_0
+2019-11-28 05:56:10,135 - webcrawer service - INFO - 运行成功: shenzhenshiguojizhaobiao_1_21_0, 一共：0条
+2019-11-28 05:56:10,136 - webcrawer service - INFO - current website is shenzhenshiguojizhaobiao_1_21_1
+2019-11-28 05:56:41,325 - webcrawer service - INFO - 运行成功: shenzhenshiguojizhaobiao_1_21_1, 一共：2条
+2019-11-28 05:56:41,326 - webcrawer service - INFO - current website is hunanxiangzigongchengzixu_1_22_0
+2019-11-28 05:56:59,955 - webcrawer service - INFO - 运行成功: hunanxiangzigongchengzixu_1_22_0, 一共：0条
+2019-11-28 05:56:59,955 - webcrawer service - INFO - current website is hunanxiangzigongchengzixu_1_22_1
+2019-11-28 05:57:18,447 - webcrawer service - INFO - 运行成功: hunanxiangzigongchengzixu_1_22_1, 一共：0条
+2019-11-28 05:57:18,448 - webcrawer service - INFO - current website is anhuizhaobiao_sheng_1_23_0
+2019-11-28 05:57:31,839 - webcrawer service - INFO - 运行成功: anhuizhaobiao_sheng_1_23_0, 一共：0条
+2019-11-28 05:57:31,839 - webcrawer service - INFO - current website is anhuizhaobiao_shixian_1_23_0
+2019-11-28 05:57:52,276 - webcrawer service - INFO - 运行成功: anhuizhaobiao_shixian_1_23_0, 一共：0条
+2019-11-28 05:57:52,277 - webcrawer service - INFO - current website is anhuizhaobiao_shixian_1_23_1
+2019-11-28 05:58:11,249 - webcrawer service - INFO - 运行成功: anhuizhaobiao_shixian_1_23_1, 一共：0条
+2019-11-28 05:58:11,250 - webcrawer service - INFO - current website is jiangxijidianshebeizhaobiao_1_24_0
+2019-11-28 05:58:27,504 - webcrawer service - INFO - 运行成功: jiangxijidianshebeizhaobiao_1_24_0, 一共：0条
+2019-11-28 05:58:27,504 - webcrawer service - INFO - current website is jiangxijidianshebeizhaobiao_1_24_1
+2019-11-28 05:58:54,613 - webcrawer service - INFO - 运行成功: jiangxijidianshebeizhaobiao_1_24_1, 一共：1条
+2019-11-28 05:58:54,613 - webcrawer service - INFO - current website is guizhoushenggongongziyuanjiaoyi_1_25_0
+2019-11-28 05:59:38,652 - webcrawer service - INFO - 运行成功: guizhoushenggongongziyuanjiaoyi_1_25_0, 一共：2条
+2019-11-28 05:59:38,652 - webcrawer service - INFO - current website is guizhoushenggongongziyuanjiaoyi_1_25_1
+2019-11-28 06:00:13,535 - webcrawer service - INFO - 运行成功: guizhoushenggongongziyuanjiaoyi_1_25_1, 一共：1条
+2019-11-28 06:00:13,535 - webcrawer service - INFO - current website is yunnanshenggonggongziyuan_zhengfu_1_26_0
+2019-11-28 06:00:45,405 - webcrawer service - INFO - 运行成功: yunnanshenggonggongziyuan_zhengfu_1_26_0, 一共：1条
+2019-11-28 06:00:45,405 - webcrawer service - INFO - current website is yunnanshenggonggongziyuan_zhengfu_1_26_1
+2019-11-28 06:01:02,456 - webcrawer service - INFO - 运行成功: yunnanshenggonggongziyuan_zhengfu_1_26_1, 一共：0条
+2019-11-28 06:01:02,456 - webcrawer service - INFO - current website is chongqingshizhengfucaigou_1_27_0
+2019-11-28 06:01:40,373 - webcrawer service - ERROR - 运行失败: chongqingshizhengfucaigou_1_27_0
+2019-11-28 06:01:40,374 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 151, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 146, in RunMain
+    self.getUrlList(model, parame, html_str, original_url,isloopBytime)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 74, in getUrlList
+    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 264, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='notice']/div/div[3]/div[3]/ul/li/a[text()=6]"}
+  (Session info: headless chrome=76.0.3809.87)
+
+
+2019-11-28 06:01:40,376 - webcrawer service - INFO - current website is chongqingshizhengfucaigou_1_27_1
+2019-11-28 06:02:26,257 - webcrawer service - ERROR - 运行失败: chongqingshizhengfucaigou_1_27_1
+2019-11-28 06:02:26,257 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 151, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 146, in RunMain
+    self.getUrlList(model, parame, html_str, original_url,isloopBytime)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 74, in getUrlList
+    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 264, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='notice']/div/div[3]/div[3]/ul/li/a[text()=6]"}
+  (Session info: headless chrome=76.0.3809.87)
+
+
+2019-11-28 06:02:26,258 - webcrawer service - INFO - current website is zizangzizhiquzhengfucaigou_1_28_0
+2019-11-28 06:02:59,030 - webcrawer service - INFO - 运行成功: zizangzizhiquzhengfucaigou_1_28_0, 一共：1条
+2019-11-28 06:02:59,030 - webcrawer service - INFO - current website is shanxicaigouyuzhaobiao_1_30_0
+2019-11-28 06:03:33,212 - webcrawer service - INFO - 运行成功: shanxicaigouyuzhaobiao_1_30_0, 一共：2条
+2019-11-28 06:03:33,212 - webcrawer service - INFO - current website is shanxicaigouyuzhaobiao_1_30_1
+2019-11-28 06:03:48,968 - webcrawer service - INFO - 运行成功: shanxicaigouyuzhaobiao_1_30_1, 一共：0条
+2019-11-28 06:03:48,968 - webcrawer service - INFO - current website is gansuzhaobiao_1_31_0
+2019-11-28 06:04:26,888 - webcrawer service - INFO - 运行成功: gansuzhaobiao_1_31_0, 一共：0条
+2019-11-28 06:04:26,889 - webcrawer service - INFO - current website is gansuzhaobiao_1_31_1
+2019-11-28 06:05:05,111 - webcrawer service - INFO - 运行成功: gansuzhaobiao_1_31_1, 一共：0条
+2019-11-28 06:05:05,111 - webcrawer service - INFO - current website is xinjiangzhengfucaigou_1_32_0
+2019-11-28 06:05:38,551 - webcrawer service - INFO - 运行成功: xinjiangzhengfucaigou_1_32_0, 一共：1条
+2019-11-28 06:05:38,551 - webcrawer service - INFO - current website is xinjiangzhengfucaigou_1_32_1
+2019-11-28 06:06:32,754 - webcrawer service - INFO - 运行成功: xinjiangzhengfucaigou_1_32_1, 一共：2条
+2019-11-28 06:06:32,755 - webcrawer service - INFO - current website is sichuanzhaobiaocaigou_1_29_0
+2019-11-28 06:07:10,926 - webcrawer service - INFO - 运行成功: sichuanzhaobiaocaigou_1_29_0, 一共：0条
+2019-11-28 06:07:10,926 - webcrawer service - INFO - current website is sichuanzhaobiaocaigouxinxi_1_29_1
+2019-11-28 06:07:33,960 - webcrawer service - INFO - 运行成功: sichuanzhaobiaocaigouxinxi_1_29_1, 一共：0条
+2019-11-28 13:03:54,020 - webcrawer service - INFO - current website is jincai_1
+2019-11-28 13:08:27,393 - webcrawer service - INFO - current website is jincai_1
+2019-11-28 13:10:19,148 - webcrawer service - INFO - 运行成功: jincai_1, 一共：30条
+2019-11-28 13:10:19,148 - webcrawer service - INFO - current website is zhongguozhaobiaoyucaigouwang_3
+2019-11-29 00:00:05,173 - webcrawer service - INFO - current website is jincai_1
+2019-11-29 00:01:53,365 - webcrawer service - INFO - 运行成功: jincai_1, 一共：27条
+2019-11-29 00:01:53,365 - webcrawer service - INFO - current website is zhongguozhaobiaoyucaigouwang_3
+2019-11-29 03:32:09,216 - webcrawer service - INFO - 运行成功: zhongguozhaobiaoyucaigouwang_3, 一共：3401条
+2019-11-29 03:32:09,217 - webcrawer service - INFO - current website is zhongguozhengfucaigouwang_4
+2019-11-29 03:41:43,242 - webcrawer service - INFO - 运行成功: zhongguozhengfucaigouwang_4, 一共：71条
+2019-11-29 03:41:43,243 - webcrawer service - INFO - current website is zhongguoyidongcaigouyuzhaobiao_5_0
+2019-11-29 03:42:32,588 - webcrawer service - INFO - 运行成功: zhongguoyidongcaigouyuzhaobiao_5_0, 一共：6条
+2019-11-29 03:42:32,588 - webcrawer service - INFO - current website is guodianzhaobiaowang_7_0
+2019-11-29 03:42:44,445 - webcrawer service - INFO - 运行成功: guodianzhaobiaowang_7_0, 一共：0条
+2019-11-29 03:42:44,446 - webcrawer service - INFO - current website is beijingshizhengfu_8
+2019-11-29 03:44:50,693 - webcrawer service - INFO - 运行成功: beijingshizhengfu_8, 一共：10条
+2019-11-29 03:44:50,694 - webcrawer service - INFO - current website is zhonghuazhaobiao_9_0
+2019-11-29 03:45:45,625 - webcrawer service - INFO - 运行成功: zhonghuazhaobiao_9_0, 一共：5条
+2019-11-29 03:45:45,626 - webcrawer service - INFO - current website is renbao_10
+2019-11-29 03:45:58,003 - webcrawer service - INFO - 运行成功: renbao_10, 一共：0条
+2019-11-29 03:45:58,003 - webcrawer service - INFO - current website is guoshou_11
+2019-11-29 03:46:09,185 - webcrawer service - INFO - 运行成功: guoshou_11, 一共：0条
+2019-11-29 03:46:09,186 - webcrawer service - INFO - current website is anbang_12
+2019-11-29 03:46:20,574 - webcrawer service - INFO - 运行成功: anbang_12, 一共：0条
+2019-11-29 03:46:20,575 - webcrawer service - INFO - current website is taikang_13_0
+2019-11-29 03:46:31,893 - webcrawer service - INFO - 运行成功: taikang_13_0, 一共：0条
+2019-11-29 03:46:31,894 - webcrawer service - INFO - current website is changchengzichan_14
+2019-11-29 03:46:47,264 - webcrawer service - INFO - 运行成功: changchengzichan_14, 一共：0条
+2019-11-29 03:46:47,264 - webcrawer service - INFO - current website is xindazichan_15
+2019-11-29 03:47:03,420 - webcrawer service - INFO - 运行成功: xindazichan_15, 一共：0条
+2019-11-29 03:47:03,420 - webcrawer service - INFO - current website is yangguangbaoxian_16
+2019-11-29 03:47:14,283 - webcrawer service - INFO - 运行成功: yangguangbaoxian_16, 一共：0条
+2019-11-29 03:47:14,283 - webcrawer service - INFO - current website is chukouxinyongbaoxian_17
+2019-11-29 03:47:47,628 - webcrawer service - INFO - 运行成功: chukouxinyongbaoxian_17, 一共：2条
+2019-11-29 03:47:47,629 - webcrawer service - INFO - current website is huahai_18
+2019-11-29 03:47:59,506 - webcrawer service - INFO - 运行成功: huahai_18, 一共：0条
+2019-11-29 03:47:59,507 - webcrawer service - INFO - current website is zhongxinzhaobiao_19
+2019-11-29 03:48:29,531 - webcrawer service - INFO - 运行成功: zhongxinzhaobiao_19, 一共：1条
+2019-11-29 03:48:29,531 - webcrawer service - INFO - current website is zhongzhenxinxi_20
+2019-11-29 03:48:40,863 - webcrawer service - INFO - 运行成功: zhongzhenxinxi_20, 一共：0条
+2019-11-29 03:48:40,863 - webcrawer service - INFO - current website is guojiadianwang_21
+2019-11-29 03:48:56,636 - webcrawer service - INFO - 运行成功: guojiadianwang_21, 一共：0条
+2019-11-29 03:48:56,636 - webcrawer service - INFO - current website is guohang_22
+2019-11-29 03:49:12,756 - webcrawer service - INFO - 运行成功: guohang_22, 一共：0条
+2019-11-29 03:49:12,757 - webcrawer service - INFO - current website is youzheng_23_0
+2019-11-29 03:49:41,492 - webcrawer service - INFO - 运行成功: youzheng_23_0, 一共：1条
+2019-11-29 03:49:41,492 - webcrawer service - INFO - current website is tieta_24
+2019-11-29 03:49:55,243 - webcrawer service - INFO - 运行成功: tieta_24, 一共：0条
+2019-11-29 03:49:55,243 - webcrawer service - INFO - current website is zhongguodianzijinchukou_26
+2019-11-29 03:50:06,962 - webcrawer service - INFO - 运行成功: zhongguodianzijinchukou_26, 一共：0条
+2019-11-29 03:50:06,962 - webcrawer service - INFO - current website is zhongguodianwangzhucexinxi_27
+2019-11-29 03:50:34,453 - webcrawer service - INFO - 运行成功: zhongguodianwangzhucexinxi_27, 一共：1条
+2019-11-29 03:50:34,454 - webcrawer service - INFO - current website is chengEzhaobiao_28
+2019-11-29 03:51:30,471 - webcrawer service - INFO - 运行成功: chengEzhaobiao_28, 一共：8条
+2019-11-29 03:51:30,472 - webcrawer service - INFO - current website is neimengguzhaobiao_29_0
+2019-11-29 03:51:42,689 - webcrawer service - INFO - 运行成功: neimengguzhaobiao_29_0, 一共：0条
+2019-11-29 03:51:42,690 - webcrawer service - INFO - current website is zhonghuashangwupingtai_1_1_0
+2019-11-29 03:52:32,605 - webcrawer service - INFO - 运行成功: zhonghuashangwupingtai_1_1_0, 一共：5条
+2019-11-29 03:52:32,605 - webcrawer service - INFO - current website is zhonghuashangwupingtai_1_1_1
+2019-11-29 03:53:07,694 - webcrawer service - INFO - 运行成功: zhonghuashangwupingtai_1_1_1, 一共：2条
+2019-11-29 03:53:07,695 - webcrawer service - INFO - current website is zhongguorenminbaoxiancaigou_1_3_0
+2019-11-29 03:53:19,882 - webcrawer service - INFO - 运行成功: zhongguorenminbaoxiancaigou_1_3_0, 一共：0条
+2019-11-29 03:53:19,882 - webcrawer service - INFO - current website is qinglima_1_4_0
+2019-11-29 03:57:58,409 - webcrawer service - INFO - 运行成功: qinglima_1_4_0, 一共：39条
+2019-11-29 03:57:58,409 - webcrawer service - INFO - current website is qinglima_1_4_1
+2019-11-29 03:58:25,900 - webcrawer service - INFO - 运行成功: qinglima_1_4_1, 一共：0条
+2019-11-29 03:58:25,900 - webcrawer service - INFO - current website is shandongcaigouyuzhaobiao_1_6_0
+2019-11-29 03:59:21,113 - webcrawer service - INFO - 运行成功: shandongcaigouyuzhaobiao_1_6_0, 一共：4条
+2019-11-29 03:59:21,114 - webcrawer service - INFO - current website is shandongcaigouyuzhaobiao_1_6_1
+2019-11-29 04:00:05,902 - webcrawer service - INFO - 运行成功: shandongcaigouyuzhaobiao_1_6_1, 一共：3条
+2019-11-29 04:00:05,903 - webcrawer service - INFO - current website is shanxishenzhaobiaogonggongfuwupingtai_1_7_0
+2019-11-29 04:01:53,902 - webcrawer service - INFO - 运行成功: shanxishenzhaobiaogonggongfuwupingtai_1_7_0, 一共：11条
+2019-11-29 04:01:53,902 - webcrawer service - INFO - current website is shanxishenzhaobiaogonggongfuwupingtai_1_7_1
+2019-11-29 04:02:53,927 - webcrawer service - INFO - 运行成功: shanxishenzhaobiaogonggongfuwupingtai_1_7_1, 一共：6条
+2019-11-29 04:02:53,927 - webcrawer service - INFO - current website is zhongyuanzhaocai_1_8_0
+2019-11-29 04:03:21,630 - webcrawer service - INFO - 运行成功: zhongyuanzhaocai_1_8_0, 一共：0条
+2019-11-29 04:03:21,631 - webcrawer service - INFO - current website is zhongyuanzhaocai_1_8_1
+2019-11-29 04:03:47,955 - webcrawer service - INFO - 运行成功: zhongyuanzhaocai_1_8_1, 一共：0条
+2019-11-29 04:03:47,956 - webcrawer service - INFO - current website is heibeishenzhaobiaotoubiao_1_9_0
+2019-11-29 04:05:02,013 - webcrawer service - INFO - 运行成功: heibeishenzhaobiaotoubiao_1_9_0, 一共：10条
+2019-11-29 04:05:02,013 - webcrawer service - INFO - current website is heibeishengzhaobiaotoubiao_1_9_1
+2019-11-29 04:05:48,903 - webcrawer service - INFO - 运行成功: heibeishengzhaobiaotoubiao_1_9_1, 一共：4条
+2019-11-29 04:05:48,903 - webcrawer service - INFO - current website is heilongjiangcaigou_1_10_0
+2019-11-29 04:06:18,504 - webcrawer service - INFO - 运行成功: heilongjiangcaigou_1_10_0, 一共：0条
+2019-11-29 04:06:18,504 - webcrawer service - INFO - current website is jilinzhaobiao_1_11_0
+2019-11-29 04:06:58,217 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_0, 一共：0条
+2019-11-29 04:06:58,217 - webcrawer service - INFO - current website is jilinzhaobiao_1_11_1
+2019-11-29 04:07:35,782 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_1, 一共：0条
+2019-11-29 04:07:35,782 - webcrawer service - INFO - current website is liaoningzhaobiao_1_12_0
+2019-11-29 04:14:51,116 - webcrawer service - INFO - 运行成功: liaoningzhaobiao_1_12_0, 一共：32条
+2019-11-29 04:14:51,116 - webcrawer service - INFO - current website is liaoningzhaobiao_1_12_1
+2019-11-29 04:22:28,080 - webcrawer service - INFO - 运行成功: liaoningzhaobiao_1_12_1, 一共：12条
+2019-11-29 04:22:28,080 - webcrawer service - INFO - current website is dalianzhaobiao_1_13_0
+2019-11-29 04:25:11,435 - webcrawer service - INFO - 运行成功: dalianzhaobiao_1_13_0, 一共：12条
+2019-11-29 04:25:11,435 - webcrawer service - INFO - current website is dalianzhaobiao_1_13_1
+2019-11-29 04:26:57,763 - webcrawer service - INFO - 运行成功: dalianzhaobiao_1_13_1, 一共：4条
+2019-11-29 04:26:57,763 - webcrawer service - INFO - current website is shanghaizhaobiao_1_14_0
+2019-11-29 04:27:35,433 - webcrawer service - INFO - 运行成功: shanghaizhaobiao_1_14_0, 一共：0条
+2019-11-29 04:27:35,433 - webcrawer service - INFO - current website is shanghaizhaobiao_1_14_1
+2019-11-29 04:28:12,879 - webcrawer service - INFO - 运行成功: shanghaizhaobiao_1_14_1, 一共：0条
+2019-11-29 04:28:12,880 - webcrawer service - INFO - current website is zhejiangzhaobiao_1_15_0
+2019-11-29 04:28:50,418 - webcrawer service - INFO - 运行成功: zhejiangzhaobiao_1_15_0, 一共：0条
+2019-11-29 04:28:50,418 - webcrawer service - INFO - current website is zhejiangzhaobiao_1_15_1
+2019-11-29 04:29:27,899 - webcrawer service - INFO - 运行成功: zhejiangzhaobiao_1_15_1, 一共：0条
+2019-11-29 04:29:27,900 - webcrawer service - INFO - current website is jiangsuzhaobiao_1_16_0
+2019-11-29 04:30:05,447 - webcrawer service - INFO - 运行成功: jiangsuzhaobiao_1_16_0, 一共：0条
+2019-11-29 04:30:05,447 - webcrawer service - INFO - current website is jiangsuzhaobiao_1_16_1
+2019-11-29 04:30:42,717 - webcrawer service - INFO - 运行成功: jiangsuzhaobiao_1_16_1, 一共：0条
+2019-11-29 04:30:42,718 - webcrawer service - INFO - current website is guangdongshenzhengfucaigou_1_17_0
+2019-11-29 04:33:42,673 - webcrawer service - INFO - 运行成功: guangdongshenzhengfucaigou_1_17_0, 一共：8条
+2019-11-29 04:33:42,673 - webcrawer service - INFO - current website is guangdongshenzhengfucaigou_1_17_1
+2019-11-29 04:37:36,778 - webcrawer service - INFO - 运行成功: guangdongshenzhengfucaigou_1_17_1, 一共：13条
+2019-11-29 04:37:36,778 - webcrawer service - INFO - current website is neimengguzizhiquzhengfucaigou
+2019-11-29 04:38:53,261 - webcrawer service - INFO - 运行成功: neimengguzizhiquzhengfucaigou, 一共：3条
+2019-11-29 04:38:53,262 - webcrawer service - INFO - current website is neimengguzizhiquzhengfucaigou_1
+2019-11-29 04:39:09,857 - webcrawer service - ERROR - 运行失败: neimengguzizhiquzhengfucaigou_1
+2019-11-29 04:39:09,883 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 151, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 147, in RunMain
+    html_str = model.parse_url("",url_type=url_info["type"],url_params=url_info)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 298, in parse_url
+    params= url_param["params"]
+KeyError: 'params'
+
+2019-11-29 04:39:09,883 - webcrawer service - INFO - current website is fujianshengonggongziyuanjiaoyi_1_18_0
+2019-11-29 04:39:42,548 - webcrawer service - INFO - 运行成功: fujianshengonggongziyuanjiaoyi_1_18_0, 一共：0条
+2019-11-29 04:39:42,549 - webcrawer service - INFO - current website is guangxizhaobiao_1_19_0
+2019-11-29 04:39:58,609 - webcrawer service - INFO - 运行成功: guangxizhaobiao_1_19_0, 一共：0条
+2019-11-29 04:39:58,609 - webcrawer service - INFO - current website is guangxizhaobiao_1_19_1
+2019-11-29 04:40:14,543 - webcrawer service - INFO - 运行成功: guangxizhaobiao_1_19_1, 一共：0条
+2019-11-29 04:40:14,543 - webcrawer service - INFO - current website is hainanzhaobiao_1_20_0
+2019-11-29 04:43:03,163 - webcrawer service - INFO - 运行成功: hainanzhaobiao_1_20_0, 一共：10条
+2019-11-29 04:43:03,163 - webcrawer service - INFO - current website is hainanzhaobiao_1_20_1
+2019-11-29 04:45:24,158 - webcrawer service - INFO - 运行成功: hainanzhaobiao_1_20_1, 一共：2条
+2019-11-29 04:45:24,159 - webcrawer service - INFO - current website is shenzhenshiguojizhaobiao_1_21_0
+2019-11-29 04:46:08,687 - webcrawer service - INFO - 运行成功: shenzhenshiguojizhaobiao_1_21_0, 一共：1条
+2019-11-29 04:46:08,687 - webcrawer service - INFO - current website is shenzhenshiguojizhaobiao_1_21_1
+2019-11-29 04:46:38,717 - webcrawer service - INFO - 运行成功: shenzhenshiguojizhaobiao_1_21_1, 一共：1条
+2019-11-29 04:46:38,717 - webcrawer service - INFO - current website is hunanxiangzigongchengzixu_1_22_0
+2019-11-29 04:46:57,500 - webcrawer service - INFO - 运行成功: hunanxiangzigongchengzixu_1_22_0, 一共：0条
+2019-11-29 04:46:57,500 - webcrawer service - INFO - current website is hunanxiangzigongchengzixu_1_22_1
+2019-11-29 04:47:16,067 - webcrawer service - INFO - 运行成功: hunanxiangzigongchengzixu_1_22_1, 一共：0条
+2019-11-29 04:47:16,067 - webcrawer service - INFO - current website is anhuizhaobiao_sheng_1_23_0
+2019-11-29 04:47:29,519 - webcrawer service - INFO - 运行成功: anhuizhaobiao_sheng_1_23_0, 一共：0条
+2019-11-29 04:47:29,520 - webcrawer service - INFO - current website is anhuizhaobiao_shixian_1_23_0
+2019-11-29 04:48:10,508 - webcrawer service - INFO - 运行成功: anhuizhaobiao_shixian_1_23_0, 一共：1条
+2019-11-29 04:48:10,508 - webcrawer service - INFO - current website is anhuizhaobiao_shixian_1_23_1
+2019-11-29 04:48:23,150 - webcrawer service - INFO - 运行成功: anhuizhaobiao_shixian_1_23_1, 一共：0条
+2019-11-29 04:48:23,151 - webcrawer service - INFO - current website is jiangxijidianshebeizhaobiao_1_24_0
+2019-11-29 04:48:50,440 - webcrawer service - INFO - 运行成功: jiangxijidianshebeizhaobiao_1_24_0, 一共：1条
+2019-11-29 04:48:50,441 - webcrawer service - INFO - current website is jiangxijidianshebeizhaobiao_1_24_1
+2019-11-29 04:49:06,503 - webcrawer service - INFO - 运行成功: jiangxijidianshebeizhaobiao_1_24_1, 一共：0条
+2019-11-29 04:49:06,504 - webcrawer service - INFO - current website is guizhoushenggongongziyuanjiaoyi_1_25_0
+2019-11-29 04:49:44,661 - webcrawer service - INFO - 运行成功: guizhoushenggongongziyuanjiaoyi_1_25_0, 一共：2条
+2019-11-29 04:49:44,661 - webcrawer service - INFO - current website is guizhoushenggongongziyuanjiaoyi_1_25_1
+2019-11-29 04:50:07,576 - webcrawer service - INFO - 运行成功: guizhoushenggongongziyuanjiaoyi_1_25_1, 一共：0条
+2019-11-29 04:50:07,576 - webcrawer service - INFO - current website is yunnanshenggonggongziyuan_zhengfu_1_26_0
+2019-11-29 04:50:24,856 - webcrawer service - INFO - 运行成功: yunnanshenggonggongziyuan_zhengfu_1_26_0, 一共：0条
+2019-11-29 04:50:24,857 - webcrawer service - INFO - current website is yunnanshenggonggongziyuan_zhengfu_1_26_1
+2019-11-29 04:50:41,825 - webcrawer service - INFO - 运行成功: yunnanshenggonggongziyuan_zhengfu_1_26_1, 一共：0条
+2019-11-29 04:50:41,826 - webcrawer service - INFO - current website is chongqingshizhengfucaigou_1_27_0
+2019-11-29 04:51:21,376 - webcrawer service - ERROR - 运行失败: chongqingshizhengfucaigou_1_27_0
+2019-11-29 04:51:21,505 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 151, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 148, in RunMain
+    self.getUrlList(model, parame, html_str, original_url,isloopBytime)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 76, in getUrlList
+    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 303, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='notice']/div/div[3]/div[3]/ul/li/a[text()=6]"}
+  (Session info: headless chrome=76.0.3809.87)
+
+
+2019-11-29 04:51:21,506 - webcrawer service - INFO - current website is chongqingshizhengfucaigou_1_27_1
+2019-11-29 04:52:06,023 - webcrawer service - ERROR - 运行失败: chongqingshizhengfucaigou_1_27_1
+2019-11-29 04:52:06,024 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline_test.py", line 151, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 148, in RunMain
+    self.getUrlList(model, parame, html_str, original_url,isloopBytime)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 76, in getUrlList
+    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 303, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='notice']/div/div[3]/div[3]/ul/li/a[text()=6]"}
+  (Session info: headless chrome=76.0.3809.87)
+
+
+2019-11-29 04:52:06,025 - webcrawer service - INFO - current website is zizangzizhiquzhengfucaigou_1_28_0
+2019-11-29 04:52:38,648 - webcrawer service - INFO - 运行成功: zizangzizhiquzhengfucaigou_1_28_0, 一共：1条
+2019-11-29 04:52:38,648 - webcrawer service - INFO - current website is shanxicaigouyuzhaobiao_1_30_0
+2019-11-29 04:53:13,643 - webcrawer service - INFO - 运行成功: shanxicaigouyuzhaobiao_1_30_0, 一共：2条
+2019-11-29 04:53:13,644 - webcrawer service - INFO - current website is shanxicaigouyuzhaobiao_1_30_1
+2019-11-29 04:53:29,277 - webcrawer service - INFO - 运行成功: shanxicaigouyuzhaobiao_1_30_1, 一共：0条
+2019-11-29 04:53:29,277 - webcrawer service - INFO - current website is gansuzhaobiao_1_31_0
+2019-11-29 04:54:06,619 - webcrawer service - INFO - 运行成功: gansuzhaobiao_1_31_0, 一共：0条
+2019-11-29 04:54:06,620 - webcrawer service - INFO - current website is gansuzhaobiao_1_31_1
+2019-11-29 04:54:44,441 - webcrawer service - INFO - 运行成功: gansuzhaobiao_1_31_1, 一共：0条
+2019-11-29 04:54:44,442 - webcrawer service - INFO - current website is xinjiangzhengfucaigou_1_32_0
+2019-11-29 04:55:23,501 - webcrawer service - INFO - 运行成功: xinjiangzhengfucaigou_1_32_0, 一共：2条
+2019-11-29 04:55:23,501 - webcrawer service - INFO - current website is xinjiangzhengfucaigou_1_32_1
+2019-11-29 04:56:16,572 - webcrawer service - INFO - 运行成功: xinjiangzhengfucaigou_1_32_1, 一共：4条
+2019-11-29 04:56:16,572 - webcrawer service - INFO - current website is sichuanzhaobiaocaigou_1_29_0
+2019-11-29 04:56:51,576 - webcrawer service - INFO - 运行成功: sichuanzhaobiaocaigou_1_29_0, 一共：0条
+2019-11-29 04:56:51,576 - webcrawer service - INFO - current website is sichuanzhaobiaocaigouxinxi_1_29_1
+2019-11-29 04:57:14,146 - webcrawer service - INFO - 运行成功: sichuanzhaobiaocaigouxinxi_1_29_1, 一共：0条
+2019-11-29 11:05:45,341 - webcrawer service - INFO - current website is jincai_1
+2019-11-29 11:06:24,001 - webcrawer service - INFO - current website is jincai_1
+2019-11-29 11:08:04,178 - webcrawer service - INFO - 运行成功: jincai_1, 一共：27条
+2019-11-29 11:08:04,178 - webcrawer service - INFO - current website is zhongguozhengfucaigouwang_4
+2019-11-29 11:16:02,105 - webcrawer service - INFO - 运行成功: zhongguozhengfucaigouwang_4, 一共：62条
+2019-11-29 11:16:02,105 - webcrawer service - INFO - current website is zhongguoyidongcaigouyuzhaobiao_5_0
+2019-11-29 11:16:56,515 - webcrawer service - INFO - 运行成功: zhongguoyidongcaigouyuzhaobiao_5_0, 一共：6条
+2019-11-29 11:16:56,515 - webcrawer service - INFO - current website is guodianzhaobiaowang_7_0
+2019-11-29 11:17:11,498 - webcrawer service - INFO - 运行成功: guodianzhaobiaowang_7_0, 一共：0条
+2019-11-29 11:17:11,499 - webcrawer service - INFO - current website is beijingshizhengfu_8
+2019-11-29 11:19:27,854 - webcrawer service - INFO - 运行成功: beijingshizhengfu_8, 一共：10条
+2019-11-29 11:19:27,855 - webcrawer service - INFO - current website is zhonghuazhaobiao_9_0
+2019-11-29 11:20:15,088 - webcrawer service - INFO - 运行成功: zhonghuazhaobiao_9_0, 一共：5条
+2019-11-29 11:20:15,089 - webcrawer service - INFO - current website is renbao_10
+2019-11-29 11:20:32,787 - webcrawer service - INFO - 运行成功: renbao_10, 一共：0条
+2019-11-29 11:20:32,788 - webcrawer service - INFO - current website is guoshou_11
+2019-11-29 11:20:47,750 - webcrawer service - INFO - 运行成功: guoshou_11, 一共：0条
+2019-11-29 11:20:47,751 - webcrawer service - INFO - current website is anbang_12
+2019-11-29 11:21:00,838 - webcrawer service - INFO - 运行成功: anbang_12, 一共：0条
+2019-11-29 11:21:00,838 - webcrawer service - INFO - current website is taikang_13_0
+2019-11-29 11:21:15,668 - webcrawer service - INFO - 运行成功: taikang_13_0, 一共：0条
+2019-11-29 11:21:15,669 - webcrawer service - INFO - current website is changchengzichan_14
+2019-11-29 11:21:46,010 - webcrawer service - INFO - 运行成功: changchengzichan_14, 一共：0条
+2019-11-29 11:21:46,011 - webcrawer service - INFO - current website is xindazichan_15
+2019-11-29 11:22:38,364 - webcrawer service - INFO - 运行成功: xindazichan_15, 一共：0条
+2019-11-29 11:22:38,365 - webcrawer service - INFO - current website is yangguangbaoxian_16
+2019-11-29 11:22:49,969 - webcrawer service - INFO - 运行成功: yangguangbaoxian_16, 一共：0条
+2019-11-29 11:22:49,969 - webcrawer service - INFO - current website is chukouxinyongbaoxian_17
+2019-11-29 11:23:33,435 - webcrawer service - INFO - 运行成功: chukouxinyongbaoxian_17, 一共：2条
+2019-11-29 11:23:33,436 - webcrawer service - INFO - current website is huahai_18
+2019-11-29 11:23:48,520 - webcrawer service - INFO - 运行成功: huahai_18, 一共：0条
+2019-11-29 11:23:48,521 - webcrawer service - INFO - current website is zhongxinzhaobiao_19
+2019-11-29 11:24:20,065 - webcrawer service - INFO - 运行成功: zhongxinzhaobiao_19, 一共：1条
+2019-11-29 11:24:20,065 - webcrawer service - INFO - current website is zhongzhenxinxi_20
+2019-11-29 11:24:37,584 - webcrawer service - INFO - 运行成功: zhongzhenxinxi_20, 一共：0条
+2019-11-29 11:24:37,584 - webcrawer service - INFO - current website is guojiadianwang_21
+2019-11-29 11:24:57,723 - webcrawer service - INFO - 运行成功: guojiadianwang_21, 一共：0条
+2019-11-29 11:24:57,723 - webcrawer service - INFO - current website is guohang_22
+2019-11-29 11:25:17,999 - webcrawer service - INFO - 运行成功: guohang_22, 一共：0条
+2019-11-29 11:25:17,999 - webcrawer service - INFO - current website is youzheng_23_0
+2019-11-29 11:25:50,455 - webcrawer service - INFO - 运行成功: youzheng_23_0, 一共：1条
+2019-11-29 11:25:50,455 - webcrawer service - INFO - current website is tieta_24
+2019-11-29 11:26:05,006 - webcrawer service - INFO - 运行成功: tieta_24, 一共：0条
+2019-11-29 11:26:05,006 - webcrawer service - INFO - current website is zhongguodianzijinchukou_26
+2019-11-29 11:26:17,072 - webcrawer service - INFO - 运行成功: zhongguodianzijinchukou_26, 一共：0条
+2019-11-29 11:26:17,072 - webcrawer service - INFO - current website is zhongguodianwangzhucexinxi_27
+2019-11-29 11:26:51,634 - webcrawer service - INFO - 运行成功: zhongguodianwangzhucexinxi_27, 一共：1条
+2019-11-29 11:26:51,634 - webcrawer service - INFO - current website is chengEzhaobiao_28
+2019-11-29 11:27:53,287 - webcrawer service - INFO - 运行成功: chengEzhaobiao_28, 一共：8条
+2019-11-29 11:27:53,287 - webcrawer service - INFO - current website is neimengguzhaobiao_29_0
+2019-11-29 11:28:21,556 - webcrawer service - INFO - 运行成功: neimengguzhaobiao_29_0, 一共：0条
+2019-11-29 11:28:21,556 - webcrawer service - INFO - current website is zhonghuashangwupingtai_1_1_0
+2019-11-29 11:29:17,020 - webcrawer service - INFO - 运行成功: zhonghuashangwupingtai_1_1_0, 一共：5条
+2019-11-29 11:29:17,020 - webcrawer service - INFO - current website is zhonghuashangwupingtai_1_1_1
+2019-11-29 11:29:59,206 - webcrawer service - INFO - 运行成功: zhonghuashangwupingtai_1_1_1, 一共：2条
+2019-11-29 11:29:59,206 - webcrawer service - INFO - current website is zhongguorenminbaoxiancaigou_1_3_0
+2019-11-29 11:30:13,320 - webcrawer service - INFO - 运行成功: zhongguorenminbaoxiancaigou_1_3_0, 一共：0条
+2019-11-29 11:30:13,320 - webcrawer service - INFO - current website is qinglima_1_4_0
+2019-11-29 11:35:02,765 - webcrawer service - INFO - 运行成功: qinglima_1_4_0, 一共：39条
+2019-11-29 11:35:02,765 - webcrawer service - INFO - current website is qinglima_1_4_1
+2019-11-29 11:35:40,242 - webcrawer service - INFO - 运行成功: qinglima_1_4_1, 一共：0条
+2019-11-29 11:35:40,242 - webcrawer service - INFO - current website is shandongcaigouyuzhaobiao_1_6_0
+2019-11-29 11:36:51,140 - webcrawer service - INFO - 运行成功: shandongcaigouyuzhaobiao_1_6_0, 一共：4条
+2019-11-29 11:36:51,141 - webcrawer service - INFO - current website is shandongcaigouyuzhaobiao_1_6_1
+2019-11-29 11:37:40,522 - webcrawer service - INFO - 运行成功: shandongcaigouyuzhaobiao_1_6_1, 一共：3条
+2019-11-29 11:37:40,522 - webcrawer service - INFO - current website is shanxishenzhaobiaogonggongfuwupingtai_1_7_0
+2019-11-29 11:40:11,698 - webcrawer service - INFO - 运行成功: shanxishenzhaobiaogonggongfuwupingtai_1_7_0, 一共：11条
+2019-11-29 11:40:11,699 - webcrawer service - INFO - current website is shanxishenzhaobiaogonggongfuwupingtai_1_7_1
+2019-11-29 11:41:31,802 - webcrawer service - INFO - 运行成功: shanxishenzhaobiaogonggongfuwupingtai_1_7_1, 一共：6条
+2019-11-29 11:41:31,803 - webcrawer service - INFO - current website is zhongyuanzhaocai_1_8_0
+2019-11-29 11:42:01,335 - webcrawer service - INFO - 运行成功: zhongyuanzhaocai_1_8_0, 一共：0条
+2019-11-29 11:42:01,335 - webcrawer service - INFO - current website is zhongyuanzhaocai_1_8_1
+2019-11-29 11:42:30,690 - webcrawer service - INFO - 运行成功: zhongyuanzhaocai_1_8_1, 一共：0条
+2019-11-29 11:42:30,691 - webcrawer service - INFO - current website is heibeishenzhaobiaotoubiao_1_9_0
+2019-11-29 11:43:49,936 - webcrawer service - INFO - 运行成功: heibeishenzhaobiaotoubiao_1_9_0, 一共：10条
+2019-11-29 11:43:49,936 - webcrawer service - INFO - current website is heibeishengzhaobiaotoubiao_1_9_1
+2019-11-29 11:44:40,226 - webcrawer service - INFO - 运行成功: heibeishengzhaobiaotoubiao_1_9_1, 一共：4条
+2019-11-29 11:44:40,227 - webcrawer service - INFO - current website is heilongjiangcaigou_1_10_0
+2019-11-29 11:45:13,270 - webcrawer service - INFO - 运行成功: heilongjiangcaigou_1_10_0, 一共：0条
+2019-11-29 11:45:13,271 - webcrawer service - INFO - current website is jilinzhaobiao_1_11_0
+2019-11-29 11:45:54,035 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_0, 一共：0条
+2019-11-29 11:45:54,035 - webcrawer service - INFO - current website is jilinzhaobiao_1_11_1
+2019-11-29 11:46:33,122 - webcrawer service - INFO - 运行成功: jilinzhaobiao_1_11_1, 一共：0条
+2019-11-29 11:46:33,122 - webcrawer service - INFO - current website is liaoningzhaobiao_1_12_0
+2019-11-29 11:54:25,121 - webcrawer service - INFO - 运行成功: liaoningzhaobiao_1_12_0, 一共：32条
+2019-11-29 11:54:25,122 - webcrawer service - INFO - current website is liaoningzhaobiao_1_12_1
+2019-11-29 12:00:06,743 - webcrawer service - INFO - 运行成功: liaoningzhaobiao_1_12_1, 一共：14条
+2019-11-29 12:00:06,743 - webcrawer service - INFO - current website is dalianzhaobiao_1_13_0
+2019-11-29 12:02:52,561 - webcrawer service - INFO - 运行成功: dalianzhaobiao_1_13_0, 一共：14条
+2019-11-29 12:02:52,561 - webcrawer service - INFO - current website is dalianzhaobiao_1_13_1
+2019-11-29 12:04:49,730 - webcrawer service - INFO - 运行成功: dalianzhaobiao_1_13_1, 一共：4条
+2019-11-29 12:04:49,731 - webcrawer service - INFO - current website is shanghaizhaobiao_1_14_0
+2019-11-29 12:05:29,180 - webcrawer service - INFO - 运行成功: shanghaizhaobiao_1_14_0, 一共：0条
+2019-11-29 12:05:29,181 - webcrawer service - INFO - current website is shanghaizhaobiao_1_14_1
+2019-11-29 12:06:27,734 - webcrawer service - INFO - 运行成功: shanghaizhaobiao_1_14_1, 一共：0条
+2019-11-29 12:06:27,734 - webcrawer service - INFO - current website is zhejiangzhaobiao_1_15_0
+2019-11-29 12:07:05,416 - webcrawer service - INFO - 运行成功: zhejiangzhaobiao_1_15_0, 一共：0条
+2019-11-29 12:07:05,416 - webcrawer service - INFO - current website is zhejiangzhaobiao_1_15_1
+2019-11-29 12:07:45,034 - webcrawer service - INFO - 运行成功: zhejiangzhaobiao_1_15_1, 一共：0条
+2019-11-29 12:07:45,035 - webcrawer service - INFO - current website is jiangsuzhaobiao_1_16_0
+2019-11-29 12:08:24,065 - webcrawer service - INFO - 运行成功: jiangsuzhaobiao_1_16_0, 一共：0条
+2019-11-29 12:08:24,066 - webcrawer service - INFO - current website is jiangsuzhaobiao_1_16_1
+2019-11-29 12:09:02,456 - webcrawer service - INFO - 运行成功: jiangsuzhaobiao_1_16_1, 一共：0条
+2019-11-29 12:09:02,457 - webcrawer service - INFO - current website is guangdongshenzhengfucaigou_1_17_0
+2019-11-29 12:10:27,779 - webcrawer service - INFO - 运行成功: guangdongshenzhengfucaigou_1_17_0, 一共：1条
+2019-11-29 12:10:27,779 - webcrawer service - INFO - current website is guangdongshenzhengfucaigou_1_17_1
+2019-11-29 12:14:16,341 - webcrawer service - INFO - 运行成功: guangdongshenzhengfucaigou_1_17_1, 一共：13条
+2019-11-29 12:14:16,342 - webcrawer service - INFO - current website is neimengguzizhiquzhengfucaigou
+2019-11-29 12:15:49,481 - webcrawer service - INFO - 运行成功: neimengguzizhiquzhengfucaigou, 一共：3条
+2019-11-29 12:15:49,481 - webcrawer service - INFO - current website is neimengguzizhiquzhengfucaigou_1
+2019-11-29 12:17:19,464 - webcrawer service - INFO - 运行成功: neimengguzizhiquzhengfucaigou_1, 一共：6条
+2019-11-29 12:17:19,464 - webcrawer service - INFO - current website is fujianshengonggongziyuanjiaoyi_1_18_0
+2019-11-29 12:18:00,868 - webcrawer service - INFO - 运行成功: fujianshengonggongziyuanjiaoyi_1_18_0, 一共：0条
+2019-11-29 12:18:00,869 - webcrawer service - INFO - current website is guangxizhaobiao_1_19_0
+2019-11-29 12:18:17,273 - webcrawer service - INFO - 运行成功: guangxizhaobiao_1_19_0, 一共：0条
+2019-11-29 12:18:17,274 - webcrawer service - INFO - current website is guangxizhaobiao_1_19_1
+2019-11-29 12:18:35,800 - webcrawer service - INFO - 运行成功: guangxizhaobiao_1_19_1, 一共：0条
+2019-11-29 12:18:35,800 - webcrawer service - INFO - current website is hainanzhaobiao_1_20_0
+2019-11-29 12:21:42,223 - webcrawer service - INFO - 运行成功: hainanzhaobiao_1_20_0, 一共：13条
+2019-11-29 12:21:42,224 - webcrawer service - INFO - current website is hainanzhaobiao_1_20_1
+2019-11-29 12:23:25,330 - webcrawer service - INFO - 运行成功: hainanzhaobiao_1_20_1, 一共：2条
+2019-11-29 12:23:25,330 - webcrawer service - INFO - current website is shenzhenshiguojizhaobiao_1_21_0
+2019-11-29 12:24:11,136 - webcrawer service - INFO - 运行成功: shenzhenshiguojizhaobiao_1_21_0, 一共：1条
+2019-11-29 12:24:11,136 - webcrawer service - INFO - current website is shenzhenshiguojizhaobiao_1_21_1
+2019-11-29 12:24:46,079 - webcrawer service - INFO - 运行成功: shenzhenshiguojizhaobiao_1_21_1, 一共：1条
+2019-11-29 12:24:46,079 - webcrawer service - INFO - current website is hunanxiangzigongchengzixu_1_22_0
+2019-11-29 12:25:06,514 - webcrawer service - INFO - 运行成功: hunanxiangzigongchengzixu_1_22_0, 一共：0条
+2019-11-29 12:25:06,514 - webcrawer service - INFO - current website is hunanxiangzigongchengzixu_1_22_1
+2019-11-29 12:25:39,954 - webcrawer service - INFO - 运行成功: hunanxiangzigongchengzixu_1_22_1, 一共：0条
+2019-11-29 12:25:39,954 - webcrawer service - INFO - current website is anhuizhaobiao_sheng_1_23_0
+2019-11-29 12:25:54,467 - webcrawer service - INFO - 运行成功: anhuizhaobiao_sheng_1_23_0, 一共：0条
+2019-11-29 12:25:54,467 - webcrawer service - INFO - current website is anhuizhaobiao_shixian_1_23_0
+2019-11-29 12:26:42,735 - webcrawer service - INFO - 运行成功: anhuizhaobiao_shixian_1_23_0, 一共：1条
+2019-11-29 12:26:42,735 - webcrawer service - INFO - current website is anhuizhaobiao_shixian_1_23_1
+2019-11-29 12:27:02,472 - webcrawer service - INFO - 运行成功: anhuizhaobiao_shixian_1_23_1, 一共：0条
+2019-11-29 12:27:02,472 - webcrawer service - INFO - current website is jiangxijidianshebeizhaobiao_1_24_0
+2019-11-29 12:27:33,571 - webcrawer service - INFO - 运行成功: jiangxijidianshebeizhaobiao_1_24_0, 一共：1条
+2019-11-29 12:27:33,571 - webcrawer service - INFO - current website is jiangxijidianshebeizhaobiao_1_24_1
+2019-11-29 12:27:51,180 - webcrawer service - INFO - 运行成功: jiangxijidianshebeizhaobiao_1_24_1, 一共：0条
+2019-11-29 12:27:51,180 - webcrawer service - INFO - current website is guizhoushenggongongziyuanjiaoyi_1_25_0
+2019-11-29 12:28:30,720 - webcrawer service - INFO - 运行成功: guizhoushenggongongziyuanjiaoyi_1_25_0, 一共：2条
+2019-11-29 12:28:30,720 - webcrawer service - INFO - current website is guizhoushenggongongziyuanjiaoyi_1_25_1
+2019-11-29 12:28:53,622 - webcrawer service - INFO - 运行成功: guizhoushenggongongziyuanjiaoyi_1_25_1, 一共：0条
+2019-11-29 12:28:53,622 - webcrawer service - INFO - current website is yunnanshenggonggongziyuan_zhengfu_1_26_0
+2019-11-29 12:29:11,004 - webcrawer service - INFO - 运行成功: yunnanshenggonggongziyuan_zhengfu_1_26_0, 一共：0条
+2019-11-29 12:29:11,004 - webcrawer service - INFO - current website is yunnanshenggonggongziyuan_zhengfu_1_26_1
+2019-11-29 12:29:29,223 - webcrawer service - INFO - 运行成功: yunnanshenggonggongziyuan_zhengfu_1_26_1, 一共：0条
+2019-11-29 12:29:29,223 - webcrawer service - INFO - current website is chongqingshizhengfucaigou_1_27_0
+2019-11-29 12:30:11,048 - webcrawer service - ERROR - 运行失败: chongqingshizhengfucaigou_1_27_0
+2019-11-29 12:30:11,050 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline.py", line 149, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 148, in RunMain
+    self.getUrlList(model, parame, html_str, original_url,isloopBytime)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 76, in getUrlList
+    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 303, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='notice']/div/div[3]/div[3]/ul/li/a[text()=6]"}
+  (Session info: headless chrome=76.0.3809.87)
+
+
+2019-11-29 12:30:11,051 - webcrawer service - INFO - current website is chongqingshizhengfucaigou_1_27_1
+2019-11-29 12:31:00,280 - webcrawer service - ERROR - 运行失败: chongqingshizhengfucaigou_1_27_1
+2019-11-29 12:31:00,280 - webcrawer service - ERROR - Traceback (most recent call last):
+  File "D:/crawler/Web_crawler/new_Crawler/try_pipeline.py", line 149, in Pipeline
+    result = testClass.RunMain(text["original_url"], self.key_array, key,vericode)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 148, in RunMain
+    self.getUrlList(model, parame, html_str, original_url,isloopBytime)
+  File "D:\crawler\Web_crawler\new_Crawler\test.py", line 76, in getUrlList
+    html_str = model.parse_url("",url_type=original_url,url_params=tmp_parame)
+  File "D:\crawler\Web_crawler\new_Crawler\CrawlerModule.py", line 303, in parse_url
+    self.driver.find_element_by_xpath(url_param["button"]).click()
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yuele\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='notice']/div/div[3]/div[3]/ul/li/a[text()=6]"}
+  (Session info: headless chrome=76.0.3809.87)
+
+
+2019-11-29 12:31:00,281 - webcrawer service - INFO - current website is zizangzizhiquzhengfucaigou_1_28_0
+2019-11-29 12:31:43,067 - webcrawer service - INFO - 运行成功: zizangzizhiquzhengfucaigou_1_28_0, 一共：1条
+2019-11-29 12:31:43,067 - webcrawer service - INFO - current website is shanxicaigouyuzhaobiao_1_30_0
+2019-11-29 12:32:16,187 - webcrawer service - INFO - 运行成功: shanxicaigouyuzhaobiao_1_30_0, 一共：2条
+2019-11-29 12:32:16,187 - webcrawer service - INFO - current website is shanxicaigouyuzhaobiao_1_30_1
+2019-11-29 12:32:31,674 - webcrawer service - INFO - 运行成功: shanxicaigouyuzhaobiao_1_30_1, 一共：0条
+2019-11-29 12:32:31,674 - webcrawer service - INFO - current website is gansuzhaobiao_1_31_0
+2019-11-29 12:33:09,725 - webcrawer service - INFO - 运行成功: gansuzhaobiao_1_31_0, 一共：0条
+2019-11-29 12:33:09,725 - webcrawer service - INFO - current website is gansuzhaobiao_1_31_1
+2019-11-29 12:33:47,681 - webcrawer service - INFO - 运行成功: gansuzhaobiao_1_31_1, 一共：0条
+2019-11-29 12:33:47,681 - webcrawer service - INFO - current website is xinjiangzhengfucaigou_1_32_0
+2019-11-29 12:34:28,820 - webcrawer service - INFO - 运行成功: xinjiangzhengfucaigou_1_32_0, 一共：2条
+2019-11-29 12:34:28,820 - webcrawer service - INFO - current website is xinjiangzhengfucaigou_1_32_1
+2019-11-29 12:35:27,817 - webcrawer service - INFO - 运行成功: xinjiangzhengfucaigou_1_32_1, 一共：4条
+2019-11-29 12:35:27,817 - webcrawer service - INFO - current website is sichuanzhaobiaocaigou_1_29_0
+2019-11-29 12:36:03,775 - webcrawer service - INFO - 运行成功: sichuanzhaobiaocaigou_1_29_0, 一共：0条
+2019-11-29 12:36:03,775 - webcrawer service - INFO - current website is sichuanzhaobiaocaigouxinxi_1_29_1
+2019-11-29 12:36:26,077 - webcrawer service - INFO - 运行成功: sichuanzhaobiaocaigouxinxi_1_29_1, 一共：0条
+2019-11-29 17:36:37,469 - webcrawer service - INFO - current website is jincai_1
+2019-11-29 17:37:47,993 - webcrawer service - INFO - current website is huazhongzhaobiaowang_3_8_0
+2019-11-29 17:40:52,537 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_0, 一共：21条
+2019-11-29 17:40:52,537 - webcrawer service - INFO - current website is huazhongzhaobiaowang_3_8_1
+2019-11-29 17:41:28,732 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_1, 一共：0条
+2019-11-29 17:41:28,733 - webcrawer service - INFO - current website is shanghaigonggongziyuanjiaoyiwang_3_14
+2019-11-29 17:42:01,790 - webcrawer service - INFO - 运行成功: shanghaigonggongziyuanjiaoyiwang_3_14, 一共：0条
+2019-11-29 17:47:15,786 - webcrawer service - INFO - current website is huazhongzhaobiaowang_3_8_0
+2019-11-29 17:47:46,444 - webcrawer service - INFO - current website is zhongguoyouzheng_3_31_0
+2019-11-29 17:48:25,627 - webcrawer service - INFO - 运行成功: zhongguoyouzheng_3_31_0, 一共：3条
+2019-11-29 17:48:25,627 - webcrawer service - INFO - current website is zhongguoyouzheng_3_31_1
+2019-11-29 17:49:19,942 - webcrawer service - INFO - 运行成功: zhongguoyouzheng_3_31_1, 一共：9条
+2019-12-03 09:41:57,170 - webcrawer service - INFO - current website is huazhongzhaobiaowang_3_8_1
+2019-12-03 09:42:54,697 - webcrawer service - INFO - 运行成功: huazhongzhaobiaowang_3_8_1, 一共：0条

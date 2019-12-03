@@ -8,6 +8,8 @@ import random
 import area
 import datetime
 from selenium.webdriver.common.action_chains import ActionChains
+from importlib import reload
+import config
 #from selenium.webdriver.support.wait import WebDriverWait
 #from selenium.webdriver.common.by import By
 #from selenium.webdriver.support import expected_conditions as EC
@@ -66,7 +68,7 @@ def regex(html_str):
     #地点信息正则
     pattern_a = re.compile(r'地点.*?： *[\u4e00-\u9fa5]{1,10}')
     content_time, content_area = pattern_t.findall(html_str), "".join(pattern_a.findall(html_str))
-    content_area_new = getAreaFromStr(content_area)
+    content_area_new = getAreaFromStr(content_area,isHasCounty=True)
     if content_area_new == "":
         content_area_new = "中国"
     return content_time, content_area_new
@@ -76,7 +78,7 @@ def search_area(content):
     area = "".join(re.findall(pattern, content))
     return area
 
-def area_tpye(area):
+def area_tpye(area,flag = True):
     """
     判断区域类型：
     输入区域，返回区域所在省份，如果找不到，返回“中国”
@@ -90,16 +92,43 @@ def area_tpye(area):
         for e in v:
             if area in e:
                 return k
-    return "中国"                    #没找到，返回中国，方便调试观察
-
+    if flag:
+        return "中国"                    #没找到，返回中国，方便调试观察
+    else:
+        return ""
+    
+    
+def date_add(date_str, days_count=1):   
+    date_list = time.strptime(date_str, "%Y-%m-%d")
+    y, m, d = date_list[:3]
+    delta = datetime.timedelta(days=days_count)
+    date_result = datetime.datetime(y, m, d) + delta
+    date_result = date_result.strftime("%Y-%m-%d")
+    return date_result
 
 
 #获取详细信息地址
-def rehref(href_title):
+def rehref(href_title,domainName_url):
     """
     正则获取 href 地址信息
     href_title：xpath 获取到的带有连接信息的字符串
     """
+    #jiangsushenggonggongziyuan_2_16_0
+    #tzjydetail('003004002','/jyxx/003004/003004002/20191201/6238bc54-5b8d-48b0-ae1c-349e7a58af62.html');
+    if re.findall(r'^(tzjydetail)',href_title):
+        href_arr = re.findall(r'[\'](.*?)[\']',href_title)
+        #域名判断
+        if domainName_url != "":
+            href = domainName_url + href_arr[1]
+        return href
+    #chongqingshigonggongziyuan_2_27_1 _2_27_0
+    #opendetail('dae5fff6-5ed9-4595-845c-c497b566f8ed','014001004')
+    if "https://www.cqggzy.com" in domainName_url:
+        href_arr = re.findall(r'[\'](.*?)[\']',href_title)
+        if href_arr:
+            return  "https://www.cqggzy.com/tiaozhuan.html?infoid={}&categorynum={}".format(href_arr[0],href_arr[1])
+        else:
+            return domainName_url+href_title            
     #javascript:urlOpen('url')
     #javascript:location.href='url';return false;
     href_arr = re.findall(r'[\'](.*?)[\']',href_title)
@@ -117,7 +146,10 @@ def rehref(href_title):
             href = href_title
         
     # 去除 ./ ../
-    href = re.sub(r"(\.{1,2})[/]","",href)    
+    href = re.sub(r"(\.{1,2})[/]","",href)
+    #域名判断
+    if domainName_url != "":
+        href = domainName_url + href
     return href
 
 #获取总的页数
@@ -139,7 +171,7 @@ def retotalPage(ori_number):
     return number
 
 #获取；匹配地址
-def getAreaFromStr(title):
+def getAreaFromStr(title,isHasCounty=False):
     #提取汉字
     pat=re.compile(r'[\u4e00-\u9fa5]+')
     title="".join(pat.findall(title)) 
@@ -159,14 +191,19 @@ def getAreaFromStr(title):
     if len(title_str)<4:
         return title_str
     for dif in range(4,1,-1):
+        
         title_str_new = "".join(["(" + title_str[i:i+dif] + ").*?|" for i in range(len(title_str)-1)])
         pattern_n = re.compile(title_str_new)
-        tmp_str = pattern_n.findall(area.area_str)
+        if isHasCounty:
+            tmp_str = pattern_n.findall(area.area_str)
+        else:
+            tmp_str = pattern_n.findall(area.area_str_noCounty)
         result = ["".join(tmp) for tmp in tmp_str if len("".join(tmp))!=0]
         if len(result)>0:
             break
     if len(result)!=0:
         result = sorted(result,key=lambda k:len(k),reverse=True)[0]
+        result = area_tpye(result,flag=False)
     else:
         result = ""
     return result
@@ -297,9 +334,11 @@ def scrollVerify(driver,moveElementXPath,distance):
     pass
 
 #if __name__ == '__main__':
-    ###from CrawlerModule import Init_driver
-    ###driver = Init_driver()
-    ###driver.get("https://jl.bidcenter.com.cn/diqumore-1-6.html")
-    ###moveElementXPath = "//span[@id='nc_1_n1z']"
-    ###distance = 258
-    ####scrollVerify(driver, moveElementXPath, distance)  
+    ####from CrawlerModule import Init_driver
+    ####driver = Init_driver()
+    ####driver.get("https://jl.bidcenter.com.cn/diqumore-1-6.html")
+    ####moveElementXPath = "//span[@id='nc_1_n1z']"
+    ####distance = 258
+    #####scrollVerify(driver, moveElementXPath, distance)  
+    #title = "渤海银行集中作业新建智能助手项目_即时通讯系统改造采购项目（项目编号：0..."
+    #print(getAreaFromStr(title))
